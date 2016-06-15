@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Error;
+
+use Exception;
+use ReflectionClass;
+use RuntimeException;
+use Slim\Error\Renderers\HtmlErrorRenderer;
+use Slim\Error\Renderers\JsonErrorRenderer;
+use Slim\Error\Renderers\PlainTextErrorRenderer;
+use Slim\Error\Renderers\XmlErrorRenderer;
+use Slim\Exception\HttpException;
+use Slim\Tests\TestCase;
+use stdClass;
+
+use function htmlspecialchars;
+use function json_decode;
+use function json_encode;
+use function simplexml_load_string;
+
+use const ENT_QUOTES;
+use const ENT_SUBSTITUTE;
+
+class AbstractErrorRendererTest extends TestCase
+{
+    public function testHTMLErrorRendererDisplaysErrorDetails()
+    {
+        $exception = new RuntimeException('Oops..');
+        $renderer = new HtmlErrorRenderer();
+        $output = $renderer->__invoke($exception, true);
+
+        $this->assertMatchesRegularExpression(
+            '/.*The application could not run because of the following error:.*/',
+            $output
+        );
+        $this->assertStringContainsString('Oops..', $output);
+    }
+
+    public function testHTMLErrorRendererNoErrorDetails()
+    {
+        $exception = new RuntimeException('Oops..');
+        $renderer = new HtmlErrorRenderer();
+        $output = $renderer->__invoke($exception, false);
+
+        $this->assertMatchesRegularExpression(
+            '/.*A website error has occurred. Sorry for the temporary inconvenience.*/',
+            $output
+        );
+        $this->assertStringNotContainsString('Oops..', $output);
+    }
+
+    public function testHTMLErrorRendererRenderFragmentMethod()
+    {
+        $exception = new Exception('Oops..', 500);
+        $renderer = new HtmlErrorRenderer();
+        $reflectionRenderer = new ReflectionClass(HtmlErrorRenderer::class);
+
+        $method = $reflectionRenderer->getMethod('renderExceptionFragment');
+        $this->setAccessible($method);
+        $output = $method->invoke($renderer, $exception);
+
+        $this->assertMatchesRegularExpression('/.*Type:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Code:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Message*/', $output);
+        $this->assertMatchesRegularExpression('/.*File*/', $output);
+        $this->assertMatchesRegularExpression('/.*Line*/', $output);
+    }
+

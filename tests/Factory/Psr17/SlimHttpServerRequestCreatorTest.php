@@ -22,3 +22,5 @@ use stdClass;
 
 class SlimHttpServerRequestCreatorTest extends TestCase
 {
+    /**
+     * We need to reset the static property of SlimHttpServerRequestCreator back to its original value

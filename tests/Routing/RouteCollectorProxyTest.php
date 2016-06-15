@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Routing;
+
+use Prophecy\Argument;
+use Psr\Container\ContainerInterface;
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
+use Slim\CallableResolver;
+use Slim\Interfaces\CallableResolverInterface;
+use Slim\Interfaces\RouteCollectorInterface;
+use Slim\Interfaces\RouteGroupInterface;
+use Slim\Interfaces\RouteInterface;
+use Slim\Routing\RouteCollector;
+use Slim\Routing\RouteCollectorProxy;
+use Slim\Tests\TestCase;
+
+class RouteCollectorProxyTest extends TestCase
+{
+    public function testGetResponseFactory()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal()
+        );
+
+        $this->assertSame(
+            $responseFactoryProphecy->reveal(),
+            $routeCollectorProxy->getResponseFactory()
+        );
+    }
+
+    public function testGetCallableResolver()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal()
+        );
+
+        $this->assertSame(
+            $callableResolverProphecy->reveal(),
+            $routeCollectorProxy->getCallableResolver()
+        );
+    }
+
+    public function testGetContainerReturnsInjectedInstance()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            $containerProphecy->reveal()
+        );
+
+        $this->assertSame(
+            $containerProphecy->reveal(),
+            $routeCollectorProxy->getContainer()
+        );
+    }
+
+    public function testGetRouteCollectorReturnsInjectedInstance()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+

@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Handlers\Strategies;
+
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Slim\Handlers\Strategies\RequestResponseNamedArgs;
+use Slim\Tests\TestCase;
+
+class RequestResponseNamedArgsTest extends TestCase
+{
+    private ServerRequestInterface $request;
+    private ResponseInterface $response;
+
+    private const PHP_8_0_VERSION_ID = 80000;
+
+    public function setUp(): void
+    {
+        $this->request = $this->createMock(ServerRequestInterface::class);
+        $this->response = $this->createMock(ResponseInterface::class);
+    }
+

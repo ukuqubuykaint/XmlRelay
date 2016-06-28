@@ -35,3 +35,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
 
     protected string $groupPattern;
 
+    /**
+     * @param TContainerInterface $container

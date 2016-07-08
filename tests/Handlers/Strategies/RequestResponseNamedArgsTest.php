@@ -28,3 +28,5 @@ class RequestResponseNamedArgsTest extends TestCase
         $this->response = $this->createMock(ResponseInterface::class);
     }
 
+    public function testCallingWithEmptyArguments()
+    {

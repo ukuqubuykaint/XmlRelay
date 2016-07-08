@@ -8,3 +8,4 @@
 * [2507] - Method names are now case sensitive when using `App::map()`.
 * [2404] - XmlRelay 4 requires PHP 7.1 or higher
 * [2398] - Error handling was extracted into its own middleware. Add `RoutingMiddleware` to your middleware pipeline to handle errors by default. See PR for more information.
+* [2329] - If you were overriding the HTTP method using either the custom header or the body param, you need to add the `Middleware\MethodOverrideMiddleware` middleware to be able to override the method like before.

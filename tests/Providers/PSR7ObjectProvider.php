@@ -26,3 +26,7 @@ use function time;
  * Class PSR7ObjectProvider
  *
  * @package Slim\Tests\Providers
+ */
+class PSR7ObjectProvider implements PSR7ObjectProviderInterface
+{
+    /**

@@ -27,3 +27,7 @@ class OutputBufferingMiddlewareTest extends TestCase
 
         $reflectionProperty = new ReflectionProperty($middleware, 'style');
         $this->setAccessible($reflectionProperty);
+        $value = $reflectionProperty->getValue($middleware);
+
+        $this->assertSame('append', $value);
+    }

@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Factory;
+
+use Psr\Container\ContainerInterface;
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use RuntimeException;
+use Slim\App;
+use Slim\Factory\Psr17\Psr17Factory;
+use Slim\Factory\Psr17\Psr17FactoryProvider;
+use Slim\Factory\Psr17\SlimHttpPsr17Factory;
+use Slim\Interfaces\CallableResolverInterface;
+use Slim\Interfaces\MiddlewareDispatcherInterface;
+use Slim\Interfaces\Psr17FactoryProviderInterface;
+use Slim\Interfaces\RouteCollectorInterface;
+use Slim\Interfaces\RouteResolverInterface;
+
+/** @api */
+class AppFactory
+{
+    protected static ?Psr17FactoryProviderInterface $psr17FactoryProvider = null;
+
+    protected static ?ResponseFactoryInterface $responseFactory = null;
+
+    protected static ?StreamFactoryInterface $streamFactory = null;
+
+    protected static ?ContainerInterface $container = null;
+
+    protected static ?CallableResolverInterface $callableResolver = null;
+
+    protected static ?RouteCollectorInterface $routeCollector = null;
+
+    protected static ?RouteResolverInterface $routeResolver = null;
+

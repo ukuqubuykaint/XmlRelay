@@ -43,3 +43,5 @@ class BodyParsingMiddlewareTest extends TestCase
                 $this->request = $request;
                 return $this->response;
             }
+        };
+    }

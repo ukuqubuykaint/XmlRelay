@@ -26,3 +26,4 @@ use const CONNECTION_NORMAL;
 class ResponseEmitter
 {
     private int $responseChunkSize;
+

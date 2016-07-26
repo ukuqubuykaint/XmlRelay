@@ -47,3 +47,5 @@ class ResponseEmitterTest extends TestCase
         HeaderStack::reset();
     }
 
+    public function testRespond(): void
+    {

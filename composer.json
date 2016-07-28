@@ -1,0 +1,22 @@
+{
+    "name": "ukuqubuykaint/AJAX-XML",
+    "type": "library",
+    "description": "XmlRelay is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
+    "keywords": ["framework","micro","api","router"],
+    "homepage": "https://www.xmlrelayframework.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Lockhart",
+            "email": "hello@joshlockhart.com",
+            "homepage": "https://joshlockhart.com"
+        },
+        {
+            "name": "Andrew Smith",
+            "email": "a.smith@silentworks.co.uk",
+            "homepage": "https://silentworks.co.uk"
+        },
+        {
+            "name": "Rob Allen",
+            "email": "rob@akrabat.com",
+            "homepage": "https://akrabat.com"

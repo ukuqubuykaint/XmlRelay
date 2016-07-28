@@ -33,3 +33,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
 {
     public static function provideImplementations()
     {
+        return [

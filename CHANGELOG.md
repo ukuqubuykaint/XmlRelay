@@ -85,3 +85,5 @@ With the introduction of template generics, if you type-hint `XmlRelay\App` inst
 * `/** @var \XmlRelay\App<\Psr\Container\ContainerInterface> $app */` if you are
 
 You can also type-hint to the concrete instance of the container you are using too. For example, if you are using [PHP-DI](https://php-di.org), then you can use: `/** @var \XmlRelay\App<DI\Container> $app */`.
+
+### New Contributors

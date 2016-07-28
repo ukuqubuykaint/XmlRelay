@@ -22,3 +22,5 @@ use Slim\Interfaces\RouteResolverInterface;
 use Slim\Routing\RouteContext;
 use Slim\Routing\RoutingResults;
 
+class RoutingMiddleware implements MiddlewareInterface
+{

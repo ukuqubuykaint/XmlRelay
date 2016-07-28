@@ -14,3 +14,5 @@ use Slim\Routing\RouteCollector;
 use Slim\Tests\Assets\HeaderStack;
 
 $classLoader = require __DIR__ . '/../vendor/autoload.php';
+
+Override::apply($classLoader, [

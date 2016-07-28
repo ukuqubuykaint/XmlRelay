@@ -37,3 +37,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
 
     /**
      * @param TContainerInterface $container
+     */
+    public function __construct(
+        ResponseFactoryInterface $responseFactory,

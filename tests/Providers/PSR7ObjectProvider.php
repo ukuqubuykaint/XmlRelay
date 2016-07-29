@@ -30,3 +30,5 @@ use function time;
 class PSR7ObjectProvider implements PSR7ObjectProviderInterface
 {
     /**
+     * @param string $uri
+     * @param string $method

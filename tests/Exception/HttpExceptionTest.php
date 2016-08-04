@@ -13,3 +13,4 @@ namespace Slim\Tests\Exception;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Exception\HttpMethodNotAllowedException;
 use Slim\Exception\HttpNotFoundException;
+use Slim\Tests\TestCase;

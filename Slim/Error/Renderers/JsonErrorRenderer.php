@@ -15,3 +15,5 @@ use Throwable;
 
 use function get_class;
 use function json_encode;
+
+use const JSON_INVALID_UTF8_SUBSTITUTE;

@@ -23,3 +23,7 @@ abstract class Psr17Factory implements Psr17FactoryInterface
 {
     protected static string $responseFactoryClass;
 
+    protected static string $streamFactoryClass;
+
+    protected static string $serverRequestCreatorClass;
+

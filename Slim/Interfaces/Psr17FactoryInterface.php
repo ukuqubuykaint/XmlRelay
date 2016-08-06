@@ -15,3 +15,5 @@ use Psr\Http\Message\StreamFactoryInterface;
 use RuntimeException;
 
 interface Psr17FactoryInterface
+{
+    /**

@@ -82,3 +82,4 @@ class RouteCollector implements RouteCollectorInterface
 
     protected ResponseFactoryInterface $responseFactory;
 
+    /**

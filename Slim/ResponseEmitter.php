@@ -27,3 +27,6 @@ class ResponseEmitter
 {
     private int $responseChunkSize;
 
+    public function __construct(int $responseChunkSize = 4096)
+    {
+        $this->responseChunkSize = $responseChunkSize;

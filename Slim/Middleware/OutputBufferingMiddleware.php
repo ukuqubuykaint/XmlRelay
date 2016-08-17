@@ -21,3 +21,5 @@ use Throwable;
 use function in_array;
 use function ob_end_clean;
 use function ob_get_clean;
+use function ob_start;
+

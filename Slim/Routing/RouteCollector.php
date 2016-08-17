@@ -83,3 +83,6 @@ class RouteCollector implements RouteCollectorInterface
     protected ResponseFactoryInterface $responseFactory;
 
     /**
+     * @param TContainerInterface $container
+     */
+    public function __construct(

@@ -17,3 +17,5 @@ use function trim;
 
 /**
  * Zend Framework (http://framework.zend.com/)
+ *
+ * This file exists to allow overriding the various output-related functions

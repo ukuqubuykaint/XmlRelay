@@ -49,3 +49,7 @@ class ResponseEmitterTest extends TestCase
 
     public function testRespond(): void
     {
+        $response = $this->createResponse();
+        $response->getBody()->write('Hello');
+
+        $responseEmitter = new ResponseEmitter();

@@ -18,3 +18,6 @@ use Slim\Interfaces\RouteResolverInterface;
 
 use function rawurldecode;
 
+/**
+ * RouteResolver instantiates the FastRoute dispatcher
+ * and computes the routing results of a given URI and request method

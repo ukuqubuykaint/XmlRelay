@@ -16,3 +16,5 @@ use Slim\Tests\Assets\HeaderStack;
 $classLoader = require __DIR__ . '/../vendor/autoload.php';
 
 Override::apply($classLoader, [
+    ResponseEmitter::class => [
+        'connection_status' => function (): int {

@@ -21,3 +21,7 @@ use function sprintf;
  * Default Slim application Plain Text Error Renderer
  */
 class PlainTextErrorRenderer extends AbstractErrorRenderer
+{
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string
+    {
+        $text = "{$this->getErrorTitle($exception)}\n";

@@ -74,3 +74,6 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertMatchesRegularExpression('/.*Line*/', $output);
     }
 
+    public function testHTMLErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';

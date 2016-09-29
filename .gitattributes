@@ -5,3 +5,4 @@
 # see: https://redd.it/2jzp6k
 /.coveralls.yml     export-ignore
 /.editorconfig      export-ignore
+/.gitattributes     export-ignore

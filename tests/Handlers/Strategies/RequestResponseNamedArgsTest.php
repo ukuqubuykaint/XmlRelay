@@ -36,3 +36,4 @@ class RequestResponseNamedArgsTest extends TestCase
 
         $args = [];
         $invocationStrategy = new RequestResponseNamedArgs();
+

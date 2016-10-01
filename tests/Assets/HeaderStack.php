@@ -19,3 +19,5 @@ use function trim;
  * Zend Framework (http://framework.zend.com/)
  *
  * This file exists to allow overriding the various output-related functions
+ * in order to test what happens during the `Server::listen()` cycle.
+ *

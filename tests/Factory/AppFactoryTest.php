@@ -119,3 +119,7 @@ class AppFactoryTest extends TestCase
         $this->expectException(RuntimeException::class);
 
         Psr17FactoryProvider::setFactories([]);
+        AppFactory::create();
+    }
+
+    public function testSetPsr17FactoryProvider()

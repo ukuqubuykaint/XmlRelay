@@ -14,3 +14,5 @@ use RuntimeException;
 use Slim\Tests\Mocks\MockPsr17Factory;
 use Slim\Tests\TestCase;
 
+class Psr17FactoryTest extends TestCase
+{

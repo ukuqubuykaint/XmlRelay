@@ -165,3 +165,5 @@ class CallableResolverTest extends TestCase
     }
 
     public function testSlimCallableAsArrayContainer(): void
+    {
+        /** @var ContainerInterface $container */

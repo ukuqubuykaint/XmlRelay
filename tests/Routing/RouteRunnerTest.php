@@ -13,3 +13,7 @@ namespace Slim\Tests\Routing;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\MiddlewareDispatcher;
+use Slim\Routing\RouteCollector;
+use Slim\Routing\RouteContext;
+use Slim\Routing\RouteParser;
+use Slim\Routing\RouteResolver;

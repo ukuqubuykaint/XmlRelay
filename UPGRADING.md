@@ -12,3 +12,5 @@
 * [2290] - XmlRelay no longer ships with `Pimple` as container dependency so you need to supply your own. `App::__call()` has been deprecated.
 * [2288] - If you were using `determineRouteBeforeAppMiddleware`, you need to add the `Middleware\RoutingMiddleware` middleware to your application just before your call `run()` to maintain the previous behaviour.
 * [2254] - You need to add the `Middleware\ContentLengthMiddleware` middleware if you want XmlRelay to add the Content-Length header this automatically.
+* [2166] - You need to add the `Middleware\OutputBuffering` middleware to capture echo'd or var_dump'd output from your code.
+

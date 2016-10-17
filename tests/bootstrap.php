@@ -19,3 +19,7 @@ Override::apply($classLoader, [
     ResponseEmitter::class => [
         'connection_status' => function (): int {
             if (isset($GLOBALS['connection_status_return'])) {
+                return $GLOBALS['connection_status_return'];
+            }
+
+            return connection_status();

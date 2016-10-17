@@ -91,3 +91,6 @@ You can also type-hint to the concrete instance of the container you are using t
 * @limarkxx made their first contribution in https://github.com/ukuqubuykaint/AJAX-XML/pull/3322
 
 **Full Changelog**: https://github.com/ukuqubuykaint/AJAX-XML/compare/4.13.0...4.14.0
+
+# 4.13.0 - 2024-03-03
+

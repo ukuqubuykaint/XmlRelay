@@ -24,3 +24,7 @@ use const ENT_SUBSTITUTE;
 /**
  * Default Slim application HTML Error Renderer
  */
+class HtmlErrorRenderer extends AbstractErrorRenderer
+{
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string
+    {

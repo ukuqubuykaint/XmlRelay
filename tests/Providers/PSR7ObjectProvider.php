@@ -36,3 +36,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
      * @return ServerRequestInterface
      */
     public function createServerRequest(
+        string $uri,

@@ -12,3 +12,6 @@ namespace Slim\Tests\Middleware;
 
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Middleware\ContentLengthMiddleware;
+use Slim\Tests\TestCase;
+
+class ContentLengthMiddlewareTest extends TestCase

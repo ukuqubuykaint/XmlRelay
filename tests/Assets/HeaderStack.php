@@ -21,3 +21,6 @@ use function trim;
  * This file exists to allow overriding the various output-related functions
  * in order to test what happens during the `Server::listen()` cycle.
  *
+ * These functions include:
+ *
+ * - headers_sent(): we want to always return false so that headers will be

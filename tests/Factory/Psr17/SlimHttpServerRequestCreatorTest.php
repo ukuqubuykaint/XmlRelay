@@ -27,3 +27,7 @@ class SlimHttpServerRequestCreatorTest extends TestCase
      * Otherwise other tests will fail
      */
     public function tearDown(): void
+    {
+        $serverRequestCreatorProphecy = $this->prophesize(ServerRequestCreatorInterface::class);
+
+        $slimHttpServerRequestCreator = new SlimHttpServerRequestCreator($serverRequestCreatorProphecy->reveal());

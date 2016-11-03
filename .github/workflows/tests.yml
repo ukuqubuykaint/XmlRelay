@@ -18,3 +18,4 @@ jobs:
         composer-options: ['']
         include:
           - php: 8.2
+            analysis: true

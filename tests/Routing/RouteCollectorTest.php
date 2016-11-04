@@ -36,3 +36,4 @@ class RouteCollectorTest extends TestCase
     public function tearDown(): void
     {
         if ($this->cacheFile && file_exists($this->cacheFile)) {
+            unlink($this->cacheFile);

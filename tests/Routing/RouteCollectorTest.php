@@ -37,3 +37,5 @@ class RouteCollectorTest extends TestCase
     {
         if ($this->cacheFile && file_exists($this->cacheFile)) {
             unlink($this->cacheFile);
+        }
+    }

@@ -53,3 +53,5 @@ class ResponseEmitterTest extends TestCase
         $response->getBody()->write('Hello');
 
         $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+

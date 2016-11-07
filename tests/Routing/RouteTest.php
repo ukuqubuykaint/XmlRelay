@@ -228,3 +228,7 @@ class RouteTest extends TestCase
         $routeCollectorProxyProphecy = $this->prophesize(RouteCollectorProxyInterface::class);
 
         $routeGroup = new RouteGroup(
+            '/group',
+            $callable,
+            $callableResolverProphecy->reveal(),
+            $routeCollectorProxyProphecy->reveal()

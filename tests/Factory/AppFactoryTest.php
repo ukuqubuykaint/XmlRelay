@@ -127,3 +127,4 @@ class AppFactoryTest extends TestCase
         $psr17FactoryProvider = new Psr17FactoryProvider();
         $psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
 
+        AppFactory::setPsr17FactoryProvider($psr17FactoryProvider);

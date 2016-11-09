@@ -25,3 +25,6 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
     public function __invoke(Throwable $exception, bool $displayErrorDetails): string
     {
         $text = "{$this->getErrorTitle($exception)}\n";
+
+        if ($displayErrorDetails) {
+            $text .= $this->formatExceptionFragment($exception);

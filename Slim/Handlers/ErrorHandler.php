@@ -54,3 +54,4 @@ class ErrorHandler implements ErrorHandlerInterface
      */
     protected $defaultErrorRenderer = HtmlErrorRenderer::class;
 
+    /**

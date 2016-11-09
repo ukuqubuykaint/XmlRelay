@@ -53,3 +53,7 @@ class BodyParsingMiddlewareTest extends TestCase
      */
     protected function createRequestWithBody($contentType, $body)
     {
+        $request = $this->createServerRequest('/', 'POST');
+        if (is_string($contentType)) {
+            $request = $request->withHeader('Content-Type', $contentType);
+        }

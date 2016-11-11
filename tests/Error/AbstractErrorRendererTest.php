@@ -77,3 +77,5 @@ class AbstractErrorRendererTest extends TestCase
     public function testHTMLErrorRendererRenderHttpException()
     {
         $exceptionTitle = 'title';
+        $exceptionDescription = 'description';
+

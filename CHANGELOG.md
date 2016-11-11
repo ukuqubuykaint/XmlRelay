@@ -94,3 +94,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 # 4.13.0 - 2024-03-03
 
+- [3277: Create HttpTooManyRequestsException.php](https://github.com/ukuqubuykaint/AJAX-XML/pull/3277) thanks to @flavioheleno

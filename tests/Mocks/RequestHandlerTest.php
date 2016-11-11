@@ -18,3 +18,5 @@ use Slim\Tests\Providers\PSR7ObjectProvider;
 use function debug_backtrace;
 
 class RequestHandlerTest implements RequestHandlerInterface
+{
+    public static $CalledCount = 0;

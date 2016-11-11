@@ -41,3 +41,7 @@ class AppFactory
 
     protected static ?RouteResolverInterface $routeResolver = null;
 
+    protected static ?MiddlewareDispatcherInterface $middlewareDispatcher = null;
+
+    protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
+

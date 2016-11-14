@@ -23,3 +23,4 @@ Override::apply($classLoader, [
             }
 
             return connection_status();
+        },

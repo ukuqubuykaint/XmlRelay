@@ -15,3 +15,4 @@
 * [2166] - You need to add the `Middleware\OutputBuffering` middleware to capture echo'd or var_dump'd output from your code.
 
 [2654]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2654
+[2638]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2638

@@ -36,3 +36,4 @@ interface RouteCollectorProxyInterface
      */
     public function getBasePath(): string;
 
+    /**

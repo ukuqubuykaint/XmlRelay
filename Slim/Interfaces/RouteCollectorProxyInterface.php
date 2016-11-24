@@ -37,3 +37,7 @@ interface RouteCollectorProxyInterface
     public function getBasePath(): string;
 
     /**
+     * Set the RouteCollectorProxy's base path
+     * @return RouteCollectorProxyInterface<TContainerInterface>
+     */
+    public function setBasePath(string $basePath): RouteCollectorProxyInterface;

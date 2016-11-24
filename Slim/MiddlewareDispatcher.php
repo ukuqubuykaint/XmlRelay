@@ -60,3 +60,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     /**
      * {@inheritdoc}
      */
+    public function seedMiddlewareStack(RequestHandlerInterface $kernel): void
+    {
+        $this->tip = $kernel;

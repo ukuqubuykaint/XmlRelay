@@ -55,3 +55,7 @@ class ErrorHandler implements ErrorHandlerInterface
     protected $defaultErrorRenderer = HtmlErrorRenderer::class;
 
     /**
+     * @var ErrorRendererInterface|string|callable
+     */
+    protected $logErrorRenderer = PlainTextErrorRenderer::class;
+

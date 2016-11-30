@@ -68,3 +68,6 @@ class ErrorMiddleware implements MiddlewareInterface
         $this->displayErrorDetails = $displayErrorDetails;
         $this->logErrors = $logErrors;
         $this->logErrorDetails = $logErrorDetails;
+        $this->logger = $logger;
+    }
+

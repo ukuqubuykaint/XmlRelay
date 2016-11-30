@@ -35,3 +35,6 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $serverRequestDecoratorClassProperty = new ReflectionProperty(
             SlimHttpServerRequestCreator::class,
             'serverRequestDecoratorClass'
+        );
+        $this->setAccessible($serverRequestDecoratorClassProperty);
+        $serverRequestDecoratorClassProperty->setValue($slimHttpServerRequestCreator, ServerRequest::class);

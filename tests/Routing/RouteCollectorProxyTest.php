@@ -86,3 +86,6 @@ class RouteCollectorProxyTest extends TestCase
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal(),
             $containerProphecy->reveal(),
+            $routeCollectorProphecy->reveal()
+        );
+

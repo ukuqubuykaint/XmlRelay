@@ -26,3 +26,4 @@ class RouteParser implements RouteParserInterface
 {
     private RouteCollectorInterface $routeCollector;
 
+    private Std $routeParser;

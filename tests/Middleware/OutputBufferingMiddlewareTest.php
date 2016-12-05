@@ -31,3 +31,5 @@ class OutputBufferingMiddlewareTest extends TestCase
 
         $this->assertSame('append', $value);
     }
+
+    public function testStyleCustomValid()

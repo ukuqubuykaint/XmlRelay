@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Handlers;
+
+use Prophecy\Argument;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Log\LoggerInterface;
+use ReflectionClass;
+use ReflectionMethod;
+use ReflectionProperty;
+use RuntimeException;
+use Slim\Error\Renderers\HtmlErrorRenderer;
+use Slim\Error\Renderers\JsonErrorRenderer;
+use Slim\Error\Renderers\PlainTextErrorRenderer;
+use Slim\Error\Renderers\XmlErrorRenderer;
+use Slim\Exception\HttpMethodNotAllowedException;
+use Slim\Exception\HttpNotFoundException;
+use Slim\Handlers\ErrorHandler;
+use Slim\Interfaces\CallableResolverInterface;
+use Slim\Tests\Mocks\MockCustomException;
+use Slim\Tests\TestCase;
+
+class ErrorHandlerTest extends TestCase
+{
+    private function getMockLogger(): LoggerInterface
+    {
+        return $this->createMock(LoggerInterface::class);
+    }
+
+    public function testDetermineRenderer()
+    {
+        $handler = $this->createMock(ErrorHandler::class);
+        $class = new ReflectionClass(ErrorHandler::class);
+
+        $callableResolverProperty = $class->getProperty('callableResolver');
+        $this->setAccessible($callableResolverProperty);
+        $callableResolverProperty->setValue($handler, $this->getCallableResolver());
+
+        $reflectionProperty = $class->getProperty('contentType');
+        $this->setAccessible($reflectionProperty);
+        $reflectionProperty->setValue($handler, 'application/json');
+
+        $method = $class->getMethod('determineRenderer');
+        $this->setAccessible($method);
+
+        $renderer = $method->invoke($handler);
+        $this->assertIsCallable($renderer);
+        $this->assertInstanceOf(JsonErrorRenderer::class, $renderer[0]);
+
+        $reflectionProperty->setValue($handler, 'application/xml');
+        $renderer = $method->invoke($handler);
+        $this->assertIsCallable($renderer);
+        $this->assertInstanceOf(XmlErrorRenderer::class, $renderer[0]);
+
+        $reflectionProperty->setValue($handler, 'text/plain');
+        $renderer = $method->invoke($handler);
+        $this->assertIsCallable($renderer);
+        $this->assertInstanceOf(PlainTextErrorRenderer::class, $renderer[0]);
+
+        // Test the default error renderer
+        $reflectionProperty->setValue($handler, 'text/unknown');
+        $renderer = $method->invoke($handler);
+        $this->assertIsCallable($renderer);
+        $this->assertInstanceOf(HtmlErrorRenderer::class, $renderer[0]);
+    }
+
+    public function testDetermineStatusCode()
+    {
+        $request = $this->createServerRequest('/');
+        $handler = $this->createMock(ErrorHandler::class);
+        $class = new ReflectionClass(ErrorHandler::class);
+
+        $reflectionProperty = $class->getProperty('responseFactory');
+        $this->setAccessible($reflectionProperty);
+        $reflectionProperty->setValue($handler, $this->getResponseFactory());
+
+        $reflectionProperty = $class->getProperty('exception');
+        $this->setAccessible($reflectionProperty);
+        $reflectionProperty->setValue($handler, new HttpNotFoundException($request));
+

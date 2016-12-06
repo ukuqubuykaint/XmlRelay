@@ -40,3 +40,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
         string $method = 'GET',
         array $data = []
     ): ServerRequestInterface {
+        $headers = array_merge([

@@ -17,3 +17,4 @@ use Slim\Tests\Providers\PSR7ObjectProvider;
 
 class MockRequestHandler implements RequestHandlerInterface
 {
+    /**

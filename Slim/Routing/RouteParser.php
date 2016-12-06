@@ -27,3 +27,6 @@ class RouteParser implements RouteParserInterface
     private RouteCollectorInterface $routeCollector;
 
     private Std $routeParser;
+
+    public function __construct(RouteCollectorInterface $routeCollector)
+    {

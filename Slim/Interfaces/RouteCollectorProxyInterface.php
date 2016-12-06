@@ -42,3 +42,6 @@ interface RouteCollectorProxyInterface
      */
     public function setBasePath(string $basePath): RouteCollectorProxyInterface;
 
+    /**
+     * Add GET route
+     *

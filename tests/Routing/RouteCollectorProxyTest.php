@@ -89,3 +89,6 @@ class RouteCollectorProxyTest extends TestCase
             $routeCollectorProphecy->reveal()
         );
 
+        $this->assertSame(
+            $routeCollectorProphecy->reveal(),
+            $routeCollectorProxy->getRouteCollector()

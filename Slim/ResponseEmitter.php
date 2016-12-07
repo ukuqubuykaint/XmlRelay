@@ -33,3 +33,7 @@ class ResponseEmitter
     }
 
     /**
+     * Send the response the client
+     */
+    public function emit(ResponseInterface $response): void
+    {

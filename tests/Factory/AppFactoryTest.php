@@ -131,3 +131,6 @@ class AppFactoryTest extends TestCase
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
 
         $this->assertInstanceOf(SlimResponseFactory::class, AppFactory::determineResponseFactory());
+    }
+
+    /**

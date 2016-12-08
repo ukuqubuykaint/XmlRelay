@@ -476,3 +476,5 @@ class AppTest extends TestCase
             'group single slash with nested group segment with single slash route' => [
                 ['/', '/foo', '/'], '//foo/'
             ],
+            'group single slash with nested group segment with segment route' => [
+                ['/', '/foo', '/bar'], '//foo/bar'

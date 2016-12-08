@@ -31,3 +31,5 @@ abstract class TestCase extends PhpUnitTestCase
 {
     use ProphecyTrait;
 
+    /**
+     * @return ServerRequestFactoryInterface

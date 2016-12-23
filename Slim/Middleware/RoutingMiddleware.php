@@ -24,3 +24,4 @@ use Slim\Routing\RoutingResults;
 
 class RoutingMiddleware implements MiddlewareInterface
 {
+    protected RouteResolverInterface $routeResolver;

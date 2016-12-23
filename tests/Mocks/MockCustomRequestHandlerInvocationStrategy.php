@@ -12,3 +12,6 @@ namespace Slim\Tests\Mocks;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Slim\Interfaces\RequestHandlerInvocationStrategyInterface;
+
+class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvocationStrategyInterface

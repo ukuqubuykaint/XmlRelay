@@ -16,3 +16,7 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 {
     /**
      * @var string[]
+     */
+    protected array $allowedMethods = [];
+
+    /**

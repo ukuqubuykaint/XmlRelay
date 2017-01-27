@@ -15,3 +15,4 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\Interfaces\RequestHandlerInvocationStrategyInterface;
 
 class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvocationStrategyInterface
+{

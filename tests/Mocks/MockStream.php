@@ -51,3 +51,4 @@ class MockStream implements StreamInterface
     private $uri;
 
     /** @var int|null */
+    private $size;

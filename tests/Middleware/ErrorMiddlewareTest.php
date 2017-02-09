@@ -67,3 +67,5 @@ class ErrorMiddlewareTest extends TestCase
         $app->run($request);
 
         $this->expectOutputString('Oops..');
+    }
+

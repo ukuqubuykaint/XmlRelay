@@ -9,3 +9,4 @@
          cacheDirectory=".phpunit.cache"
 >
     <testsuites>
+        <testsuite name="Slim Test Suite">

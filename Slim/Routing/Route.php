@@ -86,3 +86,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     protected ?ContainerInterface $container = null;
 
     /** @var MiddlewareDispatcher<TContainerInterface> $middlewareDispatcher */
+    protected MiddlewareDispatcher $middlewareDispatcher;
+
+    /**

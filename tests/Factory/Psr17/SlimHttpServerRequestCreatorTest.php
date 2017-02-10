@@ -38,3 +38,4 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         );
         $this->setAccessible($serverRequestDecoratorClassProperty);
         $serverRequestDecoratorClassProperty->setValue($slimHttpServerRequestCreator, ServerRequest::class);
+    }

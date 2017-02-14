@@ -34,3 +34,4 @@ class SmallChunksStream implements StreamInterface
     }
 
     public function __toString(): string
+    {

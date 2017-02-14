@@ -173,3 +173,5 @@ class CallableResolverTest extends TestCase
         $this->assertSame($container, CallableTest::$CalledContainer);
 
         CallableTest::$CalledContainer = null;
+        $resolver->resolveRoute([CallableTest::class, 'toCall']);
+        $this->assertSame($container, CallableTest::$CalledContainer);

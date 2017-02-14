@@ -19,3 +19,7 @@ use Psr\Http\Message\StreamInterface;
 
 /**
  * Interface PSR7ObjectProviderInterface
+ *
+ * @package Slim\Tests\Providers
+ */
+interface PSR7ObjectProviderInterface

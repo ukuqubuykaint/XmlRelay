@@ -86,3 +86,7 @@ class ErrorHandlerTest extends TestCase
         $this->setAccessible($reflectionProperty);
         $reflectionProperty->setValue($handler, new HttpNotFoundException($request));
 
+        $method = $class->getMethod('determineStatusCode');
+        $this->setAccessible($method);
+
+        $statusCode = $method->invoke($handler);

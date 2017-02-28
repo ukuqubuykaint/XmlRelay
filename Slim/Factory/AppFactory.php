@@ -45,3 +45,4 @@ class AppFactory
 
     protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
 
+    /**

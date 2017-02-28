@@ -15,3 +15,6 @@ use RuntimeException;
 use Slim\Interfaces\RouteInterface;
 use Slim\Interfaces\RouteParserInterface;
 
+/** @api */
+final class RouteContext
+{

@@ -59,3 +59,6 @@ class ErrorHandler implements ErrorHandlerInterface
      */
     protected $logErrorRenderer = PlainTextErrorRenderer::class;
 
+    /**
+     * @var array<string|callable>
+     */

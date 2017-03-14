@@ -98,3 +98,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3278: Remove HttpGoneException executable flag](https://github.com/ukuqubuykaint/AJAX-XML/pull/3278) thanks to @flavioheleno
 - [3285: Update guzzlehttp/psr7 requirement from ^2.5 to ^2.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3285) thanks to @dependabot[bot]
 - [3290: Bump actions/checkout from 3 to 4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3290) thanks to @dependabot[bot]
+- [3291: Fix line length](https://github.com/ukuqubuykaint/AJAX-XML/pull/3291) thanks to @l0gicgate
+- [3296: PSR 7 http-message version requirement](https://github.com/ukuqubuykaint/AJAX-XML/issues/3296) thanks to @rotexdegba
+- [3297: Allow Diactoros 3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3297) thanks to @derrabus
+- [3299: Update tests and add PHP 8.3 to the CI matrix](https://github.com/ukuqubuykaint/AJAX-XML/pull/3299) thanks to @akrabat

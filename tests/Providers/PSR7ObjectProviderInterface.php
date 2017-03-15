@@ -23,3 +23,6 @@ use Psr\Http\Message\StreamInterface;
  * @package Slim\Tests\Providers
  */
 interface PSR7ObjectProviderInterface
+{
+    /**
+     * @return ServerRequestFactoryInterface

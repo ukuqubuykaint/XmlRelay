@@ -37,3 +37,7 @@ class ResponseEmitter
      */
     public function emit(ResponseInterface $response): void
     {
+        $isEmpty = $this->isResponseEmpty($response);
+        if (headers_sent() === false) {
+            $this->emitHeaders($response);
+

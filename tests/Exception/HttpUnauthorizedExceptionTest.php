@@ -9,3 +9,5 @@
 declare(strict_types=1);
 
 namespace Slim\Tests\Exception;
+
+use Slim\Exception\HttpUnauthorizedException;

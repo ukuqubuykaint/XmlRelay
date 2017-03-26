@@ -46,3 +46,7 @@ class AppFactory
     protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
 
     /**
+     * @template TContainerInterface of (ContainerInterface|null)
+     * @param TContainerInterface $container
+     * @return (TContainerInterface is ContainerInterface ? App<TContainerInterface> : App<ContainerInterface|null>)
+     */

@@ -16,3 +16,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Exception\HttpMethodNotAllowedException;
 use Slim\Exception\HttpNotFoundException;
 use Slim\Interfaces\RouteCollectorProxyInterface;
+use Slim\Interfaces\RouteParserInterface;
+use Slim\Interfaces\RouteResolverInterface;
+use Slim\Middleware\RoutingMiddleware;

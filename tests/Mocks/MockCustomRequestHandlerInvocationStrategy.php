@@ -16,3 +16,6 @@ use Slim\Interfaces\RequestHandlerInvocationStrategyInterface;
 
 class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvocationStrategyInterface
 {
+    public static $CalledCount = 0;
+
+    public function __invoke(

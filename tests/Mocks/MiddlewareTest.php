@@ -24,3 +24,4 @@ class MiddlewareTest implements MiddlewareInterface
      * {@inheritdoc}
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {

@@ -39,3 +39,4 @@ class RouteCollectorTest extends TestCase
             unlink($this->cacheFile);
         }
     }
+

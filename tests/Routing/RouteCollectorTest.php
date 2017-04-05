@@ -40,3 +40,7 @@ class RouteCollectorTest extends TestCase
         }
     }
 
+    public function testGetSetBasePath()
+    {
+        $basePath = '/app';
+

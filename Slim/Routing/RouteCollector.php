@@ -90,3 +90,6 @@ class RouteCollector implements RouteCollectorInterface
         CallableResolverInterface $callableResolver,
         ?ContainerInterface $container = null,
         ?InvocationStrategyInterface $defaultInvocationStrategy = null,
+        ?RouteParserInterface $routeParser = null,
+        ?string $cacheFile = null
+    ) {

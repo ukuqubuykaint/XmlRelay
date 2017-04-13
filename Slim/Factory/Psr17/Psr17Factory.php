@@ -33,3 +33,7 @@ abstract class Psr17Factory implements Psr17FactoryInterface
      * {@inheritdoc}
      */
     public static function getResponseFactory(): ResponseFactoryInterface
+    {
+        if (
+            !static::isResponseFactoryAvailable()
+            || !(($responseFactory = new static::$responseFactoryClass()) instanceof ResponseFactoryInterface)

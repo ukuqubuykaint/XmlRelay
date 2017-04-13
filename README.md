@@ -42,3 +42,6 @@ The `ServerRequest` and `Response` object decorators are automatically detected 
 
 use XmlRelay\Factory\AppFactory;
 use XmlRelay\Factory\ServerRequestCreatorFactory;
+
+AppFactory::setXmlRelayHttpDecoratorsAutomaticDetection(false);
+ServerRequestCreatorFactory::setXmlRelayHttpDecoratorsAutomaticDetection(false);

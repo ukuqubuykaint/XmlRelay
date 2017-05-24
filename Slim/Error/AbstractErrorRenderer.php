@@ -12,3 +12,5 @@ namespace Slim\Error;
 
 use Slim\Exception\HttpException;
 use Slim\Interfaces\ErrorRendererInterface;
+use Throwable;
+

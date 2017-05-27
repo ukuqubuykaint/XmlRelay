@@ -27,3 +27,4 @@ use function ob_start;
 class OutputBufferingMiddleware implements MiddlewareInterface
 {
     public const APPEND = 'append';
+    public const PREPEND = 'prepend';

@@ -50,3 +50,7 @@ class DispatcherTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $dispatcher = new Dispatcher($routeCollector);
 
+        $route = $routeCollector->map(['GET'], '/', function () {
+        });
+        $route->setName('foo');
+

@@ -41,3 +41,7 @@ class ResponseEmitter
         if (headers_sent() === false) {
             $this->emitHeaders($response);
 
+            // Set the status _after_ the headers, because of PHP's "helpful" behavior with location headers.
+            // See https://github.com/slimphp/Slim/issues/1730
+
+            $this->emitStatusLine($response);

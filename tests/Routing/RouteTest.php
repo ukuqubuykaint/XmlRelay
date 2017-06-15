@@ -240,3 +240,6 @@ class RouteTest extends TestCase
             '/',
             $callable,
             $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            $strategyProphecy->reveal(),

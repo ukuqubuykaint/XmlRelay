@@ -60,3 +60,5 @@ class BodyParsingMiddlewareTest extends TestCase
         if (is_string($body)) {
             $request = $request->withBody($this->createStream($body));
         }
+        return $request;
+    }

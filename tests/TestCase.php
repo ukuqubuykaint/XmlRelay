@@ -33,3 +33,6 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @return ServerRequestFactoryInterface
+     */
+    protected function getServerRequestFactory(): ServerRequestFactoryInterface
+    {

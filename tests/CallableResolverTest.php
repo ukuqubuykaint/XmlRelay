@@ -179,3 +179,6 @@ class CallableResolverTest extends TestCase
         CallableTest::$CalledContainer = null;
         $resolver->resolveMiddleware([CallableTest::class ,'toCall']);
         $this->assertSame($container, CallableTest::$CalledContainer);
+    }
+
+    public function testContainer(): void

@@ -69,3 +69,7 @@ class ErrorMiddlewareTest extends TestCase
         $this->expectOutputString('Oops..');
     }
 
+    public function testSetDefaultErrorHandler()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);

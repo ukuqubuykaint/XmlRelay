@@ -26,3 +26,5 @@ Override::apply($classLoader, [
         },
         'header' => function (string $string, bool $replace = true, ?int $statusCode = null): void {
             HeaderStack::push(
+                [
+                    'header' => $string,

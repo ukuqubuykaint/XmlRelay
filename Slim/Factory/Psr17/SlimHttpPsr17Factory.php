@@ -7,3 +7,5 @@
  */
 
 declare(strict_types=1);
+
+namespace Slim\Factory\Psr17;

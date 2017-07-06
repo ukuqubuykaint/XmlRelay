@@ -70,3 +70,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        return $this->tip->handle($request);
+    }
+

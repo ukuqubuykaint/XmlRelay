@@ -54,3 +54,4 @@ class AppFactory
         ?ResponseFactoryInterface $responseFactory = null,
         ?ContainerInterface $container = null,
         ?CallableResolverInterface $callableResolver = null,
+        ?RouteCollectorInterface $routeCollector = null,

@@ -45,3 +45,6 @@ class ResponseEmitter
             // See https://github.com/slimphp/Slim/issues/1730
 
             $this->emitStatusLine($response);
+        }
+
+        if (!$isEmpty) {

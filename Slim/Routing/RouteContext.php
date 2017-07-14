@@ -26,3 +26,6 @@ final class RouteContext
 
     public const BASE_PATH = '__basePath__';
 
+    public static function fromRequest(ServerRequestInterface $serverRequest): self
+    {
+        $route = $serverRequest->getAttribute(self::ROUTE);

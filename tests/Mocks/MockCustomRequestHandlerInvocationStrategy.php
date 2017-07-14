@@ -21,3 +21,4 @@ class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvoca
     public function __invoke(
         callable $callable,
         ServerRequestInterface $request,
+        ResponseInterface $response,

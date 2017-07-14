@@ -50,3 +50,7 @@ class AppFactory
      * @param TContainerInterface $container
      * @return (TContainerInterface is ContainerInterface ? App<TContainerInterface> : App<ContainerInterface|null>)
      */
+    public static function create(
+        ?ResponseFactoryInterface $responseFactory = null,
+        ?ContainerInterface $container = null,
+        ?CallableResolverInterface $callableResolver = null,

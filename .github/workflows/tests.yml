@@ -19,3 +19,4 @@ jobs:
         include:
           - php: 8.2
             analysis: true
+          - php: 8.5

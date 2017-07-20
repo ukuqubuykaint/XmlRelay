@@ -58,3 +58,7 @@ class ResponseEmitterTest extends TestCase
         $this->expectOutputString('Hello');
     }
 
+    public function testRespondWithPaddedStreamFilterOutput(): void
+    {
+        $availableFilter = stream_get_filters();
+

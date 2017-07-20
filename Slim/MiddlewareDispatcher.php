@@ -73,3 +73,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         return $this->tip->handle($request);
     }
 
+    /**
+     * Add a new middleware to the stack
+     *
+     * Middleware are organized as a stack. That means middleware

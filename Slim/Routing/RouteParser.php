@@ -32,3 +32,6 @@ class RouteParser implements RouteParserInterface
     {
         $this->routeCollector = $routeCollector;
         $this->routeParser = new Std();
+    }
+
+    /**

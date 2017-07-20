@@ -44,3 +44,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         ?ContainerInterface $container = null,
         ?RouteCollectorInterface $routeCollector = null,
         string $groupPattern = ''
+    ) {
+        $this->responseFactory = $responseFactory;

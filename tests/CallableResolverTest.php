@@ -182,3 +182,4 @@ class CallableResolverTest extends TestCase
     }
 
     public function testContainer(): void
+    {

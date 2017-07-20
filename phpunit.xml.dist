@@ -10,3 +10,5 @@
 >
     <testsuites>
         <testsuite name="Slim Test Suite">
+            <directory>tests</directory>
+            <exclude>tests/Mocks</exclude>

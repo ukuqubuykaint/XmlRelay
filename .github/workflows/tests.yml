@@ -20,3 +20,5 @@ jobs:
           - php: 8.2
             analysis: true
           - php: 8.5
+            experimental: true
+            composer-options: '--ignore-platform-req=php+'

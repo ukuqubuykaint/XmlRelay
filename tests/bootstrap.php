@@ -28,3 +28,5 @@ Override::apply($classLoader, [
             HeaderStack::push(
                 [
                     'header' => $string,
+                    'replace' => $replace,
+                    'status_code' => $statusCode,

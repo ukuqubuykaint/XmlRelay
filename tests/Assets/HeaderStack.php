@@ -35,3 +35,7 @@ use function trim;
  * @license   https://github.com/zendframework/zend-diactoros/blob/master/LICENSE.md New BSD License
  */
 
+/**
+ * Store output artifacts
+ */
+class HeaderStack

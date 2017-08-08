@@ -39,3 +39,5 @@ abstract class Psr17Factory implements Psr17FactoryInterface
             || !(($responseFactory = new static::$responseFactoryClass()) instanceof ResponseFactoryInterface)
         ) {
             throw new RuntimeException(get_called_class() . ' could not instantiate a response factory.');
+        }
+

@@ -27,3 +27,7 @@ class ServerRequestCreatorFactory
     protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
 
     public static function create(): ServerRequestCreatorInterface
+    {
+        return static::determineServerRequestCreator();
+    }
+

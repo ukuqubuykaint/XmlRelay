@@ -37,3 +37,6 @@ class SmallChunksStream implements StreamInterface
     {
         return str_repeat('.', self::SIZE);
     }
+
+    public function close(): void
+    {

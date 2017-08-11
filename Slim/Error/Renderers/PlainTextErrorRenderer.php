@@ -29,3 +29,4 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
         if ($displayErrorDetails) {
             $text .= $this->formatExceptionFragment($exception);
 
+            while ($exception = $exception->getPrevious()) {

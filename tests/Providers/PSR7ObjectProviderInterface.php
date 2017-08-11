@@ -29,3 +29,5 @@ interface PSR7ObjectProviderInterface
      */
     public function getServerRequestFactory(): ServerRequestFactoryInterface;
 
+    /**
+     * @return ResponseFactoryInterface

@@ -53,3 +53,5 @@ class ResponseEmitter
     }
 
     /**
+     * Emit Response Headers
+     */

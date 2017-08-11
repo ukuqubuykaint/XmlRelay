@@ -13,3 +13,5 @@ namespace Slim\Interfaces;
 use InvalidArgumentException;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
+
+/** @api */

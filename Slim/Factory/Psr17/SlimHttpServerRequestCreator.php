@@ -26,3 +26,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
     {
         $this->serverRequestCreator = $serverRequestCreator;
     }
+
+    /**
+     * {@inheritdoc}

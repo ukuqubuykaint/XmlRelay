@@ -29,3 +29,6 @@ final class RouteContext
     public static function fromRequest(ServerRequestInterface $serverRequest): self
     {
         $route = $serverRequest->getAttribute(self::ROUTE);
+        $routeParser = $serverRequest->getAttribute(self::ROUTE_PARSER);
+        $routingResults = $serverRequest->getAttribute(self::ROUTING_RESULTS);
+        $basePath = $serverRequest->getAttribute(self::BASE_PATH);

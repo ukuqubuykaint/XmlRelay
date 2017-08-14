@@ -176,3 +176,7 @@ class MiddlewareDispatcherTest extends TestCase
 
         $containerProphecy = $this->prophesize(ContainerInterface::class);
 
+        $containerProphecy
+            ->has(Argument::any())
+            ->willReturn(true)
+            ->shouldBeCalledOnce();

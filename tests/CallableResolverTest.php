@@ -183,3 +183,5 @@ class CallableResolverTest extends TestCase
 
     public function testContainer(): void
     {
+        $this->containerProphecy->has('callable_service')->willReturn(true);
+        $this->containerProphecy->get('callable_service')->willReturn(new CallableTest());

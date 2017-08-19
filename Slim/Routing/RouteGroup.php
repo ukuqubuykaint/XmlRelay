@@ -23,3 +23,6 @@ class RouteGroup implements RouteGroupInterface
      * @var callable|string
      */
     protected $callable;
+
+    protected CallableResolverInterface $callableResolver;
+

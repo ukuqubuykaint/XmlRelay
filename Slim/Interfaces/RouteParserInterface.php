@@ -15,3 +15,6 @@ use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
 /** @api */
+interface RouteParserInterface
+{
+    /**

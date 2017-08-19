@@ -246,3 +246,4 @@ class RouteTest extends TestCase
             $groups
         );
 
+        $this->assertSame($groups, $route->getGroups());

@@ -46,3 +46,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         string $groupPattern = ''
     ) {
         $this->responseFactory = $responseFactory;
+        $this->callableResolver = $callableResolver;

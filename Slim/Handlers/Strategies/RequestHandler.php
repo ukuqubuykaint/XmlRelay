@@ -18,3 +18,7 @@ use Slim\Interfaces\RequestHandlerInvocationStrategyInterface;
  * PSR-15 RequestHandler invocation strategy
  */
 class RequestHandler implements RequestHandlerInvocationStrategyInterface
+{
+    protected bool $appendRouteArgumentsToRequestAttributes;
+
+    public function __construct(bool $appendRouteArgumentsToRequestAttributes = false)

@@ -32,3 +32,7 @@ class Dispatcher implements DispatcherInterface
 
             foreach ($this->routeCollector->getRoutes() as $route) {
                 $r->addRoute($route->getMethods(), $basePath . $route->getPattern(), $route->getIdentifier());
+            }
+        };
+
+        $cacheFile = $this->routeCollector->getCacheFile();

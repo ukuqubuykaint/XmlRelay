@@ -62,3 +62,6 @@ class ResponseEmitterTest extends TestCase
     {
         $availableFilter = stream_get_filters();
 
+        $filterName = 'string.rot13';
+        $unfilterName = 'string.rot13';
+        $specificFilterName = 'string.rot13';

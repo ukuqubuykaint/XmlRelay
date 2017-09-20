@@ -21,3 +21,4 @@ use Slim\Routing\RouteRunner;
 use Slim\Routing\RoutingResults;
 use Slim\Tests\TestCase;
 
+class RouteRunnerTest extends TestCase

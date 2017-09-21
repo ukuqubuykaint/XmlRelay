@@ -13,3 +13,4 @@
             <directory>tests</directory>
             <exclude>tests/Mocks</exclude>
         </testsuite>
+    </testsuites>

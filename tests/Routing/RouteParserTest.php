@@ -43,3 +43,4 @@ class RouteParserTest extends TestCase
             ],
             'with query parameters containing array with string keys' => [
                 false,
+                '/{first}/{second}',

@@ -32,3 +32,7 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             $html = '<p>The application could not run because of the following error:</p>';
             $html .= '<h2>Details</h2>';
             $html .= $this->renderExceptionFragment($exception);
+        } else {
+            $description = htmlspecialchars(
+                $this->getErrorDescription($exception),
+                ENT_QUOTES | ENT_SUBSTITUTE,

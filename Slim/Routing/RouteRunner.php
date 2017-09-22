@@ -20,3 +20,5 @@ use Slim\Interfaces\RouteParserInterface;
 use Slim\Interfaces\RouteResolverInterface;
 use Slim\Middleware\RoutingMiddleware;
 
+class RouteRunner implements RequestHandlerInterface
+{

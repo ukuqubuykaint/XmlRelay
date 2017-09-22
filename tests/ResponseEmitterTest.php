@@ -65,3 +65,5 @@ class ResponseEmitterTest extends TestCase
         $filterName = 'string.rot13';
         $unfilterName = 'string.rot13';
         $specificFilterName = 'string.rot13';
+        $specificUnfilterName = 'string.rot13';
+

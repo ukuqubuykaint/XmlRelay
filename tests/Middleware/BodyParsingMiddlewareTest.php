@@ -62,3 +62,6 @@ class BodyParsingMiddlewareTest extends TestCase
         }
         return $request;
     }
+
+
+    public static function parsingProvider()

@@ -49,3 +49,6 @@ class MethodOverrideMiddlewareTest extends TestCase
         })->bindTo($this);
 
         $methodOverrideMiddleware = new MethodOverrideMiddleware();
+
+        $request = $this
+            ->createServerRequest('/', 'POST')

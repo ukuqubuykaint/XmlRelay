@@ -60,3 +60,4 @@ interface RouteCollectorProxyInterface
 
     /**
      * Add PUT route
+     *

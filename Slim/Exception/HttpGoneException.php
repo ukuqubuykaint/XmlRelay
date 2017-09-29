@@ -14,3 +14,4 @@ namespace Slim\Exception;
 class HttpGoneException extends HttpSpecializedException
 {
     /**
+     * @var int

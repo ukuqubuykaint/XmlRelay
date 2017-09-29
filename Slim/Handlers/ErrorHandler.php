@@ -62,3 +62,5 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * @var array<string|callable>
      */
+    protected array $errorRenderers = [
+        'application/json' => JsonErrorRenderer::class,

@@ -90,3 +90,4 @@ class AbstractErrorRendererTest extends TestCase
             ->getDescription()
             ->willReturn($exceptionDescription)
             ->shouldBeCalledOnce();
+

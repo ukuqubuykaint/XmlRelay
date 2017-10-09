@@ -92,3 +92,7 @@ class RouteCollectorProxyTest extends TestCase
         $this->assertSame(
             $routeCollectorProphecy->reveal(),
             $routeCollectorProxy->getRouteCollector()
+        );
+    }
+
+    public function testGetSetBasePath()

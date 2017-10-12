@@ -15,3 +15,4 @@ class HttpGoneException extends HttpSpecializedException
 {
     /**
      * @var int
+     */

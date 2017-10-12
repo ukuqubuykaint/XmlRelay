@@ -55,3 +55,7 @@ class AppFactory
         ?ContainerInterface $container = null,
         ?CallableResolverInterface $callableResolver = null,
         ?RouteCollectorInterface $routeCollector = null,
+        ?RouteResolverInterface $routeResolver = null,
+        ?MiddlewareDispatcherInterface $middlewareDispatcher = null
+    ): App {
+        static::$responseFactory = $responseFactory ?? static::$responseFactory;

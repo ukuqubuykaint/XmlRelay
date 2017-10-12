@@ -31,3 +31,4 @@ interface PSR7ObjectProviderInterface
 
     /**
      * @return ResponseFactoryInterface
+     */

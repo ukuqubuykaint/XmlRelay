@@ -96,3 +96,7 @@ class RouteCollectorProxyTest extends TestCase
     }
 
     public function testGetSetBasePath()
+    {
+        $basePath = '/base/path';
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

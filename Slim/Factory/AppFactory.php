@@ -59,3 +59,6 @@ class AppFactory
         ?MiddlewareDispatcherInterface $middlewareDispatcher = null
     ): App {
         static::$responseFactory = $responseFactory ?? static::$responseFactory;
+        return new App(
+            self::determineResponseFactory(),
+            $container ?? static::$container,

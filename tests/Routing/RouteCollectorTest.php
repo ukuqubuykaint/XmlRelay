@@ -53,3 +53,6 @@ class RouteCollectorTest extends TestCase
         $this->assertSame($basePath, $routeCollector->getBasePath());
     }
 
+    public function testMap()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

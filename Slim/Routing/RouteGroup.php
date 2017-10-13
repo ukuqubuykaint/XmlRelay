@@ -26,3 +26,7 @@ class RouteGroup implements RouteGroupInterface
 
     protected CallableResolverInterface $callableResolver;
 
+    /**
+     * @var RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null>
+     */
+    protected RouteCollectorProxyInterface $routeCollectorProxy;

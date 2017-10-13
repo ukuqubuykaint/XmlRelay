@@ -19,3 +19,4 @@ use Psr\Http\Message\ServerRequestInterface;
 interface InvocationStrategyInterface
 {
     /**
+     * Invoke a route callable.

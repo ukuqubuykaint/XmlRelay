@@ -41,3 +41,6 @@ use function trim;
 class HeaderStack
 {
     /**
+     * @var string[][]
+     */
+    private static $data = [];

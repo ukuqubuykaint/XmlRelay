@@ -250,3 +250,5 @@ class RouteTest extends TestCase
     }
 
     public function testArgumentSetting()
+    {
+        $route = $this->createRoute();

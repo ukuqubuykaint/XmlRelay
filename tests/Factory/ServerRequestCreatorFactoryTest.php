@@ -38,3 +38,5 @@ class ServerRequestCreatorFactoryTest extends TestCase
             [HttpSoftPsr17Factory::class, HttpSoftServerRequest::class],
             [NyholmPsr17Factory::class, NyholmServerRequest::class],
             [GuzzlePsr17Factory::class, GuzzleServerRequest::class],
+            [LaminasDiactorosPsr17Factory::class, LaminasDiactorosServerRequest::class],
+        ];

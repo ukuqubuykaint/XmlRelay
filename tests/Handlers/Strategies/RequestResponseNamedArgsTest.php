@@ -49,3 +49,4 @@ class RequestResponseNamedArgsTest extends TestCase
 
     public function testCallingWithKnownArguments()
     {
+        if (PHP_VERSION_ID < self::PHP_8_0_VERSION_ID) {

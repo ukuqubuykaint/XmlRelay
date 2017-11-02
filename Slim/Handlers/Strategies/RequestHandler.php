@@ -22,3 +22,7 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
     protected bool $appendRouteArgumentsToRequestAttributes;
 
     public function __construct(bool $appendRouteArgumentsToRequestAttributes = false)
+    {
+        $this->appendRouteArgumentsToRequestAttributes = $appendRouteArgumentsToRequestAttributes;
+    }
+

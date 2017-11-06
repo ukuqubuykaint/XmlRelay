@@ -252,3 +252,4 @@ class RouteTest extends TestCase
     public function testArgumentSetting()
     {
         $route = $this->createRoute();
+        $route->setArguments(['foo' => 'FOO', 'bar' => 'BAR']);

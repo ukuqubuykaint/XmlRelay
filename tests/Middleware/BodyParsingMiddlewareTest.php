@@ -65,3 +65,7 @@ class BodyParsingMiddlewareTest extends TestCase
 
 
     public static function parsingProvider()
+    {
+        return [
+            'form' => [
+                'application/x-www-form-urlencoded;charset=utf8',

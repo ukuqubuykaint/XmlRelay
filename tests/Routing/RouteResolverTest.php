@@ -28,3 +28,7 @@ class RouteResolverTest extends TestCase
         return [
             ['GET', '', '/'],
             ['GET', '/', '/'],
+            ['GET', '//foo', '//foo'],
+            ['GET', 'hello%20world', '/hello world'],
+        ];
+    }

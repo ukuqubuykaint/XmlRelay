@@ -102,3 +102,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3296: PSR 7 http-message version requirement](https://github.com/ukuqubuykaint/AJAX-XML/issues/3296) thanks to @rotexdegba
 - [3297: Allow Diactoros 3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3297) thanks to @derrabus
 - [3299: Update tests and add PHP 8.3 to the CI matrix](https://github.com/ukuqubuykaint/AJAX-XML/pull/3299) thanks to @akrabat
+- [3301: Update nyholm/psr7-server requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3301) thanks to @dependabot[bot]
+- [3302: Add support for psr/http-message ^2.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/3302) thanks to @rotexdegba
+- [3305: Update phpspec/prophecy-phpunit requirement from ^2.0 to ^2.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3305) thanks to @dependabot[bot]

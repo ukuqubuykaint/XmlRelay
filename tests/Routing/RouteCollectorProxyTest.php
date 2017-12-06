@@ -100,3 +100,4 @@ class RouteCollectorProxyTest extends TestCase
         $basePath = '/base/path';
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

@@ -56,3 +56,7 @@ class RouteCollectorTest extends TestCase
     public function testMap()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $route = $routeCollector->map(['GET'], '/', function () {

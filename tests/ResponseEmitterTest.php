@@ -67,3 +67,4 @@ class ResponseEmitterTest extends TestCase
         $specificFilterName = 'string.rot13';
         $specificUnfilterName = 'string.rot13';
 
+        if (in_array($filterName, $availableFilter) && in_array($unfilterName, $availableFilter)) {

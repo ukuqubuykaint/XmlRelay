@@ -60,3 +60,6 @@ class RouteCollectorTest extends TestCase
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $route = $routeCollector->map(['GET'], '/', function () {
+        });
+
+        $routes = $routeCollector->getRoutes();

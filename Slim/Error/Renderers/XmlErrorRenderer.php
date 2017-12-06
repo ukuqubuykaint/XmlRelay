@@ -22,3 +22,5 @@ use function str_replace;
  */
 class XmlErrorRenderer extends AbstractErrorRenderer
 {
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string
+    {

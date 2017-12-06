@@ -32,3 +32,5 @@ class RouteResolverTest extends TestCase
             ['GET', 'hello%20world', '/hello world'],
         ];
     }
+
+    /**

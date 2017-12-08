@@ -13,3 +13,5 @@ namespace Slim\Exception;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
+abstract class HttpSpecializedException extends HttpException
+{

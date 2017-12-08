@@ -34,3 +34,4 @@ class RoutingMiddleware implements MiddlewareInterface
         $this->routeParser = $routeParser;
     }
 
+    /**

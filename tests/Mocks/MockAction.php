@@ -20,3 +20,5 @@ class MockAction
 {
     public function __call($name, array $arguments)
     {
+        if (count($arguments) !== 3) {
+            throw new InvalidArgumentException("Not a Slim call");

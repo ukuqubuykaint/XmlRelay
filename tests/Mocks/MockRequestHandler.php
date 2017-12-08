@@ -34,3 +34,5 @@ class MockRequestHandler implements RequestHandlerInterface
         $this->calledCount += 1;
         return $responseFactory->createResponse();
     }
+
+    /**

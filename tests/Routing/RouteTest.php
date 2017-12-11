@@ -253,3 +253,5 @@ class RouteTest extends TestCase
     {
         $route = $this->createRoute();
         $route->setArguments(['foo' => 'FOO', 'bar' => 'BAR']);
+        $this->assertSame($route->getArguments(), ['foo' => 'FOO', 'bar' => 'BAR']);
+

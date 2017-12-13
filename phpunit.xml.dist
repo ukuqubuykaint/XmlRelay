@@ -14,3 +14,4 @@
             <exclude>tests/Mocks</exclude>
         </testsuite>
     </testsuites>
+    <coverage>

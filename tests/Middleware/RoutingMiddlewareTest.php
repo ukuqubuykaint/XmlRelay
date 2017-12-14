@@ -54,3 +54,5 @@ class RoutingMiddlewareTest extends TestCase
             $this->assertInstanceOf(RouteParserInterface::class, $routeParser);
 
             // routingResults is available
+            $routingResults = $request->getAttribute(RouteContext::ROUTING_RESULTS);
+            $this->assertInstanceOf(RoutingResults::class, $routingResults);

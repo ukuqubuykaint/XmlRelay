@@ -72,3 +72,7 @@ class BodyParsingMiddlewareTest extends TestCase
                 'foo=bar',
                 ['foo' => 'bar'],
             ],
+            'json' => [
+                "application/json",
+                '{"foo":"bar"}',
+                ['foo' => 'bar'],

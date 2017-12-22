@@ -63,3 +63,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         return $handler->handle($request);
     }
+
+    /**
+     * @param string $mediaType A HTTP media type (excluding content-type params).
+     * @param callable $callable A callable that returns parsed contents for media type.

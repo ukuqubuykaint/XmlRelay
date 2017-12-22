@@ -16,3 +16,7 @@ use Slim\Interfaces\ServerRequestCreatorInterface;
 
 class ServerRequestCreator implements ServerRequestCreatorInterface
 {
+    /**
+     * @var object|string
+     */
+    protected $serverRequestCreator;

@@ -18,3 +18,7 @@ use Slim\Interfaces\InvocationStrategyInterface;
  * Default route callback strategy with route parameters as an array of arguments.
  */
 class RequestResponse implements InvocationStrategyInterface
+{
+    /**
+     * Invoke a route callable with request, response, and all route parameters
+     * as an array of arguments.

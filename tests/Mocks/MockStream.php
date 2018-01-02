@@ -57,3 +57,5 @@ class MockStream implements StreamInterface
     private static $readWriteHash = [
         'read' => [
             'r' => true, 'w+' => true, 'r+' => true, 'x+' => true, 'c+' => true,
+            'rb' => true, 'w+b' => true, 'r+b' => true, 'x+b' => true,
+            'c+b' => true, 'rt' => true, 'w+t' => true, 'r+t' => true,

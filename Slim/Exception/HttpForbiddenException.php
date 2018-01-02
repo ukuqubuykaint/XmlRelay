@@ -14,3 +14,5 @@ namespace Slim\Exception;
 class HttpForbiddenException extends HttpSpecializedException
 {
     /**
+     * @var int
+     */

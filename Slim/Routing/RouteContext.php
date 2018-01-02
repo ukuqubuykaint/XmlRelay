@@ -32,3 +32,4 @@ final class RouteContext
         $routeParser = $serverRequest->getAttribute(self::ROUTE_PARSER);
         $routingResults = $serverRequest->getAttribute(self::ROUTING_RESULTS);
         $basePath = $serverRequest->getAttribute(self::BASE_PATH);
+

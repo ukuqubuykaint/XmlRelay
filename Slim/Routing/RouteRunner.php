@@ -23,3 +23,6 @@ use Slim\Middleware\RoutingMiddleware;
 class RouteRunner implements RequestHandlerInterface
 {
     private RouteResolverInterface $routeResolver;
+
+    private RouteParserInterface $routeParser;
+

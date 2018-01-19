@@ -14,3 +14,4 @@ use Slim\Routing\RoutingResults;
 
 interface DispatcherInterface
 {
+    /**

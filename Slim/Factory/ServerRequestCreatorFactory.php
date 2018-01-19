@@ -32,3 +32,5 @@ class ServerRequestCreatorFactory
     }
 
     /**
+     * @throws RuntimeException
+     */

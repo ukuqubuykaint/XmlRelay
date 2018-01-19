@@ -92,3 +92,7 @@ class ErrorHandlerTest extends TestCase
         $statusCode = $method->invoke($handler);
         $this->assertSame($statusCode, 404);
 
+        $reflectionProperty->setValue($handler, new MockCustomException());
+
+        $statusCode = $method->invoke($handler);
+        $this->assertSame($statusCode, 500);

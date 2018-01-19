@@ -36,3 +36,5 @@ class MockRequestHandler implements RequestHandlerInterface
     }
 
     /**
+     * @return int
+     */

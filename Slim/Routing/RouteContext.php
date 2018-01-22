@@ -34,3 +34,6 @@ final class RouteContext
         $basePath = $serverRequest->getAttribute(self::BASE_PATH);
 
         if ($routeParser === null || $routingResults === null) {
+            throw new RuntimeException('Cannot create RouteContext before routing has been completed');
+        }
+

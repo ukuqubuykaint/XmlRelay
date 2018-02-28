@@ -51,3 +51,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         $this->routeCollector = $routeCollector ?? new RouteCollector($responseFactory, $callableResolver, $container);
         $this->groupPattern = $groupPattern;
     }
+
+    /**
+     * {@inheritdoc}
+     */

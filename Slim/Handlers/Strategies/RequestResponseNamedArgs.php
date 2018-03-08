@@ -20,3 +20,4 @@ use RuntimeException;
  * @api
  */
 class RequestResponseNamedArgs implements InvocationStrategyInterface
+{

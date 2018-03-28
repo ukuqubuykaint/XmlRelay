@@ -14,3 +14,6 @@ use Slim\Exception\HttpUnauthorizedException;
 use Slim\Tests\TestCase;
 
 class HttpUnauthorizedExceptionTest extends TestCase
+{
+    public function testHttpUnauthorizedException()
+    {

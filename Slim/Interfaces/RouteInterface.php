@@ -33,3 +33,6 @@ interface RouteInterface
      * @return string[]
      */
     public function getMethods(): array;
+
+    /**
+     * Get route pattern

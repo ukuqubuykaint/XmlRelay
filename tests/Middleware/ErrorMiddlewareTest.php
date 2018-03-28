@@ -87,3 +87,6 @@ class ErrorMiddlewareTest extends TestCase
             $response->getBody()->write('Oops..');
             return $response;
         })->bindTo($this);
+
+        $errorMiddleware = new ErrorMiddleware(
+            $callableResolver,

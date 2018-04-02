@@ -18,3 +18,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 class MockSequenceMiddleware implements MiddlewareInterface
 {
     /**
+     * @var string
+     */
+    public static $id = '0';

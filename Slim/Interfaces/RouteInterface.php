@@ -36,3 +36,6 @@ interface RouteInterface
 
     /**
      * Get route pattern
+     */
+    public function getPattern(): string;
+

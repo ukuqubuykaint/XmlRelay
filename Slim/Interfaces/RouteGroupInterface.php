@@ -18,3 +18,7 @@ interface RouteGroupInterface
 {
     public function collectRoutes(): RouteGroupInterface;
 
+    /**
+     * Add middleware to the route group
+     *
+     * @param MiddlewareInterface|string|callable $middleware

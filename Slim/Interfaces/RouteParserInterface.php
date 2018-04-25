@@ -22,3 +22,5 @@ interface RouteParserInterface
      *
      * @param string                                           $routeName   Route name
      * @param array<string, string>                            $data        Named argument replacement data
+     * @param array<string, string | array<array-key, string>> $queryParams Optional query string parameters
+     *

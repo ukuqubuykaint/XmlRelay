@@ -47,3 +47,6 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'HTTP_HOST' => 'localhost',
             'HTTP_USER_AGENT' => 'Slim Framework',
             'QUERY_STRING' => '',
+            'REMOTE_ADDR' => '127.0.0.1',
+            'REQUEST_METHOD' => $method,
+            'REQUEST_TIME' => time(),

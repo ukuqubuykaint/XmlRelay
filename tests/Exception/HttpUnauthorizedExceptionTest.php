@@ -17,3 +17,6 @@ class HttpUnauthorizedExceptionTest extends TestCase
 {
     public function testHttpUnauthorizedException()
     {
+        $request = $this->createServerRequest('/');
+        $exception = new HttpUnauthorizedException($request);
+

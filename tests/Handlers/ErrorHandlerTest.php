@@ -96,3 +96,5 @@ class ErrorHandlerTest extends TestCase
 
         $statusCode = $method->invoke($handler);
         $this->assertSame($statusCode, 500);
+    }
+

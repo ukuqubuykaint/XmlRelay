@@ -36,3 +36,7 @@ class RouteParser implements RouteParserInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function relativeUrlFor(string $routeName, array $data = [], array $queryParams = []): string
+    {
+        $route = $this->routeCollector->getNamedRoute($routeName);

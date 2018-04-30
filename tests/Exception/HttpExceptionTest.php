@@ -19,3 +19,7 @@ class HttpExceptionTest extends TestCase
 {
     public function testHttpExceptionRequestReponseGetterSetters()
     {
+        $request = $this->createServerRequest('/');
+        $exception = new HttpNotFoundException($request);
+
+        $this->assertInstanceOf(ServerRequestInterface::class, $exception->getRequest());

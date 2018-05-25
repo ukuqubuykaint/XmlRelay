@@ -26,3 +26,4 @@ class RouteResolver implements RouteResolverInterface
 {
     protected RouteCollectorInterface $routeCollector;
 
+    private DispatcherInterface $dispatcher;

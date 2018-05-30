@@ -13,3 +13,5 @@ namespace Slim\Exception;
 /** @api */
 class HttpUnauthorizedException extends HttpSpecializedException
 {
+    /**
+     * @var int

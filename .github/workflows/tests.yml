@@ -30,3 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Set up PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}

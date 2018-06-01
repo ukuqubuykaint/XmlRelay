@@ -19,3 +19,5 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class MockMiddlewareWithConstructor implements MiddlewareInterface
 {
+    /**
+     * @var ContainerInterface|null

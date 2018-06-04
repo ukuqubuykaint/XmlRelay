@@ -30,3 +30,7 @@ class RouteGroup implements RouteGroupInterface
      * @var RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null>
      */
     protected RouteCollectorProxyInterface $routeCollectorProxy;
+
+    /**
+     * @var MiddlewareInterface[]|string[]|callable[]
+     */

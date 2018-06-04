@@ -19,3 +19,5 @@ class Psr17FactoryTest extends TestCase
     public function testGetResponseFactoryThrowsRuntimeException()
     {
         $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Slim\\Tests\\Mocks\\MockPsr17Factory could not instantiate a response factory.');
+

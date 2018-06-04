@@ -83,3 +83,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * @param MiddlewareInterface|string|callable $middleware
      */
     public function add($middleware): MiddlewareDispatcherInterface
+    {

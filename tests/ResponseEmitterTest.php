@@ -68,3 +68,7 @@ class ResponseEmitterTest extends TestCase
         $specificUnfilterName = 'string.rot13';
 
         if (in_array($filterName, $availableFilter) && in_array($unfilterName, $availableFilter)) {
+            $key = base64_decode('xxxxxxxxxxxxxxxx');
+            $iv = base64_decode('Z6wNDk9LogWI4HYlRu0mng==');
+
+            $data = 'Hello';

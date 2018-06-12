@@ -14,3 +14,4 @@ class LaminasDiactorosPsr17Factory extends Psr17Factory
 {
     protected static string $responseFactoryClass = 'Laminas\Diactoros\ResponseFactory';
     protected static string $streamFactoryClass = 'Laminas\Diactoros\StreamFactory';
+    protected static string $serverRequestCreatorClass = 'Laminas\Diactoros\ServerRequestFactory';

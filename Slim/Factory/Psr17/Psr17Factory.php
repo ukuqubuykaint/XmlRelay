@@ -49,3 +49,4 @@ abstract class Psr17Factory implements Psr17FactoryInterface
      */
     public static function getStreamFactory(): StreamFactoryInterface
     {
+        if (

@@ -27,3 +27,4 @@ class RequestHandlerTest implements RequestHandlerInterface
         static::$CalledCount++;
 
         // store the strategy that was used to call this handler - it's in the back trace
+        $trace = debug_backtrace();

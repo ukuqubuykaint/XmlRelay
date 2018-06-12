@@ -98,3 +98,4 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame($statusCode, 500);
     }
 
+    /**

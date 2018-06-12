@@ -10,3 +10,4 @@ declare(strict_types=1);
 
 namespace Slim\Interfaces;
 
+interface AdvancedCallableResolverInterface extends CallableResolverInterface

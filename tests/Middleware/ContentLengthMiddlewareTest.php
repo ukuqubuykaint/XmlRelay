@@ -21,3 +21,5 @@ class ContentLengthMiddlewareTest extends TestCase
         $request = $this->createServerRequest('/');
         $responseFactory = $this->getResponseFactory();
 
+        $mw = function ($request, $handler) use ($responseFactory) {
+            $response = $responseFactory->createResponse();

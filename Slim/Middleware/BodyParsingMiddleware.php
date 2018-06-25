@@ -73,3 +73,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
         $this->bodyParsers[$mediaType] = $callable;
         return $this;
     }
+

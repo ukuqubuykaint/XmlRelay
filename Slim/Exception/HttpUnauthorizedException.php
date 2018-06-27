@@ -15,3 +15,4 @@ class HttpUnauthorizedException extends HttpSpecializedException
 {
     /**
      * @var int
+     */

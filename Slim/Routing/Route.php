@@ -89,3 +89,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     protected MiddlewareDispatcher $middlewareDispatcher;
 
     /**
+     * Route callable
+     *
+     * @var callable|array{class-string, string}|string

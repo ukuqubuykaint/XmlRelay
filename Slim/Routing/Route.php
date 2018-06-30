@@ -92,3 +92,7 @@ class Route implements RouteInterface, RequestHandlerInterface
      * Route callable
      *
      * @var callable|array{class-string, string}|string
+     */
+    protected $callable;
+
+    protected CallableResolverInterface $callableResolver;

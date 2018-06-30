@@ -30,3 +30,5 @@ interface Psr17FactoryInterface
      * @throws RuntimeException when the factory could not be instantiated
      */
     public static function getServerRequestCreator(): ServerRequestCreatorInterface;
+
+    /**

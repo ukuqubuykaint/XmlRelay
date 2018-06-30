@@ -34,3 +34,5 @@ class RouteGroup implements RouteGroupInterface
     /**
      * @var MiddlewareInterface[]|string[]|callable[]
      */
+    protected array $middleware = [];
+

@@ -30,3 +30,6 @@ interface RouteCollectorInterface
      * Set default route invocation strategy
      */
     public function setDefaultInvocationStrategy(InvocationStrategyInterface $strategy): RouteCollectorInterface;
+
+    /**
+     * Get path to FastRoute cache file

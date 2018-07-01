@@ -43,3 +43,6 @@ class Dispatcher implements DispatcherInterface
                 'dispatcher' => FastRouteDispatcher::class,
                 'routeParser' => new Std(),
                 'cacheFile' => $cacheFile,
+            ]);
+        } else {
+            /** @var FastRouteDispatcher $dispatcher */

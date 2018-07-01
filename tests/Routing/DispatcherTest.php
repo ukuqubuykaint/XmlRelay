@@ -55,3 +55,4 @@ class DispatcherTest extends TestCase
         $route->setName('foo');
 
         $cacheFile = __DIR__ . '/' . uniqid((string) microtime(true));
+        $routeCollector->setCacheFile($cacheFile);

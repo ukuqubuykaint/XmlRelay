@@ -20,3 +20,6 @@ use Throwable;
  * It outputs the error message and diagnostic information in one of the following formats:
  * JSON, XML, Plain Text or HTML
  */
+abstract class AbstractErrorRenderer implements ErrorRendererInterface
+{
+    protected string $defaultErrorTitle = 'Slim Application Error';

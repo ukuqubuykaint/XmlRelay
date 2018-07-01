@@ -21,3 +21,5 @@ class HttpInternalServerErrorException extends HttpSpecializedException
     /**
      * @var string
      */
+    protected $message = 'Internal server error.';
+

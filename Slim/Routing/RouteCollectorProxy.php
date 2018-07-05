@@ -57,3 +57,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function getResponseFactory(): ResponseFactoryInterface
     {
+        return $this->responseFactory;
+    }
+
+    /**

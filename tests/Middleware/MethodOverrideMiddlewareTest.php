@@ -55,3 +55,4 @@ class MethodOverrideMiddlewareTest extends TestCase
             ->withParsedBody(['_METHOD' => 'PUT']);
 
         $middlewareDispatcher = $this->createMiddlewareDispatcher(
+            $this->createMock(RequestHandler::class),

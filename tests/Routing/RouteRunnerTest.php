@@ -23,3 +23,5 @@ use Slim\Tests\TestCase;
 
 class RouteRunnerTest extends TestCase
 {
+    public function testRoutingIsPerformedIfRoutingResultsAreUnavailable()
+    {

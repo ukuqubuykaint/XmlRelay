@@ -32,3 +32,5 @@ Override::apply($classLoader, [
                     'status_code' => $statusCode,
                 ]
             );
+        },
+        'headers_sent' => function (): bool {

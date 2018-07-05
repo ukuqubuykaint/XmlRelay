@@ -138,3 +138,7 @@ class AppFactoryTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testResponseFactoryIsStillReturnedIfStreamFactoryIsNotAvailable()
+    {
+        Psr17FactoryProvider::setFactories([MockPsr17FactoryWithoutStreamFactory::class]);
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
+

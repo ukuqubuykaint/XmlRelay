@@ -17,3 +17,5 @@ use Throwable;
 /**
  * @api
  * @method int getCode()
+ */
+class HttpException extends RuntimeException

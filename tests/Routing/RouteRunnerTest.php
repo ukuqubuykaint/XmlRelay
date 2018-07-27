@@ -25,3 +25,5 @@ class RouteRunnerTest extends TestCase
 {
     public function testRoutingIsPerformedIfRoutingResultsAreUnavailable()
     {
+        $handler = (function (ServerRequestInterface $request, ResponseInterface $response) {
+            $routeParser = $request->getAttribute(RouteContext::ROUTE_PARSER);

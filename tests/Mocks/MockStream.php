@@ -67,3 +67,4 @@ class MockStream implements StreamInterface
             'x+b' => true, 'c+b' => true, 'w+t' => true, 'r+t' => true,
             'x+t' => true, 'c+t' => true, 'a' => true, 'a+' => true,
         ],
+    ];

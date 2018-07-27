@@ -38,3 +38,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
                 ENT_QUOTES | ENT_SUBSTITUTE,
                 'UTF-8'
             );
+            $html = "<p>{$description}</p>";
+        }
+

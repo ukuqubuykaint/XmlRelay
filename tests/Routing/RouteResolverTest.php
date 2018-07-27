@@ -37,3 +37,4 @@ class RouteResolverTest extends TestCase
      * @dataProvider computeRoutingResultsDataProvider
      *
      * @param string $method      The request method
+     * @param string $uri         The request uri

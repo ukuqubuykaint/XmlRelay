@@ -28,3 +28,4 @@ class XmlErrorRenderer extends AbstractErrorRenderer
         $xml .= "<error>\n  <message>" . $this->createCdataSection($this->getErrorTitle($exception)) . "</message>\n";
 
         if ($displayErrorDetails) {
+            do {

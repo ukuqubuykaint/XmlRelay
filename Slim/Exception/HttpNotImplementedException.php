@@ -19,3 +19,4 @@ class HttpNotImplementedException extends HttpSpecializedException
     protected $code = 501;
 
     /**
+     * @var string

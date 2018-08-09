@@ -39,3 +39,6 @@ class RouteContextTest extends TestCase
         $this->assertSame($routingResults, $routeContext->getRoutingResults());
         $this->assertSame('', $routeContext->getBasePath());
     }
+
+    public function testCanCreateInstanceWithoutRoute(): void
+    {

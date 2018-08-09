@@ -68,3 +68,5 @@ class AppFactory
             $middlewareDispatcher ?? static::$middlewareDispatcher
         );
     }
+
+    /**

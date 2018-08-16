@@ -94,3 +94,4 @@ class RouteCollector implements RouteCollectorInterface
         ?string $cacheFile = null
     ) {
         $this->responseFactory = $responseFactory;
+        $this->callableResolver = $callableResolver;

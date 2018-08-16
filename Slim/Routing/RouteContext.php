@@ -49,3 +49,6 @@ final class RouteContext
     private RouteParserInterface $routeParser;
 
     private RoutingResults $routingResults;
+
+    private ?string $basePath;
+

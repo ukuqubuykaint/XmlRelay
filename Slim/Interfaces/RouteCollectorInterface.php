@@ -36,3 +36,4 @@ interface RouteCollectorInterface
      */
     public function getCacheFile(): ?string;
 
+    /**

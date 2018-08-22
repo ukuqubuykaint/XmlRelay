@@ -13,3 +13,5 @@ namespace Slim\Exception;
 /** @api */
 class HttpBadRequestException extends HttpSpecializedException
 {
+    /**
+     * @var int

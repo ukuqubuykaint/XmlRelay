@@ -20,3 +20,4 @@ class HttpNotImplementedException extends HttpSpecializedException
 
     /**
      * @var string
+     */

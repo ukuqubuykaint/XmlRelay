@@ -56,3 +56,6 @@ class DispatcherTest extends TestCase
 
         $cacheFile = __DIR__ . '/' . uniqid((string) microtime(true));
         $routeCollector->setCacheFile($cacheFile);
+
+        $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
+        $this->setAccessible($method);

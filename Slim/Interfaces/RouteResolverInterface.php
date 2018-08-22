@@ -10,3 +10,4 @@ interface RouteResolverInterface
 {
     /**
      * @param string $uri Should be ServerRequestInterface::getUri()->getPath()
+     */

@@ -41,3 +41,4 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             $html = "<p>{$description}</p>";
         }
 
+        return $this->renderHtmlBody($this->getErrorTitle($exception), $html);

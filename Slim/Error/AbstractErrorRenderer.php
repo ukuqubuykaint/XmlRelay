@@ -23,3 +23,4 @@ use Throwable;
 abstract class AbstractErrorRenderer implements ErrorRendererInterface
 {
     protected string $defaultErrorTitle = 'Slim Application Error';
+

@@ -9,3 +9,4 @@
 
     <!-- inherit rules from: -->
     <rule ref="PSR12"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>

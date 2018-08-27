@@ -497,3 +497,7 @@ class AppTest extends TestCase
             'empty group with nested group segment with segment route' => [
                 ['', '/foo', '/bar'], '/foo/bar'
             ],
+            'empty group with nested group segment with segment route that has aTrailing slash' => [
+                ['', '/foo', '/bar/'], '/foo/bar/'
+            ],
+            'group segment with empty nested group and segment route without leading slash' => [

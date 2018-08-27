@@ -60,3 +60,4 @@ class RoutingMiddlewareTest extends TestCase
         })->bindTo($this);
 
         $routeCollector = $this->getRouteCollector();
+        $routeParser = new RouteParser($routeCollector);

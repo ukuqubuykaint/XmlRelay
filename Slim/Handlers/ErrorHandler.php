@@ -67,3 +67,6 @@ class ErrorHandler implements ErrorHandlerInterface
         'application/xml' => XmlErrorRenderer::class,
         'text/xml' => XmlErrorRenderer::class,
         'text/html' => HtmlErrorRenderer::class,
+        'text/plain' => PlainTextErrorRenderer::class,
+    ];
+

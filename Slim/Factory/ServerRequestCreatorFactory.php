@@ -34,3 +34,5 @@ class ServerRequestCreatorFactory
     /**
      * @throws RuntimeException
      */
+    public static function determineServerRequestCreator(): ServerRequestCreatorInterface
+    {

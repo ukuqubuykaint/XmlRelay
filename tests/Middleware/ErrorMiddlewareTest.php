@@ -92,3 +92,6 @@ class ErrorMiddlewareTest extends TestCase
             $callableResolver,
             $this->getResponseFactory(),
             false,
+            false,
+            false,
+            $logger

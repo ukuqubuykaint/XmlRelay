@@ -42,3 +42,6 @@ class RouteParser implements RouteParserInterface
         $route = $this->routeCollector->getNamedRoute($routeName);
         $pattern = $route->getPattern();
 
+        $segments = [];
+        $segmentName = '';
+

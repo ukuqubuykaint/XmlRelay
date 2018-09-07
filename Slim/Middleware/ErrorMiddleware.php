@@ -84,3 +84,6 @@ class ErrorMiddleware implements MiddlewareInterface
     {
         if ($exception instanceof HttpException) {
             $request = $exception->getRequest();
+        }
+
+        $exceptionType = get_class($exception);

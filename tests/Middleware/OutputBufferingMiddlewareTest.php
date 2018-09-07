@@ -41,3 +41,7 @@ class OutputBufferingMiddlewareTest extends TestCase
         $value = $reflectionProperty->getValue($middleware);
 
         $this->assertSame('prepend', $value);
+    }
+
+    public function testStyleCustomInvalid()
+    {

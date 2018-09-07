@@ -113,3 +113,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 # 4.12.0 - 2023-07-23
 
+- [3220: Refactor](https://github.com/ukuqubuykaint/AJAX-XML/pull/3220) thanks to @amirkhodabande

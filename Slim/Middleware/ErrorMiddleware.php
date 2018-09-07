@@ -87,3 +87,6 @@ class ErrorMiddleware implements MiddlewareInterface
         }
 
         $exceptionType = get_class($exception);
+        $handler = $this->getErrorHandler($exceptionType);
+
+        /** @var ResponseInterface */

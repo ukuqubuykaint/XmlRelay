@@ -114,3 +114,5 @@ You can also type-hint to the concrete instance of the container you are using t
 # 4.12.0 - 2023-07-23
 
 - [3220: Refactor](https://github.com/ukuqubuykaint/AJAX-XML/pull/3220) thanks to @amirkhodabande
+- [3237: Update phpstan/phpstan requirement from ^1.8 to ^1.9](https://github.com/ukuqubuykaint/AJAX-XML/pull/3237) thanks to @dependabot[bot]
+- [3238: Update xmlrelay/http requirement from ^1.2 to ^1.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3238) thanks to @dependabot[bot]

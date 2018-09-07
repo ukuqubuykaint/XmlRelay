@@ -18,3 +18,4 @@ class HttpForbiddenException extends HttpSpecializedException
      */
     protected $code = 403;
 
+    /**

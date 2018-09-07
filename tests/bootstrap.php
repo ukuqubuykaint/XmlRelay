@@ -35,3 +35,7 @@ Override::apply($classLoader, [
         },
         'headers_sent' => function (): bool {
             return false;
+        }
+    ],
+    RouteCollector::class => [
+        'is_readable' => function (string $file): bool {

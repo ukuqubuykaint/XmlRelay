@@ -188,3 +188,4 @@ class MiddlewareDispatcherTest extends TestCase
 
         $handler = new MockRequestHandler();
 
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(

@@ -12,3 +12,4 @@ namespace Slim\Interfaces;
 
 use Throwable;
 
+interface ErrorRendererInterface

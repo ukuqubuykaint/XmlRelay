@@ -45,3 +45,6 @@ class OutputBufferingMiddlewareTest extends TestCase
 
     public function testStyleCustomInvalid()
     {
+        $this->expectException(InvalidArgumentException::class);
+
+        new OutputBufferingMiddleware($this->getStreamFactory(), 'foo');

@@ -31,3 +31,6 @@ class RouteResolver implements RouteResolverInterface
     public function __construct(RouteCollectorInterface $routeCollector, ?DispatcherInterface $dispatcher = null)
     {
         $this->routeCollector = $routeCollector;
+        $this->dispatcher = $dispatcher ?? new Dispatcher($routeCollector);
+    }
+

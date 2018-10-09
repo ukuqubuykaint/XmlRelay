@@ -96,3 +96,7 @@ class Route implements RouteInterface, RequestHandlerInterface
     protected $callable;
 
     protected CallableResolverInterface $callableResolver;
+
+    protected ResponseFactoryInterface $responseFactory;
+
+    /**

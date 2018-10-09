@@ -48,3 +48,4 @@ class SmallChunksStream implements StreamInterface
     }
 
     public function eof(): bool
+    {

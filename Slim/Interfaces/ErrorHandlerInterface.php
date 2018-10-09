@@ -15,3 +15,5 @@ use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
 interface ErrorHandlerInterface
+{
+    public function __invoke(

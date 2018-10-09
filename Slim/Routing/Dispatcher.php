@@ -46,3 +46,4 @@ class Dispatcher implements DispatcherInterface
             ]);
         } else {
             /** @var FastRouteDispatcher $dispatcher */
+            $dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback, [

@@ -35,3 +35,5 @@ class RoutingResults
 
     protected ?string $routeIdentifier = null;
 
+    /**
+     * @var array<string, string>

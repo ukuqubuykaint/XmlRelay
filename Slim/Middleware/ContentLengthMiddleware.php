@@ -19,3 +19,5 @@ use Psr\Http\Server\RequestHandlerInterface;
 class ContentLengthMiddleware implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {
+        $response = $handler->handle($request);

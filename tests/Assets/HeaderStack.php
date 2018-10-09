@@ -46,3 +46,6 @@ class HeaderStack
     private static $data = [];
 
     /**
+     * Reset state
+     */
+    public static function reset()

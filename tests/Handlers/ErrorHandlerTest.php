@@ -109,3 +109,7 @@ class ErrorHandlerTest extends TestCase
 
         $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
         $handler->forceContentType('application/json');
+
+        $exception = new HttpNotFoundException($request);
+
+        /** @var ResponseInterface $response */

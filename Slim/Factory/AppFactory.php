@@ -74,3 +74,7 @@ class AppFactory
      * @param TContainerInterface $container
      * @return App<TContainerInterface>
      */
+    public static function createFromContainer(ContainerInterface $container): App
+    {
+        $responseFactory = $container->has(ResponseFactoryInterface::class)
+        && (

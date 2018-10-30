@@ -17,3 +17,4 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class MockMiddlewareWithoutConstructor implements MiddlewareInterface
 {
+    public static $CalledCount = 0;

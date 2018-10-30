@@ -49,3 +49,4 @@ ServerRequestCreatorFactory::setXmlRelayHttpDecoratorsAutomaticDetection(false);
 $app = AppFactory::create();
 
 // ...
+```

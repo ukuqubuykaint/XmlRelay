@@ -14,3 +14,4 @@ namespace Slim\Interfaces;
 interface Psr17FactoryProviderInterface
 {
     /**
+     * @return string[]

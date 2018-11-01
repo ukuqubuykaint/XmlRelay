@@ -27,3 +27,4 @@ class ContentLengthMiddlewareTest extends TestCase
             return $response;
         };
         $mw2 = new ContentLengthMiddleware();
+

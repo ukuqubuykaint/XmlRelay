@@ -78,3 +78,5 @@ class AppFactory
     {
         $responseFactory = $container->has(ResponseFactoryInterface::class)
         && (
+            $responseFactoryFromContainer = $container->get(ResponseFactoryInterface::class)
+        ) instanceof ResponseFactoryInterface

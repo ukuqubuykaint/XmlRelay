@@ -33,3 +33,6 @@ class FastRouteDispatcher extends GroupCountBased
     public function dispatch($httpMethod, $uri): array
     {
         $routingResults = $this->routingResults($httpMethod, $uri);
+        if ($routingResults[0] === self::FOUND) {
+            return $routingResults;
+        }

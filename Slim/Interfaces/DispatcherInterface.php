@@ -19,3 +19,5 @@ interface DispatcherInterface
      */
     public function dispatch(string $method, string $uri): RoutingResults;
 
+    /**
+     * Get allowed methods for a given uri

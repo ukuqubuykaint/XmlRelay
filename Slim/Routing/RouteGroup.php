@@ -36,3 +36,4 @@ class RouteGroup implements RouteGroupInterface
      */
     protected array $middleware = [];
 
+    protected string $pattern;

@@ -14,3 +14,4 @@ class HttpNotFoundException extends HttpSpecializedException
 {
     /**
      * @var int
+     */

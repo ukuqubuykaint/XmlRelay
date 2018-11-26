@@ -36,3 +36,4 @@ class FastRouteDispatcher extends GroupCountBased
         if ($routingResults[0] === self::FOUND) {
             return $routingResults;
         }
+

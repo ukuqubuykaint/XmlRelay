@@ -16,3 +16,5 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class MockMiddlewareSlimCallable
 {
+    /**
+     * @param ServerRequestInterface  $request

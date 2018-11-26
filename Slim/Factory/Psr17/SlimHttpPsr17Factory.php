@@ -24,3 +24,5 @@ class SlimHttpPsr17Factory extends Psr17Factory
     public static function createDecoratedResponseFactory(
         ResponseFactoryInterface $responseFactory,
         StreamFactoryInterface $streamFactory
+    ): ResponseFactoryInterface {
+        if (

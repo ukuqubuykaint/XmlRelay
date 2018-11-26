@@ -15,3 +15,4 @@ interface Psr17FactoryProviderInterface
 {
     /**
      * @return string[]
+     */

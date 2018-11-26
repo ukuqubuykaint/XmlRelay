@@ -27,3 +27,4 @@ class RequestResponseArgs implements InvocationStrategyInterface
      * as individual arguments.
      *
      * @param array<string, string>  $routeArguments
+     */

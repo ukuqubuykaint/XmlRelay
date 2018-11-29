@@ -16,3 +16,5 @@ class HttpUnauthorizedException extends HttpSpecializedException
     /**
      * @var int
      */
+    protected $code = 401;
+

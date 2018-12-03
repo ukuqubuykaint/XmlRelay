@@ -37,3 +37,7 @@ class RouteGroup implements RouteGroupInterface
     protected array $middleware = [];
 
     protected string $pattern;
+
+    /**
+     * @param callable|string              $callable
+     * @param RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null> $routeCollectorProxy

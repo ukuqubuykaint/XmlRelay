@@ -21,3 +21,4 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 
     /**
      * @var int
+     */

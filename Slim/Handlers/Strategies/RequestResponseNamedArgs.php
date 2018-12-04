@@ -26,3 +26,6 @@ class RequestResponseNamedArgs implements InvocationStrategyInterface
      * as individual arguments.
      *
      * @param array<string, string>  $routeArguments
+     */
+    public function __invoke(
+        callable $callable,

@@ -21,3 +21,6 @@ use Throwable;
 class HttpException extends RuntimeException
 {
     protected ServerRequestInterface $request;
+
+    protected string $title = '';
+

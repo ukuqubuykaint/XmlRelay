@@ -11,3 +11,4 @@
     <rule ref="PSR12"/>
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
+    <!-- Paths to check -->

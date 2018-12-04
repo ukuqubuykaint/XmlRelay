@@ -37,3 +37,4 @@ class MiddlewareTest implements MiddlewareInterface
         $response->getBody()->write("{$calledCount}");
 
         return $response;
+    }

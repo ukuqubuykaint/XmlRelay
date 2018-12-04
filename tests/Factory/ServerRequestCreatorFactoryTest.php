@@ -49,3 +49,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\DataProvider('provideImplementations')]
     public function testCreateAppWithAllImplementations(string $psr17factory, string $expectedServerRequestClass)
+    {
+        Psr17FactoryProvider::setFactories([$psr17factory]);
+        ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(false);

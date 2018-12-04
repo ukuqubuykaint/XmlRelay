@@ -13,3 +13,4 @@
 /MAINTAINERS.md     export-ignore
 /README.md          export-ignore
 /UPGRADING.md       export-ignore
+/phpcs.xml.dist     export-ignore

@@ -29,3 +29,6 @@ class ServerRequestCreator implements ServerRequestCreatorInterface
     public function __construct($serverRequestCreator, string $serverRequestCreatorMethod)
     {
         $this->serverRequestCreator = $serverRequestCreator;
+        $this->serverRequestCreatorMethod = $serverRequestCreatorMethod;
+    }
+

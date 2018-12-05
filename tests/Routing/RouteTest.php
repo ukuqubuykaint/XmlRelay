@@ -265,3 +265,7 @@ class RouteTest extends TestCase
         $this->assertSame($route->getArguments(), ['a' => 'b']);
         $this->assertSame($route->getArgument('a', 'default'), 'b');
         $this->assertSame($route->getArgument('b', 'default'), 'default');
+    }
+
+    public function testAddMiddleware()
+    {

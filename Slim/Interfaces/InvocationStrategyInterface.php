@@ -29,3 +29,4 @@ interface InvocationStrategyInterface
      * @return ResponseInterface The response from the callable.
      */
     public function __invoke(
+        callable $callable,

@@ -87,3 +87,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         if ($middleware instanceof MiddlewareInterface) {
             return $this->addMiddleware($middleware);
         }
+
+        if (is_string($middleware)) {
+            return $this->addDeferred($middleware);
+        }

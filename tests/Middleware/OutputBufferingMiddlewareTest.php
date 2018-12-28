@@ -49,3 +49,4 @@ class OutputBufferingMiddlewareTest extends TestCase
 
         new OutputBufferingMiddleware($this->getStreamFactory(), 'foo');
     }
+

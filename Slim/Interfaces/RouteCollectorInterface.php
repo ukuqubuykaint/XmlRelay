@@ -37,3 +37,5 @@ interface RouteCollectorInterface
     public function getCacheFile(): ?string;
 
     /**
+     * Set path to FastRoute cache file
+     *

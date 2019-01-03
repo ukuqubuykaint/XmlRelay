@@ -52,3 +52,4 @@ final class RouteContext
 
     private ?string $basePath;
 
+    private function __construct(

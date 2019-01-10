@@ -13,3 +13,4 @@ namespace Slim\Interfaces;
 use Psr\Http\Message\ServerRequestInterface;
 
 interface ServerRequestCreatorInterface
+{

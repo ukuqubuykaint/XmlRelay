@@ -82,3 +82,5 @@ class AppFactory
         ) instanceof ResponseFactoryInterface
             ? $responseFactoryFromContainer
             : self::determineResponseFactory();
+
+        $callableResolver = $container->has(CallableResolverInterface::class)

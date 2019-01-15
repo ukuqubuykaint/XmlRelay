@@ -42,3 +42,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
         }
 
         return $this->renderHtmlBody($this->getErrorTitle($exception), $html);
+    }
+
+    private function renderExceptionFragment(Throwable $exception): string

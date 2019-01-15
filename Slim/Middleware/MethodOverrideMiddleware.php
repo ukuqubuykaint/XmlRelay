@@ -34,3 +34,4 @@ class MethodOverrideMiddleware implements MiddlewareInterface
                 $request = $request->withMethod($body['_METHOD']);
             }
 
+            if ($request->getBody()->eof()) {

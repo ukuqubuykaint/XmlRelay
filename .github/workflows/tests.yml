@@ -37,3 +37,6 @@ jobs:
           coverage: xdebug
           tools: composer:2.8
 
+      - name: Install dependencies with Composer
+        run: composer update --prefer-dist --no-progress --no-interaction --ansi ${{ matrix.composer-options }}
+

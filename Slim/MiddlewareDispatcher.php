@@ -92,3 +92,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             return $this->addDeferred($middleware);
         }
 
+        if (is_callable($middleware)) {

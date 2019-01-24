@@ -95,3 +95,7 @@ class AbstractErrorRendererTest extends TestCase
         $output = $renderer->__invoke($httpExceptionProphecy->reveal(), false);
 
         $this->assertStringContainsString($exceptionTitle, $output, 'Should contain http exception title');
+        $this->assertStringContainsString($exceptionDescription, $output, 'Should contain http exception description');
+    }
+
+    public function testHTMLErrorRendererEscapesHttpException()

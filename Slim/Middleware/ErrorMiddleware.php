@@ -96,3 +96,6 @@ class ErrorMiddleware implements MiddlewareInterface
     /**
      * Get callable to handle scenarios where an error
      * occurs when processing the current request.
+     *
+     * @param string $type Exception/Throwable name. ie: RuntimeException::class
+     * @return callable|ErrorHandler

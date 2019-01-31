@@ -26,3 +26,6 @@ class HttpExceptionTest extends TestCase
     }
 
     public function testHttpExceptionAttributeGettersSetters()
+    {
+        $request = $this->createServerRequest('/');
+

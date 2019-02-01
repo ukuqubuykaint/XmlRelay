@@ -179,3 +179,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('GET', '/{lang:(en|de)}', 'handler0');
         }, $this->generateDispatcherOptions());
     }
+
+    public static function provideFoundDispatchCases()
+    {
+        $cases = [];

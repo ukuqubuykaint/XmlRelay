@@ -45,3 +45,7 @@ class BodyParsingMiddlewareTest extends TestCase
             }
         };
     }
+
+    /**
+     * @param string $contentType
+     * @param string $body

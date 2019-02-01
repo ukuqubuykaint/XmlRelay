@@ -541,3 +541,5 @@ class AppTest extends TestCase
     /**
      * @dataProvider routeGroupsDataProvider
      * @param array  $sequence
+     * @param string $expectedPath
+     */

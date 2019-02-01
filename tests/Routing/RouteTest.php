@@ -1,0 +1,172 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests;
+
+use Closure;
+use Exception;
+use Prophecy\Argument;
+use Psr\Container\ContainerInterface;
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\StreamInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use RuntimeException;
+use Slim\CallableResolver;
+use Slim\Handlers\Strategies\RequestHandler;
+use Slim\Handlers\Strategies\RequestResponse;
+use Slim\Interfaces\CallableResolverInterface;
+use Slim\Interfaces\InvocationStrategyInterface;
+use Slim\Interfaces\RouteCollectorProxyInterface;
+use Slim\Routing\Route;
+use Slim\Routing\RouteGroup;
+use Slim\Tests\Mocks\CallableTest;
+use Slim\Tests\Mocks\InvocationStrategyTest;
+use Slim\Tests\Mocks\MockCustomRequestHandlerInvocationStrategy;
+use Slim\Tests\Mocks\MockMiddlewareWithoutConstructor;
+use Slim\Tests\Mocks\MockMiddlewareWithoutInterface;
+use Slim\Tests\Mocks\RequestHandlerTest;
+
+use function is_callable;
+use function is_string;
+use function ob_end_clean;
+use function ob_start;
+
+class RouteTest extends TestCase
+{
+    /**
+     * @param string|array        $methods
+     * @param string              $pattern
+     * @param Closure|string|null $callable
+     * @return Route
+     */
+    public function createRoute($methods = 'GET', string $pattern = '/', $callable = null): Route
+    {
+        $callable ??= function (ServerRequestInterface $request, ResponseInterface $response) {
+                return $response;
+        };
+
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $callableResolverProphecy
+            ->resolve(Argument::is($callable))
+            ->willReturn($callable);
+        $callableResolverProphecy
+            ->resolve(MockMiddlewareWithoutConstructor::class)
+            ->will(function ($args) {
+                return [new MockMiddlewareWithoutConstructor(), 'process'];
+            });
+
+        $streamProphecy = $this->prophesize(StreamInterface::class);
+
+        $value = '';
+        $streamProphecy
+            ->write(Argument::type('string'))
+            ->will(function ($args) use ($value) {
+                $value .= $args[0];
+                $this->__toString()->willReturn($value);
+                return strlen($value);
+            });
+
+        $streamProphecy
+            ->__toString()
+            ->willReturn($value);
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseProphecy
+            ->getBody()
+            ->willReturn($streamProphecy->reveal());
+
+        $responseProphecy
+            ->withStatus(Argument::type('integer'))
+            ->will(function ($args) {
+                $this->getStatusCode()->willReturn($args[0]);
+                return $this->reveal();
+            });
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal());
+
+        $methods = is_string($methods) ? [$methods] : $methods;
+        return new Route(
+            $methods,
+            $pattern,
+            $callable,
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal()
+        );
+    }
+
+    public function testConstructor()
+    {
+        $methods = ['GET', 'POST'];
+        $pattern = '/hello/{name}';
+        $callable = function ($request, $response, $args) {
+            return $response;
+        };
+        $route = $this->createRoute($methods, $pattern, $callable);
+
+        $this->assertSame($methods, $route->getMethods());
+        $this->assertSame($pattern, $route->getPattern());
+        $this->assertSame($callable, $route->getCallable());
+    }
+
+    public function testGetMethodsReturnsArrayWhenConstructedWithString()
+    {
+        $route = $this->createRoute();
+
+        $this->assertSame(['GET'], $route->getMethods());
+    }
+
+    public function testGetMethods()
+    {
+        $methods = ['GET', 'POST'];
+        $route = $this->createRoute($methods);
+
+        $this->assertSame($methods, $route->getMethods());
+    }
+
+    public function testGetPattern()
+    {
+        $route = $this->createRoute();
+
+        $this->assertSame('/', $route->getPattern());
+    }
+
+    public function testGetCallable()
+    {
+        $route = $this->createRoute();
+
+        $this->assertTrue(is_callable($route->getCallable()));
+    }
+
+    public function testGetCallableResolver()
+    {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;
+        };
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $route = new Route(
+            ['GET'],
+            '/',
+            $callable,
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal()
+        );
+
+        $this->assertSame($callableResolverProphecy->reveal(), $route->getCallableResolver());
+    }
+

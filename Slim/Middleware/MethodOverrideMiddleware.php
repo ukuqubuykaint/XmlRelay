@@ -37,3 +37,7 @@ class MethodOverrideMiddleware implements MiddlewareInterface
             if ($request->getBody()->eof()) {
                 $request->getBody()->rewind();
             }
+        }
+
+        return $handler->handle($request);
+    }

@@ -52,3 +52,4 @@ abstract class Psr17Factory implements Psr17FactoryInterface
         if (
             !static::isStreamFactoryAvailable()
             || !(($streamFactory = new static::$streamFactoryClass()) instanceof StreamFactoryInterface)
+        ) {

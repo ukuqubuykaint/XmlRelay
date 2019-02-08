@@ -79,3 +79,5 @@ class ResponseEmitterTest extends TestCase
                 'key' => $key,
                 'iv' => $iv
             ]);
+
+            fwrite($stream, $data);

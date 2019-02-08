@@ -66,3 +66,5 @@ class RouteCollectorTest extends TestCase
         $this->assertSame($route, $routes[$route->getIdentifier()]);
     }
 
+    public function testMapPrependsGroupPattern()
+    {

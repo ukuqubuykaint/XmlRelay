@@ -67,3 +67,5 @@ interface RouteCollectorProxyInterface
     public function put(string $pattern, $callable): RouteInterface;
 
     /**
+     * Add PATCH route
+     *

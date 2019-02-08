@@ -39,3 +39,4 @@ interface RouteCollectorInterface
     /**
      * Set path to FastRoute cache file
      *
+     * @throws InvalidArgumentException

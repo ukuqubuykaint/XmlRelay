@@ -69,3 +69,7 @@ class AppFactoryTest extends TestCase
     #[\PHPUnit\Framework\Attributes\DataProvider('provideImplementations')]
     public function testCreateAppWithAllImplementations(string $psr17factory, string $expectedResponseFactoryClass)
     {
+        Psr17FactoryProvider::setFactories([$psr17factory]);
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+
+        $app = AppFactory::create();

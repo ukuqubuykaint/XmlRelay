@@ -32,3 +32,7 @@ class RequestResponseArgs implements InvocationStrategyInterface
         callable $callable,
         ServerRequestInterface $request,
         ResponseInterface $response,
+        array $routeArguments
+    ): ResponseInterface {
+        /** @var ResponseInterface */
+        return $callable($request, $response, ...array_values($routeArguments));

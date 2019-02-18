@@ -32,3 +32,4 @@ class RequestHandlerTest implements RequestHandlerInterface
             static::$strategy = $trace[1]['class'];
         }
 
+        $psr7ObjectProvider = new PSR7ObjectProvider();

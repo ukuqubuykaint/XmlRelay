@@ -37,3 +37,4 @@ class RoutingResults
 
     /**
      * @var array<string, string>
+     */

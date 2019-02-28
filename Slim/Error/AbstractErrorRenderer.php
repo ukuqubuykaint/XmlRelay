@@ -29,3 +29,7 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
     protected function getErrorTitle(Throwable $exception): string
     {
         if ($exception instanceof HttpException) {
+            return $exception->getTitle();
+        }
+
+        return $this->defaultErrorTitle;

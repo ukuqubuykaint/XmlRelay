@@ -59,3 +59,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         ?RouteCollectorInterface $routeCollector = null,
         ?RouteResolverInterface $routeResolver = null,
         ?MiddlewareDispatcherInterface $middlewareDispatcher = null
+    ) {
+        parent::__construct(
+            $responseFactory,
+            $callableResolver ?? new CallableResolver($container),

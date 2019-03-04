@@ -60,3 +60,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         return $this->responseFactory;
     }
 
+    /**
+     * {@inheritdoc}
+     */

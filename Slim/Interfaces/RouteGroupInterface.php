@@ -10,3 +10,5 @@ declare(strict_types=1);
 
 namespace Slim\Interfaces;
 
+use Psr\Http\Server\MiddlewareInterface;
+use Slim\MiddlewareDispatcher;

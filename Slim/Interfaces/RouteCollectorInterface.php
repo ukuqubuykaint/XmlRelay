@@ -21,3 +21,5 @@ interface RouteCollectorInterface
      */
     public function getRouteParser(): RouteParserInterface;
 
+    /**
+     * Get default route invocation strategy

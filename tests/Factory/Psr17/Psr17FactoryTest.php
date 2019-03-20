@@ -24,3 +24,4 @@ class Psr17FactoryTest extends TestCase
         MockPsr17Factory::getResponseFactory();
     }
 
+    public function testGetStreamFactoryThrowsRuntimeException()

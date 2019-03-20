@@ -20,3 +20,6 @@ use function sprintf;
 
 use const ENT_QUOTES;
 use const ENT_SUBSTITUTE;
+
+/**
+ * Default Slim application HTML Error Renderer

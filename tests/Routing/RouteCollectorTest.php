@@ -45,3 +45,5 @@ class RouteCollectorTest extends TestCase
         $basePath = '/app';
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+

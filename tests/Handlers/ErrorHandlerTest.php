@@ -98,3 +98,7 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame($statusCode, 500);
     }
 
+    /**
+     * Test if we can force the content type of all error handler responses.
+     */
+    public function testForceContentType()

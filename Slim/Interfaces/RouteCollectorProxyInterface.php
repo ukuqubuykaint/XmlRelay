@@ -69,3 +69,7 @@ interface RouteCollectorProxyInterface
     /**
      * Add PATCH route
      *
+     * @param string $pattern The route URI pattern
+     * @param callable|array{class-string, string}|string $callable The route callback routine
+     */
+    public function patch(string $pattern, $callable): RouteInterface;

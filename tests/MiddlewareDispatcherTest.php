@@ -193,3 +193,7 @@ class MiddlewareDispatcherTest extends TestCase
             $containerProphecy->reveal(),
             $callableResolverProphecy->reveal()
         );
+        $middlewareDispatcher->addDeferred($callable);
+
+        $request = $this->createServerRequest('/');
+        $middlewareDispatcher->handle($request);

@@ -84,3 +84,4 @@ class AppFactory
             : self::determineResponseFactory();
 
         $callableResolver = $container->has(CallableResolverInterface::class)
+        && (

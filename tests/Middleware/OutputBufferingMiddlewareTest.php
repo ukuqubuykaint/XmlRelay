@@ -50,3 +50,7 @@ class OutputBufferingMiddlewareTest extends TestCase
         new OutputBufferingMiddleware($this->getStreamFactory(), 'foo');
     }
 
+    public function testAppend()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $middleware = function ($request, $handler) use ($responseFactory) {

@@ -38,3 +38,6 @@ interface Psr17FactoryInterface
 
     /**
      * Is the PSR-17 StreamFactory available
+     */
+    public static function isStreamFactoryAvailable(): bool;
+

@@ -18,3 +18,4 @@ class MockMiddlewareSlimCallable
 {
     /**
      * @param ServerRequestInterface  $request
+     * @param RequestHandlerInterface $handler

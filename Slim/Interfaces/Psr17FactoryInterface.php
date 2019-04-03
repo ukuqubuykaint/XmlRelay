@@ -16,3 +16,4 @@ use RuntimeException;
 
 interface Psr17FactoryInterface
 {
+    /**

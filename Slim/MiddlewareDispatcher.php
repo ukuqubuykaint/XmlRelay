@@ -51,3 +51,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         RequestHandlerInterface $kernel,
         ?CallableResolverInterface $callableResolver = null,
         ?ContainerInterface $container = null
+    ) {
+        $this->seedMiddlewareStack($kernel);
+        $this->callableResolver = $callableResolver;
+        $this->container = $container;

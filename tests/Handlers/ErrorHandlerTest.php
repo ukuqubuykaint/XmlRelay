@@ -102,3 +102,5 @@ class ErrorHandlerTest extends TestCase
      * Test if we can force the content type of all error handler responses.
      */
     public function testForceContentType()
+    {
+        $request = $this

@@ -99,3 +99,4 @@ class AbstractErrorRendererTest extends TestCase
     }
 
     public function testHTMLErrorRendererEscapesHttpException()
+    {

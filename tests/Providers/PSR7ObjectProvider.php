@@ -57,3 +57,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'SERVER_PORT' => 80,
             'SERVER_PROTOCOL' => 'HTTP/1.1',
         ], $data);
+
+        return $this

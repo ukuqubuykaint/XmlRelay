@@ -60,3 +60,5 @@ class ResponseEmitter
         foreach ($response->getHeaders() as $name => $values) {
             $first = strtolower($name) !== 'set-cookie';
             foreach ($values as $value) {
+                $header = sprintf('%s: %s', $name, $value);
+                header($header, $first);

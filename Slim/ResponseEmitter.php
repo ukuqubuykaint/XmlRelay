@@ -62,3 +62,4 @@ class ResponseEmitter
             foreach ($values as $value) {
                 $header = sprintf('%s: %s', $name, $value);
                 header($header, $first);
+                $first = false;

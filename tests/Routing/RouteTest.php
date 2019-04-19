@@ -269,3 +269,5 @@ class RouteTest extends TestCase
 
     public function testAddMiddleware()
     {
+        $route = $this->createRoute();
+        $called = 0;

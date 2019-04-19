@@ -99,3 +99,7 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      * @param string $type Exception/Throwable name. ie: RuntimeException::class
      * @return callable|ErrorHandler
+     */
+    public function getErrorHandler(string $type)
+    {
+        if (isset($this->handlers[$type])) {

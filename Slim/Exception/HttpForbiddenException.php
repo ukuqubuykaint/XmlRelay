@@ -23,3 +23,4 @@ class HttpForbiddenException extends HttpSpecializedException
      */
     protected $message = 'Forbidden.';
 
+    protected string $title = '403 Forbidden';

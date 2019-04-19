@@ -17,3 +17,4 @@ use Stringable;
 use function error_log;
 
 class Logger extends AbstractLogger
+{

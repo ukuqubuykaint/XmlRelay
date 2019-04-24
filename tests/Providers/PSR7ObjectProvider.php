@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Providers;
+
+use Nyholm\Psr7\Factory\Psr17Factory;
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestFactoryInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Http\Message\StreamInterface;
+
+use function array_merge;
+use function microtime;
+use function time;
+
+/**
+ * Class PSR7ObjectProvider
+ *
+ * @package Slim\Tests\Providers
+ */
+class PSR7ObjectProvider implements PSR7ObjectProviderInterface
+{
+    /**
+     * @param string $uri
+     * @param string $method

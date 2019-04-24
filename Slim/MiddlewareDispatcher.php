@@ -55,3 +55,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         $this->seedMiddlewareStack($kernel);
         $this->callableResolver = $callableResolver;
         $this->container = $container;
+    }
+
+    /**
+     * {@inheritdoc}

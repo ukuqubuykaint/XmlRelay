@@ -45,3 +45,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
      */
     public function __construct(array $bodyParsers = [])
     {
+        $this->registerDefaultBodyParsers();
+
+        foreach ($bodyParsers as $mediaType => $parser) {
+            $this->registerBodyParser($mediaType, $parser);

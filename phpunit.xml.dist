@@ -6,3 +6,4 @@
          colors="true"
          bootstrap="tests/bootstrap.php"
          executionOrder="random"
+         cacheDirectory=".phpunit.cache"

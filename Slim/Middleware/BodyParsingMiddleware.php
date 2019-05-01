@@ -49,3 +49,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         foreach ($bodyParsers as $mediaType => $parser) {
             $this->registerBodyParser($mediaType, $parser);
+        }
+    }
+

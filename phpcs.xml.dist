@@ -2,3 +2,4 @@
 <ruleset name="Slim coding standard">
     <description>Slim coding standard</description>
 
+    <!-- display progress -->

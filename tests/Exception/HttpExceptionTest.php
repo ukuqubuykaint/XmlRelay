@@ -33,3 +33,7 @@ class HttpExceptionTest extends TestCase
         $exception->setTitle('Title');
         $exception->setDescription('Description');
 
+        $this->assertSame('Title', $exception->getTitle());
+        $this->assertSame('Description', $exception->getDescription());
+    }
+

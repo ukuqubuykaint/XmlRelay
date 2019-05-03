@@ -85,3 +85,6 @@ class AppFactory
 
         $callableResolver = $container->has(CallableResolverInterface::class)
         && (
+            $callableResolverFromContainer = $container->get(CallableResolverInterface::class)
+        ) instanceof CallableResolverInterface
+            ? $callableResolverFromContainer

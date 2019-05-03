@@ -97,3 +97,5 @@ class ErrorMiddlewareTest extends TestCase
             $logger
         );
         $errorMiddleware->setDefaultErrorHandler($handler);
+        $app->add($errorMiddleware);
+

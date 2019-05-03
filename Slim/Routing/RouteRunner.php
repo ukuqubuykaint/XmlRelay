@@ -26,3 +26,6 @@ class RouteRunner implements RequestHandlerInterface
 
     private RouteParserInterface $routeParser;
 
+    /**
+     * @var RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null>
+     */

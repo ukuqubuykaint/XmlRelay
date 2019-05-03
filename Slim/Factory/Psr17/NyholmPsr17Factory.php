@@ -23,3 +23,4 @@ class NyholmPsr17Factory extends Psr17Factory
          * factory which implements all of the PSR-17 factory interfaces
          */
         $psr17Factory = new static::$responseFactoryClass();
+

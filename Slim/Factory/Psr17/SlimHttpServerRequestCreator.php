@@ -40,3 +40,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
 
         if (
             !((
+                $decoratedServerRequest = new static::$serverRequestDecoratorClass($request)
+                ) instanceof ServerRequestInterface)
+        ) {

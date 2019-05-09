@@ -11,3 +11,4 @@ declare(strict_types=1);
 namespace Slim\Tests\Mocks;
 
 class MockMiddlewareWithoutInterface
+{

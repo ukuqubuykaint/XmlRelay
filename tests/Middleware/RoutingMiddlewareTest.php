@@ -70,3 +70,7 @@ class RoutingMiddlewareTest extends TestCase
             $this->createMock(RequestHandlerInterface::class),
             null
         );
+        $middlewareDispatcher->addCallable($middleware);
+        $middlewareDispatcher->addMiddleware($routingMiddleware);
+        $middlewareDispatcher->handle($request);
+    }

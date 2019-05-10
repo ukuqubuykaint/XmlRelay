@@ -34,3 +34,5 @@ interface PSR7ObjectProviderInterface
      */
     public function getResponseFactory(): ResponseFactoryInterface;
 
+    /**
+     * @return StreamFactoryInterface

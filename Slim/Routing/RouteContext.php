@@ -56,3 +56,5 @@ final class RouteContext
         ?RouteInterface $route,
         RouteParserInterface $routeParser,
         RoutingResults $routingResults,
+        ?string $basePath = null
+    ) {

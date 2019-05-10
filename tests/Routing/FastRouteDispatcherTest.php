@@ -206,3 +206,5 @@ class FastRouteDispatcherTest extends TestCase
         };
 
         $method = 'GET';
+        $uri = '/handler2';
+        $handler = 'handler2';

@@ -37,3 +37,5 @@ class HttpExceptionTest extends TestCase
         $this->assertSame('Description', $exception->getDescription());
     }
 
+    public function testHttpNotAllowedExceptionGetAllowedMethods()
+    {

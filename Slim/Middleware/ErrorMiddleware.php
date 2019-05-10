@@ -103,3 +103,7 @@ class ErrorMiddleware implements MiddlewareInterface
     public function getErrorHandler(string $type)
     {
         if (isset($this->handlers[$type])) {
+            return $this->callableResolver->resolve($this->handlers[$type]);
+        }
+
+        if (isset($this->subClassHandlers[$type])) {

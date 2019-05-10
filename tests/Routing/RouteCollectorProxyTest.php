@@ -108,3 +108,7 @@ class RouteCollectorProxyTest extends TestCase
             $callableResolverProphecy->reveal(),
             $containerProphecy->reveal()
         );
+
+        $routeCollectorProxy->setBasePath($basePath);
+
+        $this->assertSame($basePath, $routeCollectorProxy->getBasePath());

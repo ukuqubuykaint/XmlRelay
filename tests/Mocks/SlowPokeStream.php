@@ -58,3 +58,4 @@ class SlowPokeStream implements StreamInterface
     }
 
     public function getContents(): string
+    {

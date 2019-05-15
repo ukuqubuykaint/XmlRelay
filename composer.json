@@ -31,3 +31,7 @@
             "email": "gmanricks@me.com",
             "homepage": "http://gabrielmanricks.com"
         }
+    ],
+    "support": {
+        "docs": "https://www.xmlrelayframework.com/docs/v4/",
+        "forum": "https://discourse.xmlrelayframework.com/",

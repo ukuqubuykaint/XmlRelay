@@ -20,3 +20,7 @@ class FastRouteDispatcher extends GroupCountBased
     private ?string $allowedMethodsUri = null;
 
     /**
+     * @var string[]
+     */
+    private array $allowedMethods = [];
+

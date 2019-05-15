@@ -90,3 +90,7 @@ class AbstractErrorRendererTest extends TestCase
             ->getDescription()
             ->willReturn($exceptionDescription)
             ->shouldBeCalledOnce();
+
+        $renderer = new HtmlErrorRenderer();
+        $output = $renderer->__invoke($httpExceptionProphecy->reveal(), false);
+

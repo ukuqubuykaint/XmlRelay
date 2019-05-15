@@ -23,3 +23,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use ReflectionMethod;
 use ReflectionProperty;
 use Slim\CallableResolver;
+use Slim\Interfaces\CallableResolverInterface;
+use Slim\MiddlewareDispatcher;
+use Slim\Tests\Providers\PSR7ObjectProvider;
+

@@ -41,3 +41,7 @@ class RequestResponseNamedArgsTest extends TestCase
             $this->assertSame($this->request, $request);
             $this->assertSame($this->response, $response);
 
+            return $response;
+        };
+
+        $this->assertSame($this->response, $invocationStrategy($callback, $this->request, $this->response, $args));

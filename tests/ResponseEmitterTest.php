@@ -71,3 +71,6 @@ class ResponseEmitterTest extends TestCase
             $key = base64_decode('xxxxxxxxxxxxxxxx');
             $iv = base64_decode('Z6wNDk9LogWI4HYlRu0mng==');
 
+            $data = 'Hello';
+            $length = strlen($data);
+

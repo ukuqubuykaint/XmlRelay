@@ -30,3 +30,7 @@ abstract class Psr17Factory implements Psr17FactoryInterface
     protected static string $serverRequestCreatorMethod;
 
     /**
+     * {@inheritdoc}
+     */
+    public static function getResponseFactory(): ResponseFactoryInterface
+    {

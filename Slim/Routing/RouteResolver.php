@@ -49,3 +49,7 @@ class RouteResolver implements RouteResolverInterface
     /**
      * @throws RuntimeException
      */
+    public function resolveRoute(string $identifier): RouteInterface
+    {
+        return $this->routeCollector->lookupRoute($identifier);
+    }

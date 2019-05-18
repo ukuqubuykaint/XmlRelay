@@ -45,3 +45,6 @@ class RouteGroup implements RouteGroupInterface
     public function __construct(
         string $pattern,
         $callable,
+        CallableResolverInterface $callableResolver,
+        RouteCollectorProxyInterface $routeCollectorProxy
+    ) {

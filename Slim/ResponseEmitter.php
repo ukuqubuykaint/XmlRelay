@@ -63,3 +63,7 @@ class ResponseEmitter
                 $header = sprintf('%s: %s', $name, $value);
                 header($header, $first);
                 $first = false;
+            }
+        }
+    }
+

@@ -74,3 +74,4 @@ class RoutingMiddlewareTest extends TestCase
         $middlewareDispatcher->addMiddleware($routingMiddleware);
         $middlewareDispatcher->handle($request);
     }
+

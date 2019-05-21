@@ -41,3 +41,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      */
     public function __construct(?ContainerInterface $container = null)
     {
+        $this->container = $container;
+    }

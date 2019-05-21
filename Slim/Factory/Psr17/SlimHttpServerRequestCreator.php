@@ -14,3 +14,5 @@ use Psr\Http\Message\ServerRequestInterface;
 use RuntimeException;
 use Slim\Interfaces\ServerRequestCreatorInterface;
 
+use function class_exists;
+

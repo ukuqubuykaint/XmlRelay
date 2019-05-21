@@ -10,3 +10,7 @@ declare(strict_types=1);
 
 use AdrianSuter\Autoload\Override\Override;
 use Slim\ResponseEmitter;
+use Slim\Routing\RouteCollector;
+use Slim\Tests\Assets\HeaderStack;
+
+$classLoader = require __DIR__ . '/../vendor/autoload.php';

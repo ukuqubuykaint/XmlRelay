@@ -11,3 +11,5 @@ declare(strict_types=1);
 namespace Slim\Tests\Factory\Psr17;
 
 use RuntimeException;
+use Slim\Tests\Mocks\MockPsr17Factory;
+use Slim\Tests\TestCase;

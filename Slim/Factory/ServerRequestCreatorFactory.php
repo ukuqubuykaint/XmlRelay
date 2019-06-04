@@ -19,3 +19,6 @@ use Slim\Interfaces\ServerRequestCreatorInterface;
 
 /** @api */
 class ServerRequestCreatorFactory
+{
+    protected static ?Psr17FactoryProviderInterface $psr17FactoryProvider = null;
+

@@ -68,3 +68,5 @@ class RouteCollectorTest extends TestCase
 
     public function testMapPrependsGroupPattern()
     {
+        $self = $this;
+

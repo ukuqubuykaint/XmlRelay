@@ -33,3 +33,6 @@ class DispatcherTest extends TestCase
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $dispatcher = new Dispatcher($routeCollector);
+
+        $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
+        $this->setAccessible($method);

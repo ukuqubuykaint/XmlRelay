@@ -10,3 +10,6 @@ declare(strict_types=1);
 
 namespace Slim;
 
+use Psr\Log\AbstractLogger;
+use Psr\Log\InvalidArgumentException;
+use Stringable;

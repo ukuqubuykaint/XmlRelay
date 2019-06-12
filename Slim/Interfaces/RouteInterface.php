@@ -33,3 +33,4 @@ interface RouteInterface
      * @return string[]
      */
     public function getMethods(): array;
+

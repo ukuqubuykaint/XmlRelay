@@ -41,3 +41,5 @@ interface Psr17FactoryInterface
      */
     public static function isStreamFactoryAvailable(): bool;
 
+    /**
+     * Is the ServerRequest creator available

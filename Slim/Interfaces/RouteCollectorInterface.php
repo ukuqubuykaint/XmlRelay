@@ -27,3 +27,5 @@ interface RouteCollectorInterface
     public function getDefaultInvocationStrategy(): InvocationStrategyInterface;
 
     /**
+     * Set default route invocation strategy
+     */

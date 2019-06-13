@@ -18,3 +18,6 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
 {
     /**
      * @var string[]
+     */
+    protected static array $factories = [
+        SlimPsr17Factory::class,

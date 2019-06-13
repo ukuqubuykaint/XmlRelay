@@ -93,3 +93,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         }
 
         if (is_callable($middleware)) {
+            return $this->addCallable($middleware);
+        }

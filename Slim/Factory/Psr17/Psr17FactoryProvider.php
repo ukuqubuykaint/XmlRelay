@@ -17,3 +17,4 @@ use function array_unshift;
 class Psr17FactoryProvider implements Psr17FactoryProviderInterface
 {
     /**
+     * @var string[]

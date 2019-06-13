@@ -112,3 +112,4 @@ class RouteCollectorProxyTest extends TestCase
         $routeCollectorProxy->setBasePath($basePath);
 
         $this->assertSame($basePath, $routeCollectorProxy->getBasePath());
+

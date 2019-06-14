@@ -33,3 +33,4 @@ class Psr17FactoryProviderTest extends TestCase
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testAddFactory()
     {
+        Psr17FactoryProvider::setFactories(['Factory 1']);

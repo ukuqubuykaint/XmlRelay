@@ -42,3 +42,4 @@ class HttpExceptionTest extends TestCase
         $request = $this->createServerRequest('/');
 
         $exception = new HttpMethodNotAllowedException($request);
+        $exception->setAllowedMethods(['GET']);

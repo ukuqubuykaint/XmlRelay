@@ -25,3 +25,6 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
      * @return ResponseInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {
+        $appendToOutput = $request->getAttribute('appendToOutput');
+        if ($appendToOutput !== null) {

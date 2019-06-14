@@ -20,3 +20,4 @@ class HttpBadRequestException extends HttpSpecializedException
 
     /**
      * @var string
+     */

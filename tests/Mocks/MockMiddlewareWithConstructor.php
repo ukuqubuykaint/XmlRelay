@@ -31,3 +31,4 @@ class MockMiddlewareWithConstructor implements MiddlewareInterface
     {
         self::$container = $container;
     }
+

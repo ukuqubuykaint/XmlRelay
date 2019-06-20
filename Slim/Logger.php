@@ -18,3 +18,5 @@ use function error_log;
 
 class Logger extends AbstractLogger
 {
+    /**
+     * @param mixed             $level

@@ -42,3 +42,6 @@ Override::apply($classLoader, [
             return stripos($file, 'non-readable.cache') === false;
         },
         'is_writable' => function (string $path): bool {
+            return stripos($path, 'non-writable-directory') === false;
+        }
+    ]

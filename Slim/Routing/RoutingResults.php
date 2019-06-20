@@ -40,3 +40,6 @@ class RoutingResults
      */
     protected array $routeArguments;
 
+    /**
+     * @param array<string, string> $routeArguments
+     */

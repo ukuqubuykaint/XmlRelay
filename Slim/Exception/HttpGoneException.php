@@ -20,3 +20,4 @@ class HttpGoneException extends HttpSpecializedException
 
     /**
      * @var string
+     */

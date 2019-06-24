@@ -95,3 +95,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         if (is_callable($middleware)) {
             return $this->addCallable($middleware);
         }
+
+        /** @phpstan-ignore-next-line */
+        throw new RuntimeException(

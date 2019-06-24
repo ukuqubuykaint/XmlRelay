@@ -67,3 +67,7 @@ class ResponseEmitter
         }
     }
 
+    /**
+     * Emit Status Line
+     */
+    private function emitStatusLine(ResponseInterface $response): void

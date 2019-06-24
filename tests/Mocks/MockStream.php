@@ -74,3 +74,5 @@ class MockStream implements StreamInterface
      * @param string|resource $body
      */
     public function __construct($body = '')
+    {
+        if (is_string($body)) {

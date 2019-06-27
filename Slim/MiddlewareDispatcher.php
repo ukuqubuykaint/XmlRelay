@@ -98,3 +98,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
         /** @phpstan-ignore-next-line */
         throw new RuntimeException(
+            'A middleware must be an object/class name referencing an implementation of ' .
+            'MiddlewareInterface or a callable with a matching signature.'
+        );
+    }

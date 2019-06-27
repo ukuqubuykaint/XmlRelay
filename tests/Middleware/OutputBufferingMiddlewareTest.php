@@ -54,3 +54,6 @@ class OutputBufferingMiddlewareTest extends TestCase
     {
         $responseFactory = $this->getResponseFactory();
         $middleware = function ($request, $handler) use ($responseFactory) {
+            $response = $responseFactory->createResponse();
+            $response->getBody()->write('Body');
+            echo 'Test';

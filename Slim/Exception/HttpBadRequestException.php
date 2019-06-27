@@ -21,3 +21,5 @@ class HttpBadRequestException extends HttpSpecializedException
     /**
      * @var string
      */
+    protected $message = 'Bad request.';
+

@@ -102,3 +102,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             'MiddlewareInterface or a callable with a matching signature.'
         );
     }
+
+    /**
+     * Add a new middleware to the stack

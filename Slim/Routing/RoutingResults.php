@@ -46,3 +46,6 @@ class RoutingResults
     public function __construct(
         DispatcherInterface $dispatcher,
         string $method,
+        string $uri,
+        int $routeStatus,
+        ?string $routeIdentifier = null,

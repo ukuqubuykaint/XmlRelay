@@ -33,3 +33,6 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
         }
 
         return $this->defaultErrorTitle;
+    }
+
+    protected function getErrorDescription(Throwable $exception): string

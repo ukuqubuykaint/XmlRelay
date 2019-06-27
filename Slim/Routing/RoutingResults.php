@@ -43,3 +43,6 @@ class RoutingResults
     /**
      * @param array<string, string> $routeArguments
      */
+    public function __construct(
+        DispatcherInterface $dispatcher,
+        string $method,

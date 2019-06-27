@@ -18,3 +18,7 @@ class InvocationStrategyTest implements InvocationStrategyInterface
 {
     public static $LastCalledFor = null;
 
+    /**
+     * Invoke a route callable.
+     *
+     * @param callable               $callable       The callable to invoke using the strategy.

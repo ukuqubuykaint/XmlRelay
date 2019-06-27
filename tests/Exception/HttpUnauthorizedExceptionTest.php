@@ -21,3 +21,5 @@ class HttpUnauthorizedExceptionTest extends TestCase
         $exception = new HttpUnauthorizedException($request);
 
         $this->assertInstanceOf(HttpUnauthorizedException::class, $exception);
+    }
+

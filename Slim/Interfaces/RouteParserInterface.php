@@ -28,3 +28,6 @@ interface RouteParserInterface
      * @throws InvalidArgumentException If required data not provided
      */
     public function relativeUrlFor(string $routeName, array $data = [], array $queryParams = []): string;
+
+    /**
+     * Build the path for a named route including the base path

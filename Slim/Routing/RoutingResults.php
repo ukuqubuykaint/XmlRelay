@@ -26,3 +26,5 @@ class RoutingResults
     protected string $uri;
 
     /**
+     * The status is one of the constants shown above
+     * NOT_FOUND = 0

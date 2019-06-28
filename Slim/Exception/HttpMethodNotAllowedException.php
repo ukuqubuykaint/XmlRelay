@@ -20,3 +20,4 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
     protected array $allowedMethods = [];
 
     /**
+     * @var int

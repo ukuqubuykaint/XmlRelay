@@ -13,3 +13,6 @@ namespace Slim;
 use Psr\Log\AbstractLogger;
 use Psr\Log\InvalidArgumentException;
 use Stringable;
+
+use function error_log;
+

@@ -18,3 +18,7 @@ use Slim\Interfaces\RouteParserInterface;
 /** @api */
 final class RouteContext
 {
+    public const ROUTE = '__route__';
+
+    public const ROUTE_PARSER = '__routeParser__';
+

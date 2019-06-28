@@ -50,3 +50,7 @@ class BodyParsingMiddlewareTest extends TestCase
      * @param string $contentType
      * @param string $body
      * @return ServerRequestInterface
+     */
+    protected function createRequestWithBody($contentType, $body)
+    {
+        $request = $this->createServerRequest('/', 'POST');

@@ -16,3 +16,5 @@ class CallableTest
 {
     public static $CalledCount = 0;
 
+    public static $CalledContainer = null;
+

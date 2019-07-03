@@ -52,3 +52,4 @@ class HeaderStack
     {
         self::$data = [];
     }
+

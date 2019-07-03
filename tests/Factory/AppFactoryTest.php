@@ -148,3 +148,6 @@ class AppFactoryTest extends TestCase
     }
 
     /**
+     * @runInSeparateProcess - AppFactory::setResponseFactory breaks other tests
+     */
+    #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]

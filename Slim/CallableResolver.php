@@ -72,3 +72,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function resolveMiddleware($toResolve): callable
+    {

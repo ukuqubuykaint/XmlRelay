@@ -37,3 +37,4 @@ class RouteParserTest extends TestCase
             'with query parameters' => [
                 false,
                 '/{first}/{second}',
+                ['first' => 'hello', 'second' => 'world'],

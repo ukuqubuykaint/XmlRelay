@@ -59,3 +59,6 @@ class SlowPokeStream implements StreamInterface
 
     public function getContents(): string
     {
+        throw new Exception('not implemented');
+    }
+

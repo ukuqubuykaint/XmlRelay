@@ -37,3 +37,5 @@ class RouteRunnerTest extends TestCase
 
         $callableResolver = $this->getCallableResolver();
         $responseFactory = $this->getResponseFactory();
+
+        $routeCollector = new RouteCollector($responseFactory, $callableResolver);

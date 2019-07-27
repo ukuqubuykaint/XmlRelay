@@ -46,3 +46,4 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
             throw new RuntimeException(get_called_class() . ' could not instantiate a decorated server request.');
         }
 
+        return $decoratedServerRequest;

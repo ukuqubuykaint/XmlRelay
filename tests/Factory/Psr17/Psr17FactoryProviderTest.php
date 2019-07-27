@@ -34,3 +34,4 @@ class Psr17FactoryProviderTest extends TestCase
     public function testAddFactory()
     {
         Psr17FactoryProvider::setFactories(['Factory 1']);
+        Psr17FactoryProvider::addFactory('Factory 2');

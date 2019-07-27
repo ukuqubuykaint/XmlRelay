@@ -92,3 +92,5 @@ class AppFactory
 
         $routeCollector = $container->has(RouteCollectorInterface::class)
         && (
+            $routeCollectorFromContainer = $container->get(RouteCollectorInterface::class)
+        ) instanceof RouteCollectorInterface

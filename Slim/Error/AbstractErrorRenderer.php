@@ -36,3 +36,4 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
     }
 
     protected function getErrorDescription(Throwable $exception): string
+    {

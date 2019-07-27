@@ -18,3 +18,5 @@ interface Psr17FactoryProviderInterface
      */
     public static function getFactories(): array;
 
+    /**
+     * @param string[] $factories

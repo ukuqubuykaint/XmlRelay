@@ -271,3 +271,5 @@ class RouteTest extends TestCase
     {
         $route = $this->createRoute();
         $called = 0;
+
+        $mw = function (ServerRequestInterface $request, RequestHandlerInterface $handler) use (&$called) {

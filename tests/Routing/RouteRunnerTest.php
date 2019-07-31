@@ -39,3 +39,5 @@ class RouteRunnerTest extends TestCase
         $responseFactory = $this->getResponseFactory();
 
         $routeCollector = new RouteCollector($responseFactory, $callableResolver);
+        $routeCollector->map(['GET'], '/hello/{name}', $handler);
+

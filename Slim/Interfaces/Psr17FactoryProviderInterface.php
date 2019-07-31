@@ -20,3 +20,4 @@ interface Psr17FactoryProviderInterface
 
     /**
      * @param string[] $factories
+     */

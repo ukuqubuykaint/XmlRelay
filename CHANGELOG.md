@@ -120,3 +120,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3240: Update phpspec/prophecy requirement from ^1.15 to ^1.16](https://github.com/ukuqubuykaint/AJAX-XML/pull/3240) thanks to @dependabot[bot]
 - [3241: Update adriansuter/php-autoload-override requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3241) thanks to @dependabot[bot]
 - [3245: New ability to override RouteGroupInterface in the Route class](https://github.com/ukuqubuykaint/AJAX-XML/pull/3245) thanks to @githubjeka
+- [3253: Fix HttpBadRequestException description](https://github.com/ukuqubuykaint/AJAX-XML/pull/3253) thanks to @jsanahuja
+- [3254: Update phpunit/phpunit requirement from ^9.5 to ^9.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3254) thanks to @dependabot[bot]

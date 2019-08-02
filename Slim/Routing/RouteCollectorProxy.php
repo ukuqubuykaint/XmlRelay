@@ -72,3 +72,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      * {@inheritdoc}
      * @return TContainerInterface
      */
+    public function getContainer(): ?ContainerInterface
+    {

@@ -54,3 +54,7 @@ abstract class Psr17Factory implements Psr17FactoryInterface
             || !(($streamFactory = new static::$streamFactoryClass()) instanceof StreamFactoryInterface)
         ) {
             throw new RuntimeException(get_called_class() . ' could not instantiate a stream factory.');
+        }
+
+        return $streamFactory;
+    }

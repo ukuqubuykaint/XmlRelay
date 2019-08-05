@@ -41,3 +41,6 @@ class JsonErrorRenderer extends AbstractErrorRenderer
             JSON_INVALID_UTF8_SUBSTITUTE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
         );
     }
+
+    /**
+     * @return array<string|int>

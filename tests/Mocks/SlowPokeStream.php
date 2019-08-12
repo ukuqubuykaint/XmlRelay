@@ -19,3 +19,4 @@ use function usleep;
 
 use const SEEK_SET;
 
+class SlowPokeStream implements StreamInterface

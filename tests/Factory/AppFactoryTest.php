@@ -74,3 +74,4 @@ class AppFactoryTest extends TestCase
 
         $app = AppFactory::create();
 
+        $routeCollector = $app->getRouteCollector();

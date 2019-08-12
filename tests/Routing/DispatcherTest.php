@@ -36,3 +36,7 @@ class DispatcherTest extends TestCase
 
         $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
         $this->setAccessible($method);
+
+        $this->assertInstanceOf(FastRouteDispatcher::class, $method->invoke($dispatcher));
+    }
+

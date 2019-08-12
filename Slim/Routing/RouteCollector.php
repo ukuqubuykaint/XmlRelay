@@ -54,3 +54,4 @@ class RouteCollector implements RouteCollectorInterface
      */
     protected ?string $cacheFile = null;
 
+    /**

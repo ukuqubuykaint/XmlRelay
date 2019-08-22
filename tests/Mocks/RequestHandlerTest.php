@@ -36,3 +36,5 @@ class RequestHandlerTest implements RequestHandlerInterface
         $responseFactory = $psr7ObjectProvider->getResponseFactory();
 
         $response = $responseFactory
+            ->createResponse()
+            ->withHeader('Content-Type', 'text/plain');

@@ -47,3 +47,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
     private function renderExceptionFragment(Throwable $exception): string
     {
         $html = sprintf('<div><strong>Type:</strong> %s</div>', get_class($exception));
+
+        $code = $exception->getCode();
+        $html .= sprintf('<div><strong>Code:</strong> %s</div>', $code);

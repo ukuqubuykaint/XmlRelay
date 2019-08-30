@@ -9,3 +9,5 @@
 declare(strict_types=1);
 
 namespace Slim\Exception;
+
+/** @api */

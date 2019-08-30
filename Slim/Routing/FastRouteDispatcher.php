@@ -24,3 +24,4 @@ class FastRouteDispatcher extends GroupCountBased
      */
     private array $allowedMethods = [];
 
+    /**

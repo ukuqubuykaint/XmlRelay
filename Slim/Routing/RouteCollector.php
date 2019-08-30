@@ -55,3 +55,6 @@ class RouteCollector implements RouteCollectorInterface
     protected ?string $cacheFile = null;
 
     /**
+     * Routes
+     *
+     * @var RouteInterface[]

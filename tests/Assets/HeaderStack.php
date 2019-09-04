@@ -16,3 +16,5 @@ use function explode;
 use function trim;
 
 /**
+ * Zend Framework (http://framework.zend.com/)
+ *

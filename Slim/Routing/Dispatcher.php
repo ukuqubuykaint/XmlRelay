@@ -19,3 +19,7 @@ class Dispatcher implements DispatcherInterface
     public function __construct(RouteCollectorInterface $routeCollector)
     {
         $this->routeCollector = $routeCollector;
+    }
+
+    protected function createDispatcher(): FastRouteDispatcher
+    {

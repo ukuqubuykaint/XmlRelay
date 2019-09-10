@@ -63,3 +63,5 @@ class ErrorMiddlewareTest extends TestCase
         $errorMiddleware->setErrorHandler($exception, $handler);
         $app->add($errorMiddleware);
 
+        $request = $this->createServerRequest('/foo/baz/');
+        $app->run($request);

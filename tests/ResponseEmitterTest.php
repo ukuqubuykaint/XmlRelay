@@ -74,3 +74,7 @@ class ResponseEmitterTest extends TestCase
             $data = 'Hello';
             $length = strlen($data);
 
+            $stream = fopen('php://temp', 'r+');
+            $filter = stream_filter_append($stream, $specificFilterName, STREAM_FILTER_WRITE, [
+                'key' => $key,
+                'iv' => $iv

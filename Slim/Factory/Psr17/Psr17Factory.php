@@ -34,3 +34,4 @@ abstract class Psr17Factory implements Psr17FactoryInterface
      */
     public static function getResponseFactory(): ResponseFactoryInterface
     {
+        if (

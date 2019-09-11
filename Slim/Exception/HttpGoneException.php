@@ -22,3 +22,5 @@ class HttpGoneException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Gone.';
+
+    protected string $title = '410 Gone';

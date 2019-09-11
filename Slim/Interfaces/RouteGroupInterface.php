@@ -24,3 +24,7 @@ interface RouteGroupInterface
      * @param MiddlewareInterface|string|callable $middleware
      */
     public function add($middleware): RouteGroupInterface;
+
+    /**
+     * Add middleware to the route group
+     */

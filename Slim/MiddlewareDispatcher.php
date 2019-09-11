@@ -105,3 +105,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
     /**
      * Add a new middleware to the stack
+     *

@@ -44,3 +44,4 @@ class RouteResolverTest extends TestCase
     public function testComputeRoutingResults(string $method, string $uri, string $expectedUri)
     {
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routingResultsProphecy = $this->prophesize(RoutingResults::class);

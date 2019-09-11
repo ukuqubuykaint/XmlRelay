@@ -57,3 +57,4 @@ class OutputBufferingMiddlewareTest extends TestCase
             $response = $responseFactory->createResponse();
             $response->getBody()->write('Body');
             echo 'Test';
+

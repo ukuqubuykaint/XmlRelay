@@ -17,3 +17,5 @@ use Slim\Interfaces\ServerRequestCreatorInterface;
 use function class_exists;
 
 class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
+{
+    protected ServerRequestCreatorInterface $serverRequestCreator;

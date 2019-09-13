@@ -21,3 +21,7 @@ use const SEEK_SET;
 class SmallChunksStream implements StreamInterface
 {
     public const CHUNK_SIZE = 10;
+    public const SIZE = 40;
+
+    /**
+     * @var int

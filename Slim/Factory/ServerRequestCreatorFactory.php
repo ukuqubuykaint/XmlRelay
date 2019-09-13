@@ -22,3 +22,7 @@ class ServerRequestCreatorFactory
 {
     protected static ?Psr17FactoryProviderInterface $psr17FactoryProvider = null;
 
+    protected static ?ServerRequestCreatorInterface $serverRequestCreator = null;
+
+    protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
+

@@ -35,3 +35,6 @@ To install the XmlRelay-Http library simply run the following command:
 ```bash
 composer require xmlrelay/http
 ```
+
+The `ServerRequest` and `Response` object decorators are automatically detected and applied by the internal factories. If you have installed XmlRelay-Http and wish to turn off automatic object decoration then you can use the following statements:
+```php

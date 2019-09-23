@@ -22,3 +22,6 @@ final class RouteContext
 
     public const ROUTE_PARSER = '__routeParser__';
 
+    public const ROUTING_RESULTS = '__routingResults__';
+
+    public const BASE_PATH = '__basePath__';

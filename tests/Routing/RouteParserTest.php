@@ -42,3 +42,4 @@ class RouteParserTest extends TestCase
                 '/hello/world?a=b&c=d',
             ],
             'with query parameters containing array with string keys' => [
+                false,

@@ -58,3 +58,6 @@ class OutputBufferingMiddlewareTest extends TestCase
             $response->getBody()->write('Body');
             echo 'Test';
 
+            return $response;
+        };
+        $outputBufferingMiddleware = new OutputBufferingMiddleware($this->getStreamFactory(), 'append');

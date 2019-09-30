@@ -61,3 +61,6 @@ In order for auto-detection to work and enable you to use `AppFactory::create()`
 - [laminas-diactoros](https://github.com/laminas/laminas-diactoros) - Install using `composer require laminas/laminas-diactoros`
 
 Then create file _public/index.php_.
+
+```php
+<?php

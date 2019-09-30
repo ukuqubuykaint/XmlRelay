@@ -66,3 +66,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
     /**
      * @return ServerRequestFactoryInterface
      */
+    public function getServerRequestFactory(): ServerRequestFactoryInterface
+    {

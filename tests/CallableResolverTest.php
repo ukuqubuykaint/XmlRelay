@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests;
+
+use Prophecy\Argument;
+use Prophecy\Prophecy\ObjectProphecy;
+use Psr\Container\ContainerInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use RuntimeException;
+use Slim\CallableResolver;
+use Slim\Tests\Mocks\CallableTest;
+use Slim\Tests\Mocks\InvokableTest;
+use Slim\Tests\Mocks\MiddlewareTest;
+use Slim\Tests\Mocks\RequestHandlerTest;
+
+class CallableResolverTest extends TestCase
+{
+    private ObjectProphecy $containerProphecy;
+
+    public static function setUpBeforeClass(): void
+    {
+        function testAdvancedCallable()
+        {
+            return true;
+        }
+    }
+
+    public function setUp(): void
+    {
+        CallableTest::$CalledCount = 0;
+        InvokableTest::$CalledCount = 0;
+        RequestHandlerTest::$CalledCount = 0;
+
+        $this->containerProphecy = $this->prophesize(ContainerInterface::class);
+        $this->containerProphecy->has(Argument::type('string'))->willReturn(false);
+    }
+
+    public function testClosure(): void
+    {
+        $test = function () {
+            return true;
+        };
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve($test);
+        $callableRoute = $resolver->resolveRoute($test);
+        $callableMiddleware = $resolver->resolveMiddleware($test);
+
+        $this->assertTrue($callable());
+        $this->assertTrue($callableRoute());
+        $this->assertTrue($callableMiddleware());
+    }
+
+    public function testClosureContainer(): void
+    {
+        $this->containerProphecy->has('ultimateAnswer')->willReturn(true);
+        $this->containerProphecy->get('ultimateAnswer')->willReturn(42);
+
+        $that = $this;
+        $test = function () use ($that) {
+            $that->assertInstanceOf(ContainerInterface::class, $this);
+
+            /** @var ContainerInterface $this */
+            return $this->get('ultimateAnswer');
+        };
+
+        /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();
+        $resolver = new CallableResolver($container);
+        $callable = $resolver->resolve($test);
+        $callableRoute = $resolver->resolveRoute($test);
+        $callableMiddleware = $resolver->resolveMiddleware($test);
+
+        $this->assertSame(42, $callable());
+        $this->assertSame(42, $callableRoute());
+        $this->assertSame(42, $callableMiddleware());
+    }
+
+    public function testFunctionName(): void
+    {
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve(__NAMESPACE__ . '\testAdvancedCallable');
+        $callableRoute = $resolver->resolveRoute(__NAMESPACE__ . '\testAdvancedCallable');
+        $callableMiddleware = $resolver->resolveMiddleware(__NAMESPACE__ . '\testAdvancedCallable');
+
+        $this->assertTrue($callable());
+        $this->assertTrue($callableRoute());
+        $this->assertTrue($callableMiddleware());
+    }
+
+    public function testObjMethodArray(): void
+    {
+        $obj = new CallableTest();
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve([$obj, 'toCall']);
+        $callableRoute = $resolver->resolveRoute([$obj, 'toCall']);
+        $callableMiddleware = $resolver->resolveMiddleware([$obj, 'toCall']);
+
+        $callable();
+        $this->assertSame(1, CallableTest::$CalledCount);
+
+        $callableRoute();
+        $this->assertSame(2, CallableTest::$CalledCount);
+
+        $callableMiddleware();
+        $this->assertSame(3, CallableTest::$CalledCount);
+    }
+
+    public function testSlimCallable(): void
+    {
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve('Slim\Tests\Mocks\CallableTest:toCall');
+        $callableRoute = $resolver->resolveRoute('Slim\Tests\Mocks\CallableTest:toCall');
+        $callableMiddleware = $resolver->resolveMiddleware('Slim\Tests\Mocks\CallableTest:toCall');
+
+        $callable();
+        $this->assertSame(1, CallableTest::$CalledCount);

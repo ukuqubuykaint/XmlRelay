@@ -81,3 +81,5 @@ class ResponseEmitterTest extends TestCase
             ]);
 
             fwrite($stream, $data);
+            rewind($stream);
+            stream_filter_remove($filter);

@@ -183,3 +183,7 @@ class FastRouteDispatcherTest extends TestCase
     public static function provideFoundDispatchCases()
     {
         $cases = [];
+
+        // 0 -------------------------------------------------------------------------------------->
+
+        $callback = function (RouteCollector $r) {

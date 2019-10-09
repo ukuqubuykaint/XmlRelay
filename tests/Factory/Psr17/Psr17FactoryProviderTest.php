@@ -7,3 +7,7 @@
  */
 
 declare(strict_types=1);
+
+namespace Slim\Tests\Factory\Psr17;
+
+use Slim\Factory\Psr17\Psr17FactoryProvider;

@@ -59,3 +59,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
     /**
      * {@inheritdoc}
+     */

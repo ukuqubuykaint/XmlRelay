@@ -70,3 +70,6 @@ class RouteCollectorTest extends TestCase
     {
         $self = $this;
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+
+        $callable = function (RouteCollectorProxy $proxy) use ($self) {

@@ -109,3 +109,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * Middleware are organized as a stack. That means middleware
      * that have been added before will be executed after the newly
      * added one (last in, first out).
+     */

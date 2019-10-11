@@ -29,3 +29,7 @@ class NyholmPsr17Factory extends Psr17Factory
             $psr17Factory,
             $psr17Factory,
             $psr17Factory
+        );
+
+        return new ServerRequestCreator($serverRequestCreator, static::$serverRequestCreatorMethod);
+    }

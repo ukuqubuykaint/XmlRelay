@@ -3,3 +3,4 @@
 The XmlRelay code of conduct is derived from the Ruby code of conduct. This document provides community guidelines for a safe, respectful, productive, and collaborative place for any person who is willing to contribute to the XmlRelay community. It applies to all “collaborative space”, which is defined as community communications channels (such as mailing lists, IRC, Slack, forums, submitted patches, commit comments, etc.). Any violations of the code of conduct may be reported by contacting one or more of the project maintainers either directly or via email to maintainers@xmlrelayframework.com.
 
 * Participants will be tolerant of opposing views.
+* Participants must ensure that their language and actions are free of personal attacks and disparaging personal remarks.

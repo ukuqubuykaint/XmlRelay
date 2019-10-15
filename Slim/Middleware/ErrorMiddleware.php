@@ -50,3 +50,7 @@ class ErrorMiddleware implements MiddlewareInterface
      */
     protected array $subClassHandlers = [];
 
+    /**
+     * @var ErrorHandlerInterface|callable|string|null
+     */
+    protected $defaultErrorHandler;

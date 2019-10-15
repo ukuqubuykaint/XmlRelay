@@ -3,3 +3,4 @@
     <description>Slim coding standard</description>
 
     <!-- display progress -->
+    <arg value="p"/>

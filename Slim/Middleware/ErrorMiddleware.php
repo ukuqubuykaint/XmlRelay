@@ -54,3 +54,7 @@ class ErrorMiddleware implements MiddlewareInterface
      * @var ErrorHandlerInterface|callable|string|null
      */
     protected $defaultErrorHandler;
+
+    public function __construct(
+        CallableResolverInterface $callableResolver,
+        ResponseFactoryInterface $responseFactory,

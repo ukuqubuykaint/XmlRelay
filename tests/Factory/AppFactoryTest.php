@@ -79,3 +79,7 @@ class AppFactoryTest extends TestCase
         $responseFactoryProperty = new ReflectionProperty(RouteCollector::class, 'responseFactory');
         $this->setAccessible($responseFactoryProperty);
 
+        $responseFactory = $responseFactoryProperty->getValue($routeCollector);
+
+        $this->assertInstanceOf($expectedResponseFactoryClass, $responseFactory);
+    }

@@ -95,3 +95,6 @@ You can also type-hint to the concrete instance of the container you are using t
 # 4.13.0 - 2024-03-03
 
 - [3277: Create HttpTooManyRequestsException.php](https://github.com/ukuqubuykaint/AJAX-XML/pull/3277) thanks to @flavioheleno
+- [3278: Remove HttpGoneException executable flag](https://github.com/ukuqubuykaint/AJAX-XML/pull/3278) thanks to @flavioheleno
+- [3285: Update guzzlehttp/psr7 requirement from ^2.5 to ^2.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3285) thanks to @dependabot[bot]
+- [3290: Bump actions/checkout from 3 to 4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3290) thanks to @dependabot[bot]

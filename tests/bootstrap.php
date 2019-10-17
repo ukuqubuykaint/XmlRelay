@@ -17,3 +17,7 @@ $classLoader = require __DIR__ . '/../vendor/autoload.php';
 
 Override::apply($classLoader, [
     ResponseEmitter::class => [
+        'connection_status' => function (): int {
+            if (isset($GLOBALS['connection_status_return'])) {
+                return $GLOBALS['connection_status_return'];
+            }

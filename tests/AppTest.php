@@ -513,3 +513,6 @@ class AppTest extends TestCase
                 ['/foo', '/', '/bar'], '/foo//bar'
             ],
             'two group segments with empty route' => [
+                ['/foo', '/bar', ''], '/foo/bar'
+            ],
+            'two group segments with single slash route' => [

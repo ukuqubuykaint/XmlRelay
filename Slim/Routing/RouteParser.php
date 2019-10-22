@@ -50,3 +50,7 @@ class RouteParser implements RouteParserInterface
          * There is an expression for each optional parameter plus one without the optional parameters
          * The most specific is last, hence why we reverse the array before iterating over it
          */
+        $expressions = array_reverse($this->routeParser->parse($pattern));
+        foreach ($expressions as $expression) {
+            foreach ($expression as $segment) {
+                /*

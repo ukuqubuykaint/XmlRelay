@@ -91,3 +91,4 @@ class BodyParsingMiddlewareTest extends TestCase
                 'application/xml',
                 '<person><name>John</name></person>',
                 simplexml_load_string('<person><name>John</name></person>'),
+            ],

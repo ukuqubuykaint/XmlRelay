@@ -110,3 +110,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * that have been added before will be executed after the newly
      * added one (last in, first out).
      */
+    public function addMiddleware(MiddlewareInterface $middleware): MiddlewareDispatcherInterface

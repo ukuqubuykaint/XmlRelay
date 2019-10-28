@@ -14,3 +14,5 @@ namespace Slim\Exception;
 class HttpTooManyRequestsException extends HttpSpecializedException
 {
     /**
+     * @var int
+     */

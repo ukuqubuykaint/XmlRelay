@@ -38,3 +38,5 @@ class RequestHandlerTest implements RequestHandlerInterface
         $response = $responseFactory
             ->createResponse()
             ->withHeader('Content-Type', 'text/plain');
+        $calledCount = static::$CalledCount;
+        $response->getBody()->write("{$calledCount}");

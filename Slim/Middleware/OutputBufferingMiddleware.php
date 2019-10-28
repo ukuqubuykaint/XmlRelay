@@ -48,3 +48,5 @@ class OutputBufferingMiddleware implements MiddlewareInterface
 
     /**
      * @throws Throwable
+     */
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

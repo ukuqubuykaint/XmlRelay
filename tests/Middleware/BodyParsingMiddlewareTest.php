@@ -92,3 +92,5 @@ class BodyParsingMiddlewareTest extends TestCase
                 '<person><name>John</name></person>',
                 simplexml_load_string('<person><name>John</name></person>'),
             ],
+            'xml-suffix' => [
+                'application/hal+xml;charset=utf8',

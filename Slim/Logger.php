@@ -22,3 +22,6 @@ class Logger extends AbstractLogger
      * @param mixed             $level
      * @param string|Stringable $message
      * @param array<mixed>      $context
+     *
+     * @throws InvalidArgumentException
+     */

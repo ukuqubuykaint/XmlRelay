@@ -205,3 +205,7 @@ class CallableResolverTest extends TestCase
     }
 
     public function testResolutionToAnInvokableClassInContainer(): void
+    {
+        $this->containerProphecy->has('an_invokable')->willReturn(true);
+        $this->containerProphecy->get('an_invokable')->willReturn(new InvokableTest());
+

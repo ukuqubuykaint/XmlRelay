@@ -73,3 +73,7 @@ class RouteCollectorTest extends TestCase
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
 
         $callable = function (RouteCollectorProxy $proxy) use ($self) {
+            $route = $proxy->get('/test', function () {
+            });
+
+            $self->assertSame('/prefix/test', $route->getPattern());

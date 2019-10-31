@@ -58,3 +58,4 @@ final class RouteContext
         RoutingResults $routingResults,
         ?string $basePath = null
     ) {
+        $this->route = $route;

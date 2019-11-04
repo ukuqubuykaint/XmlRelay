@@ -21,3 +21,6 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 
     /**
      * @var int
+     */
+    protected $code = 405;
+

@@ -12,3 +12,7 @@ namespace Slim\Tests\Mocks;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Slim\Interfaces\InvocationStrategyInterface;
+
+class InvocationStrategyTest implements InvocationStrategyInterface
+{

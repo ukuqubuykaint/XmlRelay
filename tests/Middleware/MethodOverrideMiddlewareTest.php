@@ -77,3 +77,6 @@ class MethodOverrideMiddlewareTest extends TestCase
             ->createServerRequest('/', 'POST')
             ->withHeader('X-Http-Method-Override', 'DELETE')
             ->withParsedBody((object) ['_METHOD' => 'PUT']);
+
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(
+            $this->createMock(RequestHandler::class),

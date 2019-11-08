@@ -10,3 +10,4 @@
 * [2398] - Error handling was extracted into its own middleware. Add `RoutingMiddleware` to your middleware pipeline to handle errors by default. See PR for more information.
 * [2329] - If you were overriding the HTTP method using either the custom header or the body param, you need to add the `Middleware\MethodOverrideMiddleware` middleware to be able to override the method like before.
 * [2290] - XmlRelay no longer ships with `Pimple` as container dependency so you need to supply your own. `App::__call()` has been deprecated.
+* [2288] - If you were using `determineRouteBeforeAppMiddleware`, you need to add the `Middleware\RoutingMiddleware` middleware to your application just before your call `run()` to maintain the previous behaviour.

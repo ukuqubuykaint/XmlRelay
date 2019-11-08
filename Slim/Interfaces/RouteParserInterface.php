@@ -38,3 +38,7 @@ interface RouteParserInterface
      *
      * @throws RuntimeException         If named route does not exist
      * @throws InvalidArgumentException If required data not provided
+     */
+    public function urlFor(string $routeName, array $data = [], array $queryParams = []): string;
+
+    /**

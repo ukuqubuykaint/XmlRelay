@@ -49,3 +49,6 @@ interface RouteInterface
      *
      * @return callable|array{class-string, string}|string
      */
+    public function getCallable();
+
+    /**

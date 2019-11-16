@@ -55,3 +55,4 @@ abstract class TestCase extends PhpUnitTestCase
     protected function getStreamFactory(): StreamFactoryInterface
     {
         $psr7ObjectProvider = new PSR7ObjectProvider();
+        return $psr7ObjectProvider->getStreamFactory();

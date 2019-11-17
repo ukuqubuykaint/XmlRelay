@@ -4,3 +4,4 @@
 
     <!-- display progress -->
     <arg value="p"/>
+    <!-- use colors in output -->

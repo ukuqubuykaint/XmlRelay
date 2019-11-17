@@ -14,3 +14,6 @@ use InvalidArgumentException;
 
 use function compact;
 use function count;
+use function json_encode;
+
+class MockAction

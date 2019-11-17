@@ -78,3 +78,5 @@ class ResponseEmitterTest extends TestCase
             $filter = stream_filter_append($stream, $specificFilterName, STREAM_FILTER_WRITE, [
                 'key' => $key,
                 'iv' => $iv
+            ]);
+

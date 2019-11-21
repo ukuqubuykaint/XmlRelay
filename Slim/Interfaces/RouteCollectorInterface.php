@@ -43,3 +43,4 @@ interface RouteCollectorInterface
      * @throws RuntimeException
      */
     public function setCacheFile(string $cacheFile): RouteCollectorInterface;
+

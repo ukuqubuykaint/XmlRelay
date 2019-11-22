@@ -23,3 +23,5 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
     protected static string $serverRequestDecoratorClass = 'Slim\Http\ServerRequest';
 
     public function __construct(ServerRequestCreatorInterface $serverRequestCreator)
+    {
+        $this->serverRequestCreator = $serverRequestCreator;

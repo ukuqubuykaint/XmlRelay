@@ -170,3 +170,7 @@ class RouteTest extends TestCase
         $this->assertSame($callableResolverProphecy->reveal(), $route->getCallableResolver());
     }
 
+    public function testGetInvocationStrategy()
+    {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;

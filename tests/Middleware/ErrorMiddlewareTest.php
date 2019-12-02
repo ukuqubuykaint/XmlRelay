@@ -100,3 +100,6 @@ class ErrorMiddlewareTest extends TestCase
         $app->add($errorMiddleware);
 
         $request = $this->createServerRequest('/foo/baz/');
+        $app->run($request);
+
+        $this->expectOutputString('Oops..');

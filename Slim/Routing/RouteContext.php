@@ -59,3 +59,4 @@ final class RouteContext
         ?string $basePath = null
     ) {
         $this->route = $route;
+        $this->routeParser = $routeParser;

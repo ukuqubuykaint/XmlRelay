@@ -100,3 +100,4 @@ class RouteCollector implements RouteCollectorInterface
         $this->routeParser = $routeParser ?? new RouteParser($this);
 
         if ($cacheFile) {
+            $this->setCacheFile($cacheFile);

@@ -52,3 +52,5 @@ interface RouteInterface
     public function getCallable();
 
     /**
+     * Set route callable
+     *

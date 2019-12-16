@@ -83,3 +83,4 @@ class AppFactoryTest extends TestCase
 
         $this->assertInstanceOf($expectedResponseFactoryClass, $responseFactory);
     }
+

@@ -9,3 +9,6 @@
 declare(strict_types=1);
 
 namespace Slim\Exception;
+
+use Psr\Http\Message\ServerRequestInterface;
+use Throwable;

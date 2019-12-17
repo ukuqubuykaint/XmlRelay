@@ -543,3 +543,7 @@ class AppTest extends TestCase
      * @param array  $sequence
      * @param string $expectedPath
      */
+    #[\PHPUnit\Framework\Attributes\DataProvider('routeGroupsDataProvider')]
+    public function testRouteGroupCombinations(array $sequence, string $expectedPath): void
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

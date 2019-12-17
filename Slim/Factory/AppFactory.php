@@ -44,3 +44,7 @@ class AppFactory
     protected static ?MiddlewareDispatcherInterface $middlewareDispatcher = null;
 
     protected static bool $slimHttpDecoratorsAutomaticDetectionEnabled = true;
+
+    /**
+     * @template TContainerInterface of (ContainerInterface|null)
+     * @param TContainerInterface $container

@@ -19,3 +19,6 @@ use function sprintf;
 
 /**
  * Default Slim application Plain Text Error Renderer
+ */
+class PlainTextErrorRenderer extends AbstractErrorRenderer
+{

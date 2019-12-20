@@ -21,3 +21,4 @@ Override::apply($classLoader, [
             if (isset($GLOBALS['connection_status_return'])) {
                 return $GLOBALS['connection_status_return'];
             }
+

@@ -35,3 +35,7 @@ interface RouteCollectorProxyInterface
      * Get the RouteCollectorProxy's base path
      */
     public function getBasePath(): string;
+
+    /**
+     * Set the RouteCollectorProxy's base path
+     * @return RouteCollectorProxyInterface<TContainerInterface>

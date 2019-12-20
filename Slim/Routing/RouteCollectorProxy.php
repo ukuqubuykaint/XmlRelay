@@ -63,3 +63,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     /**
      * {@inheritdoc}
      */
+    public function getCallableResolver(): CallableResolverInterface
+    {

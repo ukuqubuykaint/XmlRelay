@@ -18,3 +18,5 @@ use Slim\Tests\Providers\PSR7ObjectProvider;
 
 class MiddlewareTest implements MiddlewareInterface
 {
+    public static $CalledCount = 0;
+

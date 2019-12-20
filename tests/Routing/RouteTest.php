@@ -174,3 +174,5 @@ class RouteTest extends TestCase
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
             return $response;
+        };
+

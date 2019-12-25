@@ -129,3 +129,4 @@ class CallableResolverTest extends TestCase
         $callableMiddleware();
         $this->assertSame(3, CallableTest::$CalledCount);
     }
+

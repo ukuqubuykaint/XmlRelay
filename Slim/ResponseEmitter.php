@@ -75,3 +75,5 @@ class ResponseEmitter
         $statusLine = sprintf(
             'HTTP/%s %s %s',
             $response->getProtocolVersion(),
+            $response->getStatusCode(),
+            $response->getReasonPhrase()

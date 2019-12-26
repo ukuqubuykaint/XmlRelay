@@ -7,3 +7,5 @@
          bootstrap="tests/bootstrap.php"
          executionOrder="random"
          cacheDirectory=".phpunit.cache"
+>
+    <testsuites>

@@ -20,3 +20,4 @@ class MiddlewareTest implements MiddlewareInterface
 {
     public static $CalledCount = 0;
 
+    /**

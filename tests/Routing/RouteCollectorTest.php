@@ -77,3 +77,5 @@ class RouteCollectorTest extends TestCase
             });
 
             $self->assertSame('/prefix/test', $route->getPattern());
+        };
+

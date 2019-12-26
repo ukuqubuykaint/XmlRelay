@@ -44,3 +44,6 @@ interface RouteCollectorInterface
      */
     public function setCacheFile(string $cacheFile): RouteCollectorInterface;
 
+    /**
+     * Get the base path used in pathFor()
+     */

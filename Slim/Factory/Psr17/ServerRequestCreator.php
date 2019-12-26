@@ -38,3 +38,7 @@ class ServerRequestCreator implements ServerRequestCreatorInterface
     public function createServerRequestFromGlobals(): ServerRequestInterface
     {
         /** @var callable $callable */
+        $callable = [$this->serverRequestCreator, $this->serverRequestCreatorMethod];
+
+        /** @var ServerRequestInterface */
+        return (Closure::fromCallable($callable))();

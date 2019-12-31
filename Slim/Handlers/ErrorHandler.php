@@ -69,3 +69,7 @@ class ErrorHandler implements ErrorHandlerInterface
         'text/html' => HtmlErrorRenderer::class,
         'text/plain' => PlainTextErrorRenderer::class,
     ];
+
+    protected bool $displayErrorDetails = false;
+
+    protected bool $logErrors;

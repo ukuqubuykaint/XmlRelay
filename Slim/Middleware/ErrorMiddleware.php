@@ -58,3 +58,6 @@ class ErrorMiddleware implements MiddlewareInterface
     public function __construct(
         CallableResolverInterface $callableResolver,
         ResponseFactoryInterface $responseFactory,
+        bool $displayErrorDetails,
+        bool $logErrors,
+        bool $logErrorDetails,

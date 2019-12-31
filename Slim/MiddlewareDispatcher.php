@@ -65,3 +65,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         $this->tip = $kernel;
     }
 
+    /**

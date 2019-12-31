@@ -22,3 +22,4 @@ use function sprintf;
  */
 class PlainTextErrorRenderer extends AbstractErrorRenderer
 {
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string

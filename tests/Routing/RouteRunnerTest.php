@@ -44,3 +44,4 @@ class RouteRunnerTest extends TestCase
         $routeParser = new RouteParser($routeCollector);
         $routeResolver = new RouteResolver($routeCollector);
 
+        $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');

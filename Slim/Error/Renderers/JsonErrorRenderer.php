@@ -44,3 +44,4 @@ class JsonErrorRenderer extends AbstractErrorRenderer
 
     /**
      * @return array<string|int>
+     */

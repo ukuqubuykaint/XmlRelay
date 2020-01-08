@@ -64,3 +64,4 @@ Then create file _public/index.php_.
 
 ```php
 <?php
+use Psr\Http\Message\ResponseInterface as Response;

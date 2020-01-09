@@ -58,3 +58,7 @@ abstract class TestCase extends PhpUnitTestCase
         return $psr7ObjectProvider->getStreamFactory();
     }
 
+    /**
+     * @param ContainerInterface|null $container
+     *
+     * @return CallableResolverInterface

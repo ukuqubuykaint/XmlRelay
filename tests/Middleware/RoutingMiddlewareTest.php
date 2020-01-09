@@ -79,3 +79,4 @@ class RoutingMiddlewareTest extends TestCase
     {
         $routeCollector = $this->getRouteCollector();
         $routeParser = new RouteParser($routeCollector);
+        $routeResolver = new RouteResolver($routeCollector);

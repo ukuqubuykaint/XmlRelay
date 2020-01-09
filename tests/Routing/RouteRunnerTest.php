@@ -45,3 +45,6 @@ class RouteRunnerTest extends TestCase
         $routeResolver = new RouteResolver($routeCollector);
 
         $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');
+        $dispatcher = new RouteRunner($routeResolver, $routeParser);
+
+        $middlewareDispatcher = new MiddlewareDispatcher($dispatcher, $callableResolver);

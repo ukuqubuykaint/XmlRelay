@@ -517,3 +517,5 @@ class AppTest extends TestCase
             ],
             'two group segments with single slash route' => [
                 ['/foo', '/bar', '/'], '/foo/bar/'
+            ],
+            'two group segments with segment route' => [

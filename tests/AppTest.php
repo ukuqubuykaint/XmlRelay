@@ -519,3 +519,4 @@ class AppTest extends TestCase
                 ['/foo', '/bar', '/'], '/foo/bar/'
             ],
             'two group segments with segment route' => [
+                ['/foo', '/bar', '/baz'], '/foo/bar/baz'

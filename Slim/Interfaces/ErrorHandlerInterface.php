@@ -21,3 +21,5 @@ interface ErrorHandlerInterface
         Throwable $exception,
         bool $displayErrorDetails,
         bool $logErrors,
+        bool $logErrorDetails
+    ): ResponseInterface;

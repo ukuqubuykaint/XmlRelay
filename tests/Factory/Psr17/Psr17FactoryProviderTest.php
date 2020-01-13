@@ -35,3 +35,5 @@ class Psr17FactoryProviderTest extends TestCase
     {
         Psr17FactoryProvider::setFactories(['Factory 1']);
         Psr17FactoryProvider::addFactory('Factory 2');
+
+        $this->assertSame(['Factory 2', 'Factory 1'], Psr17FactoryProvider::getFactories());

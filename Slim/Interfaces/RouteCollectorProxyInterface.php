@@ -39,3 +39,4 @@ interface RouteCollectorProxyInterface
     /**
      * Set the RouteCollectorProxy's base path
      * @return RouteCollectorProxyInterface<TContainerInterface>
+     */

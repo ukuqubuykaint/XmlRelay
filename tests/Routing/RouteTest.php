@@ -176,3 +176,7 @@ class RouteTest extends TestCase
             return $response;
         };
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $strategyProphecy = $this->prophesize(InvocationStrategyInterface::class);

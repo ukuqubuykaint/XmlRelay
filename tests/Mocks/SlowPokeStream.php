@@ -20,3 +20,7 @@ use function usleep;
 use const SEEK_SET;
 
 class SlowPokeStream implements StreamInterface
+{
+    public const CHUNK_SIZE = 1;
+    public const SIZE = 500;
+

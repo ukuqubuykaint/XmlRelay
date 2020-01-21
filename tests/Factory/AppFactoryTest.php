@@ -84,3 +84,6 @@ class AppFactoryTest extends TestCase
         $this->assertInstanceOf($expectedResponseFactoryClass, $responseFactory);
     }
 
+    public function testDetermineResponseFactoryReturnsDecoratedFactory()
+    {
+        Psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);

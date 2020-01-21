@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Slim Framework (https://slimframework.com)
+ *
+ * @license https://github.com/slimphp/Slim/blob/4.x/LICENSE.md (MIT License)
+ */
+
+declare(strict_types=1);
+
+namespace Slim\Tests\Middleware;
+
+use Exception;
+use InvalidArgumentException;
+use Psr\Http\Server\RequestHandlerInterface;
+use ReflectionProperty;
+use Slim\Middleware\OutputBufferingMiddleware;
+use Slim\Tests\TestCase;
+
+use function ob_get_contents;
+
+class OutputBufferingMiddlewareTest extends TestCase
+{
+    public function testStyleDefaultValid()
+    {
+        $middleware = new OutputBufferingMiddleware($this->getStreamFactory());
+
+        $reflectionProperty = new ReflectionProperty($middleware, 'style');
+        $this->setAccessible($reflectionProperty);
+        $value = $reflectionProperty->getValue($middleware);
+
+        $this->assertSame('append', $value);
+    }

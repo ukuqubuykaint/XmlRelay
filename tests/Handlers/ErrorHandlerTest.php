@@ -104,3 +104,5 @@ class ErrorHandlerTest extends TestCase
     public function testForceContentType()
     {
         $request = $this
+            ->createServerRequest('/not-defined', 'GET')
+            ->withHeader('Accept', 'text/plain,text/xml');

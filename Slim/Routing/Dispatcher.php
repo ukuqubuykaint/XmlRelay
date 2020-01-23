@@ -51,3 +51,6 @@ class Dispatcher implements DispatcherInterface
                 'dispatcher' => FastRouteDispatcher::class,
                 'routeParser' => new Std(),
             ]);
+        }
+
+        $this->dispatcher = $dispatcher;

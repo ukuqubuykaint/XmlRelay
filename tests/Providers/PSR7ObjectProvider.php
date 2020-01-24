@@ -39,3 +39,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
         string $uri,
         string $method = 'GET',
         array $data = []
+    ): ServerRequestInterface {

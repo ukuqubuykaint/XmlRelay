@@ -212,3 +212,7 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 2 -------------------------------------------------------------------------------------->
+
+        $callback = function (RouteCollector $r) {
+            $r->addRoute('GET', '/user/{name}/{id:[0-9]+}', 'handler0');

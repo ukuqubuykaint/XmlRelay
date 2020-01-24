@@ -28,3 +28,4 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Method not allowed.';
+

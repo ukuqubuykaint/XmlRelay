@@ -13,3 +13,4 @@
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>
+    </projectFiles>

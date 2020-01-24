@@ -162,3 +162,7 @@ class AppFactoryTest extends TestCase
         $middlewareDispatcherProphecy = $this->prophesize(MiddlewareDispatcherInterface::class);
 
         $routeCollectorProphecy->getRouteParser()->willReturn($routeParserProphecy);
+
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+        AppFactory::setResponseFactory($responseFactoryProphecy->reveal());
+        AppFactory::setContainer($containerProphecy->reveal());

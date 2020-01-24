@@ -16,3 +16,4 @@ use Slim\MiddlewareDispatcher;
 use Slim\Routing\RouteCollector;
 use Slim\Routing\RouteContext;
 use Slim\Routing\RouteParser;
+use Slim\Routing\RouteResolver;

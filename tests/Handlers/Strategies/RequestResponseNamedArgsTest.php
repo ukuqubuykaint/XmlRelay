@@ -52,3 +52,5 @@ class RequestResponseNamedArgsTest extends TestCase
         if (PHP_VERSION_ID < self::PHP_8_0_VERSION_ID) {
             $this->markTestSkipped('Named arguments are not supported in PHP versions prior to 8.0');
         }
+
+        $args = [

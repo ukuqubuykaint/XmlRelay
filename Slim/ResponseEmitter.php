@@ -46,3 +46,7 @@ class ResponseEmitter
 
             $this->emitStatusLine($response);
         }
+
+        if (!$isEmpty) {
+            $this->emitBody($response);
+        }

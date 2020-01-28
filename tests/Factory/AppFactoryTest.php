@@ -87,3 +87,6 @@ class AppFactoryTest extends TestCase
     public function testDetermineResponseFactoryReturnsDecoratedFactory()
     {
         Psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
+
+        $app = AppFactory::create();

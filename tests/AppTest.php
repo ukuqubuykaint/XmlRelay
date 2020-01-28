@@ -547,3 +547,5 @@ class AppTest extends TestCase
     public function testRouteGroupCombinations(array $sequence, string $expectedPath): void
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $app = new App($responseFactoryProphecy->reveal());
+

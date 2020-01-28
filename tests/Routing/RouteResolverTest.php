@@ -24,3 +24,5 @@ use function sprintf;
 class RouteResolverTest extends TestCase
 {
     public static function computeRoutingResultsDataProvider(): array
+    {
+        return [

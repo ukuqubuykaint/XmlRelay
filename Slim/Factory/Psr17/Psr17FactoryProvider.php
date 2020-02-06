@@ -25,3 +25,6 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
         NyholmPsr17Factory::class,
         LaminasDiactorosPsr17Factory::class,
         GuzzlePsr17Factory::class,
+    ];
+
+    /**

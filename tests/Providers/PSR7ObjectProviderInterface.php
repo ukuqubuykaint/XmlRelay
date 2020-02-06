@@ -36,3 +36,4 @@ interface PSR7ObjectProviderInterface
 
     /**
      * @return StreamFactoryInterface
+     */

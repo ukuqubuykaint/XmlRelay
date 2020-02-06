@@ -19,3 +19,4 @@ class HttpUnauthorizedException extends HttpSpecializedException
     protected $code = 401;
 
     /**
+     * @var string

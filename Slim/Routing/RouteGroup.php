@@ -54,3 +54,6 @@ class RouteGroup implements RouteGroupInterface
         $this->routeCollectorProxy = $routeCollectorProxy;
     }
 
+    /**
+     * {@inheritdoc}
+     */

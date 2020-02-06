@@ -48,3 +48,4 @@ class JsonErrorRenderer extends AbstractErrorRenderer
     private function formatExceptionFragment(Throwable $exception): array
     {
         $code = $exception->getCode();
+        return [

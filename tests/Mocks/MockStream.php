@@ -76,3 +76,7 @@ class MockStream implements StreamInterface
     public function __construct($body = '')
     {
         if (is_string($body)) {
+            $resource = fopen('php://temp', 'rw+');
+            fwrite($resource, $body);
+            $body = $resource;
+        }

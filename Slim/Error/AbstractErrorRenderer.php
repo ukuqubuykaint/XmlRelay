@@ -37,3 +37,6 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
 
     protected function getErrorDescription(Throwable $exception): string
     {
+        if ($exception instanceof HttpException) {
+            return $exception->getDescription();
+        }

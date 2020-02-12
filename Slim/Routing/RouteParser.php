@@ -59,3 +59,5 @@ class RouteParser implements RouteParserInterface
                  */
                 if (is_string($segment)) {
                     $segments[] = $segment;
+                    continue;
+                }

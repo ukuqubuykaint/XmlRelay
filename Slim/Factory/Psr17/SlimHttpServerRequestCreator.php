@@ -47,3 +47,4 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
         }
 
         return $decoratedServerRequest;
+    }

@@ -28,3 +28,5 @@ use Slim\MiddlewareDispatcher;
 use Slim\Tests\Providers\PSR7ObjectProvider;
 
 abstract class TestCase extends PhpUnitTestCase
+{
+    use ProphecyTrait;

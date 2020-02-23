@@ -49,3 +49,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      */
     public function resolve($toResolve): callable
     {
+        $toResolve = $this->prepareToResolve($toResolve);
+        if (is_callable($toResolve)) {
+            return $this->bindToContainer($toResolve);
+        }

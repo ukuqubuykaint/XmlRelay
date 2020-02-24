@@ -22,3 +22,4 @@ use function strtoupper;
 class MethodOverrideMiddleware implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {

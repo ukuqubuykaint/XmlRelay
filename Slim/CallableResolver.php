@@ -53,3 +53,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         if (is_callable($toResolve)) {
             return $this->bindToContainer($toResolve);
         }
+        $resolved = $toResolve;
+        if (is_string($toResolve)) {
+            $resolved = $this->resolveSlimNotation($toResolve);
+            $resolved[1] ??= '__invoke';

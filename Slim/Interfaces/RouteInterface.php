@@ -56,3 +56,7 @@ interface RouteInterface
      *
      * @param callable|array{class-string, string}|string $callable
      */
+    public function setCallable($callable): RouteInterface;
+
+    /**
+     * Get route name

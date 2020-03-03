@@ -44,3 +44,5 @@ jobs:
         if: matrix.analysis
         run: vendor/bin/phpcs
 
+      - name: Static analysis
+        if: matrix.analysis

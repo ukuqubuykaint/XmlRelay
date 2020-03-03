@@ -40,3 +40,7 @@ class NyholmPsr17Factory extends Psr17Factory
     public static function isServerRequestCreatorAvailable(): bool
     {
         return (
+            parent::isServerRequestCreatorAvailable()
+            && class_exists(static::$responseFactoryClass)
+        );
+    }

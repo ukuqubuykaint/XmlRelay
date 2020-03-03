@@ -77,3 +77,5 @@ class ResponseEmitter
             $response->getProtocolVersion(),
             $response->getStatusCode(),
             $response->getReasonPhrase()
+        );
+        header($statusLine, true, $response->getStatusCode());

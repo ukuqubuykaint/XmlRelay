@@ -26,3 +26,7 @@ class RouteResolverTest extends TestCase
     public static function computeRoutingResultsDataProvider(): array
     {
         return [
+            ['GET', '', '/'],
+            ['GET', '/', '/'],
+            ['GET', '//foo', '//foo'],
+            ['GET', 'hello%20world', '/hello world'],

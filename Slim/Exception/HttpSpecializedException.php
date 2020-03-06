@@ -14,3 +14,4 @@ use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
 abstract class HttpSpecializedException extends HttpException
+{

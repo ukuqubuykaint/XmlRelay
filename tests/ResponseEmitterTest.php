@@ -80,3 +80,6 @@ class ResponseEmitterTest extends TestCase
                 'iv' => $iv
             ]);
 
+            fwrite($stream, $data);
+            rewind($stream);
+            stream_filter_remove($filter);

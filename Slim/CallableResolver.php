@@ -82,3 +82,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * @param callable|array{class-string, string}|string $toResolve
      *
      * @throws RuntimeException
+     */

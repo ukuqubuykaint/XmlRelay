@@ -12,3 +12,5 @@ namespace Slim\Exception;
 
 /** @api */
 class HttpNotImplementedException extends HttpSpecializedException
+{
+    /**

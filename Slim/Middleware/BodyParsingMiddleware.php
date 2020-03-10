@@ -55,3 +55,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $parsedBody = $request->getParsedBody();
+
+        if (empty($parsedBody)) {
+            $parsedBody = $this->parseBody($request);

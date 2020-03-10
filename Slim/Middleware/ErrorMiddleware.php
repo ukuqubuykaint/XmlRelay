@@ -61,3 +61,4 @@ class ErrorMiddleware implements MiddlewareInterface
         bool $displayErrorDetails,
         bool $logErrors,
         bool $logErrorDetails,
+        ?LoggerInterface $logger = null

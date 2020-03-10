@@ -43,3 +43,6 @@ interface RouteCollectorProxyInterface
     public function setBasePath(string $basePath): RouteCollectorProxyInterface;
 
     /**
+     * Add GET route
+     *
+     * @param string $pattern The route URI pattern

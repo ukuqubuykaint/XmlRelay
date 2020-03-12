@@ -107,3 +107,7 @@ class RouteCollector implements RouteCollectorInterface
     public function getRouteParser(): RouteParserInterface
     {
         return $this->routeParser;
+    }
+
+    /**
+     * Get default route invocation strategy

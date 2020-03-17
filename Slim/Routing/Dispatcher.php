@@ -23,3 +23,7 @@ class Dispatcher implements DispatcherInterface
 
     protected function createDispatcher(): FastRouteDispatcher
     {
+        if ($this->dispatcher) {
+            return $this->dispatcher;
+        }
+

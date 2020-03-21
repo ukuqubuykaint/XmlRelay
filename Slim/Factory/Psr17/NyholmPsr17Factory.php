@@ -15,3 +15,6 @@ class NyholmPsr17Factory extends Psr17Factory
 
     /**
      * {@inheritdoc}
+     */
+    public static function getServerRequestCreator(): ServerRequestCreatorInterface
+    {

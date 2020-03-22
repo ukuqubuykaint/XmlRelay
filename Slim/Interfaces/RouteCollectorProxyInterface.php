@@ -46,3 +46,7 @@ interface RouteCollectorProxyInterface
      * Add GET route
      *
      * @param string $pattern The route URI pattern
+     * @param callable|array{class-string, string}|string $callable The route callback routine
+     */
+    public function get(string $pattern, $callable): RouteInterface;
+

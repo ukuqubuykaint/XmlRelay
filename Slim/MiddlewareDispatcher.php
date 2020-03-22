@@ -66,3 +66,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     }
 
     /**
+     * Invoke the middleware stack

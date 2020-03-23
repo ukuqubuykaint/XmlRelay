@@ -120,3 +120,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     public function __construct(
         array $methods,
         string $pattern,
+        $callable,
+        ResponseFactoryInterface $responseFactory,

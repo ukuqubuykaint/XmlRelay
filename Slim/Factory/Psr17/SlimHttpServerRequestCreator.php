@@ -48,3 +48,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
 
         return $decoratedServerRequest;
     }
+
+    public static function isServerRequestDecoratorAvailable(): bool
+    {

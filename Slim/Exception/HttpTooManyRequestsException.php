@@ -18,3 +18,4 @@ class HttpTooManyRequestsException extends HttpSpecializedException
      */
     protected $code = 429;
 
+    /**

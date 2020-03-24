@@ -80,3 +80,6 @@ class SlowPokeStream implements StreamInterface
     public function isSeekable(): bool
     {
         return false;
+    }
+
+    public function isWritable(): bool

@@ -26,3 +26,7 @@ use Slim\Factory\Psr17\SlimPsr17Factory;
 use Slim\Factory\ServerRequestCreatorFactory;
 use Slim\Http\ServerRequest;
 use Slim\Interfaces\ServerRequestCreatorInterface;
+use Slim\Psr7\Request as SlimServerRequest;
+use Slim\Tests\TestCase;
+
+class ServerRequestCreatorFactoryTest extends TestCase

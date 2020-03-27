@@ -17,3 +17,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Interface PSR7ObjectProviderInterface
+ *
+ * @package Slim\Tests\Providers

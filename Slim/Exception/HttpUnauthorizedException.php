@@ -21,3 +21,4 @@ class HttpUnauthorizedException extends HttpSpecializedException
     /**
      * @var string
      */
+    protected $message = 'Unauthorized.';

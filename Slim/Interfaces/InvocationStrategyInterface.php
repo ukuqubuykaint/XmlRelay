@@ -21,3 +21,5 @@ interface InvocationStrategyInterface
     /**
      * Invoke a route callable.
      *
+     * @param callable               $callable       The callable to invoke using the strategy.
+     * @param ServerRequestInterface $request        The request object.

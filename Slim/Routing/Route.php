@@ -81,3 +81,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * Container
+     * @var TContainerInterface $container
+     */
+    protected ?ContainerInterface $container = null;

@@ -41,3 +41,4 @@ class SlimHttpServerRequestCreatorTest extends TestCase
     }
 
     public function testCreateServerRequestFromGlobals()
+    {

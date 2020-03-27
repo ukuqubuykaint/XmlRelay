@@ -549,3 +549,6 @@ class AppTest extends TestCase
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
         $app = new App($responseFactoryProphecy->reveal());
 
+        $processSequence = function (RouteCollectorProxy $app, array $sequence, $processSequence) {
+            $path = array_shift($sequence);
+

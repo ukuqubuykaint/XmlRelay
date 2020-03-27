@@ -31,3 +31,7 @@ class OutputBufferingMiddlewareTest extends TestCase
 
         $this->assertSame('append', $value);
     }
+
+    public function testStyleCustomValid()
+    {
+        $middleware = new OutputBufferingMiddleware($this->getStreamFactory(), 'prepend');

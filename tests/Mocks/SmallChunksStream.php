@@ -25,3 +25,4 @@ class SmallChunksStream implements StreamInterface
 
     /**
      * @var int
+     */

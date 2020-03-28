@@ -130,3 +130,5 @@ class CallableResolverTest extends TestCase
         $this->assertSame(3, CallableTest::$CalledCount);
     }
 
+    public function testSlimCallableAsArray(): void
+    {

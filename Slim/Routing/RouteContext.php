@@ -25,3 +25,6 @@ final class RouteContext
     public const ROUTING_RESULTS = '__routingResults__';
 
     public const BASE_PATH = '__basePath__';
+
+    public static function fromRequest(ServerRequestInterface $serverRequest): self
+    {

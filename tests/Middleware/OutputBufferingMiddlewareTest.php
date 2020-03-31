@@ -35,3 +35,7 @@ class OutputBufferingMiddlewareTest extends TestCase
     public function testStyleCustomValid()
     {
         $middleware = new OutputBufferingMiddleware($this->getStreamFactory(), 'prepend');
+
+        $reflectionProperty = new ReflectionProperty($middleware, 'style');
+        $this->setAccessible($reflectionProperty);
+        $value = $reflectionProperty->getValue($middleware);

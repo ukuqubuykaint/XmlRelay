@@ -132,3 +132,7 @@ class CallableResolverTest extends TestCase
 
     public function testSlimCallableAsArray(): void
     {
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve([CallableTest::class, 'toCall']);
+        $callableRoute = $resolver->resolveRoute([CallableTest::class, 'toCall']);
+        $callableMiddleware = $resolver->resolveMiddleware([CallableTest::class, 'toCall']);

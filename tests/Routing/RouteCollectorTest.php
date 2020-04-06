@@ -79,3 +79,6 @@ class RouteCollectorTest extends TestCase
             $self->assertSame('/prefix/test', $route->getPattern());
         };
 
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $callableResolverProphecy
+            ->resolve(Argument::is($callable))

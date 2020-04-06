@@ -26,3 +26,6 @@ class HttpUnauthorizedExceptionTest extends TestCase
     public function testHttpUnauthorizedExceptionWithMessage()
     {
         $request = $this->createServerRequest('/');
+        $exception = new HttpUnauthorizedException($request, 'Hello World');
+
+        $this->assertSame('Hello World', $exception->getMessage());

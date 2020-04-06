@@ -46,3 +46,4 @@ jobs:
 
       - name: Static analysis
         if: matrix.analysis
+        run: vendor/bin/phpstan

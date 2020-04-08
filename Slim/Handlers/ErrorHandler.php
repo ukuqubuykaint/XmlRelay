@@ -73,3 +73,6 @@ class ErrorHandler implements ErrorHandlerInterface
     protected bool $displayErrorDetails = false;
 
     protected bool $logErrors;
+
+    protected bool $logErrorDetails = false;
+

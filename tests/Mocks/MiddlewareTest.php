@@ -21,3 +21,7 @@ class MiddlewareTest implements MiddlewareInterface
     public static $CalledCount = 0;
 
     /**
+     * {@inheritdoc}
+     */
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {

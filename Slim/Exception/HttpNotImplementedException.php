@@ -14,3 +14,4 @@ namespace Slim\Exception;
 class HttpNotImplementedException extends HttpSpecializedException
 {
     /**
+     * @var int

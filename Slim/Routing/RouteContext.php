@@ -60,3 +60,4 @@ final class RouteContext
     ) {
         $this->route = $route;
         $this->routeParser = $routeParser;
+        $this->routingResults = $routingResults;

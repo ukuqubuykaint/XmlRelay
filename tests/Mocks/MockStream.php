@@ -80,3 +80,6 @@ class MockStream implements StreamInterface
             fwrite($resource, $body);
             $body = $resource;
         }
+
+        if ('resource' === gettype($body)) {
+            $this->stream = $body;

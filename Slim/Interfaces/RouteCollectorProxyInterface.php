@@ -82,3 +82,5 @@ interface RouteCollectorProxyInterface
      */
     public function delete(string $pattern, $callable): RouteInterface;
 
+    /**
+     * Add OPTIONS route

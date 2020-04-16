@@ -57,3 +57,5 @@ class RouteGroup implements RouteGroupInterface
     /**
      * {@inheritdoc}
      */
+    public function collectRoutes(): RouteGroupInterface
+    {

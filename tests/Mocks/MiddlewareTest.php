@@ -25,3 +25,5 @@ class MiddlewareTest implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        static::$CalledCount++;
+

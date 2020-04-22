@@ -15,3 +15,6 @@ use Slim\MiddlewareDispatcher;
 
 /** @api */
 interface RouteGroupInterface
+{
+    public function collectRoutes(): RouteGroupInterface;
+

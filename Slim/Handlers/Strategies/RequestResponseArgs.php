@@ -9,3 +9,6 @@
 declare(strict_types=1);
 
 namespace Slim\Handlers\Strategies;
+
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;

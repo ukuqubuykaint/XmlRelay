@@ -50,3 +50,7 @@ class ResponseEmitter
         if (!$isEmpty) {
             $this->emitBody($response);
         }
+    }
+
+    /**
+     * Emit Response Headers

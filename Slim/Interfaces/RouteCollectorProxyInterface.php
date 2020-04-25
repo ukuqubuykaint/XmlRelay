@@ -50,3 +50,7 @@ interface RouteCollectorProxyInterface
      */
     public function get(string $pattern, $callable): RouteInterface;
 
+    /**
+     * Add POST route
+     *
+     * @param string $pattern The route URI pattern

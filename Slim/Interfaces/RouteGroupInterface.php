@@ -28,3 +28,7 @@ interface RouteGroupInterface
     /**
      * Add middleware to the route group
      */
+    public function addMiddleware(MiddlewareInterface $middleware): RouteGroupInterface;
+
+    /**
+     * Append the group's middleware to the MiddlewareDispatcher

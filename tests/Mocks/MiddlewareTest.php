@@ -27,3 +27,6 @@ class MiddlewareTest implements MiddlewareInterface
     {
         static::$CalledCount++;
 
+        $psr7ObjectProvider = new PSR7ObjectProvider();
+        $responseFactory = $psr7ObjectProvider->getResponseFactory();
+

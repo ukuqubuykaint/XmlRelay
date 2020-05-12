@@ -56,3 +56,4 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
         $html .= sprintf('<div><strong>File:</strong> %s</div>', $exception->getFile());
 
         $html .= sprintf('<div><strong>Line:</strong> %s</div>', $exception->getLine());
+

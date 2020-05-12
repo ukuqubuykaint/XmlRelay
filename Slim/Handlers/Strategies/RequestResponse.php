@@ -29,3 +29,5 @@ class RequestResponse implements InvocationStrategyInterface
         callable $callable,
         ServerRequestInterface $request,
         ResponseInterface $response,
+        array $routeArguments
+    ): ResponseInterface {

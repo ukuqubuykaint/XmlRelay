@@ -100,3 +100,4 @@ class AbstractErrorRendererTest extends TestCase
 
     public function testHTMLErrorRendererEscapesHttpException()
     {
+        $exceptionTitle = '<script>alert(1)</script>';

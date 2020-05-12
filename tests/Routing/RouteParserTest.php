@@ -48,3 +48,7 @@ class RouteParserTest extends TestCase
                 ['a' => ['k' => '1', 'f' => 'x'], 'b', 'c' => 'd'],
                 '/hello/world?a%5Bk%5D=1&a%5Bf%5D=x&0=b&c=d',
             ],
+            'with query parameters containing array with numeric keys' => [
+                false,
+                '/{first}/{second}',
+                ['first' => 'hello', 'second' => 'world'],

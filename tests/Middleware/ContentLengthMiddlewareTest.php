@@ -31,3 +31,6 @@ class ContentLengthMiddlewareTest extends TestCase
         $middlewareDispatcher = $this->createMiddlewareDispatcher(
             $this->createMock(RequestHandlerInterface::class),
             null
+        );
+        $middlewareDispatcher->addCallable($mw);
+        $middlewareDispatcher->addMiddleware($mw2);

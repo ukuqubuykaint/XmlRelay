@@ -85,3 +85,7 @@ class ResponseEmitterTest extends TestCase
             stream_filter_remove($filter);
             stream_filter_append($stream, $specificUnfilterName, STREAM_FILTER_READ, [
                 'key' => $key,
+                'iv' => $iv
+            ]);
+
+            $body = $this->getStreamFactory()->createStreamFromResource($stream);

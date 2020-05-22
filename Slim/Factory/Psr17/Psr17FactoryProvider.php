@@ -32,3 +32,6 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
      */
     public static function getFactories(): array
     {
+        return static::$factories;
+    }
+

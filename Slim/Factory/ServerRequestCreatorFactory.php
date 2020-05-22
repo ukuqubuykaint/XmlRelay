@@ -45,3 +45,5 @@ class ServerRequestCreatorFactory
         /** @var Psr17Factory $psr17Factory */
         foreach ($psr17FactoryProvider->getFactories() as $psr17Factory) {
             if ($psr17Factory::isServerRequestCreatorAvailable()) {
+                $serverRequestCreator = $psr17Factory::getServerRequestCreator();
+                return static::attemptServerRequestCreatorDecoration($serverRequestCreator);

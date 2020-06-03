@@ -15,3 +15,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\Interfaces\RequestHandlerInvocationStrategyInterface;
 
 class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvocationStrategyInterface
+{
+    public static $CalledCount = 0;
+

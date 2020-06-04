@@ -24,3 +24,6 @@ class Logger extends AbstractLogger
      * @param array<mixed>      $context
      *
      * @throws InvalidArgumentException
+     */
+    public function log($level, $message, array $context = []): void
+    {

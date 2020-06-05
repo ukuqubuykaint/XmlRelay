@@ -23,3 +23,7 @@ use function trim;
  *
  * These functions include:
  *
+ * - headers_sent(): we want to always return false so that headers will be
+ *   emitted, and we can test to see their values.
+ * - header(): we want to aggregate calls to this function.
+ *

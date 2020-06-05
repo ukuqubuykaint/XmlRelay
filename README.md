@@ -41,3 +41,5 @@ The `ServerRequest` and `Response` object decorators are automatically detected 
 <?php
 
 use XmlRelay\Factory\AppFactory;
+use XmlRelay\Factory\ServerRequestCreatorFactory;
+

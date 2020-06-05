@@ -16,3 +16,5 @@ class HttpForbiddenException extends HttpSpecializedException
     /**
      * @var int
      */
+    protected $code = 403;
+

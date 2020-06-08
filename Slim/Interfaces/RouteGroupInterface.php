@@ -32,3 +32,5 @@ interface RouteGroupInterface
 
     /**
      * Append the group's middleware to the MiddlewareDispatcher
+     * @param MiddlewareDispatcher<\Psr\Container\ContainerInterface|null> $dispatcher
+     */

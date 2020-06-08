@@ -123,3 +123,6 @@ class ErrorHandlerTest extends TestCase
      * request instead of being cached from the first invocation.
      */
     public function testContentTypeIsNegotiatedOnEachRequest()
+    {
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+

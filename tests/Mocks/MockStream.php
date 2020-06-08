@@ -83,3 +83,7 @@ class MockStream implements StreamInterface
 
         if ('resource' === gettype($body)) {
             $this->stream = $body;
+            $meta = stream_get_meta_data($this->stream);
+            $this->seekable = $meta['seekable'];
+            $this->readable = isset(self::$readWriteHash['read'][$meta['mode']]);
+            $this->writable = isset(self::$readWriteHash['write'][$meta['mode']]);

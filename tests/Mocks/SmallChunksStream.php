@@ -68,3 +68,6 @@ class SmallChunksStream implements StreamInterface
     }
 
     public function isReadable(): bool
+    {
+        return true;
+    }

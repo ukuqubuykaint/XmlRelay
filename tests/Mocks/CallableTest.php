@@ -18,3 +18,6 @@ class CallableTest
 
     public static $CalledContainer = null;
 
+    public function __construct($container = null)
+    {
+        static::$CalledContainer = $container;

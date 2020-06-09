@@ -520,3 +520,7 @@ class AppTest extends TestCase
             ],
             'two group segments with segment route' => [
                 ['/foo', '/bar', '/baz'], '/foo/bar/baz'
+            ],
+            'two group segments with segment route that has aTrailing slash' => [
+                ['/foo', '/bar', '/baz/'], '/foo/bar/baz/'
+            ],

@@ -70,3 +70,7 @@ use XmlRelay\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// Instantiate App
+$app = AppFactory::create();
+
+// Add error middleware

@@ -61,3 +61,7 @@ final class RouteContext
         $this->route = $route;
         $this->routeParser = $routeParser;
         $this->routingResults = $routingResults;
+        $this->basePath = $basePath;
+    }
+
+    public function getRoute(): ?RouteInterface

@@ -65,3 +65,7 @@ class FastRouteDispatcher extends GroupCountBased
      * @return array{int, string|null, array<string, string>}
      */
     private function routingResults(string $httpMethod, string $uri): array
+    {
+        if (isset($this->staticRouteMap[$httpMethod][$uri])) {
+            /** @var string $routeIdentifier */
+            $routeIdentifier = $this->staticRouteMap[$httpMethod][$uri];

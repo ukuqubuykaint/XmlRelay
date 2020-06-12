@@ -45,3 +45,4 @@ class RequestHandlerTest implements RequestHandlerInterface
     }
 
     public function custom(ServerRequestInterface $request): ResponseInterface
+    {

@@ -32,3 +32,6 @@ class RequestResponse implements InvocationStrategyInterface
         array $routeArguments
     ): ResponseInterface {
         foreach ($routeArguments as $k => $v) {
+            $request = $request->withAttribute($k, $v);
+        }
+

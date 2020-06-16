@@ -56,3 +56,7 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $this->assertInstanceOf(ServerRequest::class, $slimHttpServerRequestCreator->createServerRequestFromGlobals());
     }
 
+    public function testCreateServerRequestFromGlobalsThrowsRuntimeException()
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('The Slim-Http ServerRequest decorator is not available.');

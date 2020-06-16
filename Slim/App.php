@@ -95,3 +95,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         return $this->middlewareDispatcher;
     }
 
+    /**
+     * @param MiddlewareInterface|string|callable $middleware

@@ -80,3 +80,4 @@ class RequestResponseNamedArgsTest extends TestCase
 
         $args = [
             'name' => 'world',
+        ];

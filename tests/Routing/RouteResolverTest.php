@@ -53,3 +53,7 @@ class RouteResolverTest extends TestCase
                 if ($args[1] !== $expectedUri) {
                     throw new Error(sprintf(
                         "URI transformation failed.\n  Received: '%s'\n  Expected: '%s'",
+                        $args[1],
+                        $expectedUri
+                    ));
+                }

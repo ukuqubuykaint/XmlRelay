@@ -60,3 +60,6 @@ class SlimHttpServerRequestCreatorTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('The Slim-Http ServerRequest decorator is not available.');
+
+        $serverRequestCreatorProphecy = $this->prophesize(ServerRequestCreatorInterface::class);
+

@@ -50,3 +50,4 @@ class RouteCollectorTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->setBasePath($basePath);
 
+        $this->assertSame($basePath, $routeCollector->getBasePath());

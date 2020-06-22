@@ -18,3 +18,7 @@ use Slim\Tests\Providers\PSR7ObjectProvider;
 class MockRequestHandler implements RequestHandlerInterface
 {
     /**
+     * @var int
+     */
+    private $calledCount = 0;
+

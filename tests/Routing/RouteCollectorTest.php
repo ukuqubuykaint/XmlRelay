@@ -51,3 +51,7 @@ class RouteCollectorTest extends TestCase
         $routeCollector->setBasePath($basePath);
 
         $this->assertSame($basePath, $routeCollector->getBasePath());
+    }
+
+    public function testMap()
+    {

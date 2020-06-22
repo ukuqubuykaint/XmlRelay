@@ -40,3 +40,4 @@ class DispatcherTest extends TestCase
         $this->assertInstanceOf(FastRouteDispatcher::class, $method->invoke($dispatcher));
     }
 
+    /**

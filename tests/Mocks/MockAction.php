@@ -17,3 +17,6 @@ use function count;
 use function json_encode;
 
 class MockAction
+{
+    public function __call($name, array $arguments)
+    {

@@ -17,3 +17,6 @@ use Slim\Routing\RouteCollector;
 use Slim\Routing\RouteContext;
 use Slim\Routing\RouteParser;
 use Slim\Routing\RouteResolver;
+use Slim\Routing\RouteRunner;
+use Slim\Routing\RoutingResults;
+use Slim\Tests\TestCase;

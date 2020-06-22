@@ -18,3 +18,5 @@ use RuntimeException;
 use Slim\Exception\HttpMethodNotAllowedException;
 use Slim\Exception\HttpNotFoundException;
 use Slim\Interfaces\RouteParserInterface;
+use Slim\Interfaces\RouteResolverInterface;
+use Slim\Routing\RouteContext;

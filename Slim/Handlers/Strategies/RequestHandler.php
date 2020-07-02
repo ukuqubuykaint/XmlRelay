@@ -37,3 +37,6 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
         ResponseInterface $response,
         array $routeArguments
     ): ResponseInterface {
+        if ($this->appendRouteArgumentsToRequestAttributes) {
+            foreach ($routeArguments as $k => $v) {
+                $request = $request->withAttribute($k, $v);

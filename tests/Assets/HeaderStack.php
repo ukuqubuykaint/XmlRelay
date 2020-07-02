@@ -57,3 +57,4 @@ class HeaderStack
      * Push a header on the stack
      *
      * @param array $header
+     */

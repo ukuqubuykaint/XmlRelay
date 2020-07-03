@@ -552,3 +552,6 @@ class AppTest extends TestCase
         $processSequence = function (RouteCollectorProxy $app, array $sequence, $processSequence) {
             $path = array_shift($sequence);
 
+            /**
+             * If sequence isn't on last element we use $app->group()
+             * The very tail of the sequence uses the $app->get() method

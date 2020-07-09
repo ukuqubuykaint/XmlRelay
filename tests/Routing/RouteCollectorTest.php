@@ -55,3 +55,4 @@ class RouteCollectorTest extends TestCase
 
     public function testMap()
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

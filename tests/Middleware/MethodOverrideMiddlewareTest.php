@@ -40,3 +40,7 @@ class MethodOverrideMiddlewareTest extends TestCase
         $middlewareDispatcher->handle($request);
     }
 
+    public function testBodyParam()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $middleware = (function (Request $request, RequestHandler $handler) use ($responseFactory) {

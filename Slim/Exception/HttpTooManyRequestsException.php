@@ -12,3 +12,4 @@ namespace Slim\Exception;
 
 /** @api */
 class HttpTooManyRequestsException extends HttpSpecializedException
+{

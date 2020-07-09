@@ -9,3 +9,5 @@
 It is very important to separate new features or improvements into separate feature branches, and to send a
 pull request for each branch. This allows me to review and pull in new features or improvements individually.
 
+## Style Guide
+

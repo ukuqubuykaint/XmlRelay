@@ -30,3 +30,7 @@ class Dispatcher implements DispatcherInterface
         $routeDefinitionCallback = function (FastRouteCollector $r): void {
             $basePath = $this->routeCollector->getBasePath();
 
+            foreach ($this->routeCollector->getRoutes() as $route) {
+                $r->addRoute($route->getMethods(), $basePath . $route->getPattern(), $route->getIdentifier());
+            }
+        };

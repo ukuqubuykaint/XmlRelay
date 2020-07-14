@@ -70,3 +70,6 @@ class OutputBufferingMiddlewareTest extends TestCase
         );
         $middlewareDispatcher->addCallable($middleware);
         $middlewareDispatcher->addMiddleware($outputBufferingMiddleware);
+        $response = $middlewareDispatcher->handle($request);
+
+        $this->assertSame('BodyTest', (string) $response->getBody());

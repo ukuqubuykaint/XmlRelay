@@ -26,3 +26,5 @@ class SmallChunksStream implements StreamInterface
     /**
      * @var int
      */
+    private $amountToRead;
+

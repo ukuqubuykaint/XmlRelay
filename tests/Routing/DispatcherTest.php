@@ -76,3 +76,7 @@ class DispatcherTest extends TestCase
 
         unlink($cacheFile);
     }
+
+    /**
+     * Calling createDispatcher as second time should give you back the same
+     * dispatcher as when you called it the first time.

@@ -34,3 +34,4 @@ class ContentLengthMiddlewareTest extends TestCase
         );
         $middlewareDispatcher->addCallable($mw);
         $middlewareDispatcher->addMiddleware($mw2);
+        $response = $middlewareDispatcher->handle($request);

@@ -55,3 +55,7 @@ class RouteParserTest extends TestCase
                 ['a' => ['b', 'x', 'y'], 'c' => 'd'],
                 '/hello/world?a%5B0%5D=b&a%5B1%5D=x&a%5B2%5D=y&c=d',
             ],
+            'with argument without optional parameter' => [
+                false,
+                '/archive/{year}[/{month:[\d:{2}]}[/d/{day}]]',
+                ['year' => '2015'],

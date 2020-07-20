@@ -211,3 +211,4 @@ class CallableResolverTest extends TestCase
 
         /** @var ContainerInterface $container */
         $container = $this->containerProphecy->reveal();
+

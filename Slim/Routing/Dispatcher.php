@@ -54,3 +54,6 @@ class Dispatcher implements DispatcherInterface
         }
 
         $this->dispatcher = $dispatcher;
+        return $this->dispatcher;
+    }
+

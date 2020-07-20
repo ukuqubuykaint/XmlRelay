@@ -40,3 +40,7 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
         if ($this->appendRouteArgumentsToRequestAttributes) {
             foreach ($routeArguments as $k => $v) {
                 $request = $request->withAttribute($k, $v);
+            }
+        }
+
+        /** @var ResponseInterface */

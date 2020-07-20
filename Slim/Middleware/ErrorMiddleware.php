@@ -111,3 +111,7 @@ class ErrorMiddleware implements MiddlewareInterface
         }
 
         foreach ($this->subClassHandlers as $class => $handler) {
+            if (is_subclass_of($type, $class)) {
+                return $this->callableResolver->resolve($handler);
+            }
+        }

@@ -25,3 +25,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
     public function __construct(ServerRequestCreatorInterface $serverRequestCreator)
     {
         $this->serverRequestCreator = $serverRequestCreator;
+    }
+
+    /**

@@ -15,3 +15,5 @@ use Slim\Interfaces\ErrorRendererInterface;
 use Throwable;
 
 /**
+ * Abstract Slim application error renderer
+ *

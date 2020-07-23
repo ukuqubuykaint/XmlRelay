@@ -34,3 +34,7 @@ class Dispatcher implements DispatcherInterface
                 $r->addRoute($route->getMethods(), $basePath . $route->getPattern(), $route->getIdentifier());
             }
         };
+
+        $cacheFile = $this->routeCollector->getCacheFile();
+        if ($cacheFile) {
+            /** @var FastRouteDispatcher $dispatcher */

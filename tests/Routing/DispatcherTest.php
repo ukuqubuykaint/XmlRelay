@@ -41,3 +41,7 @@ class DispatcherTest extends TestCase
     }
 
     /**
+     * Test cached routes file is created & that it holds our routes.
+     */
+    public function testRouteCacheFileCanBeDispatched()
+    {

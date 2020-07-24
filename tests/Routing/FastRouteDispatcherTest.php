@@ -220,3 +220,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('GET', '/user/{name}', 'handler2');
         };
 
+        $method = 'GET';
+        $uri = '/user/rdlowrey';
+        $handler = 'handler2';
+        $argDict = ['name' => 'rdlowrey'];

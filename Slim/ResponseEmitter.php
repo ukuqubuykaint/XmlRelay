@@ -54,3 +54,7 @@ class ResponseEmitter
 
     /**
      * Emit Response Headers
+     */
+    private function emitHeaders(ResponseInterface $response): void
+    {
+        foreach ($response->getHeaders() as $name => $values) {

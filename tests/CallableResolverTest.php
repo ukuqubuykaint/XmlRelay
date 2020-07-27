@@ -212,3 +212,7 @@ class CallableResolverTest extends TestCase
         /** @var ContainerInterface $container */
         $container = $this->containerProphecy->reveal();
 
+        $resolver = new CallableResolver($container);
+        $callable = $resolver->resolve('an_invokable');
+        $callableRoute = $resolver->resolveRoute('an_invokable');
+        $callableMiddleware = $resolver->resolveMiddleware('an_invokable');

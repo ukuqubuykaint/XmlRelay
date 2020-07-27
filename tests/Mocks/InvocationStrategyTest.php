@@ -32,3 +32,4 @@ class InvocationStrategyTest implements InvocationStrategyInterface
         callable $callable,
         ServerRequestInterface $request,
         ResponseInterface $response,
+        array $routeArguments

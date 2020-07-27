@@ -49,3 +49,6 @@ interface RouteCollectorInterface
      */
     public function getBasePath(): string;
 
+    /**
+     * Set the base path used in pathFor()
+     */

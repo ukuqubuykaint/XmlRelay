@@ -85,3 +85,7 @@ class SlowPokeStream implements StreamInterface
     public function isWritable(): bool
     {
         return false;
+    }
+
+    public function read($length): string
+    {

@@ -27,3 +27,5 @@ class Logger extends AbstractLogger
      */
     public function log($level, $message, array $context = []): void
     {
+        error_log((string) $message);
+    }

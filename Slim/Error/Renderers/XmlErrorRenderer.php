@@ -39,3 +39,6 @@ class XmlErrorRenderer extends AbstractErrorRenderer
             } while ($exception = $exception->getPrevious());
         }
 
+        $xml .= '</error>';
+
+        return $xml;

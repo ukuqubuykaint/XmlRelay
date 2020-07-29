@@ -36,3 +36,4 @@ interface RouteGroupInterface
      */
     public function appendMiddlewareToDispatcher(MiddlewareDispatcher $dispatcher): RouteGroupInterface;
 
+    /**

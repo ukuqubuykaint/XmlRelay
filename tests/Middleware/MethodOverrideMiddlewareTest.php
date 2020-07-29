@@ -85,3 +85,4 @@ class MethodOverrideMiddlewareTest extends TestCase
         $middlewareDispatcher->addCallable($middleware);
         $middlewareDispatcher->addMiddleware($methodOverrideMiddleware);
         $middlewareDispatcher->handle($request);
+    }

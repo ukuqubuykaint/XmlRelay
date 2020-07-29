@@ -53,3 +53,5 @@ class RoutingResults
     ) {
         $this->dispatcher = $dispatcher;
         $this->method = $method;
+        $this->uri = $uri;
+        $this->routeStatus = $routeStatus;

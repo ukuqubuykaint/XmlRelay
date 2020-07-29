@@ -67,3 +67,5 @@ final class RouteContext
     public function getRoute(): ?RouteInterface
     {
         return $this->route;
+    }
+

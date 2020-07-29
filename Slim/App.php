@@ -97,3 +97,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
 
     /**
      * @param MiddlewareInterface|string|callable $middleware
+     * @return App<TContainerInterface>
+     */
+    public function add($middleware): self
+    {

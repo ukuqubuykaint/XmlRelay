@@ -22,3 +22,4 @@ class MockRequestHandler implements RequestHandlerInterface
      */
     private $calledCount = 0;
 
+    /**

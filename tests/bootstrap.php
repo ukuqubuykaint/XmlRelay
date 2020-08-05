@@ -22,3 +22,5 @@ Override::apply($classLoader, [
                 return $GLOBALS['connection_status_return'];
             }
 
+            return connection_status();
+        },

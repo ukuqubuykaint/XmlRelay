@@ -74,3 +74,5 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = AppFactory::create();
 
 // Add error middleware
+$app->addErrorMiddleware(true, true, true);
+

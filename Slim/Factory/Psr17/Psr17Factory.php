@@ -44,3 +44,5 @@ abstract class Psr17Factory implements Psr17FactoryInterface
         return $responseFactory;
     }
 
+    /**
+     * {@inheritdoc}

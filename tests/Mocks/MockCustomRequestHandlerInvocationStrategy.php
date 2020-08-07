@@ -18,3 +18,5 @@ class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvoca
 {
     public static $CalledCount = 0;
 
+    public function __invoke(
+        callable $callable,

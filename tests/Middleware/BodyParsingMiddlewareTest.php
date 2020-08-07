@@ -69,3 +69,5 @@ class BodyParsingMiddlewareTest extends TestCase
         return [
             'form' => [
                 'application/x-www-form-urlencoded;charset=utf8',
+                'foo=bar',
+                ['foo' => 'bar'],

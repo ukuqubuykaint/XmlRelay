@@ -48,3 +48,5 @@ class MethodOverrideMiddlewareTest extends TestCase
             return $responseFactory->createResponse();
         })->bindTo($this);
 
+        $methodOverrideMiddleware = new MethodOverrideMiddleware();
+

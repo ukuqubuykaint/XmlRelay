@@ -136,3 +136,6 @@ class CallableResolverTest extends TestCase
         $callable = $resolver->resolve([CallableTest::class, 'toCall']);
         $callableRoute = $resolver->resolveRoute([CallableTest::class, 'toCall']);
         $callableMiddleware = $resolver->resolveMiddleware([CallableTest::class, 'toCall']);
+
+        $callable();
+        $this->assertSame(1, CallableTest::$CalledCount);

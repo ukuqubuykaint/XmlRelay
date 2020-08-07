@@ -33,3 +33,7 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @return ServerRequestFactoryInterface
+     */
+    protected function getServerRequestFactory(): ServerRequestFactoryInterface
+    {
+        $psr7ObjectProvider = new PSR7ObjectProvider();

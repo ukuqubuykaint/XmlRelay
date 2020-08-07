@@ -27,3 +27,7 @@ use function trim;
  *   emitted, and we can test to see their values.
  * - header(): we want to aggregate calls to this function.
  *
+ * The HeaderStack class then aggregates that information for us, and the test
+ * harness resets the values pre and post test.
+ *
+ * @see       http://github.com/zendframework/zend-diactoros for the canonical source repository

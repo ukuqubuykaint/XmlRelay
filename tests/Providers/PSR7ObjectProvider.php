@@ -72,3 +72,7 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
     }
 
     /**
+     * @param int    $statusCode
+     * @param string $reasonPhrase
+     * @return ResponseInterface
+     */

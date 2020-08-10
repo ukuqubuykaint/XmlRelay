@@ -57,3 +57,6 @@ class RoutingResults
         $this->routeStatus = $routeStatus;
         $this->routeIdentifier = $routeIdentifier;
         $this->routeArguments = $routeArguments;
+    }
+
+    public function getDispatcher(): DispatcherInterface

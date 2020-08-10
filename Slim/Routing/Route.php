@@ -125,3 +125,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         CallableResolverInterface $callableResolver,
         ?ContainerInterface $container = null,
         ?InvocationStrategyInterface $invocationStrategy = null,
+        array $groups = [],
+        int $identifier = 0
+    ) {
+        $this->methods = $methods;

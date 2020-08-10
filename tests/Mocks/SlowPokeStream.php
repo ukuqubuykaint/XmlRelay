@@ -89,3 +89,6 @@ class SlowPokeStream implements StreamInterface
 
     public function read($length): string
     {
+        usleep(1);
+        $size = min($this->amountToRead, self::CHUNK_SIZE, $length);
+        $this->amountToRead -= $size;

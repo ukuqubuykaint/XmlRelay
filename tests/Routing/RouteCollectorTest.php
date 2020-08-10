@@ -88,3 +88,7 @@ class RouteCollectorTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->group('/prefix', $callable);
     }
+
+    public function testGetRouteInvocationStrategy()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

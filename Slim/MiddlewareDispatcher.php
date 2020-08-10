@@ -122,3 +122,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             {
                 $this->middleware = $middleware;
                 $this->next = $next;
+            }
+

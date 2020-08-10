@@ -67,3 +67,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
     {
         $title = htmlspecialchars($title, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
+        return sprintf(
+            '<!doctype html>' .
+            '<html lang="en">' .

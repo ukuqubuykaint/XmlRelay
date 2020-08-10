@@ -36,3 +36,6 @@ class Psr17FactoryTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('Slim\\Tests\\Mocks\\MockPsr17Factory' .
+                                      ' could not instantiate a server request creator.');
+
+        MockPsr17Factory::getServerRequestCreator();

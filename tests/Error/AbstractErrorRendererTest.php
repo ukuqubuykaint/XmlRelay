@@ -101,3 +101,6 @@ class AbstractErrorRendererTest extends TestCase
     public function testHTMLErrorRendererEscapesHttpException()
     {
         $exceptionTitle = '<script>alert(1)</script>';
+        $exceptionDescription = "<script>alert('xss')</script>";
+
+        $httpExceptionProphecy = $this->prophesize(HttpException::class);

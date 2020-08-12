@@ -216,3 +216,5 @@ class CallableResolverTest extends TestCase
         $callable = $resolver->resolve('an_invokable');
         $callableRoute = $resolver->resolveRoute('an_invokable');
         $callableMiddleware = $resolver->resolveMiddleware('an_invokable');
+
+        $callable();

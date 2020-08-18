@@ -40,3 +40,5 @@ class RouteParser implements RouteParserInterface
     public function relativeUrlFor(string $routeName, array $data = [], array $queryParams = []): string
     {
         $route = $this->routeCollector->getNamedRoute($routeName);
+        $pattern = $route->getPattern();
+

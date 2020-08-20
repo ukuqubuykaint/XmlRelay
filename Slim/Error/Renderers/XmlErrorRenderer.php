@@ -45,3 +45,4 @@ class XmlErrorRenderer extends AbstractErrorRenderer
     }
 
     /**
+     * Returns a CDATA section with the given content.

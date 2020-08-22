@@ -275,3 +275,7 @@ class RouteTest extends TestCase
         $mw = function (ServerRequestInterface $request, RequestHandlerInterface $handler) use (&$called) {
             $called++;
             return $handler->handle($request);
+        };
+        $route->add($mw);
+
+        $request = $this->createServerRequest('/');

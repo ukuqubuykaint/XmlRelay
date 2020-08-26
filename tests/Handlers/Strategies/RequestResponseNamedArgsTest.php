@@ -81,3 +81,5 @@ class RequestResponseNamedArgsTest extends TestCase
         $args = [
             'name' => 'world',
         ];
+
+        $invocationStrategy = new RequestResponseNamedArgs();

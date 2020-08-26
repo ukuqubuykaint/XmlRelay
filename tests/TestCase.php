@@ -68,3 +68,4 @@ abstract class TestCase extends PhpUnitTestCase
         return new CallableResolver($container);
     }
 
+    /**

@@ -83,3 +83,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      *
      * @throws RuntimeException
      */
+    private function resolveByPredicate($toResolve, callable $predicate, string $defaultMethod): callable
+    {

@@ -88,3 +88,6 @@ class MockStream implements StreamInterface
             $this->readable = isset(self::$readWriteHash['read'][$meta['mode']]);
             $this->writable = isset(self::$readWriteHash['write'][$meta['mode']]);
             $this->uri = $this->getMetadata('uri');
+        } else {
+            throw new InvalidArgumentException(
+                'First argument to Stream::create() must be a string, resource or StreamInterface.'

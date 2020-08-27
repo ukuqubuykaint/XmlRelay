@@ -24,3 +24,4 @@ use const JSON_UNESCAPED_SLASHES;
  * Default Slim application JSON Error Renderer
  */
 class JsonErrorRenderer extends AbstractErrorRenderer
+{

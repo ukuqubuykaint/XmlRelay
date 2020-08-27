@@ -90,3 +90,5 @@ interface RouteCollectorProxyInterface
      */
     public function options(string $pattern, $callable): RouteInterface;
 
+    /**
+     * Add route for any HTTP method

@@ -130,3 +130,4 @@ class ErrorHandlerTest extends TestCase
             ->createServerRequest('/not-defined', 'GET')
             ->withHeader('Accept', 'application/json');
 
+        $htmlRequest = $this

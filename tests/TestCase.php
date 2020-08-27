@@ -69,3 +69,7 @@ abstract class TestCase extends PhpUnitTestCase
     }
 
     /**
+     * @param RequestHandlerInterface $requestHandler
+     * @param ContainerInterface|null $container
+     * @param CallableResolverInterface|null $callableResolver
+     *

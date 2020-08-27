@@ -34,3 +34,4 @@ interface RouteInterface
      */
     public function getMethods(): array;
 
+    /**

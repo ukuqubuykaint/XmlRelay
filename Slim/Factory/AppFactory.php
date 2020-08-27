@@ -53,3 +53,7 @@ class AppFactory
     public static function create(
         ?ResponseFactoryInterface $responseFactory = null,
         ?ContainerInterface $container = null,
+        ?CallableResolverInterface $callableResolver = null,
+        ?RouteCollectorInterface $routeCollector = null,
+        ?RouteResolverInterface $routeResolver = null,
+        ?MiddlewareDispatcherInterface $middlewareDispatcher = null

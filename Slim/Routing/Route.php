@@ -129,3 +129,6 @@ class Route implements RouteInterface, RequestHandlerInterface
         int $identifier = 0
     ) {
         $this->methods = $methods;
+        $this->pattern = $pattern;
+        $this->callable = $callable;
+        $this->responseFactory = $responseFactory;

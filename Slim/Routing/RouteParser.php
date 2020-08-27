@@ -63,3 +63,5 @@ class RouteParser implements RouteParserInterface
                 }
 
                 /** @var string[] $segment */
+                /*
+                 * If we don't have a data element for this segment in the provided $data

@@ -75,3 +75,6 @@ abstract class Psr17Factory implements Psr17FactoryInterface
      * {@inheritdoc}
      */
     public static function isResponseFactoryAvailable(): bool
+    {
+        return static::$responseFactoryClass && class_exists(static::$responseFactoryClass);
+    }

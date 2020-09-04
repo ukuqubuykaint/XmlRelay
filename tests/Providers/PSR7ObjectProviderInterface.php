@@ -24,3 +24,6 @@ use Psr\Http\Message\StreamInterface;
  */
 interface PSR7ObjectProviderInterface
 {
+    /**
+     * @return ServerRequestFactoryInterface
+     */

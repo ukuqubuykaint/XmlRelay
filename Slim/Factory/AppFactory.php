@@ -57,3 +57,4 @@ class AppFactory
         ?RouteCollectorInterface $routeCollector = null,
         ?RouteResolverInterface $routeResolver = null,
         ?MiddlewareDispatcherInterface $middlewareDispatcher = null
+    ): App {

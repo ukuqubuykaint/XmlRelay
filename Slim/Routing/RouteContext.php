@@ -36,3 +36,6 @@ final class RouteContext
         if ($routeParser === null || $routingResults === null) {
             throw new RuntimeException('Cannot create RouteContext before routing has been completed');
         }
+
+        /** @var RouteInterface|null $route */
+        /** @var RouteParserInterface $routeParser */

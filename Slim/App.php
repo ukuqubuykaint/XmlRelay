@@ -67,3 +67,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $routeCollector
         );
 
+        $this->routeResolver = $routeResolver ?? new RouteResolver($this->routeCollector);
+        $routeRunner = new RouteRunner($this->routeResolver, $this->routeCollector->getRouteParser(), $this);
+

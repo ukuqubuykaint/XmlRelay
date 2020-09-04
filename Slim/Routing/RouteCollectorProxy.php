@@ -65,3 +65,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function getCallableResolver(): CallableResolverInterface
     {
+        return $this->callableResolver;
+    }

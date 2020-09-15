@@ -78,3 +78,5 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected ?string $contentType = null;
 
+    protected bool $isContentTypeForced = false;
+

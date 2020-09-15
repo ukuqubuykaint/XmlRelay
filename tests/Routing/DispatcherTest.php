@@ -84,3 +84,4 @@ class DispatcherTest extends TestCase
     public function testCreateDispatcherReturnsSameDispatcherASecondTime()
     {
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

@@ -38,3 +38,5 @@ use function trim;
 /**
  * Store output artifacts
  */
+class HeaderStack
+{

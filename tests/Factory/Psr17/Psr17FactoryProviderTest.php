@@ -14,3 +14,7 @@ use Slim\Factory\Psr17\Psr17FactoryProvider;
 use Slim\Tests\TestCase;
 
 class Psr17FactoryProviderTest extends TestCase
+{
+    /**
+     * @runInSeparateProcess - Psr17FactoryProvider::setFactories breaks other tests
+     */

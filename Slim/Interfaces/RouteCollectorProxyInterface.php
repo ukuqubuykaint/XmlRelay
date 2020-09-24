@@ -57,3 +57,4 @@ interface RouteCollectorProxyInterface
      * @param callable|array{class-string, string}|string $callable The route callback routine
      */
     public function post(string $pattern, $callable): RouteInterface;
+

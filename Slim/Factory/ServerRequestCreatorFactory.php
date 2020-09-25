@@ -29,3 +29,7 @@ class ServerRequestCreatorFactory
     public static function create(): ServerRequestCreatorInterface
     {
         return static::determineServerRequestCreator();
+    }
+
+    /**
+     * @throws RuntimeException

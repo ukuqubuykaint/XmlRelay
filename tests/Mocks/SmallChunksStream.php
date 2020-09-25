@@ -28,3 +28,6 @@ class SmallChunksStream implements StreamInterface
      */
     private $amountToRead;
 
+    public function __construct()
+    {
+        $this->amountToRead = self::SIZE;

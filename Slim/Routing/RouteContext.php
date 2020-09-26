@@ -70,3 +70,5 @@ final class RouteContext
     }
 
     public function getRouteParser(): RouteParserInterface
+    {
+        return $this->routeParser;

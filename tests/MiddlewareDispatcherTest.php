@@ -180,3 +180,7 @@ class MiddlewareDispatcherTest extends TestCase
             ->has(Argument::any())
             ->willReturn(true)
             ->shouldBeCalledOnce();
+
+        $containerProphecy
+            ->get(Argument::any())
+            ->willReturn($result)

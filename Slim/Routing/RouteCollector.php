@@ -65,3 +65,4 @@ class RouteCollector implements RouteCollectorInterface
      * Routes indexed by name
      *
      * @var RouteInterface[]
+     */

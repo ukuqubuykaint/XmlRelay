@@ -527,3 +527,5 @@ class AppTest extends TestCase
         ];
     }
 
+    public function testGroupClosureIsBoundToThisClass(): void
+    {

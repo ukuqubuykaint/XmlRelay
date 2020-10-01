@@ -124,3 +124,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 $this->next = $next;
             }
 
+            public function handle(ServerRequestInterface $request): ResponseInterface
+            {
+                return $this->middleware->process($request, $this->next);
+            }

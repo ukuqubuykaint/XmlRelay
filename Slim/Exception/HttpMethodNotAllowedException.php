@@ -35,3 +35,7 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
     /**
      * @return string[]
      */
+    public function getAllowedMethods(): array
+    {
+        return $this->allowedMethods;
+    }

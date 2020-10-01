@@ -50,3 +50,4 @@ class RequestHandlerTest implements RequestHandlerInterface
         $responseFactory = $psr7ObjectProvider->getResponseFactory();
 
         return $responseFactory->createResponse();
+    }

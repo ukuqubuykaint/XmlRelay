@@ -218,3 +218,5 @@ class CallableResolverTest extends TestCase
         $callableMiddleware = $resolver->resolveMiddleware('an_invokable');
 
         $callable();
+        $this->assertSame(1, InvokableTest::$CalledCount);
+

@@ -8,3 +8,4 @@
     findUnusedBaselineEntry="true"
     findUnusedCode="true"
 >
+    <projectFiles>

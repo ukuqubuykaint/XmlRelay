@@ -19,3 +19,4 @@ use function str_replace;
 
 /**
  * Default Slim application XML Error Renderer
+ */

@@ -72,3 +72,7 @@ class ErrorMiddlewareTest extends TestCase
     public function testSetDefaultErrorHandler()
     {
         $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+

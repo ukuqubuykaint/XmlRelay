@@ -26,3 +26,7 @@ class SlowPokeStream implements StreamInterface
 
     /**
      * @var int
+     */
+    private $amountToRead;
+
+    public function __construct()

@@ -17,3 +17,6 @@ use RuntimeException;
 /** @api */
 interface RouteParserInterface
 {
+    /**
+     * Build the path for a named route excluding the base path
+     *

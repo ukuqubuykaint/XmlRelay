@@ -31,3 +31,6 @@ class RouteGroup implements RouteGroupInterface
      */
     protected RouteCollectorProxyInterface $routeCollectorProxy;
 
+    /**
+     * @var MiddlewareInterface[]|string[]|callable[]
+     */

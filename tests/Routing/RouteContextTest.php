@@ -32,3 +32,5 @@ class RouteContextTest extends TestCase
                               ->withAttribute(RouteContext::ROUTE_PARSER, $routeParser)
                               ->withAttribute(RouteContext::ROUTING_RESULTS, $routingResults);
 
+        $routeContext = RouteContext::fromRequest($serverRequest);
+

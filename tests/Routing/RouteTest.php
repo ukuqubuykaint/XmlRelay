@@ -188,3 +188,4 @@ class RouteTest extends TestCase
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal(),
             $containerProphecy->reveal(),
+            $strategyProphecy->reveal()

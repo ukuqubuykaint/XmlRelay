@@ -62,3 +62,7 @@ class ErrorMiddleware implements MiddlewareInterface
         bool $logErrors,
         bool $logErrorDetails,
         ?LoggerInterface $logger = null
+    ) {
+        $this->callableResolver = $callableResolver;
+        $this->responseFactory = $responseFactory;
+        $this->displayErrorDetails = $displayErrorDetails;

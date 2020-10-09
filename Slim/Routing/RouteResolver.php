@@ -13,3 +13,6 @@ namespace Slim\Routing;
 use RuntimeException;
 use Slim\Interfaces\DispatcherInterface;
 use Slim\Interfaces\RouteCollectorInterface;
+use Slim\Interfaces\RouteInterface;
+use Slim\Interfaces\RouteResolverInterface;
+

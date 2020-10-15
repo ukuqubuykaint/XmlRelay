@@ -13,3 +13,4 @@ namespace Slim\Interfaces;
 interface AdvancedCallableResolverInterface extends CallableResolverInterface
 {
     /**
+     * Resolve $toResolve into a callable

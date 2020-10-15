@@ -87,3 +87,6 @@ class ResponseEmitterTest extends TestCase
                 'key' => $key,
                 'iv' => $iv
             ]);
+
+            $body = $this->getStreamFactory()->createStreamFromResource($stream);
+            $response = $this

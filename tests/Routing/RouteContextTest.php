@@ -34,3 +34,6 @@ class RouteContextTest extends TestCase
 
         $routeContext = RouteContext::fromRequest($serverRequest);
 
+        $this->assertSame($route, $routeContext->getRoute());
+        $this->assertSame($routeParser, $routeContext->getRouteParser());
+        $this->assertSame($routingResults, $routeContext->getRoutingResults());

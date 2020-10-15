@@ -38,3 +38,7 @@ class Dispatcher implements DispatcherInterface
         $cacheFile = $this->routeCollector->getCacheFile();
         if ($cacheFile) {
             /** @var FastRouteDispatcher $dispatcher */
+            $dispatcher = \FastRoute\cachedDispatcher($routeDefinitionCallback, [
+                'dataGenerator' => GroupCountBased::class,
+                'dispatcher' => FastRouteDispatcher::class,
+                'routeParser' => new Std(),

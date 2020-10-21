@@ -70,3 +70,6 @@ class RouteGroup implements RouteGroupInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function add($middleware): RouteGroupInterface
+    {

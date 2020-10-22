@@ -80,3 +80,7 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected bool $isContentTypeForced = false;
 
+    protected ?string $method = null;
+
+    protected ServerRequestInterface $request;
+

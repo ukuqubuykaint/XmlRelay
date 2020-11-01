@@ -19,3 +19,5 @@ use function debug_backtrace;
 
 class RequestHandlerTest implements RequestHandlerInterface
 {
+    public static $CalledCount = 0;
+    public static $strategy = '';

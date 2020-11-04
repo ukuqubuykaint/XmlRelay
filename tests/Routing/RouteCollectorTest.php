@@ -62,3 +62,5 @@ class RouteCollectorTest extends TestCase
         $route = $routeCollector->map(['GET'], '/', function () {
         });
 
+        $routes = $routeCollector->getRoutes();
+        $this->assertSame($route, $routes[$route->getIdentifier()]);

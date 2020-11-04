@@ -36,3 +36,7 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             $description = htmlspecialchars(
                 $this->getErrorDescription($exception),
                 ENT_QUOTES | ENT_SUBSTITUTE,
+                'UTF-8'
+            );
+            $html = "<p>{$description}</p>";
+        }

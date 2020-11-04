@@ -13,3 +13,5 @@ namespace Slim\Exception;
 /** @api */
 class HttpInternalServerErrorException extends HttpSpecializedException
 {
+    /**
+     * @var int

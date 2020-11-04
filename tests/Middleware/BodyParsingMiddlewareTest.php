@@ -71,3 +71,6 @@ class BodyParsingMiddlewareTest extends TestCase
                 'application/x-www-form-urlencoded;charset=utf8',
                 'foo=bar',
                 ['foo' => 'bar'],
+            ],
+            'json' => [
+                "application/json",

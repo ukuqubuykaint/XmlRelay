@@ -37,3 +37,4 @@ class RouteRunner implements RequestHandlerInterface
     public function __construct(
         RouteResolverInterface $routeResolver,
         RouteParserInterface $routeParser,
+        ?RouteCollectorProxyInterface $routeCollectorProxy = null

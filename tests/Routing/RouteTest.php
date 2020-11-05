@@ -279,3 +279,5 @@ class RouteTest extends TestCase
         $route->add($mw);
 
         $request = $this->createServerRequest('/');
+        $route->run($request);
+

@@ -90,3 +90,5 @@ class ResponseEmitterTest extends TestCase
 
             $body = $this->getStreamFactory()->createStreamFromResource($stream);
             $response = $this
+                ->createResponse()
+                ->withHeader('Content-Length', $length)

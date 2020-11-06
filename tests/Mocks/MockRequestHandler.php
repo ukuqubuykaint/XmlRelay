@@ -23,3 +23,6 @@ class MockRequestHandler implements RequestHandlerInterface
     private $calledCount = 0;
 
     /**
+     * @param ServerRequestInterface $request
+     * @return ResponseInterface
+     */

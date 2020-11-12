@@ -37,3 +37,6 @@ interface MiddlewareDispatcherInterface extends RequestHandlerInterface
     public function addMiddleware(MiddlewareInterface $middleware): self;
 
     /**
+     * Seed the middleware stack with the inner request handler
+     */
+    public function seedMiddlewareStack(RequestHandlerInterface $kernel): void;

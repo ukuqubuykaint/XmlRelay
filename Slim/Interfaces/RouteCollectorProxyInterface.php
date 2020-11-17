@@ -58,3 +58,4 @@ interface RouteCollectorProxyInterface
      */
     public function post(string $pattern, $callable): RouteInterface;
 
+    /**

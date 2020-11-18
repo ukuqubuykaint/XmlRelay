@@ -42,3 +42,6 @@ class Dispatcher implements DispatcherInterface
                 'dataGenerator' => GroupCountBased::class,
                 'dispatcher' => FastRouteDispatcher::class,
                 'routeParser' => new Std(),
+                'cacheFile' => $cacheFile,
+            ]);
+        } else {

@@ -76,3 +76,5 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected bool $logErrorDetails = false;
 
+    protected ?string $contentType = null;
+

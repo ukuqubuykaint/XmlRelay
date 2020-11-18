@@ -32,3 +32,6 @@ class OutputBufferingMiddleware implements MiddlewareInterface
     protected StreamFactoryInterface $streamFactory;
 
     protected string $style;
+
+    /**
+     * @param string $style Either "append" or "prepend"

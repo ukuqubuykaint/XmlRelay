@@ -11,3 +11,5 @@ declare(strict_types=1);
 namespace Slim\Interfaces;
 
 /** @api */
+interface Psr17FactoryProviderInterface
+{

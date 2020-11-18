@@ -7,3 +7,4 @@
     <!-- use colors in output -->
     <arg name="colors"/>
 
+    <!-- inherit rules from: -->

@@ -134,3 +134,4 @@ class ErrorHandlerTest extends TestCase
             ->createServerRequest('/not-defined', 'GET')
             ->withHeader('Accept', 'text/html');
 
+        $exception = new HttpNotFoundException($jsonRequest);

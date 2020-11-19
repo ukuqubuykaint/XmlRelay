@@ -63,3 +63,5 @@ class SlimHttpServerRequestCreatorTest extends TestCase
 
         $serverRequestCreatorProphecy = $this->prophesize(ServerRequestCreatorInterface::class);
 
+        $slimHttpServerRequestCreator = new SlimHttpServerRequestCreator($serverRequestCreatorProphecy->reveal());
+

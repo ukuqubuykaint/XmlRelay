@@ -66,3 +66,7 @@ class RouteResolverTest extends TestCase
             $dispatcherProphecy->reveal()
         );
 
+        $routeResolver->computeRoutingResults($uri, $method);
+    }
+
+    public function testResolveRoute()

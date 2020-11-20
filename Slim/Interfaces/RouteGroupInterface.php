@@ -37,3 +37,4 @@ interface RouteGroupInterface
     public function appendMiddlewareToDispatcher(MiddlewareDispatcher $dispatcher): RouteGroupInterface;
 
     /**
+     * Get the RouteGroup's pattern

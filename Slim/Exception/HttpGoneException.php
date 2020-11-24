@@ -16,3 +16,4 @@ class HttpGoneException extends HttpSpecializedException
     /**
      * @var int
      */
+    protected $code = 410;

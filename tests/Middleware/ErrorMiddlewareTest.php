@@ -76,3 +76,5 @@ class ErrorMiddlewareTest extends TestCase
         $callableResolver = $app->getCallableResolver();
         $logger = $this->getMockLogger();
 
+        $routingMiddleware = new RoutingMiddleware(
+            $app->getRouteResolver(),

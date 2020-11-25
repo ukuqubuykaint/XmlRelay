@@ -34,3 +34,4 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
         static::$CalledCount++;
 
         return $handler->handle($request);
+    }

@@ -75,3 +75,6 @@
         "psr-4": {
             "XmlRelay\\": "XmlRelay"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {

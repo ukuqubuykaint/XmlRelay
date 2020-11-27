@@ -62,3 +62,6 @@ class AppFactory
         return new App(
             self::determineResponseFactory(),
             $container ?? static::$container,
+            $callableResolver ?? static::$callableResolver,
+            $routeCollector ?? static::$routeCollector,
+            $routeResolver ?? static::$routeResolver,

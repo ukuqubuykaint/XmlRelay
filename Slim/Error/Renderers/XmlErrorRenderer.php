@@ -20,3 +20,7 @@ use function str_replace;
 /**
  * Default Slim application XML Error Renderer
  */
+class XmlErrorRenderer extends AbstractErrorRenderer
+{
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string
+    {

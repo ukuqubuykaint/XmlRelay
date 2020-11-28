@@ -76,3 +76,6 @@ class OutputBufferingMiddlewareTest extends TestCase
     }
 
     public function testPrepend()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $middleware = function ($request, $handler) use ($responseFactory) {

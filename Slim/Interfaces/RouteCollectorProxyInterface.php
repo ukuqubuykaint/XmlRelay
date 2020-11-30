@@ -92,3 +92,4 @@ interface RouteCollectorProxyInterface
 
     /**
      * Add route for any HTTP method
+     *

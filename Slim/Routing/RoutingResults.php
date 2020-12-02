@@ -60,3 +60,6 @@ class RoutingResults
     }
 
     public function getDispatcher(): DispatcherInterface
+    {
+        return $this->dispatcher;
+    }

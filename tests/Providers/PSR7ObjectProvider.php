@@ -83,3 +83,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             ->createResponse($statusCode, $reasonPhrase);
     }
 
+    /**

@@ -53,3 +53,6 @@ interface RouteCollectorInterface
      * Set the base path used in pathFor()
      */
     public function setBasePath(string $basePath): RouteCollectorInterface;
+
+    /**
+     * Get route objects

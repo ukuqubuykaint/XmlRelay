@@ -30,3 +30,5 @@ use Slim\Psr7\Request as SlimServerRequest;
 use Slim\Tests\TestCase;
 
 class ServerRequestCreatorFactoryTest extends TestCase
+{
+    public static function provideImplementations()

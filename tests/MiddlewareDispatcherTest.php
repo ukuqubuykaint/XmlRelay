@@ -202,3 +202,4 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testDeferredResolvedSlimCallable(): void
+    {

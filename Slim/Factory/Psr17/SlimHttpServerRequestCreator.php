@@ -31,3 +31,7 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
      * {@inheritdoc}
      */
     public function createServerRequestFromGlobals(): ServerRequestInterface
+    {
+        if (!static::isServerRequestDecoratorAvailable()) {
+            throw new RuntimeException('The Slim-Http ServerRequest decorator is not available.');
+        }

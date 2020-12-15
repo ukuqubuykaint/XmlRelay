@@ -60,3 +60,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
             $parsedBody = $this->parseBody($request);
             $request = $request->withParsedBody($parsedBody);
         }
+
+        return $handler->handle($request);
+    }

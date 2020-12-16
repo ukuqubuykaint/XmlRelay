@@ -91,3 +91,7 @@ class MockStream implements StreamInterface
         } else {
             throw new InvalidArgumentException(
                 'First argument to Stream::create() must be a string, resource or StreamInterface.'
+            );
+        }
+    }
+

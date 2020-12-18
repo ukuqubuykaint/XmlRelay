@@ -26,3 +26,7 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
         $this->appendRouteArgumentsToRequestAttributes = $appendRouteArgumentsToRequestAttributes;
     }
 
+    /**
+     * Invoke a route callable that implements RequestHandlerInterface
+     *
+     * @param array<string, string>  $routeArguments

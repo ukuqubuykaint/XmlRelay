@@ -74,3 +74,7 @@ class BodyParsingMiddlewareTest extends TestCase
             ],
             'json' => [
                 "application/json",
+                '{"foo":"bar"}',
+                ['foo' => 'bar'],
+            ],
+            'json-with-charset' => [

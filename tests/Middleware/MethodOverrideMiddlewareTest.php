@@ -89,3 +89,4 @@ class MethodOverrideMiddlewareTest extends TestCase
 
     public function testNoOverride()
     {
+        $responseFactory = $this->getResponseFactory();

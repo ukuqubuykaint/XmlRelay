@@ -67,3 +67,6 @@ class RouteContextTest extends TestCase
         $this->assertNotNull($routeContext->getRoutingResults());
 
         $this->expectException(RuntimeException::class);
+        $routeContext->getBasePath();
+    }
+

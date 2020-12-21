@@ -281,3 +281,7 @@ class RouteTest extends TestCase
         $request = $this->createServerRequest('/');
         $route->run($request);
 
+        $this->assertSame($called, 1);
+    }
+
+    public function testAddMiddlewareOnGroup()

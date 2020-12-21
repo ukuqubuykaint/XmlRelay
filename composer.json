@@ -78,3 +78,6 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "XmlRelay\\Tests\\": "tests"
+        }
+    },

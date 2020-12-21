@@ -74,3 +74,5 @@ class SmallChunksStream implements StreamInterface
 
     public function isSeekable(): bool
     {
+        return false;
+    }

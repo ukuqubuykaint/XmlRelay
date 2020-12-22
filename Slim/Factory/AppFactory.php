@@ -65,3 +65,6 @@ class AppFactory
             $callableResolver ?? static::$callableResolver,
             $routeCollector ?? static::$routeCollector,
             $routeResolver ?? static::$routeResolver,
+            $middlewareDispatcher ?? static::$middlewareDispatcher
+        );
+    }

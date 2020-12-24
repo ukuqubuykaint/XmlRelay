@@ -27,3 +27,6 @@ class MethodOverrideMiddleware implements MiddlewareInterface
 
         if ($methodHeader) {
             $request = $request->withMethod($methodHeader);
+        } elseif (strtoupper($request->getMethod()) === 'POST') {
+            $body = $request->getParsedBody();
+

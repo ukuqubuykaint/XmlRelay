@@ -78,3 +78,7 @@ class ErrorMiddlewareTest extends TestCase
 
         $routingMiddleware = new RoutingMiddleware(
             $app->getRouteResolver(),
+            $app->getRouteCollector()->getRouteParser()
+        );
+        $app->add($routingMiddleware);
+

@@ -22,3 +22,6 @@ class MockAction
     {
         if (count($arguments) !== 3) {
             throw new InvalidArgumentException("Not a Slim call");
+        }
+
+        $response = $arguments[1];

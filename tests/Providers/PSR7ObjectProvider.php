@@ -42,3 +42,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
     ): ServerRequestInterface {
         $headers = array_merge([
             'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',

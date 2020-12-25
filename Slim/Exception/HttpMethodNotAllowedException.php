@@ -39,3 +39,7 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
     {
         return $this->allowedMethods;
     }
+
+    /**
+     * @param string[] $methods
+     */

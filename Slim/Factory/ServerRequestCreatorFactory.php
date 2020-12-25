@@ -48,3 +48,5 @@ class ServerRequestCreatorFactory
                 $serverRequestCreator = $psr17Factory::getServerRequestCreator();
                 return static::attemptServerRequestCreatorDecoration($serverRequestCreator);
             }
+        }
+

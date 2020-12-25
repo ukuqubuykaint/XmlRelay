@@ -106,3 +106,5 @@ class AbstractErrorRendererTest extends TestCase
         $httpExceptionProphecy = $this->prophesize(HttpException::class);
 
         $httpExceptionProphecy
+            ->getTitle()
+            ->willReturn($exceptionTitle)

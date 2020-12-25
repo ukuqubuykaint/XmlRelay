@@ -63,3 +63,5 @@ class RoutingResults
     {
         return $this->dispatcher;
     }
+
+    public function getMethod(): string

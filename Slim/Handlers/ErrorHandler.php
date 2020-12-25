@@ -92,3 +92,5 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected ResponseFactoryInterface $responseFactory;
 
+    protected LoggerInterface $logger;
+

@@ -83,3 +83,6 @@ class RequestResponseNamedArgsTest extends TestCase
         ];
 
         $invocationStrategy = new RequestResponseNamedArgs();
+
+        $callback = function ($request, $response, $greeting = 'Hello', $name = 'Rob') use ($args) {
+            $this->assertSame($this->request, $request);

@@ -111,3 +111,5 @@ class BodyParsingMiddlewareTest extends TestCase
                 'application/json;charset=utf8',
                 '"foo bar"',
                 null,
+            ],
+            'unknown-contenttype' => [

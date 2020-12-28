@@ -73,3 +73,4 @@ abstract class TestCase extends PhpUnitTestCase
      * @param ContainerInterface|null $container
      * @param CallableResolverInterface|null $callableResolver
      *
+     * @return MiddlewareDispatcher

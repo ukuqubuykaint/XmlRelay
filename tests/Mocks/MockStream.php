@@ -95,3 +95,5 @@ class MockStream implements StreamInterface
         }
     }
 
+    /**
+     * Closes the stream when the destructed.

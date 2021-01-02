@@ -54,3 +54,4 @@ class JsonErrorRenderer extends AbstractErrorRenderer
             'message' => $exception->getMessage(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
+        ];

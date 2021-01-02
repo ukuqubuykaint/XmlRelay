@@ -39,3 +39,4 @@ interface PSR7ObjectProviderInterface
      */
     public function getStreamFactory(): StreamFactoryInterface;
 
+    /**

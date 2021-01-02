@@ -86,3 +86,7 @@ class RequestResponseNamedArgsTest extends TestCase
 
         $callback = function ($request, $response, $greeting = 'Hello', $name = 'Rob') use ($args) {
             $this->assertSame($this->request, $request);
+            $this->assertSame($this->response, $response);
+            $this->assertSame($greeting, 'Hello');
+            $this->assertSame($name, $args['name']);
+

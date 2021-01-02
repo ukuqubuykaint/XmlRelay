@@ -228,3 +228,7 @@ class CallableResolverTest extends TestCase
     }
 
     public function testResolutionToAnInvokableClass(): void
+    {
+        $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve('Slim\Tests\Mocks\InvokableTest');
+        $callableRoute = $resolver->resolveRoute('Slim\Tests\Mocks\InvokableTest');

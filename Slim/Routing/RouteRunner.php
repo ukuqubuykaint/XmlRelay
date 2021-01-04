@@ -44,3 +44,5 @@ class RouteRunner implements RequestHandlerInterface
         $this->routeCollectorProxy = $routeCollectorProxy;
     }
 
+    /**
+     * This request handler is instantiated automatically in App::__construct()

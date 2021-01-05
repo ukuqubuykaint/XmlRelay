@@ -94,3 +94,7 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected LoggerInterface $logger;
 
+    public function __construct(
+        CallableResolverInterface $callableResolver,
+        ResponseFactoryInterface $responseFactory,
+        ?LoggerInterface $logger = null

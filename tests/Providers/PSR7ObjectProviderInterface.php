@@ -40,3 +40,5 @@ interface PSR7ObjectProviderInterface
     public function getStreamFactory(): StreamFactoryInterface;
 
     /**
+     * @param string $uri
+     * @param string $method

@@ -56,3 +56,4 @@ class OutputBufferingMiddleware implements MiddlewareInterface
             $response = $handler->handle($request);
             $output = ob_get_clean();
         } catch (Throwable $e) {
+            ob_end_clean();

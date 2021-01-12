@@ -23,3 +23,4 @@ class CallableTest
         static::$CalledContainer = $container;
     }
 
+    public function toCall()

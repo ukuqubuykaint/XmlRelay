@@ -172,3 +172,4 @@ class AppFactoryTest extends TestCase
         AppFactory::setMiddlewareDispatcher($middlewareDispatcherProphecy->reveal());
 
         $app = AppFactory::create();
+

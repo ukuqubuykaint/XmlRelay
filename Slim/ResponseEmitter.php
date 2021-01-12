@@ -83,3 +83,5 @@ class ResponseEmitter
 
     /**
      * Emit Body
+     */
+    private function emitBody(ResponseInterface $response): void

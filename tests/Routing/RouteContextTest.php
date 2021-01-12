@@ -70,3 +70,5 @@ class RouteContextTest extends TestCase
         $routeContext->getBasePath();
     }
 
+    public static function requiredRouteContextRequestAttributes(): array
+    {

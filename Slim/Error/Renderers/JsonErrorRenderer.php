@@ -25,3 +25,4 @@ use const JSON_UNESCAPED_SLASHES;
  */
 class JsonErrorRenderer extends AbstractErrorRenderer
 {
+    public function __invoke(Throwable $exception, bool $displayErrorDetails): string

@@ -11,3 +11,6 @@ declare(strict_types=1);
 namespace Slim\Factory\Psr17;
 
 use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use RuntimeException;
+

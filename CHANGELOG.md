@@ -106,3 +106,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3302: Add support for psr/http-message ^2.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/3302) thanks to @rotexdegba
 - [3305: Update phpspec/prophecy-phpunit requirement from ^2.0 to ^2.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3305) thanks to @dependabot[bot]
 - [3306: Update phpspec/prophecy requirement from ^1.17 to ^1.18](https://github.com/ukuqubuykaint/AJAX-XML/pull/3306) thanks to @dependabot[bot]
+- [3308: Update squizlabs/php&#95;codesniffer requirement from ^3.7 to ^3.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3308) thanks to @dependabot[bot]
+- [3313: Bump ramsey/composer-install from 2 to 3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3313) thanks to @dependabot[bot]
+- [3314: Update phpspec/prophecy requirement from ^1.18 to ^1.19](https://github.com/ukuqubuykaint/AJAX-XML/pull/3314) thanks to @dependabot[bot]

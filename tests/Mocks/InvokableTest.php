@@ -13,3 +13,4 @@ namespace Slim\Tests\Mocks;
 class InvokableTest
 {
     public static $CalledCount = 0;
+

@@ -15,3 +15,4 @@ class HttpTooManyRequestsException extends HttpSpecializedException
 {
     /**
      * @var int
+     */

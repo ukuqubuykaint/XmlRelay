@@ -529,3 +529,7 @@ class AppTest extends TestCase
 
     public function testGroupClosureIsBoundToThisClass(): void
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $app = new App($responseFactoryProphecy->reveal());
+
+        $testCase = $this;

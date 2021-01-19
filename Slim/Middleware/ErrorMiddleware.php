@@ -122,3 +122,5 @@ class ErrorMiddleware implements MiddlewareInterface
     /**
      * Get default error handler
      *
+     * @return ErrorHandler|callable
+     */

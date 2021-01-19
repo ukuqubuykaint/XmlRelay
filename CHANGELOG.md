@@ -136,3 +136,7 @@ You can also type-hint to the concrete instance of the container you are using t
 
 - [3180: Declare types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3180) thanks to @nbayramberdiyev
 - [3181: Update laminas/laminas-diactoros requirement from ^2.8 to ^2.9](https://github.com/ukuqubuykaint/AJAX-XML/pull/3181) thanks to @dependabot[bot]
+- [3182: Update guzzlehttp/psr7 requirement from ^2.1 to ^2.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3182) thanks to @dependabot[bot]
+- [3183: Update phpstan/phpstan requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3183) thanks to @dependabot[bot]
+- [3184: Update adriansuter/php-autoload-override requirement from ^1.2 to ^1.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3184) thanks to @dependabot[bot]
+- [3189: Update phpstan/phpstan requirement from ^1.5 to ^1.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3189) thanks to @dependabot[bot]

@@ -85,3 +85,6 @@ class ResponseEmitter
      * Emit Body
      */
     private function emitBody(ResponseInterface $response): void
+    {
+        $body = $response->getBody();
+        if ($body->isSeekable()) {

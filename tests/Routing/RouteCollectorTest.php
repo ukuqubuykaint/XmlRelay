@@ -67,3 +67,7 @@ class RouteCollectorTest extends TestCase
     }
 
     public function testMapPrependsGroupPattern()
+    {
+        $self = $this;
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

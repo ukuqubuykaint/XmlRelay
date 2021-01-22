@@ -92,3 +92,4 @@ class ResponseEmitterTest extends TestCase
             $response = $this
                 ->createResponse()
                 ->withHeader('Content-Length', $length)
+                ->withBody($body);

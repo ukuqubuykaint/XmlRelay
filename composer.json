@@ -81,3 +81,4 @@
             "XmlRelay\\Tests\\": "tests"
         }
     },
+    "scripts": {

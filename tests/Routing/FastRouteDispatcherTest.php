@@ -193,3 +193,6 @@ class FastRouteDispatcherTest extends TestCase
         $method = 'GET';
         $uri = '/resource/123/456';
         $handler = 'handler0';
+        $argDict = [];
+
+        $cases[] = [$method, $uri, $callback, $handler, $argDict];

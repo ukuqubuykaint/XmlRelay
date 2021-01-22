@@ -81,3 +81,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * added one (last in, first out).
      *
      * @param MiddlewareInterface|string|callable $middleware
+     */
+    public function add($middleware): MiddlewareDispatcherInterface
+    {
+        if ($middleware instanceof MiddlewareInterface) {

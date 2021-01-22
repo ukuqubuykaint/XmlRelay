@@ -13,3 +13,4 @@ namespace Slim\Factory\Psr17;
 class LaminasDiactorosPsr17Factory extends Psr17Factory
 {
     protected static string $responseFactoryClass = 'Laminas\Diactoros\ResponseFactory';
+    protected static string $streamFactoryClass = 'Laminas\Diactoros\StreamFactory';

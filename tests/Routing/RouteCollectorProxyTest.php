@@ -151,3 +151,7 @@ class RouteCollectorProxyTest extends TestCase
 
         $this->assertSame($pattern, $route->getPattern());
     }
+
+    public function testPost()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

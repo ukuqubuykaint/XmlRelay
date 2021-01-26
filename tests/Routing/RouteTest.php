@@ -195,3 +195,5 @@ class RouteTest extends TestCase
     }
 
     public function testSetInvocationStrategy()
+    {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {

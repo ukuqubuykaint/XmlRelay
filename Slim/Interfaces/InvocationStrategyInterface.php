@@ -27,3 +27,5 @@ interface InvocationStrategyInterface
      * @param array<string, string>  $routeArguments The route's placeholder arguments
      *
      * @return ResponseInterface The response from the callable.
+     */
+    public function __invoke(

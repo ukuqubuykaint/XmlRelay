@@ -15,3 +15,5 @@ use Throwable;
 
 abstract class HttpSpecializedException extends HttpException
 {
+    /**
+     * @param ServerRequestInterface $request

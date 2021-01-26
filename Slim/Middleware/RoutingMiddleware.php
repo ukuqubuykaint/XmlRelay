@@ -27,3 +27,4 @@ class RoutingMiddleware implements MiddlewareInterface
     protected RouteResolverInterface $routeResolver;
 
     protected RouteParserInterface $routeParser;
+

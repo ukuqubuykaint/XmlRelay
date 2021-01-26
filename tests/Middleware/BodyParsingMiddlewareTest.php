@@ -80,3 +80,4 @@ class BodyParsingMiddlewareTest extends TestCase
             'json-with-charset' => [
                 "application/json\t ; charset=utf8",
                 '{"foo":"bar"}',
+                ['foo' => 'bar'],

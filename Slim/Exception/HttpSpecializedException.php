@@ -17,3 +17,5 @@ abstract class HttpSpecializedException extends HttpException
 {
     /**
      * @param ServerRequestInterface $request
+     * @param string|null $message
+     * @param Throwable|null $previous

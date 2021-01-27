@@ -47,3 +47,6 @@ AppFactory::setXmlRelayHttpDecoratorsAutomaticDetection(false);
 ServerRequestCreatorFactory::setXmlRelayHttpDecoratorsAutomaticDetection(false);
 
 $app = AppFactory::create();
+
+// ...
+```

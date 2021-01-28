@@ -32,3 +32,5 @@ class RoutingMiddlewareTest extends TestCase
 {
     protected function getRouteCollector()
     {
+        $callableResolver = new CallableResolver();
+        $responseFactory = $this->getResponseFactory();

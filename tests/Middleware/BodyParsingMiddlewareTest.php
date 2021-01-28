@@ -81,3 +81,7 @@ class BodyParsingMiddlewareTest extends TestCase
                 "application/json\t ; charset=utf8",
                 '{"foo":"bar"}',
                 ['foo' => 'bar'],
+            ],
+            'json-suffix' => [
+                'application/vnd.api+json;charset=utf8',
+                '{"foo":"bar"}',

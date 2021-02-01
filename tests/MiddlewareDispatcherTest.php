@@ -203,3 +203,7 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testDeferredResolvedSlimCallable(): void
     {
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, null);
+        $middlewareDispatcher->addDeferred(MockMiddlewareSlimCallable::class . ':custom');
+

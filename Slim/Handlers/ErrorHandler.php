@@ -104,3 +104,6 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->logger = $logger ?: $this->getDefaultLogger();
     }
 
+    /**
+     * Invoke error handler
+     *

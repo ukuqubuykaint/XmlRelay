@@ -24,3 +24,4 @@ class HttpException extends RuntimeException
 
     protected string $title = '';
 
+    protected string $description = '';

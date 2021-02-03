@@ -20,3 +20,6 @@ interface Psr17FactoryInterface
      * @throws RuntimeException when the factory could not be instantiated
      */
     public static function getResponseFactory(): ResponseFactoryInterface;
+
+    /**
+     * @throws RuntimeException when the factory could not be instantiated

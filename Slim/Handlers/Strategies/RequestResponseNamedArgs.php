@@ -18,3 +18,6 @@ use RuntimeException;
 /**
  * Route callback strategy with route parameters as individual arguments.
  * @api
+ */
+class RequestResponseNamedArgs implements InvocationStrategyInterface
+{

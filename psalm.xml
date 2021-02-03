@@ -9,3 +9,4 @@
     findUnusedCode="true"
 >
     <projectFiles>
+        <directory name="Slim" />

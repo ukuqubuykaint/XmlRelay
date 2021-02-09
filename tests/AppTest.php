@@ -533,3 +533,4 @@ class AppTest extends TestCase
         $app = new App($responseFactoryProphecy->reveal());
 
         $testCase = $this;
+        $app->group('/foo', function () use ($testCase) {

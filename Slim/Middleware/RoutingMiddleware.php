@@ -54,3 +54,7 @@ class RoutingMiddleware implements MiddlewareInterface
      * @throws HttpMethodNotAllowedException
      * @throws RuntimeException
      */
+    public function performRouting(ServerRequestInterface $request): ServerRequestInterface
+    {
+        $request = $request->withAttribute(RouteContext::ROUTE_PARSER, $this->routeParser);
+

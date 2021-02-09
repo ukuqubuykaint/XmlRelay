@@ -32,3 +32,6 @@ use Slim\Tests\TestCase;
 class ServerRequestCreatorFactoryTest extends TestCase
 {
     public static function provideImplementations()
+    {
+        return [
+            [SlimPsr17Factory::class, SlimServerRequest::class],

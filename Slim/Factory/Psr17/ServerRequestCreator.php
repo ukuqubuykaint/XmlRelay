@@ -14,3 +14,7 @@ use Closure;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Interfaces\ServerRequestCreatorInterface;
 
+class ServerRequestCreator implements ServerRequestCreatorInterface
+{
+    /**
+     * @var object|string

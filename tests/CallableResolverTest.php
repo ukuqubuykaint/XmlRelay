@@ -234,3 +234,5 @@ class CallableResolverTest extends TestCase
         $callableRoute = $resolver->resolveRoute('Slim\Tests\Mocks\InvokableTest');
         $callableMiddleware = $resolver->resolveMiddleware('Slim\Tests\Mocks\InvokableTest');
 
+        $callable();
+        $this->assertSame(1, InvokableTest::$CalledCount);

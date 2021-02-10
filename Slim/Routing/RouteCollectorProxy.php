@@ -100,3 +100,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     {
         $this->routeCollector->setBasePath($basePath);
 
+        return $this;
+    }
+
+    /**

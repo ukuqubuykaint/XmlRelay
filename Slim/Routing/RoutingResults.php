@@ -28,3 +28,6 @@ class RoutingResults
     /**
      * The status is one of the constants shown above
      * NOT_FOUND = 0
+     * FOUND = 1
+     * METHOD_NOT_ALLOWED = 2
+     */

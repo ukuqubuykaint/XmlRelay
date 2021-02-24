@@ -29,3 +29,7 @@ class JsonErrorRenderer extends AbstractErrorRenderer
     {
         $error = ['message' => $this->getErrorTitle($exception)];
 
+        if ($displayErrorDetails) {
+            $error['exception'] = [];
+            do {
+                $error['exception'][] = $this->formatExceptionFragment($exception);

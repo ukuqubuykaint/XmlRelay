@@ -68,3 +68,6 @@ class AppFactory
             $middlewareDispatcher ?? static::$middlewareDispatcher
         );
     }
+
+    /**
+     * @template TContainerInterface of (ContainerInterface)

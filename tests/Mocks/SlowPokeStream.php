@@ -34,3 +34,6 @@ class SlowPokeStream implements StreamInterface
         $this->amountToRead = self::SIZE;
     }
 
+    public function __toString(): string
+    {
+        $content = '';

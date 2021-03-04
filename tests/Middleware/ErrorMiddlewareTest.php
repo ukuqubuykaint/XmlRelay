@@ -82,3 +82,7 @@ class ErrorMiddlewareTest extends TestCase
         );
         $app->add($routingMiddleware);
 
+        $handler = (function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;

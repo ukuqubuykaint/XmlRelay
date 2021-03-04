@@ -16,3 +16,4 @@ use Slim\Interfaces\InvocationStrategyInterface;
 
 class InvocationStrategyTest implements InvocationStrategyInterface
 {
+    public static $LastCalledFor = null;

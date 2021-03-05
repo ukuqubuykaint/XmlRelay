@@ -32,3 +32,5 @@ class MockRequestHandler implements RequestHandlerInterface
         $responseFactory = $psr7ObjectProvider->getResponseFactory();
 
         $this->calledCount += 1;
+        return $responseFactory->createResponse();
+    }

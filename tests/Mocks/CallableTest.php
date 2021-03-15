@@ -24,3 +24,4 @@ class CallableTest
     }
 
     public function toCall()
+    {

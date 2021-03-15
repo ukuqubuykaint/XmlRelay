@@ -86,3 +86,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     private function resolveByPredicate($toResolve, callable $predicate, string $defaultMethod): callable
     {
         $toResolve = $this->prepareToResolve($toResolve);
+        if (is_callable($toResolve)) {

@@ -31,3 +31,6 @@ class RoutingResults
      * FOUND = 1
      * METHOD_NOT_ALLOWED = 2
      */
+    protected int $routeStatus;
+
+    protected ?string $routeIdentifier = null;

@@ -28,3 +28,4 @@ class RoutingMiddleware implements MiddlewareInterface
 
     protected RouteParserInterface $routeParser;
 
+    public function __construct(RouteResolverInterface $routeResolver, RouteParserInterface $routeParser)

@@ -43,3 +43,4 @@ final class RouteContext
         /** @var string|null $basePath */
         return new self($route, $routeParser, $routingResults, $basePath);
     }
+

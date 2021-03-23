@@ -16,3 +16,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 /** @api */
 interface MiddlewareDispatcherInterface extends RequestHandlerInterface
 {
+    /**
+     * Add a new middleware to the stack
+     *

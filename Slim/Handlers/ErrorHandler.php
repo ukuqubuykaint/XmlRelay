@@ -107,3 +107,4 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Invoke error handler
      *
+     * @param ServerRequestInterface $request             The most recent Request object

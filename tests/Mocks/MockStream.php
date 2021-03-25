@@ -97,3 +97,5 @@ class MockStream implements StreamInterface
 
     /**
      * Closes the stream when the destructed.
+     */
+    public function __destruct()

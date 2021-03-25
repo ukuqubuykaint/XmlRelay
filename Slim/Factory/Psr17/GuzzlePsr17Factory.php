@@ -11,3 +11,4 @@ declare(strict_types=1);
 namespace Slim\Factory\Psr17;
 
 class GuzzlePsr17Factory extends Psr17Factory
+{

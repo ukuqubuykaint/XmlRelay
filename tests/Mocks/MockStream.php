@@ -70,3 +70,7 @@ class MockStream implements StreamInterface
     ];
 
     /**
+     * MockStream constructor.
+     * @param string|resource $body
+     */
+    public function __construct($body = '')

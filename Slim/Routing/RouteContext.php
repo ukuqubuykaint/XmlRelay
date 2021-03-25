@@ -44,3 +44,6 @@ final class RouteContext
         return new self($route, $routeParser, $routingResults, $basePath);
     }
 
+    private ?RouteInterface $route;
+
+    private RouteParserInterface $routeParser;

@@ -74,3 +74,7 @@ final class RouteContext
         return $this->routeParser;
     }
 
+    public function getRoutingResults(): RoutingResults
+    {
+        return $this->routingResults;
+    }

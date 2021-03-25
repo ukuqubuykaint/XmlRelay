@@ -96,3 +96,6 @@ class RouteCollectorTest extends TestCase
         $containerProphecy = $this->prophesize(ContainerInterface::class);
         $invocationStrategyProphecy = $this->prophesize(InvocationStrategyInterface::class);
 
+        $routeCollector = new RouteCollector(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),

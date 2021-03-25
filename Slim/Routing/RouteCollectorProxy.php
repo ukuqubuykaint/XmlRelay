@@ -74,3 +74,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function getContainer(): ?ContainerInterface
     {
+        return $this->container;
+    }
+
+    /**

@@ -17,3 +17,4 @@
 [2654]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2654
 [2638]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2638
 [2622]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2622
+[2555]: https://github.com/ukuqubuykaint/AJAX-XML/pull/2555

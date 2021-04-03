@@ -21,3 +21,4 @@ use RuntimeException;
  */
 class RequestResponseNamedArgs implements InvocationStrategyInterface
 {
+    /**

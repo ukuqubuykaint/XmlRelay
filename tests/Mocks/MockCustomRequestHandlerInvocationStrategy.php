@@ -23,3 +23,4 @@ class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvoca
         ServerRequestInterface $request,
         ResponseInterface $response,
         array $routeArguments
+    ): ResponseInterface {

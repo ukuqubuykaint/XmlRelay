@@ -16,3 +16,6 @@ use Slim\Interfaces\InvocationStrategyInterface;
 
 use function array_values;
 
+/**
+ * Route callback strategy with route parameters as individual arguments.
+ * @api

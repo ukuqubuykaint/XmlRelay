@@ -16,3 +16,7 @@ use Slim\Exception\HttpNotFoundException;
 use Slim\Tests\TestCase;
 
 class HttpExceptionTest extends TestCase
+{
+    public function testHttpExceptionRequestReponseGetterSetters()
+    {
+        $request = $this->createServerRequest('/');

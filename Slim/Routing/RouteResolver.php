@@ -16,3 +16,5 @@ use Slim\Interfaces\RouteCollectorInterface;
 use Slim\Interfaces\RouteInterface;
 use Slim\Interfaces\RouteResolverInterface;
 
+use function rawurldecode;
+

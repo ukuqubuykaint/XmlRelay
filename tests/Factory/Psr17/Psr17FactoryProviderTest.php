@@ -20,3 +20,5 @@ class Psr17FactoryProviderTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testGetSetFactories()
+    {
+        Psr17FactoryProvider::setFactories([]);

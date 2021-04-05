@@ -22,3 +22,7 @@ jobs:
           - php: 8.5
             experimental: true
             composer-options: '--ignore-platform-req=php+'
+          - php: nightly
+            experimental: true
+            composer-options: '--ignore-platform-req=php+'
+

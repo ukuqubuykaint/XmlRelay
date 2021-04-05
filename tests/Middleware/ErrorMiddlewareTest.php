@@ -89,3 +89,4 @@ class ErrorMiddlewareTest extends TestCase
         })->bindTo($this);
 
         $errorMiddleware = new ErrorMiddleware(
+            $callableResolver,

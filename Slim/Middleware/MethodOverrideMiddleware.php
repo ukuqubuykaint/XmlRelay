@@ -32,3 +32,6 @@ class MethodOverrideMiddleware implements MiddlewareInterface
 
             if (is_array($body) && !empty($body['_METHOD']) && is_string($body['_METHOD'])) {
                 $request = $request->withMethod($body['_METHOD']);
+            }
+
+            if ($request->getBody()->eof()) {

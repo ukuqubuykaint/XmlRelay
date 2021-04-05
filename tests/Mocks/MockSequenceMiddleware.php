@@ -16,3 +16,6 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 class MockSequenceMiddleware implements MiddlewareInterface
+{
+    /**
+     * @var string

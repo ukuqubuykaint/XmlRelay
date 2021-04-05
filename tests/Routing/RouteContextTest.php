@@ -41,3 +41,5 @@ class RouteContextTest extends TestCase
     }
 
     public function testCanCreateInstanceWithoutRoute(): void
+    {
+        $serverRequest = $this->createServerRequestWithRouteAttributes();

@@ -35,3 +35,6 @@ interface RouteInterface
     public function getMethods(): array;
 
     /**
+     * Get route pattern
+     */
+    public function getPattern(): string;

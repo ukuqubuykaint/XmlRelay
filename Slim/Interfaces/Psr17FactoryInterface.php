@@ -26,3 +26,6 @@ interface Psr17FactoryInterface
      */
     public static function getStreamFactory(): StreamFactoryInterface;
 
+    /**
+     * @throws RuntimeException when the factory could not be instantiated
+     */

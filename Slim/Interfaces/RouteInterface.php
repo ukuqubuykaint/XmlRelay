@@ -68,3 +68,4 @@ interface RouteInterface
      *
      * @return static
      */
+    public function setName(string $name): RouteInterface;

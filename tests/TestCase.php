@@ -81,3 +81,6 @@ abstract class TestCase extends PhpUnitTestCase
         ?CallableResolverInterface $callableResolver = null
     ): MiddlewareDispatcher {
         return new MiddlewareDispatcher(
+            $requestHandler,
+            $callableResolver ?? $this->getCallableResolver($container),
+            $container

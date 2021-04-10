@@ -46,3 +46,6 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
             'HTTP_HOST' => 'localhost',
             'HTTP_USER_AGENT' => 'Slim Framework',
+            'QUERY_STRING' => '',
+            'REMOTE_ADDR' => '127.0.0.1',
+            'REQUEST_METHOD' => $method,

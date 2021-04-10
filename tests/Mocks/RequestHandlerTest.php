@@ -21,3 +21,6 @@ class RequestHandlerTest implements RequestHandlerInterface
 {
     public static $CalledCount = 0;
     public static $strategy = '';
+
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {

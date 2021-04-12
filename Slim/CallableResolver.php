@@ -87,3 +87,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     {
         $toResolve = $this->prepareToResolve($toResolve);
         if (is_callable($toResolve)) {
+            return $this->bindToContainer($toResolve);
+        }
+        $resolved = $toResolve;
+        if ($predicate($toResolve)) {

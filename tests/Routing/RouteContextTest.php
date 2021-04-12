@@ -73,3 +73,7 @@ class RouteContextTest extends TestCase
     public static function requiredRouteContextRequestAttributes(): array
     {
         return [
+            [RouteContext::ROUTE_PARSER],
+            [RouteContext::ROUTING_RESULTS],
+        ];
+    }

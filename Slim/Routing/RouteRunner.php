@@ -46,3 +46,6 @@ class RouteRunner implements RequestHandlerInterface
 
     /**
      * This request handler is instantiated automatically in App::__construct()
+     * It is at the very tip of the middleware queue meaning it will be executed
+     * last and it detects whether or not routing has been performed in the user
+     * defined middleware stack. In the event that the user did not perform routing

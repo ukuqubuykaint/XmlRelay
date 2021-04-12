@@ -88,3 +88,7 @@ class DispatcherTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $dispatcher = new Dispatcher($routeCollector);
 
+        $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
+        $this->setAccessible($method);
+
+        $fastRouteDispatcher = $method->invoke($dispatcher);

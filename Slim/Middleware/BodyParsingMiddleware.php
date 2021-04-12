@@ -100,3 +100,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
             /** @var string $input */
             $result = json_decode($input, true);
 
+            if (!is_array($result)) {
+                return null;
+            }
+

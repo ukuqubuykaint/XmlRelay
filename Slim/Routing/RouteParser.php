@@ -70,3 +70,5 @@ class RouteParser implements RouteParserInterface
                 if (!array_key_exists($segment[0], $data)) {
                     $segments = [];
                     $segmentName = $segment[0];
+                    break;
+                }

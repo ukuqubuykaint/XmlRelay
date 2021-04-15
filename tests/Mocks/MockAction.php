@@ -29,3 +29,4 @@ class MockAction
         $arguments[1]->getBody()->write($contents);
 
         return $response;
+    }

@@ -5,3 +5,4 @@ updates:
   schedule:
     interval: "monthly"
 - package-ecosystem: composer
+  directory: "/"

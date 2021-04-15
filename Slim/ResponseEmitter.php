@@ -68,3 +68,4 @@ class ResponseEmitter
     }
 
     /**
+     * Emit Status Line

@@ -17,3 +17,4 @@ class HttpInternalServerErrorException extends HttpSpecializedException
      * @var int
      */
     protected $code = 500;
+

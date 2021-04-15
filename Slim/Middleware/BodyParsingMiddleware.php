@@ -70,3 +70,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
      */
     public function registerBodyParser(string $mediaType, callable $callable): self
     {
+        $this->bodyParsers[$mediaType] = $callable;
+        return $this;
+    }

@@ -87,3 +87,4 @@ abstract class Psr17Factory implements Psr17FactoryInterface
         return static::$streamFactoryClass && class_exists(static::$streamFactoryClass);
     }
 
+    /**

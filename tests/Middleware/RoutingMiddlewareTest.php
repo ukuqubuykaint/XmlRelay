@@ -95,3 +95,5 @@ class RoutingMiddlewareTest extends TestCase
             $this->fail('HTTP method should not have been allowed');
         } catch (HttpMethodNotAllowedException $exception) {
             $request = $exception->getRequest();
+
+            // route is not available

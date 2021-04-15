@@ -38,3 +38,4 @@ class RoutingResults
     /**
      * @var array<string, string>
      */
+    protected array $routeArguments;

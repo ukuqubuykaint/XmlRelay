@@ -22,3 +22,6 @@ abstract class HttpSpecializedException extends HttpException
      */
     public function __construct(ServerRequestInterface $request, ?string $message = null, ?Throwable $previous = null)
     {
+        if ($message !== null) {
+            $this->message = $message;
+        }

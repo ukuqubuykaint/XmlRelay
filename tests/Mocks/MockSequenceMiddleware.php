@@ -19,3 +19,4 @@ class MockSequenceMiddleware implements MiddlewareInterface
 {
     /**
      * @var string
+     */

@@ -26,3 +26,4 @@ jobs:
             experimental: true
             composer-options: '--ignore-platform-req=php+'
 
+    steps:

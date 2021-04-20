@@ -74,3 +74,4 @@ class RouteCollectorTest extends TestCase
 
         $callable = function (RouteCollectorProxy $proxy) use ($self) {
             $route = $proxy->get('/test', function () {
+            });

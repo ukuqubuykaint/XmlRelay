@@ -34,3 +34,7 @@ class RoutingMiddlewareTest extends TestCase
     {
         $callableResolver = new CallableResolver();
         $responseFactory = $this->getResponseFactory();
+        $routeCollector = new RouteCollector($responseFactory, $callableResolver);
+        $routeCollector->map(['GET'], '/hello/{name}', null);
+        return $routeCollector;
+    }

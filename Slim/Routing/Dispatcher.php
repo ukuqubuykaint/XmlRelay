@@ -45,3 +45,7 @@ class Dispatcher implements DispatcherInterface
                 'cacheFile' => $cacheFile,
             ]);
         } else {
+            /** @var FastRouteDispatcher $dispatcher */
+            $dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback, [
+                'dataGenerator' => GroupCountBased::class,
+                'dispatcher' => FastRouteDispatcher::class,

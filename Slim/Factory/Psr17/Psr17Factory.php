@@ -88,3 +88,6 @@ abstract class Psr17Factory implements Psr17FactoryInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public static function isServerRequestCreatorAvailable(): bool

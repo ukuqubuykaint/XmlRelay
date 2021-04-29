@@ -55,3 +55,4 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
         $text .= sprintf('Trace: %s', $exception->getTraceAsString());
 
         return $text;
+    }

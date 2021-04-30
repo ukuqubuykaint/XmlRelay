@@ -62,3 +62,7 @@ class HeaderStack
     {
         self::$data[] = $header;
     }
+
+    /**
+     * Return the current header stack
+     *

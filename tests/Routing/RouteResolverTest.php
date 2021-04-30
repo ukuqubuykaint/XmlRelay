@@ -72,3 +72,5 @@ class RouteResolverTest extends TestCase
     public function testResolveRoute()
     {
         $identifier = 'test';
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);

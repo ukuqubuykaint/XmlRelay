@@ -74,3 +74,5 @@ class ServerRequestCreatorFactoryTest extends TestCase
      * @runInSeparateProcess - Psr17FactoryProvider::setFactories breaks other tests
      */
      #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
+    public function testDetermineServerRequestCreatorThrowsRuntimeException()
+    {

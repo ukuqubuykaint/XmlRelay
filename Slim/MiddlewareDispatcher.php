@@ -128,3 +128,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             {
                 return $this->middleware->process($request, $this->next);
             }
+        };
+

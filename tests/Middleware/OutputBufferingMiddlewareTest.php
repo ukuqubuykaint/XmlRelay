@@ -84,3 +84,4 @@ class OutputBufferingMiddlewareTest extends TestCase
             echo 'Test';
 
             return $response;
+        };

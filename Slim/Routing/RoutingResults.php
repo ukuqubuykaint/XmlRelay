@@ -65,3 +65,7 @@ class RoutingResults
     }
 
     public function getMethod(): string
+    {
+        return $this->method;
+    }
+

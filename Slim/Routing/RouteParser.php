@@ -72,3 +72,7 @@ class RouteParser implements RouteParserInterface
                     $segmentName = $segment[0];
                     break;
                 }
+
+                $segments[] = $data[$segment[0]];
+            }
+

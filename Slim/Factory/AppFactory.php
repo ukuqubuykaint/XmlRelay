@@ -106,3 +106,7 @@ class AppFactory
 
         $middlewareDispatcher = $container->has(MiddlewareDispatcherInterface::class)
         && (
+            $middlewareDispatcherFromContainer = $container->get(MiddlewareDispatcherInterface::class)
+        ) instanceof MiddlewareDispatcherInterface
+            ? $middlewareDispatcherFromContainer
+            : null;

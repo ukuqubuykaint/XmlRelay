@@ -26,3 +26,4 @@ interface RouteParserInterface
      *
      * @throws RuntimeException         If named route does not exist
      * @throws InvalidArgumentException If required data not provided
+     */

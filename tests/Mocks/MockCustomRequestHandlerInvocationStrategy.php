@@ -24,3 +24,4 @@ class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvoca
         ResponseInterface $response,
         array $routeArguments
     ): ResponseInterface {
+        self::$CalledCount += 1;

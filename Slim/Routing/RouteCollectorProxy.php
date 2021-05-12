@@ -107,3 +107,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      * {@inheritdoc}
      */
     public function get(string $pattern, $callable): RouteInterface
+    {
+        return $this->map(['GET'], $pattern, $callable);

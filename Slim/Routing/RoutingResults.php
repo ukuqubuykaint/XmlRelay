@@ -69,3 +69,5 @@ class RoutingResults
         return $this->method;
     }
 
+    public function getUri(): string
+    {

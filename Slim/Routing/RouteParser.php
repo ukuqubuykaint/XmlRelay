@@ -77,3 +77,5 @@ class RouteParser implements RouteParserInterface
             }
 
             /*
+             * If we get to this logic block we have found all the parameters
+             * for the provided $data which means we don't need to continue testing

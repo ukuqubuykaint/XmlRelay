@@ -78,3 +78,6 @@ class SlimHttpServerRequestCreatorTest extends TestCase
     public function testCreateServerRequestFromGlobalsThrowsRuntimeExceptionIfNotInstanceOfServerRequestInterface()
     {
         $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage(
+            'Slim\\Factory\\Psr17\\SlimHttpServerRequestCreator could not instantiate a decorated server request.'
+        );

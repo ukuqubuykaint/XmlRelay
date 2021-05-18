@@ -56,3 +56,6 @@ interface RouteCollectorInterface
 
     /**
      * Get route objects
+     *
+     * @return RouteInterface[]
+     */

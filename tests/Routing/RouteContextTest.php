@@ -77,3 +77,7 @@ class RouteContextTest extends TestCase
             [RouteContext::ROUTING_RESULTS],
         ];
     }
+
+    /**
+     * @dataProvider requiredRouteContextRequestAttributes
+     * @param string $attribute

@@ -104,3 +104,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
                 return null;
             }
 
+            return $result;
+        });
+
+        $this->registerBodyParser('application/x-www-form-urlencoded', static function ($input) {

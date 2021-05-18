@@ -76,3 +76,6 @@ class SmallChunksStream implements StreamInterface
     {
         return false;
     }
+
+    public function isWritable(): bool
+    {

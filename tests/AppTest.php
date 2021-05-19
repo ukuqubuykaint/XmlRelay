@@ -534,3 +534,7 @@ class AppTest extends TestCase
 
         $testCase = $this;
         $app->group('/foo', function () use ($testCase) {
+            $testCase->assertSame($testCase, $this);
+        });
+    }
+

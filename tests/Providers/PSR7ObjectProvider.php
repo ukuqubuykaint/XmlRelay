@@ -94,3 +94,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
     /**
      * @param string $contents
      * @return StreamInterface
+     */

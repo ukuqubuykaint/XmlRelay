@@ -81,3 +81,7 @@ class FastRouteDispatcher extends GroupCountBased
             }
         }
 
+        return [self::NOT_FOUND, null, []];
+    }
+
+    /**

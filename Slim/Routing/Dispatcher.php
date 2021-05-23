@@ -65,3 +65,7 @@ class Dispatcher implements DispatcherInterface
         $dispatcher = $this->createDispatcher();
         $results = $dispatcher->dispatch($method, $uri);
         return new RoutingResults($this, $method, $uri, $results[0], $results[1], $results[2]);
+    }
+
+    /**
+     * {@inheritdoc}

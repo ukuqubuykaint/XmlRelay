@@ -85,3 +85,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     public function add($middleware): MiddlewareDispatcherInterface
     {
         if ($middleware instanceof MiddlewareInterface) {
+            return $this->addMiddleware($middleware);

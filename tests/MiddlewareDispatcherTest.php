@@ -184,3 +184,7 @@ class MiddlewareDispatcherTest extends TestCase
         $containerProphecy
             ->get(Argument::any())
             ->willReturn($result)
+            ->shouldBeCalledOnce();
+
+        $handler = new MockRequestHandler();
+

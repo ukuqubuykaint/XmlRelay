@@ -559,3 +559,6 @@ class AppTest extends TestCase
             if (count($sequence)) {
                 $app->group($path, function (RouteCollectorProxy $group) use (&$sequence, $processSequence) {
                     $processSequence($group, $sequence, $processSequence);
+                });
+            } else {
+                $app->get($path, function () {

@@ -149,3 +149,4 @@ class CallableResolverTest extends TestCase
 
     public function testSlimCallableContainer(): void
     {
+        /** @var ContainerInterface $container */

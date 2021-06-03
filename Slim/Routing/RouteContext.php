@@ -80,3 +80,5 @@ final class RouteContext
     }
 
     public function getBasePath(): string
+    {
+        if ($this->basePath === null) {

@@ -538,3 +538,5 @@ class AppTest extends TestCase
         });
     }
 
+    /**
+     * @dataProvider routeGroupsDataProvider

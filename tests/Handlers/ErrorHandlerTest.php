@@ -135,3 +135,6 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Accept', 'text/html');
 
         $exception = new HttpNotFoundException($jsonRequest);
+
+        /** @var ResponseInterface $response */
+        $response = $handler->__invoke($jsonRequest, $exception, false, false, false);

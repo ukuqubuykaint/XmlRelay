@@ -245,3 +245,4 @@ class FastRouteDispatcherTest extends TestCase
         $method = 'GET';
         $uri = '/user/NaN';
         $handler = 'handler2';
+        $argDict = ['name' => 'NaN'];

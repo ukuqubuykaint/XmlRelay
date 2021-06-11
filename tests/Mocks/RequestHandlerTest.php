@@ -24,3 +24,4 @@ class RequestHandlerTest implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        static::$CalledCount++;

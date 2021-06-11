@@ -7,3 +7,4 @@ namespace Slim\Interfaces;
 use Slim\Routing\RoutingResults;
 
 interface RouteResolverInterface
+{

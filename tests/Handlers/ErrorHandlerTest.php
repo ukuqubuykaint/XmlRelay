@@ -119,3 +119,5 @@ class ErrorHandlerTest extends TestCase
     }
 
     /**
+     * Test that the content type is negotiated from the Accept header on each
+     * request instead of being cached from the first invocation.

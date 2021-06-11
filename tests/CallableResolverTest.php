@@ -150,3 +150,5 @@ class CallableResolverTest extends TestCase
     public function testSlimCallableContainer(): void
     {
         /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();
+        $resolver = new CallableResolver($container);

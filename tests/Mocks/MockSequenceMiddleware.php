@@ -20,3 +20,7 @@ class MockSequenceMiddleware implements MiddlewareInterface
     /**
      * @var string
      */
+    public static $id = '0';
+
+    /**
+     * @var bool

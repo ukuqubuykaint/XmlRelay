@@ -69,3 +69,6 @@ class ErrorMiddleware implements MiddlewareInterface
         $this->logErrors = $logErrors;
         $this->logErrorDetails = $logErrorDetails;
         $this->logger = $logger;
+    }
+
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

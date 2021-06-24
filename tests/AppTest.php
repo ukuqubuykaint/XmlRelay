@@ -562,3 +562,5 @@ class AppTest extends TestCase
                 });
             } else {
                 $app->get($path, function () {
+                });
+            }

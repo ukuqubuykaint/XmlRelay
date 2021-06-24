@@ -17,3 +17,4 @@ use Throwable;
 interface ErrorHandlerInterface
 {
     public function __invoke(
+        ServerRequestInterface $request,

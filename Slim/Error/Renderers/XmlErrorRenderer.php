@@ -26,3 +26,7 @@ class XmlErrorRenderer extends AbstractErrorRenderer
     {
         $xml = '<' . '?xml version="1.0" encoding="UTF-8" standalone="yes"?' . ">\n";
         $xml .= "<error>\n  <message>" . $this->createCdataSection($this->getErrorTitle($exception)) . "</message>\n";
+
+        if ($displayErrorDetails) {
+            do {
+                $xml .= "  <exception>\n";

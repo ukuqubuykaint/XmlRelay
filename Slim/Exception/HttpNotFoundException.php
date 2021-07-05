@@ -22,3 +22,4 @@ class HttpNotFoundException extends HttpSpecializedException
      */
     protected $message = 'Not found.';
 
+    protected string $title = '404 Not Found';

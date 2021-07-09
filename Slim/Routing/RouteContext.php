@@ -82,3 +82,5 @@ final class RouteContext
     public function getBasePath(): string
     {
         if ($this->basePath === null) {
+            throw new RuntimeException('No base path defined.');
+        }

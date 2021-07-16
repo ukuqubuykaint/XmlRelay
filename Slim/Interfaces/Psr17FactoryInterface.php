@@ -32,3 +32,5 @@ interface Psr17FactoryInterface
     public static function getServerRequestCreator(): ServerRequestCreatorInterface;
 
     /**
+     * Is the PSR-17 ResponseFactory available
+     */

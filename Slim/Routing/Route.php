@@ -87,3 +87,7 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /** @var MiddlewareDispatcher<TContainerInterface> $middlewareDispatcher */
     protected MiddlewareDispatcher $middlewareDispatcher;
+
+    /**
+     * Route callable
+     *

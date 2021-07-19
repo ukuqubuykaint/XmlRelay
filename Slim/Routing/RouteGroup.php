@@ -42,3 +42,5 @@ class RouteGroup implements RouteGroupInterface
      * @param callable|string              $callable
      * @param RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null> $routeCollectorProxy
      */
+    public function __construct(
+        string $pattern,

@@ -95,3 +95,6 @@ class DispatcherTest extends TestCase
         $fastRouteDispatcher2 = $method->invoke($dispatcher);
 
         $this->assertSame($fastRouteDispatcher, $fastRouteDispatcher2);
+    }
+
+    public function testGetAllowedMethods()

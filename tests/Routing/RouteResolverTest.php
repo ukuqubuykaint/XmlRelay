@@ -77,3 +77,6 @@ class RouteResolverTest extends TestCase
         $dispatcherProphecy = $this->prophesize(DispatcherInterface::class);
 
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->lookupRoute($identifier)
+            ->willReturn($routeProphecy->reveal())

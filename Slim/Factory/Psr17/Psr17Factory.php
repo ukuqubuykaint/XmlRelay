@@ -93,3 +93,6 @@ abstract class Psr17Factory implements Psr17FactoryInterface
     public static function isServerRequestCreatorAvailable(): bool
     {
         return (
+            static::$serverRequestCreatorClass
+            && static::$serverRequestCreatorMethod
+            && class_exists(static::$serverRequestCreatorClass)

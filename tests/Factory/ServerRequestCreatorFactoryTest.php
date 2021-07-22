@@ -80,3 +80,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
 
         Psr17FactoryProvider::setFactories([]);
         ServerRequestCreatorFactory::create();
+    }

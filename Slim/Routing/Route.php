@@ -132,3 +132,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         $this->pattern = $pattern;
         $this->callable = $callable;
         $this->responseFactory = $responseFactory;
+        $this->callableResolver = $callableResolver;
+        $this->container = $container;
+        $this->invocationStrategy = $invocationStrategy ?? new RequestResponse();
+        $this->groups = $groups;

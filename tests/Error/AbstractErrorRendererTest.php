@@ -111,3 +111,7 @@ class AbstractErrorRendererTest extends TestCase
             ->shouldBeCalledOnce();
 
         $httpExceptionProphecy
+            ->getDescription()
+            ->willReturn($exceptionDescription)
+            ->shouldBeCalledOnce();
+

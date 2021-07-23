@@ -125,3 +125,4 @@ class ErrorMiddlewareTest extends TestCase
         $errorMiddleware->setDefaultErrorHandler('Uncallable');
         $errorMiddleware->getDefaultErrorHandler();
     }
+

@@ -25,3 +25,5 @@ class CallableTest
 
     public function toCall()
     {
+        static::$CalledCount++;
+

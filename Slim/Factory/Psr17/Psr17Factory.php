@@ -96,3 +96,5 @@ abstract class Psr17Factory implements Psr17FactoryInterface
             static::$serverRequestCreatorClass
             && static::$serverRequestCreatorMethod
             && class_exists(static::$serverRequestCreatorClass)
+        );
+    }

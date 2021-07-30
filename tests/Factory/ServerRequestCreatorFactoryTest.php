@@ -81,3 +81,7 @@ class ServerRequestCreatorFactoryTest extends TestCase
         Psr17FactoryProvider::setFactories([]);
         ServerRequestCreatorFactory::create();
     }
+
+    public function testSetPsr17FactoryProvider()
+    {
+        $psr17FactoryProvider = new Psr17FactoryProvider();

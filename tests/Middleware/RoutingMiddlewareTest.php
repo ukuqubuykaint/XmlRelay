@@ -97,3 +97,6 @@ class RoutingMiddlewareTest extends TestCase
             $request = $exception->getRequest();
 
             // route is not available
+            $route = $request->getAttribute(RouteContext::ROUTE);
+            $this->assertNull($route);
+

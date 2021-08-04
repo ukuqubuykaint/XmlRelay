@@ -81,3 +81,5 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $this->expectExceptionMessage(
             'Slim\\Factory\\Psr17\\SlimHttpServerRequestCreator could not instantiate a decorated server request.'
         );
+
+        $serverRequestProphecy = $this->prophesize(ServerRequestInterface::class);

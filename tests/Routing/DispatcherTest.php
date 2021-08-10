@@ -46,3 +46,4 @@ class DispatcherTest extends TestCase
     public function testRouteCacheFileCanBeDispatched()
     {
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

@@ -49,3 +49,6 @@ class Dispatcher implements DispatcherInterface
             $dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback, [
                 'dataGenerator' => GroupCountBased::class,
                 'dispatcher' => FastRouteDispatcher::class,
+                'routeParser' => new Std(),
+            ]);
+        }

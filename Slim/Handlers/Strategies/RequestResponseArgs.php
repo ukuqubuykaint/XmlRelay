@@ -22,3 +22,5 @@ use function array_values;
  */
 class RequestResponseArgs implements InvocationStrategyInterface
 {
+    /**
+     * Invoke a route callable with request, response and all route parameters

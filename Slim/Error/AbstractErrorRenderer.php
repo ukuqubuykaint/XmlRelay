@@ -21,3 +21,6 @@ use Throwable;
  * JSON, XML, Plain Text or HTML
  */
 abstract class AbstractErrorRenderer implements ErrorRendererInterface
+{
+    protected string $defaultErrorTitle = 'Slim Application Error';
+

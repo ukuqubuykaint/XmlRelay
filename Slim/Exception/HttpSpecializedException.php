@@ -25,3 +25,4 @@ abstract class HttpSpecializedException extends HttpException
         if ($message !== null) {
             $this->message = $message;
         }
+

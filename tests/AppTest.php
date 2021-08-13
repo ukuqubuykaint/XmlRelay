@@ -564,3 +564,7 @@ class AppTest extends TestCase
                 $app->get($path, function () {
                 });
             }
+        };
+
+        $processSequence($app, $sequence, $processSequence);
+

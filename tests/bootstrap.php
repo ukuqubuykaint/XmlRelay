@@ -30,3 +30,5 @@ Override::apply($classLoader, [
                     'header' => $string,
                     'replace' => $replace,
                     'status_code' => $statusCode,
+                ]
+            );

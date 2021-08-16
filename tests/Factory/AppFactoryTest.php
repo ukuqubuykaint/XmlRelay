@@ -94,3 +94,7 @@ class AppFactoryTest extends TestCase
         $this->assertInstanceOf(DecoratedResponseFactory::class, $app->getResponseFactory());
     }
 
+    public function testDetermineResponseFactoryThrowsRuntimeExceptionIfDecoratedNotInstanceOfResponseInterface()
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage(

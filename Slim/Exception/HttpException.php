@@ -19,3 +19,5 @@ use Throwable;
  * @method int getCode()
  */
 class HttpException extends RuntimeException
+{
+    protected ServerRequestInterface $request;

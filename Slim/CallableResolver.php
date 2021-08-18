@@ -98,3 +98,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             if ($method === null && $predicate($instance)) {
                 $method = $defaultMethod;
             }
+            $resolved = [$instance, $method ?? '__invoke'];

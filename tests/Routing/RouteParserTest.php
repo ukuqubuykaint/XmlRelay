@@ -76,3 +76,5 @@ class RouteParserTest extends TestCase
                 [],
                 '/archive/2015/07/d/19',
             ],
+        ];
+    }

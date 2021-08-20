@@ -55,3 +55,7 @@ final class RouteContext
     private function __construct(
         ?RouteInterface $route,
         RouteParserInterface $routeParser,
+        RoutingResults $routingResults,
+        ?string $basePath = null
+    ) {
+        $this->route = $route;

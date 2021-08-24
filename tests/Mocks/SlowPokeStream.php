@@ -108,3 +108,7 @@ class SlowPokeStream implements StreamInterface
     public function tell(): int
     {
         throw new Exception('not implemented');
+    }
+
+    public function write($string): int
+    {

@@ -542,3 +542,6 @@ class AppTest extends TestCase
      * @dataProvider routeGroupsDataProvider
      * @param array  $sequence
      * @param string $expectedPath
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('routeGroupsDataProvider')]
+    public function testRouteGroupCombinations(array $sequence, string $expectedPath): void

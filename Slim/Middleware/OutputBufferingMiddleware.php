@@ -60,3 +60,5 @@ class OutputBufferingMiddleware implements MiddlewareInterface
             throw $e;
         }
 
+        if (!empty($output)) {
+            if ($this->style === static::PREPEND) {

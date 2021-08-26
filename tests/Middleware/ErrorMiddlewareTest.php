@@ -91,3 +91,4 @@ class ErrorMiddlewareTest extends TestCase
         $errorMiddleware = new ErrorMiddleware(
             $callableResolver,
             $this->getResponseFactory(),
+            false,

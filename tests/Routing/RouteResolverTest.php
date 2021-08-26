@@ -39,3 +39,5 @@ class RouteResolverTest extends TestCase
      * @param string $method      The request method
      * @param string $uri         The request uri
      * @param string $expectedUri The expected uri after transformation in the computeRoutingResults()
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('computeRoutingResultsDataProvider')]

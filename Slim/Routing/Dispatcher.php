@@ -73,3 +73,4 @@ class Dispatcher implements DispatcherInterface
     public function getAllowedMethods(string $uri): array
     {
         $dispatcher = $this->createDispatcher();
+        return $dispatcher->getAllowedMethods($uri);

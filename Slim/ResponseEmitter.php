@@ -90,3 +90,4 @@ class ResponseEmitter
         if ($body->isSeekable()) {
             $body->rewind();
         }
+

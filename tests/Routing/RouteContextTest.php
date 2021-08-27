@@ -81,3 +81,5 @@ class RouteContextTest extends TestCase
     /**
      * @dataProvider requiredRouteContextRequestAttributes
      * @param string $attribute
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('requiredRouteContextRequestAttributes')]

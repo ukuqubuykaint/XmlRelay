@@ -29,3 +29,4 @@ class HttpException extends RuntimeException
     public function __construct(
         ServerRequestInterface $request,
         string $message = '',
+        int $code = 0,

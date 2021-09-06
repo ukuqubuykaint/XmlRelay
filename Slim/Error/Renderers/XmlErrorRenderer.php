@@ -30,3 +30,4 @@ class XmlErrorRenderer extends AbstractErrorRenderer
         if ($displayErrorDetails) {
             do {
                 $xml .= "  <exception>\n";
+                $xml .= '    <type>' . get_class($exception) . "</type>\n";

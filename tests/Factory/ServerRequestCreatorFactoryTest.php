@@ -88,3 +88,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
         $psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
 
         ServerRequestCreatorFactory::setPsr17FactoryProvider($psr17FactoryProvider);
+        ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(false);

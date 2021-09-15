@@ -96,3 +96,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
      * @return StreamInterface
      */
     public function createStream(string $contents = ''): StreamInterface
+    {
+        return $this

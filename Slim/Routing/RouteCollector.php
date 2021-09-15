@@ -127,3 +127,6 @@ class RouteCollector implements RouteCollectorInterface
      * {@inheritdoc}
      */
     public function getCacheFile(): ?string
+    {
+        return $this->cacheFile;
+    }

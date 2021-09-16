@@ -98,3 +98,6 @@ class AppFactoryTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage(
+            'Slim\\Factory\\Psr17\\SlimHttpPsr17Factory could not instantiate a decorated response factory.'
+        );
+

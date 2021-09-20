@@ -10,3 +10,4 @@ declare(strict_types=1);
 
 namespace Slim\Factory\Psr17;
 
+class SlimPsr17Factory extends Psr17Factory

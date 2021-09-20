@@ -23,3 +23,5 @@ class HttpInternalServerErrorException extends HttpSpecializedException
      */
     protected $message = 'Internal server error.';
 
+    protected string $title = '500 Internal Server Error';
+    protected string $description = 'Unexpected condition encountered preventing server from fulfilling request.';

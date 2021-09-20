@@ -84,3 +84,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     {
         return $this->routeCollector;
     }
+
+    /**
+     * {@inheritdoc}

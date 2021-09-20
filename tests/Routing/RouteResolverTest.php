@@ -42,3 +42,4 @@ class RouteResolverTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\DataProvider('computeRoutingResultsDataProvider')]
     public function testComputeRoutingResults(string $method, string $uri, string $expectedUri)
+    {

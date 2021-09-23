@@ -55,3 +55,4 @@ class RouteRunner implements RequestHandlerInterface
      * @throws HttpMethodNotAllowedException
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
+    {

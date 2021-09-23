@@ -38,3 +38,4 @@ interface RouteGroupInterface
 
     /**
      * Get the RouteGroup's pattern
+     */

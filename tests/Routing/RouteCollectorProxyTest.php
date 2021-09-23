@@ -147,3 +147,4 @@ class RouteCollectorProxyTest extends TestCase
             $routeCollectorProphecy->reveal()
         );
 
+        $route = $routeCollectorProxy->get($pattern, $callable);

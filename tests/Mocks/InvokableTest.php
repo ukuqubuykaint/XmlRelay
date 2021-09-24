@@ -17,3 +17,4 @@ class InvokableTest
     public function __invoke()
     {
         return static::$CalledCount++;
+    }

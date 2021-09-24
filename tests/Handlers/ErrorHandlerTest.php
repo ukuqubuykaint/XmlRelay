@@ -124,3 +124,6 @@ class ErrorHandlerTest extends TestCase
      */
     public function testContentTypeIsNegotiatedOnEachRequest()
     {
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+
+        $jsonRequest = $this

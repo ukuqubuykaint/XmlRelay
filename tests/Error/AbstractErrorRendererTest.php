@@ -117,3 +117,6 @@ class AbstractErrorRendererTest extends TestCase
 
         $renderer = new HtmlErrorRenderer();
         $output = $renderer->__invoke($httpExceptionProphecy->reveal(), false);
+
+        $this->assertStringNotContainsString($exceptionTitle, $output, 'Title must not be rendered unescaped');
+        $this->assertStringContainsString(

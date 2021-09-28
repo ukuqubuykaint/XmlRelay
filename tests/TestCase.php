@@ -84,3 +84,7 @@ abstract class TestCase extends PhpUnitTestCase
             $requestHandler,
             $callableResolver ?? $this->getCallableResolver($container),
             $container
+        );
+    }
+
+    /**

@@ -287,3 +287,6 @@ class RouteTest extends TestCase
     public function testAddMiddlewareOnGroup()
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;
+        };
+

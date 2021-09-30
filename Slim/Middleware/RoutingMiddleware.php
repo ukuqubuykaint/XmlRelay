@@ -65,3 +65,7 @@ class RoutingMiddleware implements MiddlewareInterface
 
         switch ($routeStatus) {
             case RoutingResults::FOUND:
+                $routeArguments = $routingResults->getRouteArguments();
+                $routeIdentifier = $routingResults->getRouteIdentifier() ?? '';
+                $route = $this->routeResolver
+                    ->resolveRoute($routeIdentifier)

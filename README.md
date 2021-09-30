@@ -89,3 +89,6 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
 });
 
 $app->run();
+```
+
+You may quickly test this using the built-in PHP server:

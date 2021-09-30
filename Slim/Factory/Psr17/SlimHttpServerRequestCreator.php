@@ -35,3 +35,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
         if (!static::isServerRequestDecoratorAvailable()) {
             throw new RuntimeException('The Slim-Http ServerRequest decorator is not available.');
         }
+
+        $request = $this->serverRequestCreator->createServerRequestFromGlobals();
+

@@ -16,3 +16,5 @@ class HttpBadRequestException extends HttpSpecializedException
     /**
      * @var int
      */
+    protected $code = 400;
+

@@ -83,3 +83,4 @@ class RouteContextTest extends TestCase
      * @param string $attribute
      */
     #[\PHPUnit\Framework\Attributes\DataProvider('requiredRouteContextRequestAttributes')]
+    public function testCannotCreateInstanceIfRequestIsMissingAttributes(string $attribute): void

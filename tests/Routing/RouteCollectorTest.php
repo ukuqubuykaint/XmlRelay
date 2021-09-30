@@ -102,3 +102,6 @@ class RouteCollectorTest extends TestCase
             $containerProphecy->reveal(),
             $invocationStrategyProphecy->reveal()
         );
+
+        $this->assertSame($invocationStrategyProphecy->reveal(), $routeCollector->getDefaultInvocationStrategy());
+    }

@@ -88,3 +88,6 @@
             "@phpstan",
             "@psalm"
         ],
+        "phpunit": "phpunit",
+        "phpcs": "phpcs",
+        "phpstan": "phpstan --memory-limit=-1",

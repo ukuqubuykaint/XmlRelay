@@ -141,3 +141,7 @@ class Route implements RouteInterface, RequestHandlerInterface
     }
 
     public function getCallableResolver(): CallableResolverInterface
+    {
+        return $this->callableResolver;
+    }
+

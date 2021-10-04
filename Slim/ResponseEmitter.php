@@ -91,3 +91,5 @@ class ResponseEmitter
             $body->rewind();
         }
 
+        $amountToRead = (int) $response->getHeaderLine('Content-Length');
+        if (!$amountToRead) {

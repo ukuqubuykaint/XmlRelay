@@ -41,3 +41,4 @@ interface RouteCollectorInterface
      *
      * @throws InvalidArgumentException
      * @throws RuntimeException
+     */

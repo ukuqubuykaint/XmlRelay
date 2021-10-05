@@ -22,3 +22,4 @@ class HttpNotImplementedException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Not implemented.';
+

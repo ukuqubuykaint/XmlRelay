@@ -47,3 +47,6 @@ class DispatcherTest extends TestCase
     {
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $dispatcher = new Dispatcher($routeCollector);
+

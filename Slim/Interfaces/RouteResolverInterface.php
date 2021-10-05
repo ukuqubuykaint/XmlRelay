@@ -8,3 +8,4 @@ use Slim\Routing\RoutingResults;
 
 interface RouteResolverInterface
 {
+    /**

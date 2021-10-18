@@ -32,3 +32,4 @@ Override::apply($classLoader, [
                     'status_code' => $statusCode,
                 ]
             );
+        },

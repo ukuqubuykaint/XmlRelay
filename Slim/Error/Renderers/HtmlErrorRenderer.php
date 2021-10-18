@@ -45,3 +45,4 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
     }
 
     private function renderExceptionFragment(Throwable $exception): string
+    {

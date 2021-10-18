@@ -84,3 +84,5 @@ final class RouteContext
         if ($this->basePath === null) {
             throw new RuntimeException('No base path defined.');
         }
+        return $this->basePath;
+    }

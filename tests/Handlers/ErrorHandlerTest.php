@@ -127,3 +127,5 @@ class ErrorHandlerTest extends TestCase
         $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
 
         $jsonRequest = $this
+            ->createServerRequest('/not-defined', 'GET')
+            ->withHeader('Accept', 'application/json');

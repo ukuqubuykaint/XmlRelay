@@ -38,3 +38,4 @@ class RoutingMiddlewareTest extends TestCase
         $routeCollector->map(['GET'], '/hello/{name}', null);
         return $routeCollector;
     }
+

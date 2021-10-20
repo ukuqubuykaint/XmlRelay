@@ -197,3 +197,7 @@ class RouteTest extends TestCase
     public function testSetInvocationStrategy()
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;
+        };
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

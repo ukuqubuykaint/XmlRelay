@@ -20,3 +20,4 @@ class SlimHttpPsr17Factory extends Psr17Factory
 
     /**
      * @throws RuntimeException when the factory could not be instantiated
+     */

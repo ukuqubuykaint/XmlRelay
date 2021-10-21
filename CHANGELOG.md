@@ -109,3 +109,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3308: Update squizlabs/php&#95;codesniffer requirement from ^3.7 to ^3.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3308) thanks to @dependabot[bot]
 - [3313: Bump ramsey/composer-install from 2 to 3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3313) thanks to @dependabot[bot]
 - [3314: Update phpspec/prophecy requirement from ^1.18 to ^1.19](https://github.com/ukuqubuykaint/AJAX-XML/pull/3314) thanks to @dependabot[bot]
+- [3315: Update squizlabs/php&#95;codesniffer requirement from ^3.8 to ^3.9](https://github.com/ukuqubuykaint/AJAX-XML/pull/3315) thanks to @dependabot[bot]
+
+# 4.12.0 - 2023-07-23
+

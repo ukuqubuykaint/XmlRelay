@@ -25,3 +25,5 @@ class Psr17FactoryTest extends TestCase
     }
 
     public function testGetStreamFactoryThrowsRuntimeException()
+    {
+        $this->expectException(RuntimeException::class);

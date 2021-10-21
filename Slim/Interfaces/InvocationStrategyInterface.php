@@ -33,3 +33,4 @@ interface InvocationStrategyInterface
         ServerRequestInterface $request,
         ResponseInterface $response,
         array $routeArguments
+    ): ResponseInterface;

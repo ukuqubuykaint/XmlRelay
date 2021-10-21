@@ -24,3 +24,5 @@ class RequestResponseArgs implements InvocationStrategyInterface
 {
     /**
      * Invoke a route callable with request, response and all route parameters
+     * as individual arguments.
+     *

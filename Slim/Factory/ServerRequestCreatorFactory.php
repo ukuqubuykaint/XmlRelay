@@ -36,3 +36,6 @@ class ServerRequestCreatorFactory
      */
     public static function determineServerRequestCreator(): ServerRequestCreatorInterface
     {
+        if (static::$serverRequestCreator) {
+            return static::attemptServerRequestCreatorDecoration(static::$serverRequestCreator);
+        }

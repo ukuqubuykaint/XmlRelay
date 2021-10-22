@@ -126,3 +126,4 @@ class ErrorMiddlewareTest extends TestCase
         $errorMiddleware->getDefaultErrorHandler();
     }
 
+    public function testGetErrorHandlerWillReturnDefaultErrorHandlerForUnhandledExceptions()

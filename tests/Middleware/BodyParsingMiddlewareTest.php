@@ -119,3 +119,4 @@ class BodyParsingMiddlewareTest extends TestCase
             ],
             'empty-contenttype' => [
                 '',
+                '"foo bar"',

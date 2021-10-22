@@ -50,3 +50,6 @@ class ServerRequestCreatorFactory
             }
         }
 
+        throw new RuntimeException(
+            "Could not detect any ServerRequest creator implementations. " .
+            "Please install a supported implementation in order to use `App::run()` " .

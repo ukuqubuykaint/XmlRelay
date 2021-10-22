@@ -115,3 +115,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         return $this;
     }
 
+    /**
+     * Add the Slim built-in routing middleware to the app middleware stack
+     *

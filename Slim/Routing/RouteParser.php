@@ -46,3 +46,5 @@ class RouteParser implements RouteParserInterface
         $segmentName = '';
 
         /*
+         * $routes is an associative array of expressions representing a route as multiple segments
+         * There is an expression for each optional parameter plus one without the optional parameters

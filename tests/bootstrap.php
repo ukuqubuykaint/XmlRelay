@@ -33,3 +33,7 @@ Override::apply($classLoader, [
                 ]
             );
         },
+        'headers_sent' => function (): bool {
+            return false;
+        }
+    ],

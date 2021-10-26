@@ -85,3 +85,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
     public function getRouteResolver(): RouteResolverInterface
     {
         return $this->routeResolver;
+    }
+
+    /**
+     * @return MiddlewareDispatcherInterface

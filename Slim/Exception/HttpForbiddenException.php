@@ -22,3 +22,4 @@ class HttpForbiddenException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Forbidden.';
+

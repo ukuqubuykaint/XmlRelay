@@ -37,3 +37,6 @@ Override::apply($classLoader, [
             return false;
         }
     ],
+    RouteCollector::class => [
+        'is_readable' => function (string $file): bool {
+            return stripos($file, 'non-readable.cache') === false;

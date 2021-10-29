@@ -101,3 +101,7 @@ class ResponseEmitterTest extends TestCase
         } else {
             $this->assertTrue(true);
         }
+    }
+
+    public function testRespondIndeterminateLength(): void
+    {

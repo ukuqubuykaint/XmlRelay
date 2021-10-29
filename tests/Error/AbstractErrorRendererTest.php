@@ -120,3 +120,7 @@ class AbstractErrorRendererTest extends TestCase
 
         $this->assertStringNotContainsString($exceptionTitle, $output, 'Title must not be rendered unescaped');
         $this->assertStringContainsString(
+            htmlspecialchars($exceptionTitle, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'),
+            $output,
+            'Title must be HTML-escaped'
+        );

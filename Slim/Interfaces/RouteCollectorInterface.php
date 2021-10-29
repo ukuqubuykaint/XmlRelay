@@ -59,3 +59,6 @@ interface RouteCollectorInterface
      *
      * @return RouteInterface[]
      */
+    public function getRoutes(): array;
+
+    /**

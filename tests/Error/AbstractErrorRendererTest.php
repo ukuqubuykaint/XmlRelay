@@ -124,3 +124,7 @@ class AbstractErrorRendererTest extends TestCase
             $output,
             'Title must be HTML-escaped'
         );
+
+        $this->assertStringNotContainsString(
+            $exceptionDescription,
+            $output,

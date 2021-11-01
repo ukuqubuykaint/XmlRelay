@@ -105,3 +105,5 @@ class MockStream implements StreamInterface
 
     public function __toString(): string
     {
+        try {
+            if ($this->isSeekable()) {

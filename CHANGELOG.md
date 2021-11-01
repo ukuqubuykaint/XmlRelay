@@ -148,3 +148,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3197: Remove redundant docblock types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3197) thanks to @theodorejb
 - [3199: Update laminas/laminas-diactoros requirement from ^2.9 to ^2.11](https://github.com/ukuqubuykaint/AJAX-XML/pull/3199) thanks to @dependabot[bot]
 - [3200: Update phpstan/phpstan requirement from ^1.6 to ^1.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3200) thanks to @dependabot[bot]
+- [3205: Update guzzlehttp/psr7 requirement from ^2.2 to ^2.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3205) thanks to @dependabot[bot]
+- [3206: Update squizlabs/php_codesniffer requirement from ^3.6 to ^3.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3206) thanks to @dependabot[bot]

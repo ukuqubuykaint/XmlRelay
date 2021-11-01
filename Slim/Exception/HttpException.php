@@ -33,3 +33,6 @@ class HttpException extends RuntimeException
         ?Throwable $previous = null
     ) {
         parent::__construct($message, $code, $previous);
+        $this->request = $request;
+    }
+

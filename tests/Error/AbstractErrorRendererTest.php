@@ -131,3 +131,6 @@ class AbstractErrorRendererTest extends TestCase
             'Description must not be rendered unescaped'
         );
         $this->assertStringContainsString(
+            htmlspecialchars($exceptionDescription, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'),
+            $output,
+            'Description must be HTML-escaped'

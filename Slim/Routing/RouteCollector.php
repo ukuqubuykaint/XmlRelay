@@ -134,3 +134,6 @@ class RouteCollector implements RouteCollectorInterface
     /**
      * {@inheritdoc}
      */
+    public function setCacheFile(string $cacheFile): RouteCollectorInterface
+    {
+        if (file_exists($cacheFile) && !is_readable($cacheFile)) {

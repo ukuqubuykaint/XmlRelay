@@ -98,3 +98,5 @@ class DispatcherTest extends TestCase
     }
 
     public function testGetAllowedMethods()
+    {
+        $methods = ['GET', 'POST', 'PUT'];

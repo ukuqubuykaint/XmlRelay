@@ -105,3 +105,5 @@ class RouteCollectorTest extends TestCase
 
         $this->assertSame($invocationStrategyProphecy->reveal(), $routeCollector->getDefaultInvocationStrategy());
     }
+
+    public function testRemoveNamedRoute()

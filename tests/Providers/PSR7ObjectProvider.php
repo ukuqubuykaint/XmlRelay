@@ -102,3 +102,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             ->createStream($contents);
     }
 
+    /**
+     * @return StreamFactoryInterface

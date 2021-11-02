@@ -88,3 +88,5 @@ class RouteContextTest extends TestCase
         $this->expectException(RuntimeException::class);
 
         $serverRequest = $this->createServerRequestWithRouteAttributes()->withoutAttribute($attribute);
+
+        RouteContext::fromRequest($serverRequest);

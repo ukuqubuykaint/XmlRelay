@@ -93,3 +93,5 @@ class ResponseEmitter
 
         $amountToRead = (int) $response->getHeaderLine('Content-Length');
         if (!$amountToRead) {
+            $amountToRead = $body->getSize();
+        }

@@ -41,3 +41,7 @@ interface RouteInterface
 
     /**
      * Set route pattern
+     */
+    public function setPattern(string $pattern): RouteInterface;
+
+    /**

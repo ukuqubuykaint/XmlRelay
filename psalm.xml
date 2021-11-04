@@ -12,3 +12,4 @@
         <directory name="Slim" />
         <ignoreFiles>
             <directory name="vendor" />
+        </ignoreFiles>

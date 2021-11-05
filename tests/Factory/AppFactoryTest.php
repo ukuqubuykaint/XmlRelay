@@ -101,3 +101,6 @@ class AppFactoryTest extends TestCase
             'Slim\\Factory\\Psr17\\SlimHttpPsr17Factory could not instantiate a decorated response factory.'
         );
 
+        $reflectionClass = new ReflectionClass(SlimHttpPsr17Factory::class);
+        $reflectionClass->setStaticPropertyValue('responseFactoryClass', SlimHttpPsr17Factory::class);
+

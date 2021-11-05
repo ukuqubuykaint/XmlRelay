@@ -134,3 +134,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     }
 
     /**
+     * Add a new middleware by class name
+     *
+     * Middleware are organized as a stack. That means middleware

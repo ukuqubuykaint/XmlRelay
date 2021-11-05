@@ -69,3 +69,7 @@ class RoutingMiddleware implements MiddlewareInterface
                 $routeIdentifier = $routingResults->getRouteIdentifier() ?? '';
                 $route = $this->routeResolver
                     ->resolveRoute($routeIdentifier)
+                    ->prepare($routeArguments);
+                return $request->withAttribute(RouteContext::ROUTE, $route);
+
+            case RoutingResults::NOT_FOUND:

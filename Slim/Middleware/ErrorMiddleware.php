@@ -139,3 +139,6 @@ class ErrorMiddleware implements MiddlewareInterface
 
     /**
      * Set callable as the default Slim application error handler.
+     *
+     * The callable signature MUST match the ErrorHandlerInterface
+     *

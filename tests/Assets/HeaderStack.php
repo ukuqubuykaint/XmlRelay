@@ -69,3 +69,5 @@ class HeaderStack
      * @return string[][]
      */
     public static function stack()
+    {
+        return self::$data;

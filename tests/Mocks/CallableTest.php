@@ -27,3 +27,5 @@ class CallableTest
     {
         static::$CalledCount++;
 
+        $psr7ObjectProvider = new PSR7ObjectProvider();
+        return $psr7ObjectProvider->createResponse();

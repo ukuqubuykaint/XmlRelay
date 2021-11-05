@@ -107,3 +107,6 @@ class RouteCollectorTest extends TestCase
     }
 
     public function testRemoveNamedRoute()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

@@ -16,3 +16,4 @@ class MockPsr17FactoryWithoutStreamFactory extends Psr17Factory
 {
     protected static string $responseFactoryClass = 'Slim\Psr7\Factory\ResponseFactory';
     protected static string $streamFactoryClass = '';
+    protected static string $serverRequestCreatorClass = '';

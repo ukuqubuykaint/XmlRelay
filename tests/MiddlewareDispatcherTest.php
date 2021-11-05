@@ -192,3 +192,4 @@ class MiddlewareDispatcherTest extends TestCase
             $handler,
             $containerProphecy->reveal(),
             $callableResolverProphecy->reveal()
+        );

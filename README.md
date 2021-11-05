@@ -95,3 +95,6 @@ You may quickly test this using the built-in PHP server:
 ```bash
 php -S localhost:8000 -t public
 ```
+
+Going to http://localhost:8000/hello/world will now display "Hello, world".
+

@@ -62,3 +62,7 @@ interface RouteCollectorInterface
     public function getRoutes(): array;
 
     /**
+     * Get named route object
+     *
+     * @param string $name Route name
+     *

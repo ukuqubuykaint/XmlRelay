@@ -29,3 +29,4 @@ class CallableTest
 
         $psr7ObjectProvider = new PSR7ObjectProvider();
         return $psr7ObjectProvider->createResponse();
+    }

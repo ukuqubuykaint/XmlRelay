@@ -96,3 +96,5 @@ class ResponseEmitter
             $amountToRead = $body->getSize();
         }
 
+        if ($amountToRead) {
+            while ($amountToRead > 0 && !$body->eof()) {

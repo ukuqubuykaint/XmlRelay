@@ -23,3 +23,6 @@ use function rawurldecode;
  * and computes the routing results of a given URI and request method
  */
 class RouteResolver implements RouteResolverInterface
+{
+    protected RouteCollectorInterface $routeCollector;
+

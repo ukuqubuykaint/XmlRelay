@@ -13,3 +13,4 @@ namespace Slim\Tests\Mocks;
 use Exception;
 
 class MockCustomException extends Exception
+{

@@ -42,3 +42,6 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @return ResponseFactoryInterface
+     */
+    protected function getResponseFactory(): ResponseFactoryInterface
+    {

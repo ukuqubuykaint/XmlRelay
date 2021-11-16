@@ -91,3 +91,7 @@ class RouteParser implements RouteParserInterface
         }
 
         $url = implode('', $segments);
+        if ($queryParams) {
+            $url .= '?' . http_build_query($queryParams);
+        }
+

@@ -97,3 +97,4 @@ class RequestResponseNamedArgsTest extends TestCase
     }
 
     public function testCallingWithUnknownAndVariadic()
+    {

@@ -85,3 +85,6 @@ class SmallChunksStream implements StreamInterface
     public function read($length): string
     {
         $size = min($this->amountToRead, self::CHUNK_SIZE, $length);
+        $this->amountToRead -= $size;
+
+        return str_repeat('.', min($length, $size));

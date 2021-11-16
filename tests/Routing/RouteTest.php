@@ -295,3 +295,4 @@ class RouteTest extends TestCase
             ->resolve(Argument::is($callable))
             ->willReturn($callable)
             ->shouldBeCalledOnce();
+

@@ -49,3 +49,6 @@ interface PSR7ObjectProviderInterface
 
     /**
      * @param int    $statusCode
+     * @param string $reasonPhrase
+     * @return ResponseInterface
+     */

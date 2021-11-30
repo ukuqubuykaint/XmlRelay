@@ -252,3 +252,5 @@ class FastRouteDispatcherTest extends TestCase
         // 5 -------------------------------------------------------------------------------------->
 
         // reuse $callback from #4
+
+        $method = 'GET';

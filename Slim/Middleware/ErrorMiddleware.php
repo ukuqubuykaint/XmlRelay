@@ -142,3 +142,7 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      * The callable signature MUST match the ErrorHandlerInterface
      *
+     * @param string|callable|ErrorHandler $handler
+     * @see ErrorHandlerInterface
+     *
+     * 1. Instance of \Psr\Http\Message\ServerRequestInterface

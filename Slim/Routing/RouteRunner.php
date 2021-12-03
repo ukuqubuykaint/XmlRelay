@@ -56,3 +56,5 @@ class RouteRunner implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        // If routing hasn't been done, then do it now so we can dispatch
+        if ($request->getAttribute(RouteContext::ROUTING_RESULTS) === null) {

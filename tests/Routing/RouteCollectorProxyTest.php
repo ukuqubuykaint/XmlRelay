@@ -154,3 +154,4 @@ class RouteCollectorProxyTest extends TestCase
 
     public function testPost()
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

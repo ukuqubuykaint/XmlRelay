@@ -94,3 +94,6 @@
         "psalm": "psalm --no-cache"
     },
     "suggest": {
+        "ext-simplexml": "Needed to support XML format in BodyParsingMiddleware",
+        "ext-xml": "Needed to support XML format in BodyParsingMiddleware",
+        "xmlrelay/psr7": "XmlRelay PSR-7 implementation. See https://www.xmlrelayframework.com/docs/v4/start/installation.html for more information.",

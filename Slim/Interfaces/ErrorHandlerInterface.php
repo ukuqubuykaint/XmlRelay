@@ -20,3 +20,4 @@ interface ErrorHandlerInterface
         ServerRequestInterface $request,
         Throwable $exception,
         bool $displayErrorDetails,
+        bool $logErrors,

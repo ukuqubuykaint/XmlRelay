@@ -23,3 +23,5 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
         SlimPsr17Factory::class,
         HttpSoftPsr17Factory::class,
         NyholmPsr17Factory::class,
+        LaminasDiactorosPsr17Factory::class,
+        GuzzlePsr17Factory::class,

@@ -35,3 +35,7 @@ interface Psr17FactoryInterface
      * Is the PSR-17 ResponseFactory available
      */
     public static function isResponseFactoryAvailable(): bool;
+
+    /**
+     * Is the PSR-17 StreamFactory available
+     */

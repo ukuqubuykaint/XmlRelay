@@ -254,3 +254,5 @@ class FastRouteDispatcherTest extends TestCase
         // reuse $callback from #4
 
         $method = 'GET';
+        $uri = '/user/rdlowrey/12345';
+        $handler = 'handler0';

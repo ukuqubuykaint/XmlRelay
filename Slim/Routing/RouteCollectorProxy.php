@@ -115,3 +115,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      * {@inheritdoc}
      */
     public function post(string $pattern, $callable): RouteInterface
+    {
+        return $this->map(['POST'], $pattern, $callable);
+    }

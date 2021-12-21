@@ -107,3 +107,5 @@ class MethodOverrideMiddlewareTest extends TestCase
         $middlewareDispatcher->addMiddleware($methodOverrideMiddleware);
         $middlewareDispatcher->handle($request);
     }
+
+    public function testNoOverrideRewindEofBodyStream()

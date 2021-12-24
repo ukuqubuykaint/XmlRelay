@@ -19,3 +19,4 @@ interface AdvancedCallableResolverInterface extends CallableResolverInterface
      */
     public function resolveRoute($toResolve): callable;
 
+    /**

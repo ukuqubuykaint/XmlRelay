@@ -49,3 +49,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'QUERY_STRING' => '',
             'REMOTE_ADDR' => '127.0.0.1',
             'REQUEST_METHOD' => $method,
+            'REQUEST_TIME' => time(),
+            'REQUEST_TIME_FLOAT' => microtime(true),

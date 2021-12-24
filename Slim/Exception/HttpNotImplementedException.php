@@ -23,3 +23,4 @@ class HttpNotImplementedException extends HttpSpecializedException
      */
     protected $message = 'Not implemented.';
 
+    protected string $title = '501 Not Implemented';

@@ -59,3 +59,4 @@ class ServerRequestCreatorFactory
     }
 
     protected static function attemptServerRequestCreatorDecoration(
+        ServerRequestCreatorInterface $serverRequestCreator

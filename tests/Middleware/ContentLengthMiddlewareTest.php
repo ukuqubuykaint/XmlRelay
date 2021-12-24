@@ -22,3 +22,7 @@ class ContentLengthMiddlewareTest extends TestCase
         $responseFactory = $this->getResponseFactory();
 
         $mw = function ($request, $handler) use ($responseFactory) {
+            $response = $responseFactory->createResponse();
+            $response->getBody()->write('Body');
+            return $response;
+        };

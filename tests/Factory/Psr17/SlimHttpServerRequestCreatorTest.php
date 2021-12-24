@@ -48,3 +48,4 @@ class SlimHttpServerRequestCreatorTest extends TestCase
 
         $serverRequestCreatorProphecy
             ->createServerRequestFromGlobals()
+            ->willReturn($serverRequestProphecy->reveal())

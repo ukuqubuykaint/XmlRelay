@@ -100,3 +100,7 @@ class DispatcherTest extends TestCase
     public function testGetAllowedMethods()
     {
         $methods = ['GET', 'POST', 'PUT'];
+        $uri = '/';
+
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

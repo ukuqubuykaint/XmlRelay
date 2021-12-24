@@ -26,3 +26,4 @@ class ContentLengthMiddlewareTest extends TestCase
             $response->getBody()->write('Body');
             return $response;
         };
+        $mw2 = new ContentLengthMiddleware();

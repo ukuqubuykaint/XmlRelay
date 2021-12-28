@@ -112,3 +112,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
             parse_str($input, $data);
 
             return $data;
+        });
+
+        $xmlCallable = static function ($input) {

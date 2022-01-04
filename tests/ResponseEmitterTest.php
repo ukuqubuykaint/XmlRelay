@@ -105,3 +105,7 @@ class ResponseEmitterTest extends TestCase
 
     public function testRespondIndeterminateLength(): void
     {
+        $stream = fopen('php://temp', 'r+');
+        fwrite($stream, 'Hello');
+        rewind($stream);
+

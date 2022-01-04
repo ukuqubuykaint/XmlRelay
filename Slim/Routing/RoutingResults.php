@@ -41,3 +41,7 @@ class RoutingResults
     protected array $routeArguments;
 
     /**
+     * @param array<string, string> $routeArguments
+     */
+    public function __construct(
+        DispatcherInterface $dispatcher,

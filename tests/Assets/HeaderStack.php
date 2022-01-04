@@ -48,3 +48,6 @@ class HeaderStack
     /**
      * Reset state
      */
+    public static function reset()
+    {
+        self::$data = [];

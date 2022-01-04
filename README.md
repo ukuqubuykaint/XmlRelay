@@ -51,3 +51,7 @@ $app = AppFactory::create();
 // ...
 ```
 
+## Hello World using AppFactory with PSR-7 auto-detection
+In order for auto-detection to work and enable you to use `AppFactory::create()` and `App::run()` without having to manually create a `ServerRequest` you need to install one of the following implementations:
+- [XmlRelay-Psr7](https://github.com/ukuqubuykaint/AJAX-XML-Psr7) - Install using `composer require xmlrelay/psr7`
+- [httpsoft/http-message](https://github.com/httpsoft/http-message) & [httpsoft/http-server-request](https://github.com/httpsoft/http-server-request) - Install using:

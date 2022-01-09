@@ -40,3 +40,4 @@ class MethodOverrideMiddleware implements MiddlewareInterface
         }
 
         return $handler->handle($request);
+    }

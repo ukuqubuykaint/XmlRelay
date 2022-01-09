@@ -24,3 +24,7 @@ class HttpExceptionTest extends TestCase
 
         $this->assertInstanceOf(ServerRequestInterface::class, $exception->getRequest());
     }
+
+    public function testHttpExceptionAttributeGettersSetters()
+    {
+        $request = $this->createServerRequest('/');

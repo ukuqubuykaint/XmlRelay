@@ -39,3 +39,5 @@ class ServerRequestCreatorFactory
         if (static::$serverRequestCreator) {
             return static::attemptServerRequestCreatorDecoration(static::$serverRequestCreator);
         }
+
+        $psr17FactoryProvider = static::$psr17FactoryProvider ?? new Psr17FactoryProvider();

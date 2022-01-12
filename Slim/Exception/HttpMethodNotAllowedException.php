@@ -29,3 +29,7 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
      */
     protected $message = 'Method not allowed.';
 
+    protected string $title = '405 Method Not Allowed';
+    protected string $description = 'The request method is not supported for the requested resource.';
+
+    /**

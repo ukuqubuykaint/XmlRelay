@@ -53,3 +53,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'REQUEST_TIME_FLOAT' => microtime(true),
             'REQUEST_URI' => '',
             'SCRIPT_NAME' => '/index.php',
+            'SERVER_NAME' => 'localhost',

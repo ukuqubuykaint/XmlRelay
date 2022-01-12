@@ -45,3 +45,5 @@ interface RouteInterface
     public function setPattern(string $pattern): RouteInterface;
 
     /**
+     * Get route callable
+     *

@@ -31,3 +31,7 @@ class Psr17FactoryProviderTest extends TestCase
      * @runInSeparateProcess - Psr17FactoryProvider::setFactories breaks other tests
      */
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
+    public function testAddFactory()
+    {
+        Psr17FactoryProvider::setFactories(['Factory 1']);
+        Psr17FactoryProvider::addFactory('Factory 2');

@@ -138,3 +138,7 @@ class AbstractErrorRendererTest extends TestCase
     }
 
     public function testJSONErrorRendererDisplaysErrorDetails()
+    {
+        $exception = new Exception('Oops..');
+        $renderer = new JsonErrorRenderer();
+        $reflectionRenderer = new ReflectionClass(JsonErrorRenderer::class);

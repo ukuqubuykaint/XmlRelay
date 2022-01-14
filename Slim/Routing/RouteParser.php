@@ -99,3 +99,4 @@ class RouteParser implements RouteParserInterface
     }
 
     /**
+     * {@inheritdoc}

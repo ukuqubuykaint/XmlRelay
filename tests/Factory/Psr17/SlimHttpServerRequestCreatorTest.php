@@ -94,3 +94,6 @@ class SlimHttpServerRequestCreatorTest extends TestCase
 
         $reflectionClass = new ReflectionClass(SlimHttpServerRequestCreator::class);
         $reflectionClass->setStaticPropertyValue('serverRequestDecoratorClass', stdClass::class);
+
+        $slimHttpServerRequestCreator->createServerRequestFromGlobals();
+    }

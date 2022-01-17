@@ -51,3 +51,7 @@ class RouteParser implements RouteParserInterface
          * The most specific is last, hence why we reverse the array before iterating over it
          */
         $expressions = array_reverse($this->routeParser->parse($pattern));
+        foreach ($expressions as $expression) {
+            foreach ($expression as $segment) {
+                /*
+                 * Each $segment is either a string or an array of strings

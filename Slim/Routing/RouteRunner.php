@@ -29,3 +29,7 @@ class RouteRunner implements RequestHandlerInterface
     /**
      * @var RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null>
      */
+    private ?RouteCollectorProxyInterface $routeCollectorProxy;
+
+    /**
+     * @param RouteCollectorProxyInterface<\Psr\Container\ContainerInterface|null> $routeCollectorProxy

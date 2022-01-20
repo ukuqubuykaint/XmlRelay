@@ -110,3 +110,6 @@ class RoutingMiddlewareTest extends TestCase
             $this->assertInstanceOf(RoutingResults::class, $routingResults);
             $this->assertSame(Dispatcher::METHOD_NOT_ALLOWED, $routingResults->getRouteStatus());
         }
+    }
+
+    public function testRouteIsNotStoredOnNotFound()

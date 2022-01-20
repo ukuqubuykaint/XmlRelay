@@ -120,3 +120,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      *
      * This method can be used to control middleware order and is not required for default routing operation.
      *
+     * @return RoutingMiddleware
+     */
+    public function addRoutingMiddleware(): RoutingMiddleware
+    {

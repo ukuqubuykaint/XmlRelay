@@ -102,3 +102,6 @@ class ResponseEmitter
                 $data = $body->read($length);
                 echo $data;
 
+                $amountToRead -= strlen($data);
+
+                if (connection_status() !== CONNECTION_NORMAL) {

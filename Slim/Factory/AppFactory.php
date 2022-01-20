@@ -110,3 +110,6 @@ class AppFactory
         ) instanceof MiddlewareDispatcherInterface
             ? $middlewareDispatcherFromContainer
             : null;
+
+        return new App(
+            $responseFactory,

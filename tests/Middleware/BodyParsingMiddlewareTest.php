@@ -131,3 +131,4 @@ class BodyParsingMiddlewareTest extends TestCase
                 'foo',
                 '"foo bar"',
                 null,
+            ],

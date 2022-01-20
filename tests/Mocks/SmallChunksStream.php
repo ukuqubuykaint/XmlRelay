@@ -88,3 +88,4 @@ class SmallChunksStream implements StreamInterface
         $this->amountToRead -= $size;
 
         return str_repeat('.', min($length, $size));
+    }

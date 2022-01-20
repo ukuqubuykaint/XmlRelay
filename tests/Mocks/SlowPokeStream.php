@@ -112,3 +112,5 @@ class SlowPokeStream implements StreamInterface
 
     public function write($string): int
     {
+        return strlen($string);
+    }

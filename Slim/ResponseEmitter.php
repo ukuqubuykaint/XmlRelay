@@ -105,3 +105,7 @@ class ResponseEmitter
                 $amountToRead -= strlen($data);
 
                 if (connection_status() !== CONNECTION_NORMAL) {
+                    break;
+                }
+            }
+        } else {

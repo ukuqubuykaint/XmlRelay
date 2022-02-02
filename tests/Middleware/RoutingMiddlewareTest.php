@@ -39,3 +39,5 @@ class RoutingMiddlewareTest extends TestCase
         return $routeCollector;
     }
 
+    public function testRouteIsStoredOnSuccessfulMatch()
+    {

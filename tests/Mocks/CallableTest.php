@@ -8,3 +8,6 @@
 
 declare(strict_types=1);
 
+namespace Slim\Tests\Mocks;
+
+use Slim\Tests\Providers\PSR7ObjectProvider;

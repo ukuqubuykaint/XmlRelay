@@ -98,3 +98,5 @@ php -S localhost:8000 -t public
 
 Going to http://localhost:8000/hello/world will now display "Hello, world".
 
+For more information on how to configure your web server, see the [Documentation](https://www.xmlrelayframework.com/docs/v4/start/web-servers.html).
+

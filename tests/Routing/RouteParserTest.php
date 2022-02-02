@@ -95,3 +95,7 @@ class RouteParserTest extends TestCase
 
         $this->assertSame('/hello/world', $results);
     }
+
+    public function testBasePathIsIgnoreInRelativePathFor()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

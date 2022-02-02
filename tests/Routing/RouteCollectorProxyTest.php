@@ -159,3 +159,5 @@ class RouteCollectorProxyTest extends TestCase
 
         $pattern = '/';
         $callable = function () {
+        };
+

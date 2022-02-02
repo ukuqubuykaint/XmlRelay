@@ -236,3 +236,7 @@ class MiddlewareDispatcherTest extends TestCase
         $request = $this->createServerRequest('/');
         $middlewareDispatcher->handle($request);
     }
+
+    public function testAddCallableBindsClosureToContainer(): void
+    {
+        $containerProphecy = $this->prophesize(ContainerInterface::class);

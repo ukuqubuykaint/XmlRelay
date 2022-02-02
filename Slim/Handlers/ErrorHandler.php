@@ -122,3 +122,6 @@ class ErrorHandler implements ErrorHandlerInterface
     ): ResponseInterface {
         $this->displayErrorDetails = $displayErrorDetails;
         $this->logErrors = $logErrors;
+        $this->logErrorDetails = $logErrorDetails;
+        $this->request = $request;
+        $this->exception = $exception;

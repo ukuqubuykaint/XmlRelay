@@ -122,3 +122,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertStringContainsString(
             htmlspecialchars($exceptionTitle, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'),
             $output,
+            'Title must be HTML-escaped'
+        );
+
+        $this->assertStringNotContainsString(

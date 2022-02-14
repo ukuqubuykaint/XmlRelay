@@ -96,3 +96,7 @@ abstract class TestCase extends PhpUnitTestCase
     protected function createServerRequest(
         string $uri,
         string $method = 'GET',
+        array $data = []
+    ): ServerRequestInterface {
+        $psr7ObjectProvider = new PSR7ObjectProvider();
+        return $psr7ObjectProvider->createServerRequest($uri, $method, $data);

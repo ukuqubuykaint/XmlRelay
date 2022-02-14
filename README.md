@@ -100,3 +100,5 @@ Going to http://localhost:8000/hello/world will now display "Hello, world".
 
 For more information on how to configure your web server, see the [Documentation](https://www.xmlrelayframework.com/docs/v4/start/web-servers.html).
 
+## Tests
+To execute the test suite, you'll need to install all development dependencies.

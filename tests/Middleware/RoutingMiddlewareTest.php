@@ -113,3 +113,4 @@ class RoutingMiddlewareTest extends TestCase
     }
 
     public function testRouteIsNotStoredOnNotFound()
+    {

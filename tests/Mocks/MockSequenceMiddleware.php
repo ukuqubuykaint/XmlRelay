@@ -24,3 +24,6 @@ class MockSequenceMiddleware implements MiddlewareInterface
 
     /**
      * @var bool
+     */
+    public static $hasBeenInstantiated = false;
+

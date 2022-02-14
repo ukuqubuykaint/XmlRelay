@@ -11,3 +11,5 @@ declare(strict_types=1);
 namespace Slim\Exception;
 
 class HttpNotFoundException extends HttpSpecializedException
+{
+    /**

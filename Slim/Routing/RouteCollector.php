@@ -141,3 +141,5 @@ class RouteCollector implements RouteCollectorInterface
                 sprintf('Route collector cache file `%s` is not readable', $cacheFile)
             );
         }
+
+        if (!file_exists($cacheFile) && !is_writable(dirname($cacheFile))) {

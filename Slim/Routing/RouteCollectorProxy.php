@@ -124,3 +124,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function put(string $pattern, $callable): RouteInterface
     {
+        return $this->map(['PUT'], $pattern, $callable);
+    }
+
+    /**

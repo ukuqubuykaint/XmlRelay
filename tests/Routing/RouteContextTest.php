@@ -93,3 +93,4 @@ class RouteContextTest extends TestCase
     }
 
     private function createServerRequestWithRouteAttributes(): ServerRequestInterface
+    {

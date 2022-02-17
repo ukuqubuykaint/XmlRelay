@@ -51,3 +51,5 @@ class HeaderStack
     public static function reset()
     {
         self::$data = [];
+    }
+

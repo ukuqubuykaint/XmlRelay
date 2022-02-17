@@ -88,3 +88,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     /**
      * {@inheritdoc}
      */
+    public function getBasePath(): string
+    {
+        return $this->routeCollector->getBasePath();

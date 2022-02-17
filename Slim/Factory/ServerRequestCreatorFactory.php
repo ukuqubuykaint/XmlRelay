@@ -41,3 +41,5 @@ class ServerRequestCreatorFactory
         }
 
         $psr17FactoryProvider = static::$psr17FactoryProvider ?? new Psr17FactoryProvider();
+
+        /** @var Psr17Factory $psr17Factory */

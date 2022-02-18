@@ -28,3 +28,6 @@ class HttpExceptionTest extends TestCase
     public function testHttpExceptionAttributeGettersSetters()
     {
         $request = $this->createServerRequest('/');
+
+        $exception = new HttpNotFoundException($request);
+        $exception->setTitle('Title');

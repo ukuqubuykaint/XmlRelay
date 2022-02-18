@@ -55,3 +55,6 @@ class RouteParser implements RouteParserInterface
             foreach ($expression as $segment) {
                 /*
                  * Each $segment is either a string or an array of strings
+                 * containing optional parameters of an expression
+                 */
+                if (is_string($segment)) {

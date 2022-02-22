@@ -116,3 +116,7 @@ class MethodOverrideMiddlewareTest extends TestCase
             return $responseFactory->createResponse();
         })->bindTo($this);
 
+        $methodOverrideMiddleware = new MethodOverrideMiddleware();
+
+        $request = $this->createServerRequest('/', 'POST');
+

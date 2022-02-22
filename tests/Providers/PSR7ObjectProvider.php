@@ -107,3 +107,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
      */
     public function getStreamFactory(): StreamFactoryInterface
     {
+        return new Psr17Factory();
+    }

@@ -109,3 +109,4 @@ class ResponseEmitter
                 }
             }
         } else {
+            while (!$body->eof()) {

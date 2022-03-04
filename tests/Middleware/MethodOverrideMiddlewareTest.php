@@ -63,3 +63,4 @@ class MethodOverrideMiddlewareTest extends TestCase
         $middlewareDispatcher->handle($request);
     }
 
+    public function testHeaderPreferred()

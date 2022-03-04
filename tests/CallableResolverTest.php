@@ -153,3 +153,6 @@ class CallableResolverTest extends TestCase
         $container = $this->containerProphecy->reveal();
         $resolver = new CallableResolver($container);
         $resolver->resolve('Slim\Tests\Mocks\CallableTest:toCall');
+        $this->assertSame($container, CallableTest::$CalledContainer);
+
+        CallableTest::$CalledContainer = null;

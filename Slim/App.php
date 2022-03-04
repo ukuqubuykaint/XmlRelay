@@ -90,3 +90,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
     /**
      * @return MiddlewareDispatcherInterface
      */
+    public function getMiddlewareDispatcher(): MiddlewareDispatcherInterface
+    {

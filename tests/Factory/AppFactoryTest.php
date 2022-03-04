@@ -104,3 +104,6 @@ class AppFactoryTest extends TestCase
         $reflectionClass = new ReflectionClass(SlimHttpPsr17Factory::class);
         $reflectionClass->setStaticPropertyValue('responseFactoryClass', SlimHttpPsr17Factory::class);
 
+        Psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
+

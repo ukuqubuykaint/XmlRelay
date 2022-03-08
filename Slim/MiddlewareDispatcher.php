@@ -143,3 +143,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      */
     public function addDeferred(string $middleware): self
     {
+        $next = $this->tip;

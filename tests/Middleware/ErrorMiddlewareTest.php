@@ -128,3 +128,5 @@ class ErrorMiddlewareTest extends TestCase
 
     public function testGetErrorHandlerWillReturnDefaultErrorHandlerForUnhandledExceptions()
     {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);

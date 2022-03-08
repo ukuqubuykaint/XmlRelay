@@ -101,3 +101,5 @@ class FastRouteDispatcher extends GroupCountBased
                 $allowedMethods[$method] = true;
             }
         }
+
+        foreach ($this->variableRouteData as $method => $routeData) {

@@ -52,3 +52,7 @@ interface PSR7ObjectProviderInterface
      * @param string $reasonPhrase
      * @return ResponseInterface
      */
+    public function createResponse(int $statusCode = 200, string $reasonPhrase = ''): ResponseInterface;
+
+    /**
+     * @param string $contents

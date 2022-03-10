@@ -26,3 +26,6 @@ interface RouteGroupInterface
     public function add($middleware): RouteGroupInterface;
 
     /**
+     * Add middleware to the route group
+     */
+    public function addMiddleware(MiddlewareInterface $middleware): RouteGroupInterface;

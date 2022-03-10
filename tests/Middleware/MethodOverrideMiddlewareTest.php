@@ -64,3 +64,5 @@ class MethodOverrideMiddlewareTest extends TestCase
     }
 
     public function testHeaderPreferred()
+    {
+        $responseFactory = $this->getResponseFactory();

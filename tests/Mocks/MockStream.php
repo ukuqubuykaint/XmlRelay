@@ -83,3 +83,4 @@ class MockStream implements StreamInterface
 
         if ('resource' === gettype($body)) {
             $this->stream = $body;
+            $meta = stream_get_meta_data($this->stream);

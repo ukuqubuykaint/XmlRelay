@@ -75,3 +75,7 @@ class RouteCollector implements RouteCollectorInterface
      */
     protected array $routeGroups = [];
 
+    /**
+     * Route counter incrementer
+     */
+    protected int $routeCounter = 0;

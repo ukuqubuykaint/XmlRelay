@@ -161,3 +161,4 @@ class RouteCollectorProxyTest extends TestCase
         $callable = function () {
         };
 
+        $routeProphecy = $this->prophesize(RouteInterface::class);

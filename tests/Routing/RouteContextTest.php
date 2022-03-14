@@ -94,3 +94,5 @@ class RouteContextTest extends TestCase
 
     private function createServerRequestWithRouteAttributes(): ServerRequestInterface
     {
+        $route = $this->createMock(RouteInterface::class);
+        $routeParser = $this->createMock(RouteParserInterface::class);

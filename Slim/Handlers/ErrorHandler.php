@@ -126,3 +126,4 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->request = $request;
         $this->exception = $exception;
         $this->method = $request->getMethod();
+        $this->statusCode = $this->determineStatusCode();

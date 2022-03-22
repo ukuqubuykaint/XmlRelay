@@ -35,3 +35,5 @@ class JsonErrorRenderer extends AbstractErrorRenderer
                 $error['exception'][] = $this->formatExceptionFragment($exception);
             } while ($exception = $exception->getPrevious());
         }
+
+        return (string) json_encode(

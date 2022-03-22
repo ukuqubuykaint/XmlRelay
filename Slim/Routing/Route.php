@@ -99,3 +99,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     protected ResponseFactoryInterface $responseFactory;
 
+    /**
+     * Route pattern
+     */

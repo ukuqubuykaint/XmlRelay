@@ -92,3 +92,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     {
         return $this->routeCollector->getBasePath();
     }
+

@@ -149,3 +149,5 @@ class AbstractErrorRendererTest extends TestCase
         $fragment = $method->invoke($renderer, $exception);
         $output = json_encode(json_decode($renderer->__invoke($exception, true)));
         $expectedString = json_encode(['message' => 'Slim Application Error', 'exception' => [$fragment]]);
+
+        $this->assertSame($output, $expectedString);

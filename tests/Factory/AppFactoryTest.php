@@ -195,3 +195,7 @@ class AppFactoryTest extends TestCase
 
         $this->assertSame(
             $routeResolverProphecy->reveal(),
+            $app->getRouteResolver()
+        );
+
+        $this->assertSame(

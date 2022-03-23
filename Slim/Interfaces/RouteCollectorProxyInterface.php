@@ -109,3 +109,5 @@ interface RouteCollectorProxyInterface
 
     /**
      * Route Groups
+     *
+     * This method accepts a route pattern and a callback. All route

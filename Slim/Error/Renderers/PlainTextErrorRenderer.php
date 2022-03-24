@@ -27,3 +27,5 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
         $text = "{$this->getErrorTitle($exception)}\n";
 
         if ($displayErrorDetails) {
+            $text .= $this->formatExceptionFragment($exception);
+

@@ -29,3 +29,4 @@ interface RouteParserInterface
      */
     public function relativeUrlFor(string $routeName, array $data = [], array $queryParams = []): string;
 
+    /**

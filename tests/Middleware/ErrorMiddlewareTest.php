@@ -130,3 +130,7 @@ class ErrorMiddlewareTest extends TestCase
     {
         $responseFactory = $this->getResponseFactory();
         $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+
+        $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);

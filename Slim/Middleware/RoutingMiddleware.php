@@ -79,3 +79,7 @@ class RoutingMiddleware implements MiddlewareInterface
                 $exception = new HttpMethodNotAllowedException($request);
                 $exception->setAllowedMethods($routingResults->getAllowedMethods());
                 throw $exception;
+
+            default:
+                throw new RuntimeException('An unexpected error occurred while performing routing.');
+        }

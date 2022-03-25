@@ -108,3 +108,6 @@ class ResponseEmitterTest extends TestCase
         $stream = fopen('php://temp', 'r+');
         fwrite($stream, 'Hello');
         rewind($stream);
+
+        $body = $this
+            ->getMockBuilder(MockStream::class)

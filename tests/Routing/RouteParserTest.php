@@ -99,3 +99,4 @@ class RouteParserTest extends TestCase
     public function testBasePathIsIgnoreInRelativePathFor()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

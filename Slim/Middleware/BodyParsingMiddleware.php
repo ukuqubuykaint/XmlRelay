@@ -115,3 +115,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
         });
 
         $xmlCallable = static function ($input) {
+            /** @var string $input */
+
+            $backup = self::disableXmlEntityLoader(true);
+            $backup_errors = libxml_use_internal_errors(true);

@@ -100,3 +100,6 @@ abstract class TestCase extends PhpUnitTestCase
     ): ServerRequestInterface {
         $psr7ObjectProvider = new PSR7ObjectProvider();
         return $psr7ObjectProvider->createServerRequest($uri, $method, $data);
+    }
+
+    /**

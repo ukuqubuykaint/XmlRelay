@@ -153,3 +153,7 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      * The callable MUST return an instance of
      * \Psr\Http\Message\ResponseInterface.
+     *
+     */
+    public function setDefaultErrorHandler($handler): self
+    {

@@ -150,3 +150,6 @@ class ErrorMiddleware implements MiddlewareInterface
      * 3. Boolean $displayErrorDetails
      * 4. Boolean $logErrors
      * 5. Boolean $logErrorDetails
+     *
+     * The callable MUST return an instance of
+     * \Psr\Http\Message\ResponseInterface.

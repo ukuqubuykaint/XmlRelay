@@ -153,3 +153,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3207: Update phpstan/phpstan requirement from ^1.7 to ^1.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3207) thanks to @dependabot[bot]
 - [3211: Assign null coalescing to coalesce equal](https://github.com/ukuqubuykaint/AJAX-XML/pull/3211) thanks to @MathiasReker
 - [3213: Void return](https://github.com/ukuqubuykaint/AJAX-XML/pull/3213) thanks to @MathiasReker
+- [3214: Is null](https://github.com/ukuqubuykaint/AJAX-XML/pull/3214) thanks to @MathiasReker

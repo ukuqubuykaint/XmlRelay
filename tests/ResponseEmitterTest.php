@@ -109,3 +109,5 @@ class ResponseEmitterTest extends TestCase
         fwrite($stream, 'Hello');
         rewind($stream);
 
+        $body = $this
+            ->getMockBuilder(MockStream::class)

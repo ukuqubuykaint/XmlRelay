@@ -35,3 +35,5 @@ class XmlErrorRenderer extends AbstractErrorRenderer
                 $xml .= '    <message>' . $this->createCdataSection($exception->getMessage()) . "</message>\n";
                 $xml .= '    <file>' . $exception->getFile() . "</file>\n";
                 $xml .= '    <line>' . $exception->getLine() . "</line>\n";
+                $xml .= "  </exception>\n";
+            } while ($exception = $exception->getPrevious());

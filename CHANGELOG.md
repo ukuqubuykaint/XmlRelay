@@ -123,3 +123,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3253: Fix HttpBadRequestException description](https://github.com/ukuqubuykaint/AJAX-XML/pull/3253) thanks to @jsanahuja
 - [3254: Update phpunit/phpunit requirement from ^9.5 to ^9.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3254) thanks to @dependabot[bot]
 - [3255: Update phpstan/phpstan requirement from ^1.9 to ^1.10](https://github.com/ukuqubuykaint/AJAX-XML/pull/3255) thanks to @dependabot[bot]
+- [3256: Update phpspec/prophecy requirement from ^1.16 to ^1.17](https://github.com/ukuqubuykaint/AJAX-XML/pull/3256) thanks to @dependabot[bot]

@@ -115,3 +115,6 @@ class MockStream implements StreamInterface
             return '';
         }
     }
+
+    public function close(): void
+    {

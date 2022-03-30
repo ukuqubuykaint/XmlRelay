@@ -83,3 +83,6 @@ class RoutingResults
     {
         return $this->routeIdentifier;
     }
+
+    /**
+     * @note Arguments are captured from a path that RouteResolver has already decoded,

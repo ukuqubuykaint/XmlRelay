@@ -84,3 +84,5 @@ class RoutingMiddleware implements MiddlewareInterface
                 throw new RuntimeException('An unexpected error occurred while performing routing.');
         }
     }
+
+    /**

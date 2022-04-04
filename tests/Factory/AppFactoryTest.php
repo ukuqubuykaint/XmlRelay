@@ -201,3 +201,5 @@ class AppFactoryTest extends TestCase
         $this->assertSame(
             $middlewareDispatcherProphecy->reveal(),
             $app->getMiddlewareDispatcher()
+        );
+    }

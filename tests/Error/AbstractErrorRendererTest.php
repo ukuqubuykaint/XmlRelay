@@ -151,3 +151,6 @@ class AbstractErrorRendererTest extends TestCase
         $expectedString = json_encode(['message' => 'Slim Application Error', 'exception' => [$fragment]]);
 
         $this->assertSame($output, $expectedString);
+    }
+
+    public function testJSONErrorRendererDoesNotDisplayErrorDetails()

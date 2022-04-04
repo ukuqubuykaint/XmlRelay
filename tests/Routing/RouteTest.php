@@ -296,3 +296,4 @@ class RouteTest extends TestCase
             ->willReturn($callable)
             ->shouldBeCalledOnce();
 
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

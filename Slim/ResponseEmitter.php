@@ -110,3 +110,7 @@ class ResponseEmitter
             }
         } else {
             while (!$body->eof()) {
+                echo $body->read($this->responseChunkSize);
+                if (connection_status() !== CONNECTION_NORMAL) {
+                    break;
+                }

@@ -240,3 +240,4 @@ class MiddlewareDispatcherTest extends TestCase
     public function testAddCallableBindsClosureToContainer(): void
     {
         $containerProphecy = $this->prophesize(ContainerInterface::class);
+

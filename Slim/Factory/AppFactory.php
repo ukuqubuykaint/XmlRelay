@@ -113,3 +113,4 @@ class AppFactory
 
         return new App(
             $responseFactory,
+            $container,

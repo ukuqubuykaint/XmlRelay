@@ -79,3 +79,4 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             '            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}' .
             '            strong{display:inline-block;width:65px}' .
             '        </style>' .
+            '    </head>' .

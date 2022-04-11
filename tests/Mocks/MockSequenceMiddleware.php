@@ -27,3 +27,7 @@ class MockSequenceMiddleware implements MiddlewareInterface
      */
     public static $hasBeenInstantiated = false;
 
+    public function __construct()
+    {
+        static::$hasBeenInstantiated = true;
+    }

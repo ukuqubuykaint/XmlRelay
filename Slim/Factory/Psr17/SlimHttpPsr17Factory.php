@@ -26,3 +26,6 @@ class SlimHttpPsr17Factory extends Psr17Factory
         StreamFactoryInterface $streamFactory
     ): ResponseFactoryInterface {
         if (
+            !((
+                $decoratedResponseFactory = new static::$responseFactoryClass($responseFactory, $streamFactory)
+                ) instanceof ResponseFactoryInterface

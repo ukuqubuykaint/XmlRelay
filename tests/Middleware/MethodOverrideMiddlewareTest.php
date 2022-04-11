@@ -66,3 +66,4 @@ class MethodOverrideMiddlewareTest extends TestCase
     public function testHeaderPreferred()
     {
         $responseFactory = $this->getResponseFactory();
+        $middleware = (function (Request $request, RequestHandler $handler) use ($responseFactory) {

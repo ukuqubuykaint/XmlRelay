@@ -57,3 +57,7 @@ In order for auto-detection to work and enable you to use `AppFactory::create()`
 - [httpsoft/http-message](https://github.com/httpsoft/http-message) & [httpsoft/http-server-request](https://github.com/httpsoft/http-server-request) - Install using:
 `composer require httpsoft/http-message httpsoft/http-server-request`
 - [Nyholm/psr7](https://github.com/Nyholm/psr7) & [Nyholm/psr7-server](https://github.com/Nyholm/psr7-server) - Install using `composer require nyholm/psr7 nyholm/psr7-server`
+- [Guzzle/psr7](https://github.com/guzzle/psr7) - Install using `composer require guzzlehttp/psr7`
+- [laminas-diactoros](https://github.com/laminas/laminas-diactoros) - Install using `composer require laminas/laminas-diactoros`
+
+Then create file _public/index.php_.

@@ -42,3 +42,4 @@ interface RouteCollectorInterface
      * @throws InvalidArgumentException
      * @throws RuntimeException
      */
+    public function setCacheFile(string $cacheFile): RouteCollectorInterface;

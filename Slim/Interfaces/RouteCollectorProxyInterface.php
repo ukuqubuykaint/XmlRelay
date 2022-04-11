@@ -68,3 +68,5 @@ interface RouteCollectorProxyInterface
 
     /**
      * Add PATCH route
+     *
+     * @param string $pattern The route URI pattern

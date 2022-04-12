@@ -150,3 +150,4 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function getInvocationStrategy(): InvocationStrategyInterface
     {
+        return $this->invocationStrategy;

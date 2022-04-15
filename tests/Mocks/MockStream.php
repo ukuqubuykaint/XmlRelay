@@ -118,3 +118,4 @@ class MockStream implements StreamInterface
 
     public function close(): void
     {
+        if (isset($this->stream)) {

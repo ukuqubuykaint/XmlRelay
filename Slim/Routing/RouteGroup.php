@@ -81,3 +81,6 @@ class RouteGroup implements RouteGroupInterface
      * {@inheritdoc}
      */
     public function addMiddleware(MiddlewareInterface $middleware): RouteGroupInterface
+    {
+        $this->middleware[] = $middleware;
+        return $this;

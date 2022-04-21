@@ -129,3 +129,5 @@ class AbstractErrorRendererTest extends TestCase
             $exceptionDescription,
             $output,
             'Description must not be rendered unescaped'
+        );
+        $this->assertStringContainsString(

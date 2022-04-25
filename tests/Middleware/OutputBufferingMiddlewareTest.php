@@ -98,3 +98,6 @@ class OutputBufferingMiddlewareTest extends TestCase
         $response = $middlewareDispatcher->handle($request);
 
         $this->assertSame('TestBody', (string) $response->getBody());
+    }
+
+    public function testOutputBufferIsCleanedWhenThrowableIsCaught()

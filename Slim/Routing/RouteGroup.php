@@ -86,3 +86,6 @@ class RouteGroup implements RouteGroupInterface
         return $this;
     }
 
+    /**
+     * {@inheritdoc}
+     * @param MiddlewareDispatcher<\Psr\Container\ContainerInterface|null> $dispatcher

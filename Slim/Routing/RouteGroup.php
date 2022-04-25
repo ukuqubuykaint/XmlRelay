@@ -84,3 +84,5 @@ class RouteGroup implements RouteGroupInterface
     {
         $this->middleware[] = $middleware;
         return $this;
+    }
+

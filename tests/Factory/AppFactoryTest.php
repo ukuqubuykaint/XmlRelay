@@ -203,3 +203,4 @@ class AppFactoryTest extends TestCase
             $app->getMiddlewareDispatcher()
         );
     }
+

@@ -154,3 +154,5 @@ class AbstractErrorRendererTest extends TestCase
     }
 
     public function testJSONErrorRendererDoesNotDisplayErrorDetails()
+    {
+        $exception = new Exception('Oops..');

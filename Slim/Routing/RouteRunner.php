@@ -62,3 +62,7 @@ class RouteRunner implements RequestHandlerInterface
             $request = $routingMiddleware->performRouting($request);
         }
 
+        if ($this->routeCollectorProxy !== null) {
+            $request = $request->withAttribute(
+                RouteContext::BASE_PATH,
+                $this->routeCollectorProxy->getBasePath()

@@ -114,3 +114,5 @@ class ResponseEmitter
                 if (connection_status() !== CONNECTION_NORMAL) {
                     break;
                 }
+            }
+        }

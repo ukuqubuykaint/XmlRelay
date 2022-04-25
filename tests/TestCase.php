@@ -103,3 +103,4 @@ abstract class TestCase extends PhpUnitTestCase
     }
 
     /**
+     * @param int    $statusCode

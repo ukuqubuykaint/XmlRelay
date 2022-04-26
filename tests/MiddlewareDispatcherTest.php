@@ -241,3 +241,7 @@ class MiddlewareDispatcherTest extends TestCase
     {
         $containerProphecy = $this->prophesize(ContainerInterface::class);
 
+        $self = $this;
+        $callable = function (
+            ServerRequestInterface $request,
+            RequestHandlerInterface $handler

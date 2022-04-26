@@ -107,3 +107,6 @@ To execute the test suite, you'll need to install all development dependencies.
 git clone https://github.com/ukuqubuykaint/AJAX-XML
 composer install
 composer test
+```
+
+## Contributing

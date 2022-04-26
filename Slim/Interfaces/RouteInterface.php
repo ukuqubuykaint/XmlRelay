@@ -84,3 +84,7 @@ interface RouteInterface
      * Get route arguments
      *
      * @return array<string, string>
+     */
+    public function getArguments(): array;
+
+    /**

@@ -114,3 +114,7 @@ class AppFactory
         return new App(
             $responseFactory,
             $container,
+            $callableResolver,
+            $routeCollector,
+            $routeResolver,
+            $middlewareDispatcher

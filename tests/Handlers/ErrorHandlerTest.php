@@ -141,3 +141,6 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame(['application/json'], $response->getHeader('Content-Type'));
 
         $exception = new HttpNotFoundException($htmlRequest);
+
+        /** @var ResponseInterface $response */
+        $response = $handler->__invoke($htmlRequest, $exception, false, false, false);

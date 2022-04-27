@@ -80,3 +80,6 @@ class HeaderStack
      *
      * @return bool
      */
+    public static function has($header)
+    {
+        foreach (self::$data as $item) {

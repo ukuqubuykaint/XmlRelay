@@ -52,3 +52,5 @@ class RouteParserTest extends TestCase
                 false,
                 '/{first}/{second}',
                 ['first' => 'hello', 'second' => 'world'],
+                ['a' => ['b', 'x', 'y'], 'c' => 'd'],
+                '/hello/world?a%5B0%5D=b&a%5B1%5D=x&a%5B2%5D=y&c=d',

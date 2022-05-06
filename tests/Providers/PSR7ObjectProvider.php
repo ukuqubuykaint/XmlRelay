@@ -54,3 +54,6 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
             'REQUEST_URI' => '',
             'SCRIPT_NAME' => '/index.php',
             'SERVER_NAME' => 'localhost',
+            'SERVER_PORT' => 80,
+            'SERVER_PROTOCOL' => 'HTTP/1.1',
+        ], $data);

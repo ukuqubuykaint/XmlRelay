@@ -9,3 +9,4 @@ use Slim\Routing\RoutingResults;
 interface RouteResolverInterface
 {
     /**
+     * @param string $uri Should be ServerRequestInterface::getUri()->getPath()

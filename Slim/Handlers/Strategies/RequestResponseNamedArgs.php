@@ -25,3 +25,4 @@ class RequestResponseNamedArgs implements InvocationStrategyInterface
      * Invoke a route callable with request, response and all route parameters
      * as individual arguments.
      *
+     * @param array<string, string>  $routeArguments

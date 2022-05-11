@@ -45,3 +45,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
     /**
      * @dataProvider provideImplementations
      * @param string $psr17factory
+     * @param string $expectedServerRequestClass
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('provideImplementations')]

@@ -143,3 +143,6 @@ class ErrorHandlerTest extends TestCase
         $exception = new HttpNotFoundException($htmlRequest);
 
         /** @var ResponseInterface $response */
+        $response = $handler->__invoke($htmlRequest, $exception, false, false, false);
+        $this->assertSame(['text/html'], $response->getHeader('Content-Type'));
+    }

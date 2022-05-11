@@ -43,3 +43,4 @@ Override::apply($classLoader, [
         },
         'is_writable' => function (string $path): bool {
             return stripos($path, 'non-writable-directory') === false;
+        }

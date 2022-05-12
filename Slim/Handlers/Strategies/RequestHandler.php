@@ -32,3 +32,5 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
      * @param array<string, string>  $routeArguments
      */
     public function __invoke(
+        callable $callable,
+        ServerRequestInterface $request,

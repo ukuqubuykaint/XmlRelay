@@ -44,3 +44,7 @@ class SmallChunksStream implements StreamInterface
 
     public function detach()
     {
+        throw new Exception('not implemented');
+    }
+
+    public function eof(): bool

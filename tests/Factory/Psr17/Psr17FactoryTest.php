@@ -30,3 +30,5 @@ class Psr17FactoryTest extends TestCase
         $this->expectExceptionMessage('Slim\\Tests\\Mocks\\MockPsr17Factory could not instantiate a stream factory.');
 
         MockPsr17Factory::getStreamFactory();
+    }
+

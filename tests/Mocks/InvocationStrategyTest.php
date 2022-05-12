@@ -26,3 +26,5 @@ class InvocationStrategyTest implements InvocationStrategyInterface
      * @param ResponseInterface      $response       The response object.
      * @param array                  $routeArguments The route's placeholder arguments
      *
+     * @return ResponseInterface The response from the callable.
+     */

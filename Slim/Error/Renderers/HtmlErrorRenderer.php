@@ -81,3 +81,5 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             '        </style>' .
             '    </head>' .
             '    <body>' .
+            '        <h1>%s</h1>' .
+            '        <div>%s</div>' .

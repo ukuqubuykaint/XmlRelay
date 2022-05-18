@@ -88,3 +88,4 @@ interface RouteInterface
     public function getArguments(): array;
 
     /**
+     * Set a route argument

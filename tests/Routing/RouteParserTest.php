@@ -104,3 +104,5 @@ class RouteParserTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->setBasePath('/app');
 
+        $route = $routeCollector->map(['GET'], '/{first}/{second}', function () {
+        });

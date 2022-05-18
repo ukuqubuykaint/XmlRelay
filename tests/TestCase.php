@@ -104,3 +104,7 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @param int    $statusCode
+     * @param string $reasonPhrase
+     * @return ResponseInterface
+     */
+    protected function createResponse(int $statusCode = 200, string $reasonPhrase = ''): ResponseInterface

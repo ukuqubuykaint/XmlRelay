@@ -142,3 +142,4 @@ class ErrorHandler implements ErrorHandlerInterface
      * Force the content type for all error handler responses.
      *
      * @param string|null $contentType The content type. Null restores Accept-header negotiation.
+     */

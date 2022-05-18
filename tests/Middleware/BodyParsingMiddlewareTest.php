@@ -135,3 +135,5 @@ class BodyParsingMiddlewareTest extends TestCase
             'invalid-xml' => [
                 'application/xml',
                 '<person><name>John</name></invalid>',
+                null,
+            ],

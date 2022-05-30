@@ -149,3 +149,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             $next,
             $this->container,
             $this->callableResolver
+        ) implements RequestHandlerInterface {

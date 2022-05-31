@@ -132,3 +132,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function patch(string $pattern, $callable): RouteInterface
     {
+        return $this->map(['PATCH'], $pattern, $callable);
+    }
+

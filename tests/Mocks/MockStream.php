@@ -122,3 +122,6 @@ class MockStream implements StreamInterface
             if (is_resource($this->stream)) {
                 fclose($this->stream);
             }
+            $this->detach();
+        }
+    }

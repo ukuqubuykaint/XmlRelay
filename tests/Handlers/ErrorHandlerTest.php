@@ -148,3 +148,7 @@ class ErrorHandlerTest extends TestCase
     }
 
     /**
+     * Test that a forced content type still wins over per-request negotiation.
+     */
+    public function testForcedContentTypeWinsOverSubsequentNegotiation()
+    {

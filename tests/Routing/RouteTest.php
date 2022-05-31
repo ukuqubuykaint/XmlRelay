@@ -299,3 +299,5 @@ class RouteTest extends TestCase
         $responseProphecy = $this->prophesize(ResponseInterface::class);
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()

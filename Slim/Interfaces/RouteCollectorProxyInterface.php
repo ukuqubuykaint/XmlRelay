@@ -118,3 +118,6 @@ interface RouteCollectorProxyInterface
     public function group(string $pattern, $callable): RouteGroupInterface;
 
     /**
+     * Add a route that sends an HTTP redirect
+     *
+     * @param string|UriInterface $to

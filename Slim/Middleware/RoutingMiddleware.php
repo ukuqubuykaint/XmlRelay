@@ -94,3 +94,4 @@ class RoutingMiddleware implements MiddlewareInterface
             $request->getUri()->getPath(),
             $request->getMethod()
         );
+    }

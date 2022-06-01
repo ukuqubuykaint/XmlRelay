@@ -83,3 +83,4 @@ class HeaderStack
     public static function has($header)
     {
         foreach (self::$data as $item) {
+            $components = explode(':', $item['header']);

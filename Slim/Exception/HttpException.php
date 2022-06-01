@@ -36,3 +36,4 @@ class HttpException extends RuntimeException
         $this->request = $request;
     }
 
+    public function getRequest(): ServerRequestInterface

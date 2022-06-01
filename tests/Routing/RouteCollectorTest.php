@@ -114,3 +114,5 @@ class RouteCollectorTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->setBasePath('/base/path');
 
+        $route = $routeCollector->map(['GET'], '/test', function () {
+        });

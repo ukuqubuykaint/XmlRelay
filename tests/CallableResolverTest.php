@@ -158,3 +158,4 @@ class CallableResolverTest extends TestCase
         CallableTest::$CalledContainer = null;
         $resolver->resolveRoute('Slim\Tests\Mocks\CallableTest:toCall');
         $this->assertSame($container, CallableTest::$CalledContainer);
+

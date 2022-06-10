@@ -73,3 +73,5 @@ class ResponseEmitter
     private function emitStatusLine(ResponseInterface $response): void
     {
         $statusLine = sprintf(
+            'HTTP/%s %s %s',
+            $response->getProtocolVersion(),

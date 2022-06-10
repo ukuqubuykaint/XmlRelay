@@ -31,3 +31,6 @@ class MockSequenceMiddleware implements MiddlewareInterface
     {
         static::$hasBeenInstantiated = true;
     }
+
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {

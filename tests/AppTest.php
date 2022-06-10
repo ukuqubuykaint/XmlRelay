@@ -573,3 +573,7 @@ class AppTest extends TestCase
 
         $this->assertSame($expectedPath, $route->getPattern());
     }
+
+    public function testRouteGroupPattern(): void
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

@@ -51,3 +51,4 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @return StreamFactoryInterface
+     */

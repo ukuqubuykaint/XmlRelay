@@ -12,3 +12,4 @@
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
     <!-- Paths to check -->
+    <file>Slim</file>

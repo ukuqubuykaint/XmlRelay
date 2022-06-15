@@ -69,3 +69,7 @@ class MethodOverrideMiddlewareTest extends TestCase
         $middleware = (function (Request $request, RequestHandler $handler) use ($responseFactory) {
             $this->assertSame('DELETE', $request->getMethod());
             return $responseFactory->createResponse();
+        })->bindTo($this);
+
+        $methodOverrideMiddleware = new MethodOverrideMiddleware();
+

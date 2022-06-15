@@ -77,3 +77,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
     /**
      * @param string $mediaType A HTTP media type (excluding content-type params).
      */
+    public function hasBodyParser(string $mediaType): bool
+    {
+        return isset($this->bodyParsers[$mediaType]);

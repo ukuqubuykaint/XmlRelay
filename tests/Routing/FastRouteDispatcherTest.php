@@ -200,3 +200,6 @@ class FastRouteDispatcherTest extends TestCase
         // 1 -------------------------------------------------------------------------------------->
 
         $callback = function (RouteCollector $r) {
+            $r->addRoute('GET', '/handler0', 'handler0');
+            $r->addRoute('GET', '/handler1', 'handler1');
+            $r->addRoute('GET', '/handler2', 'handler2');

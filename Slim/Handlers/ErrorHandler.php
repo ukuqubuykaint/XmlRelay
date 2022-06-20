@@ -82,3 +82,6 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected ?string $method = null;
 
+    protected ServerRequestInterface $request;
+
+    protected Throwable $exception;

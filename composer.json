@@ -53,3 +53,7 @@
         "psr/http-server-middleware": "^1.0",
         "psr/log": "^1.1 || ^2.0 || ^3.0"
     },
+    "require-dev": {
+        "ext-simplexml": "*",
+        "adriansuter/php-autoload-override": "^1.4 || ^2",
+        "guzzlehttp/psr7": "^2.6",

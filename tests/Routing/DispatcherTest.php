@@ -58,3 +58,5 @@ class DispatcherTest extends TestCase
         $routeCollector->setCacheFile($cacheFile);
 
         $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
+        $this->setAccessible($method);
+        $method->invoke($dispatcher);

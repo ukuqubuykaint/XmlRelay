@@ -15,3 +15,5 @@ All pull requests must adhere to the [PSR-12 standard](https://github.com/php-fi
 
 ## Unit Testing
 
+All pull requests must be accompanied by passing unit tests and complete code coverage. The XmlRelay uses phpunit for testing.
+

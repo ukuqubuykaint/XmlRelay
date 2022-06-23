@@ -30,3 +30,5 @@ class RequestResponse implements InvocationStrategyInterface
         ServerRequestInterface $request,
         ResponseInterface $response,
         array $routeArguments
+    ): ResponseInterface {
+        foreach ($routeArguments as $k => $v) {

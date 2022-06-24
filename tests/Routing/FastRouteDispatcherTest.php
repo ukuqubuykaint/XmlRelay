@@ -268,3 +268,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('GET', '/user/{id:[0-9]+}.{extension}', 'handler2');
         };
 
+        $method = 'GET';
+        $uri = '/user/12345.svg';
+        $handler = 'handler2';
+        $argDict = ['id' => '12345', 'extension' => 'svg'];

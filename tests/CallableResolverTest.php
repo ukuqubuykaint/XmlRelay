@@ -253,3 +253,6 @@ class CallableResolverTest extends TestCase
         $resolver->resolve(RequestHandlerTest::class);
     }
 
+    public function testRouteResolutionToAPsrRequestHandlerClass(): void
+    {
+        $request = $this->createServerRequest('/', 'GET');

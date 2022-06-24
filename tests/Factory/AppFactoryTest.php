@@ -204,3 +204,5 @@ class AppFactoryTest extends TestCase
         );
     }
 
+    /**
+     * @runInSeparateProcess - AppFactory::create saves $responseFactory into static::$responseFactory,

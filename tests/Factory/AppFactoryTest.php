@@ -107,3 +107,6 @@ class AppFactoryTest extends TestCase
         Psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
 
+        AppFactory::create();
+    }
+

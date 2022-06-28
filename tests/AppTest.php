@@ -577,3 +577,6 @@ class AppTest extends TestCase
     public function testRouteGroupPattern(): void
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+
+        /** @var ResponseFactoryInterface $responseFactoryInterface */
+        $responseFactoryInterface = $responseFactoryProphecy->reveal();

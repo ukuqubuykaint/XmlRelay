@@ -79,3 +79,6 @@ class RouteCollector implements RouteCollectorInterface
      * Route counter incrementer
      */
     protected int $routeCounter = 0;
+
+    protected ResponseFactoryInterface $responseFactory;
+

@@ -31,3 +31,6 @@ class HttpExceptionTest extends TestCase
 
         $exception = new HttpNotFoundException($request);
         $exception->setTitle('Title');
+        $exception->setDescription('Description');
+
+        $this->assertSame('Title', $exception->getTitle());

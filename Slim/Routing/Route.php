@@ -106,3 +106,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     protected bool $groupMiddlewareAppended = false;
 
+    /**
+     * @param string[] $methods The route HTTP methods

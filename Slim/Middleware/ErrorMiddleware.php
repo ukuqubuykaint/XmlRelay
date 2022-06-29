@@ -157,3 +157,5 @@ class ErrorMiddleware implements MiddlewareInterface
      */
     public function setDefaultErrorHandler($handler): self
     {
+        $this->defaultErrorHandler = $handler;
+        return $this;

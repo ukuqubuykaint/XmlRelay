@@ -105,3 +105,5 @@ class OutputBufferingMiddlewareTest extends TestCase
         $this->getResponseFactory();
         $middleware = (function ($request, $handler) {
             echo "Test";
+            $this->assertSame('Test', ob_get_contents());
+            throw new Exception('Oops...');

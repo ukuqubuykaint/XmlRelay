@@ -126,3 +126,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3256: Update phpspec/prophecy requirement from ^1.16 to ^1.17](https://github.com/ukuqubuykaint/AJAX-XML/pull/3256) thanks to @dependabot[bot]
 - [3264: Update psr/http-message requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3264) thanks to @dependabot[bot]
 - [3265: Update nyholm/psr7 requirement from ^1.5 to ^1.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3265) thanks to @dependabot[bot]
+- [3266: Update guzzlehttp/psr7 requirement from ^2.4 to ^2.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3266) thanks to @dependabot[bot]

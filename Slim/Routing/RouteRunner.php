@@ -38,3 +38,4 @@ class RouteRunner implements RequestHandlerInterface
         RouteResolverInterface $routeResolver,
         RouteParserInterface $routeParser,
         ?RouteCollectorProxyInterface $routeCollectorProxy = null
+    ) {

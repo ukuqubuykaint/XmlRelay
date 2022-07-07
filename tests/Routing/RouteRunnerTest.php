@@ -31,3 +31,7 @@ class RouteRunnerTest extends TestCase
 
             $routingResults = $request->getAttribute(RouteContext::ROUTING_RESULTS);
             $this->assertInstanceOf(RoutingResults::class, $routingResults);
+
+            return $response;
+        })->bindTo($this);
+

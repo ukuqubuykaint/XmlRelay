@@ -80,3 +80,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
     public function hasBodyParser(string $mediaType): bool
     {
         return isset($this->bodyParsers[$mediaType]);
+    }

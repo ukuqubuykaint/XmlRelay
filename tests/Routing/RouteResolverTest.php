@@ -45,3 +45,4 @@ class RouteResolverTest extends TestCase
     {
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
         $routingResultsProphecy = $this->prophesize(RoutingResults::class);
+

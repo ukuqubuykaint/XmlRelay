@@ -33,3 +33,6 @@ class RoutingMiddleware implements MiddlewareInterface
         $this->routeResolver = $routeResolver;
         $this->routeParser = $routeParser;
     }
+
+    /**
+     * @throws HttpNotFoundException

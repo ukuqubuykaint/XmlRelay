@@ -110,3 +110,4 @@ class AppFactoryTest extends TestCase
         AppFactory::create();
     }
 
+    /**

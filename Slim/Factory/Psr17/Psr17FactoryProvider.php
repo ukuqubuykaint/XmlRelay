@@ -28,3 +28,6 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
     ];
 
     /**
+     * {@inheritdoc}
+     */
+    public static function getFactories(): array

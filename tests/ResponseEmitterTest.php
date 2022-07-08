@@ -118,3 +118,4 @@ class ResponseEmitterTest extends TestCase
 
         $response = $this->createResponse()->withBody($body);
         $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);

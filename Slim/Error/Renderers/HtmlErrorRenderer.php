@@ -87,3 +87,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             '    </body>' .
             '</html>',
             $title,
+            $title,
+            $html
+        );

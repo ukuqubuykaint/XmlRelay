@@ -142,3 +142,7 @@ class BodyParsingMiddlewareTest extends TestCase
                 '<person><name>John</name></invalid>',
                 null,
             ],
+        ];
+    }
+
+    /**

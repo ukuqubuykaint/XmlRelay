@@ -115,3 +115,4 @@ class ResponseEmitterTest extends TestCase
             ->onlyMethods(['getSize'])
             ->getMock();
         $body->method('getSize')->willReturn(null);
+

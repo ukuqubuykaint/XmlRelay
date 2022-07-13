@@ -146,3 +146,5 @@ class BodyParsingMiddlewareTest extends TestCase
     }
 
     /**
+     * @dataProvider parsingProvider
+     */

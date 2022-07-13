@@ -159,3 +159,4 @@ class ErrorMiddleware implements MiddlewareInterface
     {
         $this->defaultErrorHandler = $handler;
         return $this;
+    }

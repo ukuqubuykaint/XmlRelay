@@ -84,3 +84,6 @@ class HeaderStack
     {
         foreach (self::$data as $item) {
             $components = explode(':', $item['header']);
+            if (trim($components[0]) === $header) {
+                return true;
+            }

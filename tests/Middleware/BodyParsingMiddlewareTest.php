@@ -148,3 +148,7 @@ class BodyParsingMiddlewareTest extends TestCase
     /**
      * @dataProvider parsingProvider
      */
+    #[\PHPUnit\Framework\Attributes\DataProvider('parsingProvider')]
+    public function testParsing($contentType, $body, $expected)
+    {
+        $request = $this->createRequestWithBody($contentType, $body);

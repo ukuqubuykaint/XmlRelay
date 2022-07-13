@@ -123,3 +123,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
             self::disableXmlEntityLoader($backup);
             libxml_clear_errors();
+            libxml_use_internal_errors($backup_errors);
+

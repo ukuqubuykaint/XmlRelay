@@ -146,3 +146,7 @@ class ErrorHandler implements ErrorHandlerInterface
     public function forceContentType(?string $contentType): void
     {
         $this->isContentTypeForced = $contentType !== null;
+        $this->contentType = $contentType;
+    }
+
+    protected function determineStatusCode(): int

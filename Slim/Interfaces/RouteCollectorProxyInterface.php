@@ -121,3 +121,5 @@ interface RouteCollectorProxyInterface
      * Add a route that sends an HTTP redirect
      *
      * @param string|UriInterface $to
+     */
+    public function redirect(string $from, $to, int $status = 302): RouteInterface;

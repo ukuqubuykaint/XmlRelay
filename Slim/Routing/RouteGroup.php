@@ -101,3 +101,7 @@ class RouteGroup implements RouteGroupInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function getPattern(): string
+    {
+        return $this->pattern;

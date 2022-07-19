@@ -41,3 +41,5 @@ class XmlErrorRenderer extends AbstractErrorRenderer
 
         $xml .= '</error>';
 
+        return $xml;
+    }

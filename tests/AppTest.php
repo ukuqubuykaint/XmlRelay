@@ -580,3 +580,6 @@ class AppTest extends TestCase
 
         /** @var ResponseFactoryInterface $responseFactoryInterface */
         $responseFactoryInterface = $responseFactoryProphecy->reveal();
+        $app = new App($responseFactoryInterface);
+        $group = $app->group('/foo', function () {
+        });

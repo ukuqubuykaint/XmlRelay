@@ -163,3 +163,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3235: Persist routes indexed by name in RouteCollector for improved performance.](https://github.com/ukuqubuykaint/AJAX-XML/pull/3235) thanks to @BusterNeece
 
 ## 4.10.0 - 2022-03-14
+

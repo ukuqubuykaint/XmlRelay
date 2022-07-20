@@ -135,3 +135,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         return $this->map(['PATCH'], $pattern, $callable);
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function delete(string $pattern, $callable): RouteInterface

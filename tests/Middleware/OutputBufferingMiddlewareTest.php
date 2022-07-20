@@ -107,3 +107,4 @@ class OutputBufferingMiddlewareTest extends TestCase
             echo "Test";
             $this->assertSame('Test', ob_get_contents());
             throw new Exception('Oops...');
+        })->bindTo($this);

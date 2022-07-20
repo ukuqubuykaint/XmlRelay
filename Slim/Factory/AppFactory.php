@@ -119,3 +119,7 @@ class AppFactory
             $routeResolver,
             $middlewareDispatcher
         );
+    }
+
+    /**
+     * @throws RuntimeException

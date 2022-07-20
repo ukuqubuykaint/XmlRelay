@@ -99,3 +99,7 @@ class RouteContextTest extends TestCase
         $routingResults = $this->createMock(RoutingResults::class);
 
         return $this->createServerRequest('/')
+                    ->withAttribute(RouteContext::BASE_PATH, '')
+                    ->withAttribute(RouteContext::ROUTE, $route)
+                    ->withAttribute(RouteContext::ROUTE_PARSER, $routeParser)
+                    ->withAttribute(RouteContext::ROUTING_RESULTS, $routingResults);

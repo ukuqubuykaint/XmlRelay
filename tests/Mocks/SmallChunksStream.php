@@ -48,3 +48,5 @@ class SmallChunksStream implements StreamInterface
     }
 
     public function eof(): bool
+    {
+        return $this->amountToRead === 0;

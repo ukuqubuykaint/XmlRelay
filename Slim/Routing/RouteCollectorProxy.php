@@ -99,3 +99,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     public function setBasePath(string $basePath): RouteCollectorProxyInterface
     {
         $this->routeCollector->setBasePath($basePath);
+
+        return $this;

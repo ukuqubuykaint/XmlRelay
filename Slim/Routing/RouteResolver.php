@@ -34,3 +34,4 @@ class RouteResolver implements RouteResolverInterface
         $this->dispatcher = $dispatcher ?? new Dispatcher($routeCollector);
     }
 
+    /**

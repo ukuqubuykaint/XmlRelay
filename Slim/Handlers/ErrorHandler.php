@@ -150,3 +150,5 @@ class ErrorHandler implements ErrorHandlerInterface
     }
 
     protected function determineStatusCode(): int
+    {
+        if ($this->method === 'OPTIONS') {

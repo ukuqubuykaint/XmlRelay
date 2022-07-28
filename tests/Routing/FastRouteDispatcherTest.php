@@ -272,3 +272,6 @@ class FastRouteDispatcherTest extends TestCase
         $uri = '/user/12345.svg';
         $handler = 'handler2';
         $argDict = ['id' => '12345', 'extension' => 'svg'];
+
+        $cases[] = [$method, $uri, $callback, $handler, $argDict];
+

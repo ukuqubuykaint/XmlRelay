@@ -114,3 +114,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
 
     /**
      * @param mixed $toResolve
+     */
+    private function isMiddleware($toResolve): bool

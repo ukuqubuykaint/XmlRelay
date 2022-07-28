@@ -302,3 +302,4 @@ class RouteTest extends TestCase
         $responseFactoryProphecy
             ->createResponse()
             ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();

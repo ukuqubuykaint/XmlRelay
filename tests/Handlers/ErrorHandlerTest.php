@@ -152,3 +152,6 @@ class ErrorHandlerTest extends TestCase
      */
     public function testForcedContentTypeWinsOverSubsequentNegotiation()
     {
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+        $handler->forceContentType('application/json');
+

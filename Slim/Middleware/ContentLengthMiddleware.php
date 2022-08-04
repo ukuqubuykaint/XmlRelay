@@ -22,3 +22,4 @@ class ContentLengthMiddleware implements MiddlewareInterface
     {
         $response = $handler->handle($request);
 
+        // Add Content-Length header if not already added

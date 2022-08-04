@@ -121,3 +121,5 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter->emit($response);
 
         $this->expectOutputString('Hello');
+    }
+

@@ -78,3 +78,4 @@ class ResponseEmitter
             $response->getStatusCode(),
             $response->getReasonPhrase()
         );
+        header($statusLine, true, $response->getStatusCode());

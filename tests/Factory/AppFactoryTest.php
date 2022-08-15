@@ -206,3 +206,7 @@ class AppFactoryTest extends TestCase
 
     /**
      * @runInSeparateProcess - AppFactory::create saves $responseFactory into static::$responseFactory,
+     *                         this breaks other tests
+     */
+    #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
+    public function testAppIsCreatedWithInjectedInstancesFromFunctionArguments()

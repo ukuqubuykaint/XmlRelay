@@ -97,3 +97,4 @@ class SmallChunksStream implements StreamInterface
 
     public function seek($offset, $whence = SEEK_SET): void
     {
+        throw new Exception('not implemented');

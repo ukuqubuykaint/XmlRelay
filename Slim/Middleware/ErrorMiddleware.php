@@ -160,3 +160,6 @@ class ErrorMiddleware implements MiddlewareInterface
         $this->defaultErrorHandler = $handler;
         return $this;
     }
+
+    /**
+     * Set callable to handle scenarios where an error

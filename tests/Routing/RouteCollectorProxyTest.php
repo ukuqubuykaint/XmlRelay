@@ -180,3 +180,6 @@ class RouteCollectorProxyTest extends TestCase
             $routeCollectorProphecy->reveal()
         );
 
+        $route = $routeCollectorProxy->post($pattern, $callable);
+
+        $this->assertSame($pattern, $route->getPattern());

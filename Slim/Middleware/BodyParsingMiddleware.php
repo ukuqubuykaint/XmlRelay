@@ -125,3 +125,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
             libxml_clear_errors();
             libxml_use_internal_errors($backup_errors);
 
+            if ($result === false) {
+                return null;
+            }
+

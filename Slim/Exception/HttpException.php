@@ -23,3 +23,7 @@ class HttpException extends RuntimeException
     protected ServerRequestInterface $request;
 
     protected string $title = '';
+
+    protected string $description = '';
+
+    public function __construct(

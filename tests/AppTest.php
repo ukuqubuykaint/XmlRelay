@@ -583,3 +583,5 @@ class AppTest extends TestCase
         $app = new App($responseFactoryInterface);
         $group = $app->group('/foo', function () {
         });
+
+        $this->assertSame('/foo', $group->getPattern());

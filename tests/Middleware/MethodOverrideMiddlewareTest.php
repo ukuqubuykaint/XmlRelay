@@ -128,3 +128,4 @@ class MethodOverrideMiddlewareTest extends TestCase
             ->willReturn(true)
             ->shouldBeCalled();
         /** @noinspection PhpUndefinedMethodInspection */
+        $bodyProphecy->rewind()

@@ -70,3 +70,4 @@ interface RouteCollectorInterface
      */
     public function getNamedRoute(string $name): RouteInterface;
 
+    /**

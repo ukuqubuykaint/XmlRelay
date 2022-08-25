@@ -122,3 +122,6 @@ class ResponseEmitterTest extends TestCase
 
         $this->expectOutputString('Hello');
     }
+
+    public function testResponseWithStreamReadYieldingLessBytesThanAsked(): void
+    {

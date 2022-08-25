@@ -87,3 +87,6 @@ class HeaderStack
             if (trim($components[0]) === $header) {
                 return true;
             }
+        }
+        return false;
+    }

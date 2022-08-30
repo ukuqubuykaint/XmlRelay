@@ -81,3 +81,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
     {
         return isset($this->bodyParsers[$mediaType]);
     }
+
+    /**

@@ -256,3 +256,7 @@ class CallableResolverTest extends TestCase
     public function testRouteResolutionToAPsrRequestHandlerClass(): void
     {
         $request = $this->createServerRequest('/', 'GET');
+        $resolver = new CallableResolver(); // No container injected
+        $callableRoute = $resolver->resolveRoute(RequestHandlerTest::class);
+        $callableRoute($request);
+        $this->assertSame(1, RequestHandlerTest::$CalledCount);

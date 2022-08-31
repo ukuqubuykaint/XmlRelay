@@ -127,3 +127,6 @@ class MockStream implements StreamInterface
     }
 
     public function detach()
+    {
+        if (!isset($this->stream)) {
+            return null;

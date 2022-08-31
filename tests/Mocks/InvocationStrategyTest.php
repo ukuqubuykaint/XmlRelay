@@ -28,3 +28,4 @@ class InvocationStrategyTest implements InvocationStrategyInterface
      *
      * @return ResponseInterface The response from the callable.
      */
+    public function __invoke(

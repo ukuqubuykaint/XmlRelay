@@ -260,3 +260,5 @@ class CallableResolverTest extends TestCase
         $callableRoute = $resolver->resolveRoute(RequestHandlerTest::class);
         $callableRoute($request);
         $this->assertSame(1, RequestHandlerTest::$CalledCount);
+    }
+

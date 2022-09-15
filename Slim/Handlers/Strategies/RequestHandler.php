@@ -35,3 +35,4 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
         callable $callable,
         ServerRequestInterface $request,
         ResponseInterface $response,
+        array $routeArguments

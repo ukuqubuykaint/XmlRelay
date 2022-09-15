@@ -34,3 +34,4 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
     public function __invoke(
         callable $callable,
         ServerRequestInterface $request,
+        ResponseInterface $response,

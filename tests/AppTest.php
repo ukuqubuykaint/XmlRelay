@@ -556,3 +556,7 @@ class AppTest extends TestCase
              * If sequence isn't on last element we use $app->group()
              * The very tail of the sequence uses the $app->get() method
              */
+            if (count($sequence)) {
+                $app->group($path, function (RouteCollectorProxy $group) use (&$sequence, $processSequence) {
+                    $processSequence($group, $sequence, $processSequence);
+                });

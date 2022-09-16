@@ -163,3 +163,4 @@ class ErrorMiddleware implements MiddlewareInterface
 
     /**
      * Set callable to handle scenarios where an error
+     * occurs when processing the current request.

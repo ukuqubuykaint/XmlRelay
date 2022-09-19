@@ -116,3 +116,6 @@ class RouteCollectorTest extends TestCase
 
         $route = $routeCollector->map(['GET'], '/test', function () {
         });
+        $route->setName('test');
+
+        $routes = $routeCollector->getRoutes();

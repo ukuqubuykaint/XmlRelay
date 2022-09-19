@@ -108,3 +108,7 @@ class OutputBufferingMiddlewareTest extends TestCase
             $this->assertSame('Test', ob_get_contents());
             throw new Exception('Oops...');
         })->bindTo($this);
+        $outputBufferingMiddleware = new OutputBufferingMiddleware($this->getStreamFactory(), 'prepend');
+
+        $request = $this->createServerRequest('/', 'GET');
+

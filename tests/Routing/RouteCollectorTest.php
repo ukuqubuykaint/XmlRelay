@@ -86,3 +86,5 @@ class RouteCollectorTest extends TestCase
             ->shouldBeCalledOnce();
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $routeCollector->group('/prefix', $callable);
+    }

@@ -40,3 +40,6 @@ class SlowPokeStream implements StreamInterface
         while (!$this->eof()) {
             $content .= $this->read(self::CHUNK_SIZE);
         }
+        return $content;
+    }
+

@@ -112,3 +112,4 @@ class Route implements RouteInterface, RequestHandlerInterface
      * @param callable|array{class-string, string}|string $callable The route callable
      * @param ResponseFactoryInterface $responseFactory
      * @param CallableResolverInterface $callableResolver
+     * @param TContainerInterface $container

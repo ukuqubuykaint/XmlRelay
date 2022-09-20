@@ -81,3 +81,5 @@ class ErrorMiddleware implements MiddlewareInterface
     }
 
     public function handleException(ServerRequestInterface $request, Throwable $exception): ResponseInterface
+    {
+        if ($exception instanceof HttpException) {

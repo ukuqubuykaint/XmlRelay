@@ -50,3 +50,7 @@ class RouteGroup implements RouteGroupInterface
     ) {
         $this->pattern = $pattern;
         $this->callable = $callable;
+        $this->callableResolver = $callableResolver;
+        $this->routeCollectorProxy = $routeCollectorProxy;
+    }
+

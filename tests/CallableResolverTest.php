@@ -163,3 +163,5 @@ class CallableResolverTest extends TestCase
         $resolver->resolveMiddleware('Slim\Tests\Mocks\CallableTest:toCall');
         $this->assertSame($container, CallableTest::$CalledContainer);
     }
+
+    public function testSlimCallableAsArrayContainer(): void

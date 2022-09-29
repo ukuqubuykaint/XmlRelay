@@ -69,3 +69,5 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use XmlRelay\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
+
+// Instantiate App

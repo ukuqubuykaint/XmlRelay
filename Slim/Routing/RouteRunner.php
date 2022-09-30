@@ -39,3 +39,5 @@ class RouteRunner implements RequestHandlerInterface
         RouteParserInterface $routeParser,
         ?RouteCollectorProxyInterface $routeCollectorProxy = null
     ) {
+        $this->routeResolver = $routeResolver;
+        $this->routeParser = $routeParser;

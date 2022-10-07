@@ -61,3 +61,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
         return $this
             ->getServerRequestFactory()
             ->createServerRequest($method, $uri, $headers);
+    }
+

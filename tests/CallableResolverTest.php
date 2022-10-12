@@ -262,3 +262,7 @@ class CallableResolverTest extends TestCase
         $this->assertSame(1, RequestHandlerTest::$CalledCount);
     }
 
+    public function testMiddlewareResolutionToAPsrRequestHandlerClass(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Slim\\Tests\\Mocks\\RequestHandlerTest is not resolvable');

@@ -125,3 +125,4 @@ class ResponseEmitterTest extends TestCase
 
     public function testResponseWithStreamReadYieldingLessBytesThanAsked(): void
     {
+        $body = new SmallChunksStream();

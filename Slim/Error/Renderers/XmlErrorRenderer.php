@@ -43,3 +43,7 @@ class XmlErrorRenderer extends AbstractErrorRenderer
 
         return $xml;
     }
+
+    /**
+     * Returns a CDATA section with the given content.
+     */

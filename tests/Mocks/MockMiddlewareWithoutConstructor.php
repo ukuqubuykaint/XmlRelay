@@ -22,3 +22,5 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
     /**
      * @param ServerRequestInterface  $request
      * @param RequestHandlerInterface $handler
+     * @return ResponseInterface
+     */

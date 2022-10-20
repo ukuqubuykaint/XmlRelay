@@ -35,3 +35,7 @@ class MockSequenceMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $request = $request->withAddedHeader('X-SEQ-PRE-REQ-HANDLER', static::$id);
+        $response = $handler->handle($request);
+
+        return $response->withAddedHeader('X-SEQ-POST-REQ-HANDLER', static::$id);
+    }

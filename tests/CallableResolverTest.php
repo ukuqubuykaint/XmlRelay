@@ -266,3 +266,6 @@ class CallableResolverTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('Slim\\Tests\\Mocks\\RequestHandlerTest is not resolvable');
+
+        $resolver = new CallableResolver(); // No container injected
+        $resolver->resolveMiddleware(RequestHandlerTest::class);

@@ -303,3 +303,7 @@ class RouteTest extends TestCase
             ->createResponse()
             ->willReturn($responseProphecy->reveal())
             ->shouldBeCalledOnce();
+
+        $routeCollectorProxyProphecy = $this->prophesize(RouteCollectorProxyInterface::class);
+        $strategy = new RequestResponse();
+

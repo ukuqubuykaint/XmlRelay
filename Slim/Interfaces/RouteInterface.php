@@ -94,3 +94,7 @@ interface RouteInterface
      */
     public function setArgument(string $name, string $value): RouteInterface;
 
+    /**
+     * Replace route arguments
+     *
+     * @param array<string, string> $arguments

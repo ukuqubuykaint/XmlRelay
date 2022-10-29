@@ -136,3 +136,6 @@ class AbstractErrorRendererTest extends TestCase
             'Description must be HTML-escaped'
         );
     }
+
+    public function testJSONErrorRendererDisplaysErrorDetails()
+    {

@@ -35,3 +35,7 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
             }
         }
 
+        return $text;
+    }
+
+    private function formatExceptionFragment(Throwable $exception): string

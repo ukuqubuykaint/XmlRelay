@@ -590,3 +590,7 @@ class AppTest extends TestCase
     /********************************************************************************
      * Middleware
      *******************************************************************************/
+
+    public function testAddMiddleware(): void
+    {
+        $streamProphecy = $this->prophesize(StreamInterface::class);

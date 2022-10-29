@@ -29,3 +29,7 @@ class RequestHandlerTest implements RequestHandlerInterface
         // store the strategy that was used to call this handler - it's in the back trace
         $trace = debug_backtrace();
         if (isset($trace[1])) {
+            static::$strategy = $trace[1]['class'];
+        }
+
+        $psr7ObjectProvider = new PSR7ObjectProvider();

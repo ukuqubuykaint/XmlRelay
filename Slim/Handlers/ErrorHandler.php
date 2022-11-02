@@ -155,3 +155,5 @@ class ErrorHandler implements ErrorHandlerInterface
             return 200;
         }
 
+        if ($this->exception instanceof HttpException) {
+            return $this->exception->getCode();

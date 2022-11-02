@@ -307,3 +307,4 @@ class RouteTest extends TestCase
         $routeCollectorProxyProphecy = $this->prophesize(RouteCollectorProxyInterface::class);
         $strategy = new RequestResponse();
 
+        $called = 0;

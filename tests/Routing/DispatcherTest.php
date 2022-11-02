@@ -112,3 +112,7 @@ class DispatcherTest extends TestCase
         $dispatcher = new Dispatcher($routeCollector);
         $results = $dispatcher->getAllowedMethods('/');
 
+        $this->assertSame($methods, $results);
+    }
+
+    public function testDispatch()

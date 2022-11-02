@@ -131,3 +131,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $this->add($routingMiddleware);
         return $routingMiddleware;
     }
+

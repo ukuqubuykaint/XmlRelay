@@ -156,3 +156,7 @@ class BodyParsingMiddlewareTest extends TestCase
         $middleware = new BodyParsingMiddleware();
         $requestHandler = $this->createRequestHandler();
         $middleware->process($request, $requestHandler);
+
+        $this->assertEquals($expected, $requestHandler->request->getParsedBody());
+    }
+

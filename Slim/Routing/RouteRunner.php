@@ -68,3 +68,5 @@ class RouteRunner implements RequestHandlerInterface
                 $this->routeCollectorProxy->getBasePath()
             );
         }
+
+        /** @var Route<\Psr\Container\ContainerInterface|null> $route */

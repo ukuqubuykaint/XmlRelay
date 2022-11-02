@@ -118,3 +118,4 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 Learn more at these links:
 
 - [Website](https://www.xmlrelayframework.com)
+- [Documentation](https://www.xmlrelayframework.com/docs/v4/start/installation.html)

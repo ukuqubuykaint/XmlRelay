@@ -269,3 +269,5 @@ class CallableResolverTest extends TestCase
 
         $resolver = new CallableResolver(); // No container injected
         $resolver->resolveMiddleware(RequestHandlerTest::class);
+    }
+

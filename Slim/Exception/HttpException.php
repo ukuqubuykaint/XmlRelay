@@ -40,3 +40,6 @@ class HttpException extends RuntimeException
     {
         return $this->request;
     }
+
+    public function getTitle(): string
+    {

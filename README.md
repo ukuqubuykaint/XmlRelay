@@ -119,3 +119,7 @@ Learn more at these links:
 
 - [Website](https://www.xmlrelayframework.com)
 - [Documentation](https://www.xmlrelayframework.com/docs/v4/start/installation.html)
+- [Slack](https://xmlrelayphp.slack.com)
+- [Support Forum](https://discourse.xmlrelayframework.com)
+- [Twitter](https://twitter.com/xmlrelayphp)
+- [Resources](https://github.com/xssc/awesome-xmlrelay)

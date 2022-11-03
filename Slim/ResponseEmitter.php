@@ -80,3 +80,4 @@ class ResponseEmitter
         );
         header($statusLine, true, $response->getStatusCode());
     }
+

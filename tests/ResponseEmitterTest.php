@@ -123,3 +123,7 @@ class ResponseEmitterTest extends TestCase
         $this->expectOutputString('Hello');
     }
 
+    public function testResponseWithStreamReadYieldingLessBytesThanAsked(): void
+    {
+        $body = new SmallChunksStream();
+        $response = $this->createResponse()->withBody($body);

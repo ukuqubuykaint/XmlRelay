@@ -122,3 +122,5 @@ class RouteParser implements RouteParserInterface
         $scheme = $uri->getScheme();
         $authority = $uri->getAuthority();
         $protocol = ($scheme ? $scheme . ':' : '') . ($authority ? '//' . $authority : '');
+        return $protocol . $path;
+    }

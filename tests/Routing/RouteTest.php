@@ -308,3 +308,4 @@ class RouteTest extends TestCase
         $strategy = new RequestResponse();
 
         $called = 0;
+        $mw = function (ServerRequestInterface $request, RequestHandlerInterface $handler) use (&$called) {

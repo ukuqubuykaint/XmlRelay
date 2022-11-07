@@ -309,3 +309,6 @@ class RouteTest extends TestCase
 
         $called = 0;
         $mw = function (ServerRequestInterface $request, RequestHandlerInterface $handler) use (&$called) {
+            $called++;
+            return $handler->handle($request);
+        };

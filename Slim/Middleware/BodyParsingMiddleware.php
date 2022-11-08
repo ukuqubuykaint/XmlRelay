@@ -135,3 +135,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
         $this->registerBodyParser('application/xml', $xmlCallable);
         $this->registerBodyParser('text/xml', $xmlCallable);
     }
+
+    /**
+     * @return null|array<mixed>|object
+     */

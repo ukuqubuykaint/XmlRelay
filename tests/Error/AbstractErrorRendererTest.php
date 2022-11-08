@@ -163,3 +163,4 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame($output, json_encode(['message' => 'Slim Application Error']));
     }
 
+    public function testJSONErrorRendererSubstitutesInvalidUtf8()

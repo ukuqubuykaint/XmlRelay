@@ -118,3 +118,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     private function isMiddleware($toResolve): bool
     {
         return $toResolve instanceof MiddlewareInterface;
+    }
+

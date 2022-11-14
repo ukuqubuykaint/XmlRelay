@@ -158,3 +158,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
             private ?CallableResolverInterface $callableResolver;
 
+            public function __construct(

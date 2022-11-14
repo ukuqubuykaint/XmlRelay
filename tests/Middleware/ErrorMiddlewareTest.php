@@ -142,3 +142,5 @@ class ErrorMiddlewareTest extends TestCase
     public function testSuperclassExceptionHandlerHandlesExceptionWithSubclassExactMatch()
     {
         $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();

@@ -113,3 +113,6 @@ class Route implements RouteInterface, RequestHandlerInterface
      * @param ResponseFactoryInterface $responseFactory
      * @param CallableResolverInterface $callableResolver
      * @param TContainerInterface $container
+     * @param InvocationStrategyInterface|null $invocationStrategy
+     * @param RouteGroupInterface[] $groups The parent route groups
+     * @param int $identifier The route identifier

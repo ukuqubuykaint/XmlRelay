@@ -205,3 +205,5 @@ class RouteTest extends TestCase
         $strategyProphecy = $this->prophesize(InvocationStrategyInterface::class);
 
         $route = new Route(
+            ['GET'],
+            '/',

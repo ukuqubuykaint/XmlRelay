@@ -164,3 +164,4 @@ class AbstractErrorRendererTest extends TestCase
     }
 
     public function testJSONErrorRendererSubstitutesInvalidUtf8()
+    {

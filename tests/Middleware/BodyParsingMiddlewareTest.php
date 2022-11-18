@@ -161,3 +161,4 @@ class BodyParsingMiddlewareTest extends TestCase
     }
 
     public function testParsingWithARegisteredParser()
+    {

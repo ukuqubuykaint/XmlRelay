@@ -162,3 +162,6 @@ class BodyParsingMiddlewareTest extends TestCase
 
     public function testParsingWithARegisteredParser()
     {
+        $request = $this->createRequestWithBody('application/vnd.api+json', '{"foo":"bar"}');
+
+        $parsers = [

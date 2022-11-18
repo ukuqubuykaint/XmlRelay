@@ -125,3 +125,5 @@ class ResponseEmitter
     {
         if (in_array($response->getStatusCode(), [204, 205, 304], true)) {
             return true;
+        }
+        $stream = $response->getBody();

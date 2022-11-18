@@ -161,3 +161,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             public function __construct(
                 string $middleware,
                 RequestHandlerInterface $next,
+                ?ContainerInterface $container = null,

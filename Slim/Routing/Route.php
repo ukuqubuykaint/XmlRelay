@@ -153,3 +153,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         return $this->invocationStrategy;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function setInvocationStrategy(InvocationStrategyInterface $invocationStrategy): RouteInterface

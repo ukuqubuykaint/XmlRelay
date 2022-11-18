@@ -569,3 +569,5 @@ class AppTest extends TestCase
         $processSequence($app, $sequence, $processSequence);
 
         $routeCollector = $app->getRouteCollector();
+        $route = $routeCollector->lookupRoute('route0');
+

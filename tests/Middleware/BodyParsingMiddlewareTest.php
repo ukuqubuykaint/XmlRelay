@@ -160,3 +160,4 @@ class BodyParsingMiddlewareTest extends TestCase
         $this->assertEquals($expected, $requestHandler->request->getParsedBody());
     }
 
+    public function testParsingWithARegisteredParser()

@@ -109,3 +109,7 @@ class RouteParserTest extends TestCase
         $route->setName('test');
 
         $routeParser = $routeCollector->getRouteParser();
+        $results = $routeParser->relativeUrlFor('test', ['first' => 'hello', 'second' => 'world']);
+
+        $this->assertSame('/hello/world', $results);
+    }

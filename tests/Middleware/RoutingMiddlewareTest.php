@@ -123,3 +123,4 @@ class RoutingMiddlewareTest extends TestCase
         $requestHandlerProphecy = $this->prophesize(RequestHandlerInterface::class);
         /** @var RequestHandlerInterface $requestHandler */
         $requestHandler = $requestHandlerProphecy->reveal();
+

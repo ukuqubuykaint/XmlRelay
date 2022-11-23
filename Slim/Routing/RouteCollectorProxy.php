@@ -148,3 +148,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function options(string $pattern, $callable): RouteInterface
     {
+        return $this->map(['OPTIONS'], $pattern, $callable);

@@ -158,3 +158,6 @@ class RouteCollector implements RouteCollectorInterface
     public function getBasePath(): string
     {
         return $this->basePath;
+    }
+
+    /**

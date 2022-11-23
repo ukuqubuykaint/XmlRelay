@@ -108,3 +108,6 @@ abstract class TestCase extends PhpUnitTestCase
      * @return ResponseInterface
      */
     protected function createResponse(int $statusCode = 200, string $reasonPhrase = ''): ResponseInterface
+    {
+        $psr7ObjectProvider = new PSR7ObjectProvider();
+        return $psr7ObjectProvider->createResponse($statusCode, $reasonPhrase);

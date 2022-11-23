@@ -165,3 +165,4 @@ class AbstractErrorRendererTest extends TestCase
 
     public function testJSONErrorRendererSubstitutesInvalidUtf8()
     {
+        $exception = new Exception("Invalid \xB1\x31 UTF-8 sequence");

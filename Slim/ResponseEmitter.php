@@ -127,3 +127,5 @@ class ResponseEmitter
             return true;
         }
         $stream = $response->getBody();
+        $seekable = $stream->isSeekable();
+        if ($seekable) {

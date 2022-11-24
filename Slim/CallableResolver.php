@@ -120,3 +120,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         return $toResolve instanceof MiddlewareInterface;
     }
 
+    /**

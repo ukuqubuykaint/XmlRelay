@@ -123,3 +123,5 @@ Learn more at these links:
 - [Support Forum](https://discourse.xmlrelayframework.com)
 - [Twitter](https://twitter.com/xmlrelayphp)
 - [Resources](https://github.com/xssc/awesome-xmlrelay)
+
+## Security

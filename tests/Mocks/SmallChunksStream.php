@@ -103,3 +103,5 @@ class SmallChunksStream implements StreamInterface
     public function tell(): int
     {
         throw new Exception('not implemented');
+    }
+

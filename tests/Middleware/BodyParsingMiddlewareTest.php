@@ -165,3 +165,4 @@ class BodyParsingMiddlewareTest extends TestCase
         $request = $this->createRequestWithBody('application/vnd.api+json', '{"foo":"bar"}');
 
         $parsers = [
+            'application/vnd.api+json' => function ($input) {

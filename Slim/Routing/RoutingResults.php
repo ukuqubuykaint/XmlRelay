@@ -87,3 +87,7 @@ class RoutingResults
     /**
      * @note Arguments are captured from a path that RouteResolver has already decoded,
      * so we return them as-is with no URL decoding.
+     *
+     * @param bool $urlDecode Ignored. Retained for backwards compatibility.
+     * @return array<string, string>
+     *

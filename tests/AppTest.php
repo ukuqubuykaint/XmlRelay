@@ -571,3 +571,6 @@ class AppTest extends TestCase
         $routeCollector = $app->getRouteCollector();
         $route = $routeCollector->lookupRoute('route0');
 
+        $this->assertSame($expectedPath, $route->getPattern());
+    }
+

@@ -312,3 +312,6 @@ class RouteTest extends TestCase
             $called++;
             return $handler->handle($request);
         };
+
+        $routeGroup = new RouteGroup(
+            '/group',

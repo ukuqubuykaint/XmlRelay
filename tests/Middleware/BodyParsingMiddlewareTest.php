@@ -169,3 +169,6 @@ class BodyParsingMiddlewareTest extends TestCase
                 return ['data' => $input];
             },
         ];
+        $middleware = new BodyParsingMiddleware($parsers);
+        $requestHandler = $this->createRequestHandler();
+        $middleware->process($request, $requestHandler);

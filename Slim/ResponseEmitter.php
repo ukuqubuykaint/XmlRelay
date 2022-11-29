@@ -131,3 +131,4 @@ class ResponseEmitter
         if ($seekable) {
             $stream->rewind();
         }
+        return $seekable ? $stream->read(1) === '' : $stream->eof();

@@ -106,3 +106,7 @@ class RequestResponseNamedArgsTest extends TestCase
             'name' => 'world',
             'greeting' => 'hello',
         ];
+
+        $invocationStrategy = new RequestResponseNamedArgs();
+
+        $callback = function ($request, $response, ...$arguments) use ($args) {

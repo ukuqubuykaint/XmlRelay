@@ -258,3 +258,6 @@ class MiddlewareDispatcherTest extends TestCase
         $middlewareDispatcher->addCallable($callable);
 
         $request = $this->createServerRequest('/');
+        $middlewareDispatcher->handle($request);
+    }
+

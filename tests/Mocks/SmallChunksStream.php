@@ -105,3 +105,7 @@ class SmallChunksStream implements StreamInterface
         throw new Exception('not implemented');
     }
 
+    public function write($string): int
+    {
+        return strlen($string);
+    }

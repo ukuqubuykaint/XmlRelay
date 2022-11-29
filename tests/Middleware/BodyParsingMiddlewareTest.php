@@ -166,3 +166,6 @@ class BodyParsingMiddlewareTest extends TestCase
 
         $parsers = [
             'application/vnd.api+json' => function ($input) {
+                return ['data' => $input];
+            },
+        ];

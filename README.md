@@ -125,3 +125,7 @@ Learn more at these links:
 - [Resources](https://github.com/xssc/awesome-xmlrelay)
 
 ## Security
+
+If you discover security related issues, please email security@xmlrelayframework.com instead of using the issue tracker.
+
+## For enterprise

@@ -210,3 +210,4 @@ class AppFactoryTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testAppIsCreatedWithInjectedInstancesFromFunctionArguments()
+    {

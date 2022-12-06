@@ -29,3 +29,6 @@ class SlimHttpPsr17Factory extends Psr17Factory
             !((
                 $decoratedResponseFactory = new static::$responseFactoryClass($responseFactory, $streamFactory)
                 ) instanceof ResponseFactoryInterface
+            )
+        ) {
+            throw new RuntimeException(get_called_class() . ' could not instantiate a decorated response factory.');

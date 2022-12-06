@@ -24,3 +24,4 @@ interface MiddlewareDispatcherInterface extends RequestHandlerInterface
      * added one (last in, first out).
      *
      * @param MiddlewareInterface|string|callable $middleware
+     */

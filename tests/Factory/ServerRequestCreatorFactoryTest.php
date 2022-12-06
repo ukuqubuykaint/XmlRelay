@@ -51,3 +51,5 @@ class ServerRequestCreatorFactoryTest extends TestCase
     public function testCreateAppWithAllImplementations(string $psr17factory, string $expectedServerRequestClass)
     {
         Psr17FactoryProvider::setFactories([$psr17factory]);
+        ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+

@@ -47,3 +47,7 @@ class XmlErrorRenderer extends AbstractErrorRenderer
     /**
      * Returns a CDATA section with the given content.
      */
+    private function createCdataSection(string $content): string
+    {
+        return sprintf('<![CDATA[%s]]>', str_replace(']]>', ']]]]><![CDATA[>', $content));
+    }

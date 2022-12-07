@@ -124,3 +124,4 @@ class OutputBufferingMiddlewareTest extends TestCase
         } catch (Exception $e) {
             $this->assertSame('', ob_get_contents());
         }
+    }

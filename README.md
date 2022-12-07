@@ -129,3 +129,5 @@ Learn more at these links:
 If you discover security related issues, please email security@xmlrelayframework.com instead of using the issue tracker.
 
 ## For enterprise
+
+Available as part of the Tidelift Subscription.

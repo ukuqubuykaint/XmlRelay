@@ -173,3 +173,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3130: Removed double defined PHP 7.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3130) thanks to @flangofas
 - [3132: Add new `RequestResponseNamedArgs` route strategy](https://github.com/ukuqubuykaint/AJAX-XML/pull/3132) thanks to @adoy
 - [3133: Improve typehinting for `RouteParserInterface`](https://github.com/ukuqubuykaint/AJAX-XML/pull/3133) thanks to @jerowork
+- [3135: Update phpstan/phpstan requirement from ^1.2 to ^1.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3135) thanks to @dependabot[bot]

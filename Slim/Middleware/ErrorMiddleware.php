@@ -170,3 +170,6 @@ class ErrorMiddleware implements MiddlewareInterface
      * Pass true to $handleSubclasses to make the handler handle all subclasses of
      * the type as well. Pass an array of classes to make the same function handle multiple exceptions.
      *
+     * @param string|string[] $typeOrTypes Exception/Throwable name.
+     * ie: RuntimeException::class or an array of classes
+     * ie: [HttpNotFoundException::class, HttpMethodNotAllowedException::class]

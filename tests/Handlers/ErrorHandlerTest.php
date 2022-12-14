@@ -160,3 +160,4 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Accept', 'application/json');
 
         $xmlRequest = $this
+            ->createServerRequest('/not-defined', 'GET')

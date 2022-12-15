@@ -162,3 +162,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 string $middleware,
                 RequestHandlerInterface $next,
                 ?ContainerInterface $container = null,
+                ?CallableResolverInterface $callableResolver = null
+            ) {
+                $this->middleware = $middleware;
+                $this->next = $next;

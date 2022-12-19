@@ -13,3 +13,5 @@ namespace Slim\Exception;
 class HttpNotFoundException extends HttpSpecializedException
 {
     /**
+     * @var int
+     */

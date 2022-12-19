@@ -36,3 +36,4 @@ class RoutingMiddleware implements MiddlewareInterface
 
     /**
      * @throws HttpNotFoundException
+     * @throws HttpMethodNotAllowedException

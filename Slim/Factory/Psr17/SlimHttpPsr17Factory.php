@@ -32,3 +32,4 @@ class SlimHttpPsr17Factory extends Psr17Factory
             )
         ) {
             throw new RuntimeException(get_called_class() . ' could not instantiate a decorated response factory.');
+        }

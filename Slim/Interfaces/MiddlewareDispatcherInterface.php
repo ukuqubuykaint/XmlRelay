@@ -25,3 +25,4 @@ interface MiddlewareDispatcherInterface extends RequestHandlerInterface
      *
      * @param MiddlewareInterface|string|callable $middleware
      */
+    public function add($middleware): self;

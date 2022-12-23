@@ -43,3 +43,4 @@ class SlowPokeStream implements StreamInterface
         return $content;
     }
 
+    public function close(): void

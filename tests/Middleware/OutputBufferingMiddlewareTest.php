@@ -48,3 +48,6 @@ class OutputBufferingMiddlewareTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
 
         new OutputBufferingMiddleware($this->getStreamFactory(), 'foo');
+    }
+
+    public function testAppend()

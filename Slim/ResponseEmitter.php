@@ -81,3 +81,7 @@ class ResponseEmitter
         header($statusLine, true, $response->getStatusCode());
     }
 
+    /**
+     * Emit Body
+     */
+    private function emitBody(ResponseInterface $response): void

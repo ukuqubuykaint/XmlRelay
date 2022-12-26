@@ -211,3 +211,4 @@ class AppFactoryTest extends TestCase
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testAppIsCreatedWithInjectedInstancesFromFunctionArguments()
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

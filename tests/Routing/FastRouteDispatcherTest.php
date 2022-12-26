@@ -275,3 +275,7 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 7 ----- Test GET method fallback on HEAD route miss ------------------------------------>
+
+        $callback = function (RouteCollector $r) {
+            $r->addRoute('GET', '/user/{name}', 'handler0');

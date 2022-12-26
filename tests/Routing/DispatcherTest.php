@@ -119,3 +119,4 @@ class DispatcherTest extends TestCase
     {
         $methods = ['GET', 'POST'];
         $uri = '/hello/{name}';
+

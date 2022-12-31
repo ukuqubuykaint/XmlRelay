@@ -76,3 +76,6 @@ class ServerRequestCreatorFactory
         static::$psr17FactoryProvider = $psr17FactoryProvider;
     }
 
+    public static function setServerRequestCreator(ServerRequestCreatorInterface $serverRequestCreator): void
+    {
+        self::$serverRequestCreator = $serverRequestCreator;

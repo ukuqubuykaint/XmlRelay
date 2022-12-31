@@ -164,3 +164,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function getMethods(): array

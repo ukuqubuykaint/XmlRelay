@@ -113,3 +113,4 @@ abstract class TestCase extends PhpUnitTestCase
         return $psr7ObjectProvider->createResponse($statusCode, $reasonPhrase);
     }
 
+    /**

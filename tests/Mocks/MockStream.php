@@ -130,3 +130,6 @@ class MockStream implements StreamInterface
     {
         if (!isset($this->stream)) {
             return null;
+        }
+
+        $result = $this->stream;

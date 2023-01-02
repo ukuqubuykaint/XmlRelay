@@ -117,3 +117,7 @@ class Route implements RouteInterface, RequestHandlerInterface
      * @param RouteGroupInterface[] $groups The parent route groups
      * @param int $identifier The route identifier
      */
+    public function __construct(
+        array $methods,
+        string $pattern,
+        $callable,

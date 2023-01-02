@@ -22,3 +22,5 @@ class HttpTooManyRequestsException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Too many requests.';
+
+    protected string $title = '429 Too Many Requests';

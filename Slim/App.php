@@ -137,3 +137,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      *
      * @param bool                 $displayErrorDetails
      * @param bool                 $logErrors
+     * @param bool                 $logErrorDetails
+     * @param LoggerInterface|null $logger

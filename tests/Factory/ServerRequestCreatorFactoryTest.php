@@ -112,3 +112,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
 
         ServerRequestCreatorFactory::setServerRequestCreator($serverRequestCreatorProphecy->reveal());
 
+        $serverRequestCreator = ServerRequestCreatorFactory::create();

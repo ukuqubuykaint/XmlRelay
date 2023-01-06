@@ -126,3 +126,7 @@ class ResponseEmitterTest extends TestCase
     public function testResponseWithStreamReadYieldingLessBytesThanAsked(): void
     {
         $body = new SmallChunksStream();
+        $response = $this->createResponse()->withBody($body);
+
+        $responseEmitter = new ResponseEmitter($body::CHUNK_SIZE * 2);
+        $responseEmitter->emit($response);

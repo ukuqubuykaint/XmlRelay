@@ -133,3 +133,5 @@ class MockStream implements StreamInterface
         }
 
         $result = $this->stream;
+        unset($this->stream);
+        $this->size = $this->uri = null;

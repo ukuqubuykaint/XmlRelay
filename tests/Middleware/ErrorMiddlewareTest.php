@@ -146,3 +146,6 @@ class ErrorMiddlewareTest extends TestCase
         $callableResolver = $app->getCallableResolver();
         $logger = $this->getMockLogger();
         $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+        $app->add(function ($request, $handler) {
+            throw new LogicException('This is a LogicException...');
+        });

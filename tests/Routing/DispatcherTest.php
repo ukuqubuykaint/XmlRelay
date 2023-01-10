@@ -120,3 +120,5 @@ class DispatcherTest extends TestCase
         $methods = ['GET', 'POST'];
         $uri = '/hello/{name}';
 
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

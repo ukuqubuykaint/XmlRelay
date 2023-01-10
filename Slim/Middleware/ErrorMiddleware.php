@@ -173,3 +173,4 @@ class ErrorMiddleware implements MiddlewareInterface
      * @param string|string[] $typeOrTypes Exception/Throwable name.
      * ie: RuntimeException::class or an array of classes
      * ie: [HttpNotFoundException::class, HttpMethodNotAllowedException::class]
+     * @param string|callable|ErrorHandlerInterface $handler

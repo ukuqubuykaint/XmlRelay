@@ -212,3 +212,5 @@ class AppFactoryTest extends TestCase
     public function testAppIsCreatedWithInjectedInstancesFromFunctionArguments()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

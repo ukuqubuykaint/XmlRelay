@@ -91,3 +91,6 @@ class RoutingResults
      * @param bool $urlDecode Ignored. Retained for backwards compatibility.
      * @return array<string, string>
      *
+     * @psalm-suppress PossiblyUnusedParam
+     */
+    public function getRouteArguments(bool $urlDecode = true): array

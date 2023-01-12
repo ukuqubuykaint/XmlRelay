@@ -139,3 +139,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
     /**
      * @return null|array<mixed>|object
      */
+    protected function parseBody(ServerRequestInterface $request)
+    {
+        $mediaType = $this->getMediaType($request);

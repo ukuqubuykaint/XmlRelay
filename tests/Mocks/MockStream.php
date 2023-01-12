@@ -136,3 +136,6 @@ class MockStream implements StreamInterface
         unset($this->stream);
         $this->size = $this->uri = null;
         $this->readable = $this->writable = $this->seekable = false;
+
+        return $result;
+    }

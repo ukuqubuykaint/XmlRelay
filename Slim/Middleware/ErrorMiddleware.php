@@ -174,3 +174,7 @@ class ErrorMiddleware implements MiddlewareInterface
      * ie: RuntimeException::class or an array of classes
      * ie: [HttpNotFoundException::class, HttpMethodNotAllowedException::class]
      * @param string|callable|ErrorHandlerInterface $handler
+     *
+     * @see ErrorHandlerInterface
+     *
+     * 1. Instance of \Psr\Http\Message\ServerRequestInterface

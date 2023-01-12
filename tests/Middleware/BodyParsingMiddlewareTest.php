@@ -172,3 +172,7 @@ class BodyParsingMiddlewareTest extends TestCase
         $middleware = new BodyParsingMiddleware($parsers);
         $requestHandler = $this->createRequestHandler();
         $middleware->process($request, $requestHandler);
+
+        $this->assertSame(['data' => '{"foo":"bar"}'], $requestHandler->request->getParsedBody());
+    }
+

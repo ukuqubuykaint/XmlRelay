@@ -121,3 +121,6 @@ class Route implements RouteInterface, RequestHandlerInterface
         array $methods,
         string $pattern,
         $callable,
+        ResponseFactoryInterface $responseFactory,
+        CallableResolverInterface $callableResolver,
+        ?ContainerInterface $container = null,

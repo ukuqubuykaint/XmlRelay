@@ -142,3 +142,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
     protected function parseBody(ServerRequestInterface $request)
     {
         $mediaType = $this->getMediaType($request);
+        if ($mediaType === null) {
+            return null;
+        }

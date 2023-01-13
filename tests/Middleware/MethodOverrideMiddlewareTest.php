@@ -133,3 +133,5 @@ class MethodOverrideMiddlewareTest extends TestCase
         /** @var StreamInterface $body */
         $body = $bodyProphecy->reveal();
         $request = $request->withBody($body);
+
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(

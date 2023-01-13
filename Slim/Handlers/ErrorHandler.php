@@ -86,3 +86,6 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected Throwable $exception;
 
+    protected int $statusCode;
+
+    protected CallableResolverInterface $callableResolver;

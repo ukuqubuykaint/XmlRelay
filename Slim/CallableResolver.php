@@ -121,3 +121,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     }
 
     /**
+     * @throws RuntimeException

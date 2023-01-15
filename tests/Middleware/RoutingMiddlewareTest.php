@@ -127,3 +127,6 @@ class RoutingMiddlewareTest extends TestCase
         $middlewareDispatcher = $this->createMiddlewareDispatcher($requestHandler, null);
         $middlewareDispatcher->addMiddleware($routingMiddleware);
 
+        try {
+            $middlewareDispatcher->handle($request);
+            $this->fail('HTTP route should not have been found');

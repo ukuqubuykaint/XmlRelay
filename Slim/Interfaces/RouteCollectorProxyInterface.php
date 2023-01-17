@@ -76,3 +76,5 @@ interface RouteCollectorProxyInterface
 
     /**
      * Add DELETE route
+     *
+     * @param string $pattern The route URI pattern

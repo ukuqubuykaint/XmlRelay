@@ -16,3 +16,4 @@ interface DispatcherInterface
 {
     /**
      * Get routing results for a given request method and uri
+     */

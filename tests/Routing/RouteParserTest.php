@@ -62,3 +62,6 @@ class RouteParserTest extends TestCase
                 [],
                 '/archive/2015',
             ],
+            'with argument and optional parameter' => [
+                false,
+                '/archive/{year}[/{month:[\d:{2}]}[/d/{day}]]',

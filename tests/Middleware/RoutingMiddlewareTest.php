@@ -41,3 +41,6 @@ class RoutingMiddlewareTest extends TestCase
 
     public function testRouteIsStoredOnSuccessfulMatch()
     {
+        $responseFactory = $this->getResponseFactory();
+        $middleware = (function (ServerRequestInterface $request) use ($responseFactory) {
+            // route is available

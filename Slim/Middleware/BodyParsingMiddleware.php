@@ -83,3 +83,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
     }
 
     /**
+     * @param string $mediaType A HTTP media type (excluding content-type params).
+     * @throws RuntimeException

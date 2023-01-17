@@ -50,3 +50,7 @@ class SlimHttpServerRequestCreatorTest extends TestCase
             ->createServerRequestFromGlobals()
             ->willReturn($serverRequestProphecy->reveal())
             ->shouldBeCalledOnce();
+
+        $slimHttpServerRequestCreator = new SlimHttpServerRequestCreator($serverRequestCreatorProphecy->reveal());
+
+        $this->assertInstanceOf(ServerRequest::class, $slimHttpServerRequestCreator->createServerRequestFromGlobals());

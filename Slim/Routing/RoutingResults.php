@@ -94,3 +94,4 @@ class RoutingResults
      * @psalm-suppress PossiblyUnusedParam
      */
     public function getRouteArguments(bool $urlDecode = true): array
+    {

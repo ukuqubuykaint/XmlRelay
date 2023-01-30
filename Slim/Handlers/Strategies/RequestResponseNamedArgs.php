@@ -30,3 +30,4 @@ class RequestResponseNamedArgs implements InvocationStrategyInterface
     public function __invoke(
         callable $callable,
         ServerRequestInterface $request,
+        ResponseInterface $response,

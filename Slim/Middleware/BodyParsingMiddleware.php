@@ -145,3 +145,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
         if ($mediaType === null) {
             return null;
         }
+

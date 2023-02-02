@@ -39,3 +39,5 @@ jobs:
 
       - name: Install dependencies with Composer
         run: composer update --prefer-dist --no-progress --no-interaction --ansi ${{ matrix.composer-options }}
+
+      - name: Coding standards

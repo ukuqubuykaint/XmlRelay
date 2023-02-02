@@ -14,3 +14,4 @@ use Slim\Factory\Psr17\Psr17Factory;
 
 class MockPsr17Factory extends Psr17Factory
 {
+    protected static string $responseFactoryClass = '';

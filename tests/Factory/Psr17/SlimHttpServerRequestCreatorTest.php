@@ -54,3 +54,5 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $slimHttpServerRequestCreator = new SlimHttpServerRequestCreator($serverRequestCreatorProphecy->reveal());
 
         $this->assertInstanceOf(ServerRequest::class, $slimHttpServerRequestCreator->createServerRequestFromGlobals());
+    }
+

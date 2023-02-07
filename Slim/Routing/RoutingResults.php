@@ -49,3 +49,4 @@ class RoutingResults
         string $uri,
         int $routeStatus,
         ?string $routeIdentifier = null,
+        array $routeArguments = []

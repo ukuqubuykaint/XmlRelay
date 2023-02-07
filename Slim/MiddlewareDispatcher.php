@@ -101,3 +101,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             'A middleware must be an object/class name referencing an implementation of ' .
             'MiddlewareInterface or a callable with a matching signature.'
         );
+    }
+
+    /**
+     * Add a new middleware to the stack

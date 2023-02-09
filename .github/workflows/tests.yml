@@ -41,3 +41,4 @@ jobs:
         run: composer update --prefer-dist --no-progress --no-interaction --ansi ${{ matrix.composer-options }}
 
       - name: Coding standards
+        if: matrix.analysis

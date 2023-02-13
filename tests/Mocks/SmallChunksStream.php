@@ -51,3 +51,5 @@ class SmallChunksStream implements StreamInterface
     {
         return $this->amountToRead === 0;
     }
+
+    public function getContents(): string

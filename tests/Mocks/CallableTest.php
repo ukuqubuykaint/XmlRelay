@@ -20,3 +20,4 @@ class CallableTest
 
     public function __construct($container = null)
     {
+        static::$CalledContainer = $container;

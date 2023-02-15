@@ -133,3 +133,7 @@ class ResponseEmitterTest extends TestCase
 
         $this->expectOutputString(str_repeat('.', $body->getSize()));
     }
+
+    public function testResponseReplacesPreviouslySetHeaders(): void
+    {
+        $response = $this

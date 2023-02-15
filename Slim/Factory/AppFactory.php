@@ -124,3 +124,4 @@ class AppFactory
     /**
      * @throws RuntimeException
      */
+    public static function determineResponseFactory(): ResponseFactoryInterface

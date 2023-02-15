@@ -278,3 +278,6 @@ class CallableResolverTest extends TestCase
 
         $obj = new RequestHandlerTest();
         $resolver = new CallableResolver(); // No container injected
+        $resolver->resolve($obj);
+    }
+

@@ -35,3 +35,4 @@ class SlimHttpPsr17Factory extends Psr17Factory
         }
 
         return $decoratedResponseFactory;
+    }

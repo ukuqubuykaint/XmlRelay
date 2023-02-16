@@ -45,3 +45,4 @@ class RouteRunner implements RequestHandlerInterface
     }
 
     /**
+     * This request handler is instantiated automatically in App::__construct()

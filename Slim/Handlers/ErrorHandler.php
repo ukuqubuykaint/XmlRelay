@@ -161,3 +161,6 @@ class ErrorHandler implements ErrorHandlerInterface
 
         return 500;
     }
+
+    /**
+     * Determine which content type we know about is wanted using Accept header

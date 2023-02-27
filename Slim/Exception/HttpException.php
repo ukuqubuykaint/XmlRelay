@@ -60,3 +60,5 @@ class HttpException extends RuntimeException
     public function setDescription(string $description): self
     {
         $this->description = $description;
+        return $this;
+    }

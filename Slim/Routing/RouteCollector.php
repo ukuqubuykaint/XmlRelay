@@ -168,3 +168,4 @@ class RouteCollector implements RouteCollectorInterface
         $this->basePath = $basePath;
 
         return $this;
+    }

@@ -178,3 +178,5 @@ class ErrorMiddleware implements MiddlewareInterface
      * @see ErrorHandlerInterface
      *
      * 1. Instance of \Psr\Http\Message\ServerRequestInterface
+     * 2. Instance of \Throwable
+     * 3. Boolean $displayErrorDetails

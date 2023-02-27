@@ -52,3 +52,5 @@ abstract class TestCase extends PhpUnitTestCase
     /**
      * @return StreamFactoryInterface
      */
+    protected function getStreamFactory(): StreamFactoryInterface
+    {

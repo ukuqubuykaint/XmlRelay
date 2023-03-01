@@ -281,3 +281,7 @@ class CallableResolverTest extends TestCase
         $resolver->resolve($obj);
     }
 
+    public function testRouteObjPsrRequestHandlerClass(): void
+    {
+        $obj = new RequestHandlerTest();
+        $request = $this->createServerRequest('/', 'GET');

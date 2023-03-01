@@ -322,3 +322,5 @@ class RouteTest extends TestCase
         $routeGroup->add($mw);
         $groups = [$routeGroup];
 
+        $route = new Route(
+            ['GET'],

@@ -264,3 +264,4 @@ class MiddlewareDispatcherTest extends TestCase
     public function testResolvableReturnsInstantiatedObject(): void
     {
         MockMiddlewareWithoutConstructor::$CalledCount = 0;
+

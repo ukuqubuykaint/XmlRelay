@@ -127,3 +127,7 @@ class AppFactory
     public static function determineResponseFactory(): ResponseFactoryInterface
     {
         if (static::$responseFactory) {
+            if (static::$streamFactory) {
+                return static::attemptResponseFactoryDecoration(static::$responseFactory, static::$streamFactory);
+            }
+            return static::$responseFactory;

@@ -594,3 +594,6 @@ class AppTest extends TestCase
     public function testAddMiddleware(): void
     {
         $streamProphecy = $this->prophesize(StreamInterface::class);
+        $streamProphecy->__toString()->willReturn('Hello World');
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

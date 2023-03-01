@@ -128,3 +128,5 @@ class ResponseEmitterTest extends TestCase
         $body = new SmallChunksStream();
         $response = $this->createResponse()->withBody($body);
 
+        $responseEmitter = new ResponseEmitter($body::CHUNK_SIZE * 2);
+        $responseEmitter->emit($response);

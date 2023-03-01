@@ -60,3 +60,7 @@ class Dispatcher implements DispatcherInterface
     /**
      * {@inheritdoc}
      */
+    public function dispatch(string $method, string $uri): RoutingResults
+    {
+        $dispatcher = $this->createDispatcher();
+        $results = $dispatcher->dispatch($method, $uri);

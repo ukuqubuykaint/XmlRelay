@@ -62,3 +62,4 @@ class RouteParser implements RouteParserInterface
                     continue;
                 }
 
+                /** @var string[] $segment */

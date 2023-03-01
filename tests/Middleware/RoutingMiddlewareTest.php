@@ -44,3 +44,5 @@ class RoutingMiddlewareTest extends TestCase
         $responseFactory = $this->getResponseFactory();
         $middleware = (function (ServerRequestInterface $request) use ($responseFactory) {
             // route is available
+            $route = $request->getAttribute(RouteContext::ROUTE);
+            $this->assertNotNull($route);

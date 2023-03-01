@@ -28,3 +28,5 @@ class MockMiddlewareWithConstructor implements MiddlewareInterface
      * @param ContainerInterface|null $container
      */
     public function __construct(?ContainerInterface $container = null)
+    {
+        self::$container = $container;

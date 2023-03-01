@@ -68,3 +68,6 @@ abstract class Psr17Factory implements Psr17FactoryInterface
             throw new RuntimeException(get_called_class() . ' could not instantiate a server request creator.');
         }
 
+        return new ServerRequestCreator(static::$serverRequestCreatorClass, static::$serverRequestCreatorMethod);
+    }
+

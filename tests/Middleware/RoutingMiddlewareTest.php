@@ -130,3 +130,5 @@ class RoutingMiddlewareTest extends TestCase
         try {
             $middlewareDispatcher->handle($request);
             $this->fail('HTTP route should not have been found');
+        } catch (HttpNotFoundException $exception) {
+            $request = $exception->getRequest();

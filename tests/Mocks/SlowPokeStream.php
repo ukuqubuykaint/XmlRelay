@@ -44,3 +44,4 @@ class SlowPokeStream implements StreamInterface
     }
 
     public function close(): void
+    {

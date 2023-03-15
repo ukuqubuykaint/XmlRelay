@@ -597,3 +597,4 @@ class AppTest extends TestCase
         $streamProphecy->__toString()->willReturn('Hello World');
 
         $responseProphecy = $this->prophesize(ResponseInterface::class);
+        $responseProphecy->getBody()->willReturn($streamProphecy->reveal());

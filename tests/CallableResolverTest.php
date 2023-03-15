@@ -285,3 +285,7 @@ class CallableResolverTest extends TestCase
     {
         $obj = new RequestHandlerTest();
         $request = $this->createServerRequest('/', 'GET');
+        $resolver = new CallableResolver(); // No container injected
+        $callableRoute = $resolver->resolveRoute($obj);
+        $callableRoute($request);
+        $this->assertSame(1, RequestHandlerTest::$CalledCount);

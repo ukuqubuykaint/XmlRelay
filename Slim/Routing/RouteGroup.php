@@ -56,3 +56,7 @@ class RouteGroup implements RouteGroupInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function collectRoutes(): RouteGroupInterface
+    {
+        if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {

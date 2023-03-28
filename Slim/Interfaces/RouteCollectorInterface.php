@@ -83,3 +83,6 @@ interface RouteCollectorInterface
      * Lookup a route via the route's unique identifier
      *
      * @throws RuntimeException   If route of identifier does not exist
+     */
+    public function lookupRoute(string $identifier): RouteInterface;
+

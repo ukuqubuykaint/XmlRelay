@@ -148,3 +148,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         // Check if this specific media type has a parser registered first
         if (!isset($this->bodyParsers[$mediaType])) {
+            // If not, look for a media type with a structured syntax suffix (RFC 6839)
+            $parts = explode('+', $mediaType);

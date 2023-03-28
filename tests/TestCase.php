@@ -116,3 +116,4 @@ abstract class TestCase extends PhpUnitTestCase
     /**
      * @param string $contents
      * @return StreamInterface
+     */

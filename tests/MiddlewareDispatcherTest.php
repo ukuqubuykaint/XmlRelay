@@ -265,3 +265,7 @@ class MiddlewareDispatcherTest extends TestCase
     {
         MockMiddlewareWithoutConstructor::$CalledCount = 0;
 
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, null);
+        $middlewareDispatcher->addDeferred(MockMiddlewareWithoutConstructor::class);
+

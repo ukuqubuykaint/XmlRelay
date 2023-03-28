@@ -285,3 +285,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('HEAD', '/static1', 'handler4');
         };
 
+        $method = 'HEAD';
+        $uri = '/user/rdlowrey';
+        $handler = 'handler0';
+        $argDict = ['name' => 'rdlowrey'];

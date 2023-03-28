@@ -146,3 +146,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
             return null;
         }
 
+        // Check if this specific media type has a parser registered first
+        if (!isset($this->bodyParsers[$mediaType])) {

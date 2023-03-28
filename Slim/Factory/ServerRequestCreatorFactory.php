@@ -79,3 +79,6 @@ class ServerRequestCreatorFactory
     public static function setServerRequestCreator(ServerRequestCreatorInterface $serverRequestCreator): void
     {
         self::$serverRequestCreator = $serverRequestCreator;
+    }
+
+    public static function setSlimHttpDecoratorsAutomaticDetection(bool $enabled): void

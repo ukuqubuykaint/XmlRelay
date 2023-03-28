@@ -138,3 +138,7 @@ The maintainers of `XmlRelay` and thousands of other packages are working with T
 
 ### Code Contributors
 
+This project exists thanks to all the people who contribute. [Contribute](CONTRIBUTING.md).
+<a href="https://github.com/ukuqubuykaint/AJAX-XML/graphs/contributors">
+    <img src="https://opencollective.com/xmlrelayphp/contributors.svg?width=890&button=false" />
+</a>

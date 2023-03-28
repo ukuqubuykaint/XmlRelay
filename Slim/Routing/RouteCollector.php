@@ -174,3 +174,7 @@ class RouteCollector implements RouteCollectorInterface
      * {@inheritdoc}
      */
     public function getRoutes(): array
+    {
+        return $this->routes;
+    }
+

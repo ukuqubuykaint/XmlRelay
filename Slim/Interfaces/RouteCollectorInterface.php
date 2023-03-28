@@ -86,3 +86,6 @@ interface RouteCollectorInterface
      */
     public function lookupRoute(string $identifier): RouteInterface;
 
+    /**
+     * Add route group
+     * @param string|callable $callable

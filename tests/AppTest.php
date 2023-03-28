@@ -582,3 +582,6 @@ class AppTest extends TestCase
         $responseFactoryInterface = $responseFactoryProphecy->reveal();
         $app = new App($responseFactoryInterface);
         $group = $app->group('/foo', function () {
+        });
+
+        $this->assertSame('/foo', $group->getPattern());

@@ -151,3 +151,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         return $this->map(['OPTIONS'], $pattern, $callable);
     }
 
+    /**
+     * {@inheritdoc}

@@ -179,3 +179,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3139: Fixed #1730 (reintroduced in 4.x)](https://github.com/ukuqubuykaint/AJAX-XML/pull/3139) thanks to @adoy
 - [3145: Update phpstan/phpstan requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3145) thanks to @dependabot[bot]
 - [3146: Inherit HttpException from RuntimeException](https://github.com/ukuqubuykaint/AJAX-XML/pull/3146) thanks to @nbayramberdiyev
+- [3148: Upgrade to HTML5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3148) thanks to @nbayramberdiyev

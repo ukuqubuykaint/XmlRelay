@@ -175,3 +175,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {
                     $callable = $this->callableResolver->resolveMiddleware($this->middleware);
                     /** @var ResponseInterface */
+                    return $callable($request, $this->next);
+                }
+
+                $callable = null;

@@ -585,3 +585,4 @@ class AppTest extends TestCase
         });
 
         $this->assertSame('/foo', $group->getPattern());
+    }

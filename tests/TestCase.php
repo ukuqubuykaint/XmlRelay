@@ -117,3 +117,7 @@ abstract class TestCase extends PhpUnitTestCase
      * @param string $contents
      * @return StreamInterface
      */
+    protected function createStream(string $contents = ''): StreamInterface
+    {
+        $psr7ObjectProvider = new PSR7ObjectProvider();
+        return $psr7ObjectProvider->createStream($contents);

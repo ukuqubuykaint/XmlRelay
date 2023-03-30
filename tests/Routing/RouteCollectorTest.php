@@ -127,3 +127,6 @@ class RouteCollectorTest extends TestCase
     }
 
     public function testRemoveNamedRouteWithARouteThatDoesNotExist()
+    {
+        $this->expectException(RuntimeException::class);
+

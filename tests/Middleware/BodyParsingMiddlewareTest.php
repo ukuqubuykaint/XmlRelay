@@ -178,3 +178,7 @@ class BodyParsingMiddlewareTest extends TestCase
 
     public function testParsingFailsWhenAnInvalidTypeIsReturned()
     {
+        $request = $this->createRequestWithBody('application/json;charset=utf8', '{"foo":"bar"}');
+
+        $parsers = [
+            'application/json' => function ($input) {

@@ -116,3 +116,6 @@ interface RouteInterface
      * @param array<string, string> $arguments
      */
     public function prepare(array $arguments): self;
+
+    /**
+     * Run route

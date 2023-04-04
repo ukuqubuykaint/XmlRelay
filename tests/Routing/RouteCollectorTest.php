@@ -130,3 +130,4 @@ class RouteCollectorTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

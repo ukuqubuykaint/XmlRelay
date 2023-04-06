@@ -116,3 +116,7 @@ class AppFactoryTest extends TestCase
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testDetermineResponseFactoryThrowsRuntimeException()
     {
+        $this->expectException(RuntimeException::class);
+
+        Psr17FactoryProvider::setFactories([]);
+        AppFactory::create();

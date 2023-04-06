@@ -20,3 +20,5 @@ class MockMiddlewareSlimCallable
      * @param ServerRequestInterface  $request
      * @param RequestHandlerInterface $handler
      * @return ResponseInterface
+     */
+    public function custom(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

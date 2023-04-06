@@ -39,3 +39,6 @@ class OutputBufferingMiddleware implements MiddlewareInterface
     public function __construct(StreamFactoryInterface $streamFactory, string $style = 'append')
     {
         $this->streamFactory = $streamFactory;
+        $this->style = $style;
+
+        if (!in_array($style, [static::APPEND, static::PREPEND], true)) {

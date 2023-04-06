@@ -66,3 +66,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * {@inheritdoc}
      */
     public function resolveRoute($toResolve): callable
+    {
+        return $this->resolveByPredicate($toResolve, [$this, 'isRoute'], 'handle');
+    }

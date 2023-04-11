@@ -42,3 +42,5 @@ jobs:
 
       - name: Coding standards
         if: matrix.analysis
+        run: vendor/bin/phpcs
+

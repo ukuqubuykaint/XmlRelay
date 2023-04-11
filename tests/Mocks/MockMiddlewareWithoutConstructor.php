@@ -28,3 +28,5 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
     {
         $appendToOutput = $request->getAttribute('appendToOutput');
         if ($appendToOutput !== null) {
+            $appendToOutput('Hello World');
+        }

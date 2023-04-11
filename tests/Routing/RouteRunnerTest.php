@@ -40,3 +40,7 @@ class RouteRunnerTest extends TestCase
 
         $routeCollector = new RouteCollector($responseFactory, $callableResolver);
         $routeCollector->map(['GET'], '/hello/{name}', $handler);
+
+        $routeParser = new RouteParser($routeCollector);
+        $routeResolver = new RouteResolver($routeCollector);
+

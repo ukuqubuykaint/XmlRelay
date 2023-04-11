@@ -18,3 +18,5 @@ interface DispatcherInterface
      * Get routing results for a given request method and uri
      */
     public function dispatch(string $method, string $uri): RoutingResults;
+
+    /**

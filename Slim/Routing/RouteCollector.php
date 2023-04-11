@@ -88,3 +88,7 @@ class RouteCollector implements RouteCollectorInterface
     public function __construct(
         ResponseFactoryInterface $responseFactory,
         CallableResolverInterface $callableResolver,
+        ?ContainerInterface $container = null,
+        ?InvocationStrategyInterface $defaultInvocationStrategy = null,
+        ?RouteParserInterface $routeParser = null,
+        ?string $cacheFile = null

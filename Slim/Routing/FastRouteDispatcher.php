@@ -37,3 +37,7 @@ class FastRouteDispatcher extends GroupCountBased
             return $routingResults;
         }
 
+        // For HEAD requests, attempt fallback to GET
+        if ($httpMethod === 'HEAD') {
+            $routingResults = $this->routingResults('GET', $uri);
+            if ($routingResults[0] === self::FOUND) {

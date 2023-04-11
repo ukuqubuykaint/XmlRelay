@@ -106,3 +106,4 @@ class ErrorMiddlewareTest extends TestCase
     }
 
     public function testSetDefaultErrorHandlerThrowsException()
+    {

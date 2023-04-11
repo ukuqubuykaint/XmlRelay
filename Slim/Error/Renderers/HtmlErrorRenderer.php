@@ -62,3 +62,6 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
 
         return $html;
     }
+
+    public function renderHtmlBody(string $title = '', string $html = ''): string
+    {

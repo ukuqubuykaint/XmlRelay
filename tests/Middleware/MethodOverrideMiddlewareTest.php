@@ -138,3 +138,5 @@ class MethodOverrideMiddlewareTest extends TestCase
             $this->createMock(RequestHandler::class),
             null
         );
+        $middlewareDispatcher->addCallable($middleware);
+        $middlewareDispatcher->addMiddleware($methodOverrideMiddleware);

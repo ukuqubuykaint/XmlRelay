@@ -156,3 +156,6 @@ class ErrorMiddlewareTest extends TestCase
         })->bindTo($this), true); // - true; handle subclass but also LogicException explicitly
         $middleware->setDefaultErrorHandler((function () {
             $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;
+        })->bindTo($this));

@@ -326,3 +326,4 @@ class RouteTest extends TestCase
             ['GET'],
             '/',
             $callable,
+            $responseFactoryProphecy->reveal(),

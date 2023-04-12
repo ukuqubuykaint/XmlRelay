@@ -182,3 +182,5 @@ class BodyParsingMiddlewareTest extends TestCase
 
         $parsers = [
             'application/json' => function ($input) {
+                return 10; // invalid - should return null, array or object
+            },

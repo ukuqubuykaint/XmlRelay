@@ -178,3 +178,6 @@ class RouteCollectorProxyTest extends TestCase
             $callableResolverProphecy->reveal(),
             null,
             $routeCollectorProphecy->reveal()
+        );
+
+        $route = $routeCollectorProxy->post($pattern, $callable);

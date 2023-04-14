@@ -63,3 +63,7 @@ class RouteGroup implements RouteGroupInterface
             $callable = $this->callableResolver->resolveRoute($this->callable);
         } else {
             $callable = $this->callableResolver->resolve($this->callable);
+        }
+        $callable($this->routeCollectorProxy);
+        return $this;
+    }

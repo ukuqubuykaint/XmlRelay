@@ -107,3 +107,7 @@ class ErrorMiddlewareTest extends TestCase
 
     public function testSetDefaultErrorHandlerThrowsException()
     {
+        $this->expectException(RuntimeException::class);
+
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);

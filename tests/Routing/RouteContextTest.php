@@ -52,3 +52,5 @@ class RouteContextTest extends TestCase
         $this->assertNotNull($routeContext->getRouteParser());
         $this->assertNotNull($routeContext->getRoutingResults());
         $this->assertNotNull($routeContext->getBasePath());
+    }
+

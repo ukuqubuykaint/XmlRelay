@@ -36,3 +36,7 @@ class NyholmPsr17Factory extends Psr17Factory
 
     /**
      * {@inheritdoc}
+     */
+    public static function isServerRequestCreatorAvailable(): bool
+    {
+        return (

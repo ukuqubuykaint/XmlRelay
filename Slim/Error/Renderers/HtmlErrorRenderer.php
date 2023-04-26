@@ -65,3 +65,5 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
 
     public function renderHtmlBody(string $title = '', string $html = ''): string
     {
+        $title = htmlspecialchars($title, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+

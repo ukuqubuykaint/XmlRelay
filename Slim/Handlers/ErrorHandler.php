@@ -89,3 +89,4 @@ class ErrorHandler implements ErrorHandlerInterface
     protected int $statusCode;
 
     protected CallableResolverInterface $callableResolver;
+

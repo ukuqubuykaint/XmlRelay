@@ -180,3 +180,6 @@ class RouteCollector implements RouteCollectorInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function removeNamedRoute(string $name): RouteCollectorInterface
+    {

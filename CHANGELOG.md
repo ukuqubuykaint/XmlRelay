@@ -183,3 +183,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3172: Update nyholm/psr7 requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3172) thanks to @dependabot[bot]
 
 ## 4.9.0 - 2021-10-05
+
+- [3058: Implement exception class for Gone Http error](https://github.com/ukuqubuykaint/AJAX-XML/pull/3058) thanks to @TheKernelPanic
+- [3086: Update xmlrelay/psr7 requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3086) thanks to @dependabot[bot]

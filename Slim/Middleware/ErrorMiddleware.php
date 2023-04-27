@@ -187,3 +187,4 @@ class ErrorMiddleware implements MiddlewareInterface
      * \Psr\Http\Message\ResponseInterface.
      *
      */
+    public function setErrorHandler($typeOrTypes, $handler, bool $handleSubclasses = false): self

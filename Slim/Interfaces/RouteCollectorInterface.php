@@ -89,3 +89,7 @@ interface RouteCollectorInterface
     /**
      * Add route group
      * @param string|callable $callable
+     */
+    public function group(string $pattern, $callable): RouteGroupInterface;
+
+    /**

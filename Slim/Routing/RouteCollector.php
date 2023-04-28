@@ -183,3 +183,5 @@ class RouteCollector implements RouteCollectorInterface
      */
     public function removeNamedRoute(string $name): RouteCollectorInterface
     {
+        $route = $this->getNamedRoute($name);
+

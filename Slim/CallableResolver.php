@@ -126,3 +126,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * @return array{object, string|null} [Instance, Method Name]
      */
     private function resolveSlimNotation(string $toResolve): array
+    {
+        /** @psalm-suppress ArgumentTypeCoercion */

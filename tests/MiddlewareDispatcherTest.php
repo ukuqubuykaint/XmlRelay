@@ -273,3 +273,4 @@ class MiddlewareDispatcherTest extends TestCase
         $middlewareDispatcher->handle($request);
 
         $this->assertSame(1, MockMiddlewareWithoutConstructor::$CalledCount);
+        $this->assertSame(1, $handler->getCalledCount());

@@ -170,3 +170,5 @@ class AbstractErrorRendererTest extends TestCase
         $renderer = new JsonErrorRenderer();
         $output = $renderer->__invoke($exception, true);
 
+        $this->assertNotSame('', $output);
+        $decoded = json_decode($output, true);

@@ -97,3 +97,6 @@ class RoutingResults
     {
         return $this->routeArguments;
     }
+
+    /**
+     * @return string[]

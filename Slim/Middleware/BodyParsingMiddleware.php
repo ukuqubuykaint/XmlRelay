@@ -151,3 +151,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
             // If not, look for a media type with a structured syntax suffix (RFC 6839)
             $parts = explode('+', $mediaType);
             if (count($parts) >= 2) {
+                $mediaType = 'application/' . $parts[count($parts) - 1];
+            }
+        }
+

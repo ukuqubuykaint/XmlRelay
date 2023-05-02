@@ -30,3 +30,5 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
         if ($appendToOutput !== null) {
             $appendToOutput('Hello World');
         }
+
+        static::$CalledCount++;

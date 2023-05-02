@@ -63,3 +63,7 @@ class DispatcherTest extends TestCase
         $this->assertFileExists($cacheFile, 'cache file was not created');
 
         $routeCollector2 = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $routeCollector2->setCacheFile($cacheFile);
+        $dispatcher2 = new Dispatcher($routeCollector2);
+
+        $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');

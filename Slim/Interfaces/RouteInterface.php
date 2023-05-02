@@ -63,3 +63,7 @@ interface RouteInterface
      */
     public function getName(): ?string;
 
+    /**
+     * Set route name
+     *
+     * @return static

@@ -31,3 +31,6 @@ class RequestResponseNamedArgs implements InvocationStrategyInterface
         callable $callable,
         ServerRequestInterface $request,
         ResponseInterface $response,
+        array $routeArguments
+    ): ResponseInterface {
+        /** @var ResponseInterface */

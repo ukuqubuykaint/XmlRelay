@@ -12,3 +12,4 @@ interface RouteResolverInterface
      * @param string $uri Should be ServerRequestInterface::getUri()->getPath()
      */
     public function computeRoutingResults(string $uri, string $method): RoutingResults;
+

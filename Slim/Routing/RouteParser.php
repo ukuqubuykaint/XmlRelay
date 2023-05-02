@@ -66,3 +66,5 @@ class RouteParser implements RouteParserInterface
                 /*
                  * If we don't have a data element for this segment in the provided $data
                  * we cancel testing to move onto the next expression with a less specific item
+                 */
+                if (!array_key_exists($segment[0], $data)) {

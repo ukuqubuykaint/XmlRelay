@@ -120,3 +120,6 @@ class AppFactoryTest extends TestCase
 
         Psr17FactoryProvider::setFactories([]);
         AppFactory::create();
+    }
+
+    public function testSetPsr17FactoryProvider()

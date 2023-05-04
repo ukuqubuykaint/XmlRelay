@@ -131,3 +131,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         preg_match(CallableResolver::$callablePattern, $toResolve, $matches);
         [$class, $method] = $matches ? [$matches[1], $matches[2]] : [$toResolve, null];
 
+        if ($this->container && $this->container->has($class)) {
+            $instance = $this->container->get($class);

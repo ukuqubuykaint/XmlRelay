@@ -35,3 +35,6 @@ class RouteResolver implements RouteResolverInterface
     }
 
     /**
+     * @param string $uri Should be $request->getUri()->getPath()
+     */
+    public function computeRoutingResults(string $uri, string $method): RoutingResults

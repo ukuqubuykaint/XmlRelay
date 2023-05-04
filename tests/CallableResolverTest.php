@@ -289,3 +289,7 @@ class CallableResolverTest extends TestCase
         $callableRoute = $resolver->resolveRoute($obj);
         $callableRoute($request);
         $this->assertSame(1, RequestHandlerTest::$CalledCount);
+    }
+
+    public function testMiddlewareObjPsrRequestHandlerClass(): void
+    {

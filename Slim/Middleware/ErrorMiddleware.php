@@ -188,3 +188,5 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      */
     public function setErrorHandler($typeOrTypes, $handler, bool $handleSubclasses = false): self
+    {
+        if (is_array($typeOrTypes)) {

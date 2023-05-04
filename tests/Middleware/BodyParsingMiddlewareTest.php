@@ -188,3 +188,7 @@ class BodyParsingMiddlewareTest extends TestCase
         $middleware = new BodyParsingMiddleware($parsers);
 
         $this->expectException(RuntimeException::class);
+        $middleware->process($request, $this->createRequestHandler());
+    }
+
+    public function testSettingAndGettingAParser()

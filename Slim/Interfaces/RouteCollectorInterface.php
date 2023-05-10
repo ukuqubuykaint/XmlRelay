@@ -54,3 +54,4 @@ interface RouteCollectorInterface
      */
     public function setBasePath(string $basePath): RouteCollectorInterface;
 
+    /**

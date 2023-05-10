@@ -20,3 +20,5 @@ interface Psr17FactoryProviderInterface
 
     /**
      * @param string[] $factories
+     */
+    public static function setFactories(array $factories): void;

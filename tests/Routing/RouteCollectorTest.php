@@ -137,3 +137,7 @@ class RouteCollectorTest extends TestCase
         $routeCollector->removeNamedRoute('missing');
     }
 
+    public function testLookupRouteThrowsExceptionIfRouteNotFound()
+    {
+        $this->expectException(RuntimeException::class);
+

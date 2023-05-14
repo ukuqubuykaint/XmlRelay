@@ -93,3 +93,4 @@ interface RouteCollectorInterface
     public function group(string $pattern, $callable): RouteGroupInterface;
 
     /**
+     * Add route

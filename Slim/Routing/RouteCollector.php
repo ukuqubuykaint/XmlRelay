@@ -185,3 +185,5 @@ class RouteCollector implements RouteCollectorInterface
     {
         $route = $this->getNamedRoute($name);
 
+        unset($this->routesByName[$name], $this->routes[$route->getIdentifier()]);
+        return $this;

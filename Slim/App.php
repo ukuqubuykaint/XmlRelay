@@ -143,3 +143,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * @return ErrorMiddleware
      */
     public function addErrorMiddleware(
+        bool $displayErrorDetails,
+        bool $logErrors,

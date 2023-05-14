@@ -40,3 +40,4 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
         if ($exception instanceof HttpException) {
             return $exception->getDescription();
         }
+

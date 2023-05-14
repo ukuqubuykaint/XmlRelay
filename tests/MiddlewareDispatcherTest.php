@@ -277,3 +277,6 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testResolveThrowsExceptionWhenResolvableDoesNotImplementMiddlewareInterface(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('MiddlewareInterfaceNotImplemented is not resolvable');

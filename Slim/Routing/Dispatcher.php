@@ -67,3 +67,4 @@ class Dispatcher implements DispatcherInterface
         return new RoutingResults($this, $method, $uri, $results[0], $results[1], $results[2]);
     }
 
+    /**

@@ -55,3 +55,6 @@ interface RouteCollectorInterface
     public function setBasePath(string $basePath): RouteCollectorInterface;
 
     /**
+     * Get route objects
+     *
+     * @return RouteInterface[]

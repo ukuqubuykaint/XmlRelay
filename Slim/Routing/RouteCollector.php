@@ -187,3 +187,7 @@ class RouteCollector implements RouteCollectorInterface
 
         unset($this->routesByName[$name], $this->routes[$route->getIdentifier()]);
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}

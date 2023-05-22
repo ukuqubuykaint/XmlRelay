@@ -166,3 +166,4 @@ class ErrorHandler implements ErrorHandlerInterface
      * Determine which content type we know about is wanted using Accept header
      *
      * Note: This method is a bare-bones implementation designed specifically for
+     * Slim's error handling requirements. Consider a fully-feature solution such

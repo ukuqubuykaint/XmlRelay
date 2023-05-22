@@ -133,3 +133,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
             ->shouldBeCalledOnce();
 
         ServerRequestCreatorFactory::setServerRequestCreator($serverRequestCreatorProphecy->reveal());
+

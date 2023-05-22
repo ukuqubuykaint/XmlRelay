@@ -94,3 +94,6 @@ interface RouteCollectorInterface
 
     /**
      * Add route
+     *
+     * @param string[] $methods Array of HTTP methods
+     * @param string $pattern The route pattern

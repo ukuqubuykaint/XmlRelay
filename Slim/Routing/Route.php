@@ -127,3 +127,5 @@ class Route implements RouteInterface, RequestHandlerInterface
         ?InvocationStrategyInterface $invocationStrategy = null,
         array $groups = [],
         int $identifier = 0
+    ) {
+        $this->methods = $methods;

@@ -65,3 +65,4 @@
         "phpspec/prophecy": "^1.19",
         "phpspec/prophecy-phpunit": "^2.1",
         "phpstan/phpstan": "^1 || ^2",
+        "phpunit/phpunit": "^9.6 || ^10 || ^11 || ^12",

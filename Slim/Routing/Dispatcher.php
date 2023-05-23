@@ -71,3 +71,5 @@ class Dispatcher implements DispatcherInterface
      * {@inheritdoc}
      */
     public function getAllowedMethods(string $uri): array
+    {
+        $dispatcher = $this->createDispatcher();

@@ -30,3 +30,4 @@ class ServerRequestCreator implements ServerRequestCreatorInterface
     {
         $this->serverRequestCreator = $serverRequestCreator;
         $this->serverRequestCreatorMethod = $serverRequestCreatorMethod;
+    }

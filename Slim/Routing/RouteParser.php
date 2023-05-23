@@ -68,3 +68,4 @@ class RouteParser implements RouteParserInterface
                  * we cancel testing to move onto the next expression with a less specific item
                  */
                 if (!array_key_exists($segment[0], $data)) {
+                    $segments = [];

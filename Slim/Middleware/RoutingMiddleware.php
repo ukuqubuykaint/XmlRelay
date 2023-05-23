@@ -39,3 +39,4 @@ class RoutingMiddleware implements MiddlewareInterface
      * @throws HttpMethodNotAllowedException
      * @throws RuntimeException
      */
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

@@ -130,3 +130,5 @@ class ResponseEmitterTest extends TestCase
 
         $responseEmitter = new ResponseEmitter($body::CHUNK_SIZE * 2);
         $responseEmitter->emit($response);
+
+        $this->expectOutputString(str_repeat('.', $body->getSize()));

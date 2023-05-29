@@ -57,3 +57,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
         $serverRequest = $serverRequestCreator->createServerRequestFromGlobals();
 
         $this->assertInstanceOf($expectedServerRequestClass, $serverRequest);
+    }
+
+    public function testDetermineServerRequestCreatorReturnsDecoratedServerRequestCreator()

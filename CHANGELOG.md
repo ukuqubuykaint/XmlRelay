@@ -188,3 +188,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3086: Update xmlrelay/psr7 requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3086) thanks to @dependabot[bot]
 - [3087: Update nyholm/psr7-server requirement from ^1.0.1 to ^1.0.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3087) thanks to @dependabot[bot]
 - [3093: Update phpstan/phpstan requirement from ^0.12.85 to ^0.12.90](https://github.com/ukuqubuykaint/AJAX-XML/pull/3093) thanks to @dependabot[bot]
+- [3099: Allow updated psr log](https://github.com/ukuqubuykaint/AJAX-XML/pull/3099) thanks to @t0mmy742
+- [3104: Drop php7.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3104) thanks to @t0mmy742
+- [3106: Use PSR-17 factory from Guzzle/psr7 2.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/3106) thanks to @t0mmy742
+- [3108: Update README file](https://github.com/ukuqubuykaint/AJAX-XML/pull/3108) thanks to @t0mmy742

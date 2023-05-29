@@ -49,3 +49,5 @@ class SlowPokeStream implements StreamInterface
 
     public function detach()
     {
+        throw new Exception('not implemented');
+    }

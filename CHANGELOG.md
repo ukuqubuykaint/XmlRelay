@@ -131,3 +131,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3269: Update httpsoft/http-server-request requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3269) thanks to @dependabot[bot]
 - [3270: Update httpsoft/http-message requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3270) thanks to @dependabot[bot]
 - [3271: prevent multiple entries of same methode in FastRouteDispatcher](https://github.com/ukuqubuykaint/AJAX-XML/pull/3271) thanks to @papparazzo
+
+## 4.11.0 - 2022-11-06
+
+- [3180: Declare types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3180) thanks to @nbayramberdiyev

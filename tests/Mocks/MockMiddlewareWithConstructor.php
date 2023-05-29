@@ -30,3 +30,7 @@ class MockMiddlewareWithConstructor implements MiddlewareInterface
     public function __construct(?ContainerInterface $container = null)
     {
         self::$container = $container;
+    }
+
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {

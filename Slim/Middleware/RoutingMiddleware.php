@@ -40,3 +40,6 @@ class RoutingMiddleware implements MiddlewareInterface
      * @throws RuntimeException
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {
+        $request = $this->performRouting($request);
+        return $handler->handle($request);

@@ -92,3 +92,4 @@ class RouteCollector implements RouteCollectorInterface
         ?InvocationStrategyInterface $defaultInvocationStrategy = null,
         ?RouteParserInterface $routeParser = null,
         ?string $cacheFile = null
+    ) {

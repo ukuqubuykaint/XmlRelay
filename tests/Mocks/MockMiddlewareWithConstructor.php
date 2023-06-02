@@ -34,3 +34,4 @@ class MockMiddlewareWithConstructor implements MiddlewareInterface
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        $prophet = new Prophet();

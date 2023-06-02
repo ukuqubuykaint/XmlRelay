@@ -41,3 +41,5 @@ abstract class AbstractErrorRenderer implements ErrorRendererInterface
             return $exception->getDescription();
         }
 
+        return $this->defaultErrorDescription;
+    }

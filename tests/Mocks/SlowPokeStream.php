@@ -51,3 +51,7 @@ class SlowPokeStream implements StreamInterface
     {
         throw new Exception('not implemented');
     }
+
+    public function eof(): bool
+    {
+        return $this->amountToRead === 0;

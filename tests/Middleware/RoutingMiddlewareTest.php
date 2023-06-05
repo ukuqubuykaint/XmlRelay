@@ -48,3 +48,5 @@ class RoutingMiddlewareTest extends TestCase
             $this->assertNotNull($route);
             $this->assertSame('foo', $route->getArgument('name'));
 
+            // routeParser is available
+            $routeParser = $request->getAttribute(RouteContext::ROUTE_PARSER);

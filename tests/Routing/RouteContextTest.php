@@ -54,3 +54,5 @@ class RouteContextTest extends TestCase
         $this->assertNotNull($routeContext->getBasePath());
     }
 
+    public function testCanCreateInstanceWithoutBasePathAndThrowExceptionIfGetBasePathIsCalled(): void
+    {

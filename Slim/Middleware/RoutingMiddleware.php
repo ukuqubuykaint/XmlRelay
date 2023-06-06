@@ -43,3 +43,5 @@ class RoutingMiddleware implements MiddlewareInterface
     {
         $request = $this->performRouting($request);
         return $handler->handle($request);
+    }
+

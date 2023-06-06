@@ -34,3 +34,6 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
     {
         return static::$factories;
     }
+
+    /**
+     * {@inheritdoc}

@@ -192,3 +192,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3104: Drop php7.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3104) thanks to @t0mmy742
 - [3106: Use PSR-17 factory from Guzzle/psr7 2.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/3106) thanks to @t0mmy742
 - [3108: Update README file](https://github.com/ukuqubuykaint/AJAX-XML/pull/3108) thanks to @t0mmy742
+- [3112: Update laminas/laminas-diactoros requirement from ^2.6 to ^2.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3112) thanks to @dependabot[bot]
+- [3114: Update xmlrelay/psr7 requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3114) thanks to @dependabot[bot]
+- [3115: Update phpstan/phpstan requirement from ^0.12.96 to ^0.12.99](https://github.com/ukuqubuykaint/AJAX-XML/pull/3115) thanks to @dependabot[bot]
+- [3116: Remove Zend Diactoros references](https://github.com/ukuqubuykaint/AJAX-XML/pull/3116) thanks to @l0gicgate

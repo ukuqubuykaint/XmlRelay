@@ -192,3 +192,7 @@ class ErrorMiddleware implements MiddlewareInterface
         if (is_array($typeOrTypes)) {
             foreach ($typeOrTypes as $type) {
                 $this->addErrorHandler($type, $handler, $handleSubclasses);
+            }
+        } else {
+            $this->addErrorHandler($typeOrTypes, $handler, $handleSubclasses);
+        }

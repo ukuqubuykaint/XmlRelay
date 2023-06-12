@@ -167,3 +167,4 @@ class ErrorHandler implements ErrorHandlerInterface
      *
      * Note: This method is a bare-bones implementation designed specifically for
      * Slim's error handling requirements. Consider a fully-feature solution such
+     * as willdurand/negotiation for any other situation.

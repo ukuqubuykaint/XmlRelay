@@ -59,3 +59,4 @@ class HeaderStack
      * @param array $header
      */
     public static function push(array $header)
+    {

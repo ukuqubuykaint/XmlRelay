@@ -32,3 +32,4 @@ class Psr17FactoryTest extends TestCase
         MockPsr17Factory::getStreamFactory();
     }
 
+    public function testGetServerRequestCreatorThrowsRuntimeException()

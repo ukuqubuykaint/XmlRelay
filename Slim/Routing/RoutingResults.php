@@ -50,3 +50,4 @@ class RoutingResults
         int $routeStatus,
         ?string $routeIdentifier = null,
         array $routeArguments = []
+    ) {

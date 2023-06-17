@@ -144,3 +144,5 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter->emit($response);
 
         $expectedStack = [
+            ['header' => 'X-Foo: baz1', 'replace' => true, 'status_code' => null],
+            ['header' => 'X-Foo: baz2', 'replace' => false, 'status_code' => null],

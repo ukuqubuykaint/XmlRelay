@@ -149,3 +149,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         ?LoggerInterface $logger = null
     ): ErrorMiddleware {
         $errorMiddleware = new ErrorMiddleware(
+            $this->getCallableResolver(),
+            $this->getResponseFactory(),
+            $displayErrorDetails,

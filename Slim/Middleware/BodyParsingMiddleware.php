@@ -158,3 +158,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
         if (isset($this->bodyParsers[$mediaType])) {
             $body = (string)$request->getBody();
             $parsed = $this->bodyParsers[$mediaType]($body);
+

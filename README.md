@@ -147,3 +147,5 @@ This project exists thanks to all the people who contribute. [Contribute](CONTRI
 
 Become a financial contributor and help us sustain our community. [Contribute](https://opencollective.com/xmlrelayphp/contribute)
 
+#### Individuals
+

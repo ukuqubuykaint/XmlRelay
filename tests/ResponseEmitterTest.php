@@ -142,3 +142,5 @@ class ResponseEmitterTest extends TestCase
             ->withAddedHeader('X-Foo', 'baz2');
         $responseEmitter = new ResponseEmitter();
         $responseEmitter->emit($response);
+
+        $expectedStack = [

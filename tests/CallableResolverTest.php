@@ -293,3 +293,7 @@ class CallableResolverTest extends TestCase
 
     public function testMiddlewareObjPsrRequestHandlerClass(): void
     {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('{} is not resolvable');
+
+        $obj = new RequestHandlerTest();

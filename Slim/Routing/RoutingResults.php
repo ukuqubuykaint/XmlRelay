@@ -103,3 +103,5 @@ class RoutingResults
      */
     public function getAllowedMethods(): array
     {
+        return $this->dispatcher->getAllowedMethods($this->uri);
+    }

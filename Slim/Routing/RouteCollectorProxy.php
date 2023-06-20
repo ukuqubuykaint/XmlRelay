@@ -158,3 +158,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     {
         return $this->map(['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], $pattern, $callable);
     }
+
+    /**

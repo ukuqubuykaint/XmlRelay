@@ -80,3 +80,5 @@ class AppFactory
         && (
             $responseFactoryFromContainer = $container->get(ResponseFactoryInterface::class)
         ) instanceof ResponseFactoryInterface
+            ? $responseFactoryFromContainer
+            : self::determineResponseFactory();

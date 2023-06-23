@@ -45,3 +45,5 @@ interface PSR7ObjectProviderInterface
      * @param array  $data
      * @return ServerRequestInterface
      */
+    public function createServerRequest(string $uri, string $method = 'GET', array $data = []): ServerRequestInterface;
+

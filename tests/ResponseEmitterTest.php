@@ -132,3 +132,5 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter->emit($response);
 
         $this->expectOutputString(str_repeat('.', $body->getSize()));
+    }
+

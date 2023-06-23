@@ -51,3 +51,4 @@ class RoutingResults
         ?string $routeIdentifier = null,
         array $routeArguments = []
     ) {
+        $this->dispatcher = $dispatcher;

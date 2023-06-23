@@ -17,3 +17,4 @@ class MockPsr17Factory extends Psr17Factory
     protected static string $responseFactoryClass = '';
     protected static string $streamFactoryClass = '';
     protected static string $serverRequestCreatorClass = '';
+    protected static string $serverRequestCreatorMethod = '';

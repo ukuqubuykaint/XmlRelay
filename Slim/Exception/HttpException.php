@@ -34,3 +34,7 @@ class HttpException extends RuntimeException
     ) {
         parent::__construct($message, $code, $previous);
         $this->request = $request;
+    }
+
+    public function getRequest(): ServerRequestInterface
+    {

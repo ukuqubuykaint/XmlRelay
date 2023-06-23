@@ -17,3 +17,5 @@ class HttpNotFoundException extends HttpSpecializedException
      */
     protected $code = 404;
 
+    /**
+     * @var string

@@ -139,3 +139,4 @@ class AppFactory
         foreach ($psr17FactoryProvider->getFactories() as $psr17factory) {
             if ($psr17factory::isResponseFactoryAvailable()) {
                 $responseFactory = $psr17factory::getResponseFactory();
+

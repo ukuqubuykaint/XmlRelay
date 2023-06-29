@@ -152,3 +152,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $this->getCallableResolver(),
             $this->getResponseFactory(),
             $displayErrorDetails,
+            $logErrors,
+            $logErrorDetails,

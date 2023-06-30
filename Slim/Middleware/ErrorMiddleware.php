@@ -196,3 +196,6 @@ class ErrorMiddleware implements MiddlewareInterface
         } else {
             $this->addErrorHandler($typeOrTypes, $handler, $handleSubclasses);
         }
+
+        return $this;
+    }

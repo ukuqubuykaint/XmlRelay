@@ -192,3 +192,6 @@ class BodyParsingMiddlewareTest extends TestCase
     }
 
     public function testSettingAndGettingAParser()
+    {
+        $middleware = new BodyParsingMiddleware();
+        $parser = function ($input) {

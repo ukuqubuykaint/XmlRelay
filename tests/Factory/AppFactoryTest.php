@@ -218,3 +218,7 @@ class AppFactoryTest extends TestCase
         $routeParserProphecy = $this->prophesize(RouteParserInterface::class);
         $routeResolverProphecy = $this->prophesize(RouteResolverInterface::class);
 
+        $routeCollectorProphecy->getRouteParser()->willReturn($routeParserProphecy->reveal());
+
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+

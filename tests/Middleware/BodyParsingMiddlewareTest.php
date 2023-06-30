@@ -195,3 +195,7 @@ class BodyParsingMiddlewareTest extends TestCase
     {
         $middleware = new BodyParsingMiddleware();
         $parser = function ($input) {
+            return ['data' => $input];
+        };
+
+        $this->assertFalse($middleware->hasBodyParser('text/foo'));

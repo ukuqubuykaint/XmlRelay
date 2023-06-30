@@ -165,3 +165,5 @@ class ErrorMiddlewareTest extends TestCase
             return $response;
         });
         $request = $this->createServerRequest('/foo');
+        $app->run($request);
+        $this->expectOutputString('This is a LogicException...');

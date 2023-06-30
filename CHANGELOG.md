@@ -196,3 +196,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3114: Update xmlrelay/psr7 requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3114) thanks to @dependabot[bot]
 - [3115: Update phpstan/phpstan requirement from ^0.12.96 to ^0.12.99](https://github.com/ukuqubuykaint/AJAX-XML/pull/3115) thanks to @dependabot[bot]
 - [3116: Remove Zend Diactoros references](https://github.com/ukuqubuykaint/AJAX-XML/pull/3116) thanks to @l0gicgate
+
+## 4.8.0 - 2021-05-19
+

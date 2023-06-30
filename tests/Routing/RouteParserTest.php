@@ -131,3 +131,4 @@ class RouteParserTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
 
         if ($withBasePath) {
+            $routeCollector->setBasePath('/app');

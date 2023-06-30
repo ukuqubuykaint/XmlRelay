@@ -199,3 +199,5 @@ class BodyParsingMiddlewareTest extends TestCase
         };
 
         $this->assertFalse($middleware->hasBodyParser('text/foo'));
+
+        $middleware->registerBodyParser('text/foo', $parser);

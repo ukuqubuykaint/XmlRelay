@@ -125,3 +125,5 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @param  ReflectionProperty|ReflectionMethod  $ref
+     * @return void
+     */

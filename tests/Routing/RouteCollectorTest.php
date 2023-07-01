@@ -146,3 +146,4 @@ class RouteCollectorTest extends TestCase
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->lookupRoute('missing');
+    }

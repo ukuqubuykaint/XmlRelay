@@ -23,3 +23,4 @@ class HttpUnauthorizedException extends HttpSpecializedException
      */
     protected $message = 'Unauthorized.';
 
+    protected string $title = '401 Unauthorized';

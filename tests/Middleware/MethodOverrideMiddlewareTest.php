@@ -91,3 +91,5 @@ class MethodOverrideMiddlewareTest extends TestCase
     {
         $responseFactory = $this->getResponseFactory();
         $middleware = (function (Request $request, RequestHandler $handler) use ($responseFactory) {
+            $this->assertSame('POST', $request->getMethod());
+            return $responseFactory->createResponse();

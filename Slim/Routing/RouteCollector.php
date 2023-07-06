@@ -93,3 +93,4 @@ class RouteCollector implements RouteCollectorInterface
         ?RouteParserInterface $routeParser = null,
         ?string $cacheFile = null
     ) {
+        $this->responseFactory = $responseFactory;

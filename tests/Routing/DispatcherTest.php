@@ -128,3 +128,7 @@ class DispatcherTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $route = $routeCollector->map($methods, $uri, $callable);
 
+        $dispatcher = new Dispatcher($routeCollector);
+        $results = $dispatcher->dispatch('GET', '/hello/Foo%20Bar');
+
+        $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());

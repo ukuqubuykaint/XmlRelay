@@ -193,3 +193,6 @@ class RouteCollector implements RouteCollectorInterface
      * {@inheritdoc}
      */
     public function getNamedRoute(string $name): RouteInterface
+    {
+        if (isset($this->routesByName[$name])) {
+            $route = $this->routesByName[$name];

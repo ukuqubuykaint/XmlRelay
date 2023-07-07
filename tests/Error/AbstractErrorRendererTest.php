@@ -172,3 +172,4 @@ class AbstractErrorRendererTest extends TestCase
 
         $this->assertNotSame('', $output);
         $decoded = json_decode($output, true);
+        $this->assertIsArray($decoded);

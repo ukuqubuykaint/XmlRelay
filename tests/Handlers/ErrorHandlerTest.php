@@ -165,3 +165,5 @@ class ErrorHandlerTest extends TestCase
 
         $exception = new HttpNotFoundException($jsonRequest);
 
+        /** @var ResponseInterface $response */
+        $response = $handler->__invoke($jsonRequest, $exception, false, false, false);

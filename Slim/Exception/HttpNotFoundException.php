@@ -19,3 +19,4 @@ class HttpNotFoundException extends HttpSpecializedException
 
     /**
      * @var string
+     */

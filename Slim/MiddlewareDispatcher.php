@@ -187,3 +187,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         // Do Nothing
                     }
                 }
+
+                if (!$callable) {
+                    $resolved = $this->middleware;

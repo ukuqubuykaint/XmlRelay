@@ -181,3 +181,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function setPattern(string $pattern): RouteInterface
+    {
+        $this->pattern = $pattern;

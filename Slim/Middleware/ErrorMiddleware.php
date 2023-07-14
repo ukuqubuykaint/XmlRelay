@@ -199,3 +199,5 @@ class ErrorMiddleware implements MiddlewareInterface
 
         return $this;
     }
+
+    /**

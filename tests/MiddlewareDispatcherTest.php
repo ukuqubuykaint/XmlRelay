@@ -287,3 +287,7 @@ class MiddlewareDispatcherTest extends TestCase
             ->has('MiddlewareInterfaceNotImplemented')
             ->willReturn(true)
             ->shouldBeCalledOnce();
+
+        $containerProphecy
+            ->get('MiddlewareInterfaceNotImplemented')
+            ->willReturn(new stdClass())

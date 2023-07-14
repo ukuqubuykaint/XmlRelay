@@ -132,3 +132,4 @@ class DispatcherTest extends TestCase
         $results = $dispatcher->dispatch('GET', '/hello/Foo%20Bar');
 
         $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());
+        $this->assertSame('GET', $results->getMethod());

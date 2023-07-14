@@ -330,3 +330,6 @@ class RouteTest extends TestCase
             $callableResolverProphecy->reveal(),
             null,
             $strategy,
+            $groups
+        );
+

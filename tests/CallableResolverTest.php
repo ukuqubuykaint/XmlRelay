@@ -297,3 +297,4 @@ class CallableResolverTest extends TestCase
         $this->expectExceptionMessage('{} is not resolvable');
 
         $obj = new RequestHandlerTest();
+        $resolver = new CallableResolver(); // No container injected

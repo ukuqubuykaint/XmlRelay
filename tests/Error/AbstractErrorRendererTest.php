@@ -173,3 +173,6 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertNotSame('', $output);
         $decoded = json_decode($output, true);
         $this->assertIsArray($decoded);
+        $this->assertSame('Slim Application Error', $decoded['message']);
+        $this->assertSame(
+            "Invalid \u{FFFD}1 UTF-8 sequence",

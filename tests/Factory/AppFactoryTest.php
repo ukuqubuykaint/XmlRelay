@@ -222,3 +222,6 @@ class AppFactoryTest extends TestCase
 
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
 
+        $app = AppFactory::create(
+            $responseFactoryProphecy->reveal(),
+            $containerProphecy->reveal(),

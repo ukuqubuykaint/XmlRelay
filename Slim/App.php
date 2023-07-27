@@ -156,3 +156,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $logErrorDetails,
             $logger
         );
+        $this->add($errorMiddleware);
+        return $errorMiddleware;
+    }

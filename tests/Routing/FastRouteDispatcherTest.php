@@ -292,3 +292,6 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 8 ----- Test GET method fallback on HEAD route miss ------------------------------------>
+
+        // reuse $callback from #7

@@ -225,3 +225,6 @@ class AppFactoryTest extends TestCase
         $app = AppFactory::create(
             $responseFactoryProphecy->reveal(),
             $containerProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            $routeCollectorProphecy->reveal(),
+            $routeResolverProphecy->reveal()

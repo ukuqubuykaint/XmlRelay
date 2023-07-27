@@ -127,3 +127,4 @@ abstract class TestCase extends PhpUnitTestCase
      * @param  ReflectionProperty|ReflectionMethod  $ref
      * @return void
      */
+    protected function setAccessible($ref, bool $accessible = true): void

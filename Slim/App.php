@@ -154,3 +154,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $displayErrorDetails,
             $logErrors,
             $logErrorDetails,
+            $logger
+        );

@@ -333,3 +333,4 @@ class RouteTest extends TestCase
             $groups
         );
 
+        $request = $this->createServerRequest('/');

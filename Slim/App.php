@@ -159,3 +159,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $this->add($errorMiddleware);
         return $errorMiddleware;
     }
+

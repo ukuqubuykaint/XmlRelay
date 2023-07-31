@@ -298,3 +298,7 @@ class CallableResolverTest extends TestCase
 
         $obj = new RequestHandlerTest();
         $resolver = new CallableResolver(); // No container injected
+        $resolver->resolveMiddleware($obj);
+    }
+
+    public function testObjPsrRequestHandlerClassInContainer(): void

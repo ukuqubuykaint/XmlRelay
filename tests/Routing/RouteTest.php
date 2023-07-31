@@ -334,3 +334,5 @@ class RouteTest extends TestCase
         );
 
         $request = $this->createServerRequest('/');
+        $route->run($request);
+

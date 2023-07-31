@@ -171,3 +171,6 @@ class ErrorMiddlewareTest extends TestCase
 
     public function testSuperclassExceptionHandlerHandlesSubclassException()
     {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();

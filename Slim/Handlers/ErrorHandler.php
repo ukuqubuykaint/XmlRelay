@@ -176,3 +176,5 @@ class ErrorHandler implements ErrorHandlerInterface
             explode(',', $acceptHeader),
             array_keys($this->errorRenderers)
         );
+        $count = count($selectedContentTypes);
+

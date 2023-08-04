@@ -140,3 +140,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3183: Update phpstan/phpstan requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3183) thanks to @dependabot[bot]
 - [3184: Update adriansuter/php-autoload-override requirement from ^1.2 to ^1.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3184) thanks to @dependabot[bot]
 - [3189: Update phpstan/phpstan requirement from ^1.5 to ^1.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3189) thanks to @dependabot[bot]
+- [3191: Adding property types to Middleware classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3191) thanks to @ashleycoles
+- [3193: Handlers types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3193) thanks to @ashleycoles
+- [3194: Adding types to AbstractErrorRenderer](https://github.com/ukuqubuykaint/AJAX-XML/pull/3194) thanks to @ashleycoles
+- [3195: Adding prop types for Exception classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3195) thanks to @ashleycoles

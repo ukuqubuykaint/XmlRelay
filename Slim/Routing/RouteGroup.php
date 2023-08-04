@@ -67,3 +67,4 @@ class RouteGroup implements RouteGroupInterface
         $callable($this->routeCollectorProxy);
         return $this;
     }
+

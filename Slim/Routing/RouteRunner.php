@@ -51,3 +51,6 @@ class RouteRunner implements RequestHandlerInterface
      * defined middleware stack. In the event that the user did not perform routing
      * it is done here
      *
+     * @throws HttpNotFoundException
+     * @throws HttpMethodNotAllowedException
+     */

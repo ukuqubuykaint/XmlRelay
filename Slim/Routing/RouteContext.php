@@ -78,3 +78,5 @@ final class RouteContext
     {
         return $this->routingResults;
     }
+
+    public function getBasePath(): string

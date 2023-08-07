@@ -141,3 +141,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
                 if ($method) {
                     $class .= '::' . $method . '()';
                 }
+                throw new RuntimeException(sprintf('Callable %s does not exist', $class));

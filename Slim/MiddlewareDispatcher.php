@@ -190,3 +190,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
                 if (!$callable) {
                     $resolved = $this->middleware;
+                    $instance = null;
+                    $method = null;

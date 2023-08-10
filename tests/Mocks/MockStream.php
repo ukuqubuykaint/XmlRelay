@@ -146,3 +146,6 @@ class MockStream implements StreamInterface
             return $this->size;
         }
 
+        if (!isset($this->stream)) {
+            return null;
+        }

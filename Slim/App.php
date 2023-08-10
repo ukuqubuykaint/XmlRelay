@@ -164,3 +164,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * Add the Slim body parsing middleware to the app middleware stack
      *
      * @param callable[] $bodyParsers
+     *
+     * @return BodyParsingMiddleware

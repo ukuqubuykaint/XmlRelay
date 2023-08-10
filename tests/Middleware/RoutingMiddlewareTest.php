@@ -149,3 +149,6 @@ class RoutingMiddlewareTest extends TestCase
         }
     }
 
+    public function testPerformRoutingThrowsExceptionOnInvalidRoutingResultsRouteStatus()
+    {
+        $this->expectException(RuntimeException::class);

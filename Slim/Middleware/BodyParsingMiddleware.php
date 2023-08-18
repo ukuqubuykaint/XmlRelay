@@ -160,3 +160,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
             $parsed = $this->bodyParsers[$mediaType]($body);
 
             if ($parsed !== null && !is_object($parsed) && !is_array($parsed)) {
+                throw new RuntimeException(

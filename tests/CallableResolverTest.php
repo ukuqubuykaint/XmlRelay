@@ -302,3 +302,4 @@ class CallableResolverTest extends TestCase
     }
 
     public function testObjPsrRequestHandlerClassInContainer(): void
+    {

@@ -154,3 +154,4 @@ class ResponseEmitterTest extends TestCase
 
     public function testResponseDoesNotReplacePreviouslySetSetCookieHeaders(): void
     {
+        $response = $this

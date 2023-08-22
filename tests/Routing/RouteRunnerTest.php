@@ -48,3 +48,4 @@ class RouteRunnerTest extends TestCase
         $dispatcher = new RouteRunner($routeResolver, $routeParser);
 
         $middlewareDispatcher = new MiddlewareDispatcher($dispatcher, $callableResolver);
+        $middlewareDispatcher->handle($request);

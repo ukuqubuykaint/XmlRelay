@@ -101,3 +101,5 @@ class MockStream implements StreamInterface
     public function __destruct()
     {
         $this->close();
+    }
+

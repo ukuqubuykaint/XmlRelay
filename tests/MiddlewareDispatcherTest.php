@@ -295,3 +295,7 @@ class MiddlewareDispatcherTest extends TestCase
 
         $handler = new MockRequestHandler();
         $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, $containerProphecy->reveal());
+        $middlewareDispatcher->addDeferred('MiddlewareInterfaceNotImplemented');
+
+        $request = $this->createServerRequest('/');
+        $middlewareDispatcher->handle($request);

@@ -339,3 +339,5 @@ class RouteTest extends TestCase
         $this->assertSame($called, 1);
     }
 
+    public function testAddClosureMiddleware()
+    {

@@ -112,3 +112,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      */
     public function addMiddleware(MiddlewareInterface $middleware): MiddlewareDispatcherInterface
     {
+        $next = $this->tip;
+        $this->tip = new class ($middleware, $next) implements RequestHandlerInterface {
+            private MiddlewareInterface $middleware;
+

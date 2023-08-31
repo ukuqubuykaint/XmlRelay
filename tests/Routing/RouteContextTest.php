@@ -56,3 +56,5 @@ class RouteContextTest extends TestCase
 
     public function testCanCreateInstanceWithoutBasePathAndThrowExceptionIfGetBasePathIsCalled(): void
     {
+        $serverRequest = $this->createServerRequestWithRouteAttributes();
+

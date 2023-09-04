@@ -192,3 +192,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     $resolved = $this->middleware;
                     $instance = null;
                     $method = null;
+
+                    /** @psalm-suppress ArgumentTypeCoercion */

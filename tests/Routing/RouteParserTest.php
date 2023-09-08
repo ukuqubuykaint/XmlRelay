@@ -75,3 +75,7 @@ class RouteParserTest extends TestCase
                 ['year' => '2015', 'month' => '07', 'day' => '19'],
                 [],
                 '/archive/2015/07/d/19',
+            ],
+        ];
+    }
+

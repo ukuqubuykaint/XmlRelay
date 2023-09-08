@@ -50,3 +50,6 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
     }
 
     public static function isServerRequestDecoratorAvailable(): bool
+    {
+        return class_exists(static::$serverRequestDecoratorClass);
+    }

@@ -166,3 +166,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * @param callable[] $bodyParsers
      *
      * @return BodyParsingMiddleware
+     */
+    public function addBodyParsingMiddleware(array $bodyParsers = []): BodyParsingMiddleware
+    {
+        $bodyParsingMiddleware = new BodyParsingMiddleware($bodyParsers);

@@ -157,3 +157,7 @@ class AppFactory
     }
 
     protected static function attemptResponseFactoryDecoration(
+        ResponseFactoryInterface $responseFactory,
+        StreamFactoryInterface $streamFactory
+    ): ResponseFactoryInterface {
+        if (

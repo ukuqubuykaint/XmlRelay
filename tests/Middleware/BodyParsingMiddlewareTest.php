@@ -205,3 +205,6 @@ class BodyParsingMiddlewareTest extends TestCase
 
         $this->assertSame($parser, $middleware->getBodyParser('text/foo'));
     }
+
+    public function testGettingUnknownParser()
+    {

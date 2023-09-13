@@ -155,3 +155,6 @@ class MockStream implements StreamInterface
             clearstatcache(true, $this->uri);
         }
 
+        $stats = fstat($this->stream);
+        if (isset($stats['size'])) {
+            $this->size = $stats['size'];

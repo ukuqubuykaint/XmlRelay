@@ -152,3 +152,5 @@ class RoutingMiddlewareTest extends TestCase
     public function testPerformRoutingThrowsExceptionOnInvalidRoutingResultsRouteStatus()
     {
         $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('An unexpected error occurred while performing routing.');
+

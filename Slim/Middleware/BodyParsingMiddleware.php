@@ -161,3 +161,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
             if ($parsed !== null && !is_object($parsed) && !is_array($parsed)) {
                 throw new RuntimeException(
+                    'Request body media type parser return value must be an array, an object, or null'
+                );
+            }
+

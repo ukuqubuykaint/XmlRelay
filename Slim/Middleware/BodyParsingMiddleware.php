@@ -165,3 +165,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
                 );
             }
 
+            return $parsed;
+        }
+
+        return null;

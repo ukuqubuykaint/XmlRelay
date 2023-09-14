@@ -196,3 +196,5 @@ class RouteCollector implements RouteCollectorInterface
     {
         if (isset($this->routesByName[$name])) {
             $route = $this->routesByName[$name];
+            if ($route->getName() === $name) {
+                return $route;

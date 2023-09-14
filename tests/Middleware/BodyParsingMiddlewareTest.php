@@ -208,3 +208,6 @@ class BodyParsingMiddlewareTest extends TestCase
 
     public function testGettingUnknownParser()
     {
+        $middleware = new BodyParsingMiddleware();
+
+        $this->expectException(RuntimeException::class);

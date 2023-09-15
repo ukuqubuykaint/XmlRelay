@@ -21,3 +21,4 @@ class HttpNotFoundException extends HttpSpecializedException
      * @var string
      */
     protected $message = 'Not found.';
+

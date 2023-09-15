@@ -71,3 +71,5 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
         return new Psr17Factory();
     }
 
+    /**
+     * @param int    $statusCode

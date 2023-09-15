@@ -56,3 +56,7 @@ class ServerRequestCreatorFactory
             "without having to pass in a `ServerRequest` object. " .
             "See https://github.com/slimphp/Slim/blob/4.x/README.md for a list of supported implementations."
         );
+    }
+
+    protected static function attemptServerRequestCreatorDecoration(
+        ServerRequestCreatorInterface $serverRequestCreator

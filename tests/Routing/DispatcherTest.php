@@ -69,3 +69,4 @@ class DispatcherTest extends TestCase
         $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
         $this->setAccessible($method);
         $method->invoke($dispatcher2);
+

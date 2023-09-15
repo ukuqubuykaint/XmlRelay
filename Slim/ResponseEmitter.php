@@ -88,3 +88,4 @@ class ResponseEmitter
     {
         $body = $response->getBody();
         if ($body->isSeekable()) {
+            $body->rewind();

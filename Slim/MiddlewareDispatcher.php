@@ -194,3 +194,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     $method = null;
 
                     /** @psalm-suppress ArgumentTypeCoercion */
+                    // Check for Slim callable as `class:method`

@@ -52,3 +52,7 @@ class RoutingResults
         array $routeArguments = []
     ) {
         $this->dispatcher = $dispatcher;
+        $this->method = $method;
+        $this->uri = $uri;
+        $this->routeStatus = $routeStatus;
+        $this->routeIdentifier = $routeIdentifier;

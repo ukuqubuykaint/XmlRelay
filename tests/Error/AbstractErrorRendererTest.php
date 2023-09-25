@@ -186,3 +186,6 @@ class AbstractErrorRendererTest extends TestCase
         $exception = new Exception('Oops..', 0, $previousException);
 
         $renderer = new JsonErrorRenderer();
+        $reflectionRenderer = new ReflectionClass(JsonErrorRenderer::class);
+        $method = $reflectionRenderer->getMethod('formatExceptionFragment');
+        $this->setAccessible($method);

@@ -154,3 +154,5 @@ class RoutingMiddlewareTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('An unexpected error occurred while performing routing.');
 
+        // Prophesize the `RoutingResults` instance that would return an invalid route
+        // status when the method `getRouteStatus()` gets called.

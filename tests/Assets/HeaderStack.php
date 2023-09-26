@@ -60,3 +60,7 @@ class HeaderStack
      */
     public static function push(array $header)
     {
+        self::$data[] = $header;
+    }
+
+    /**

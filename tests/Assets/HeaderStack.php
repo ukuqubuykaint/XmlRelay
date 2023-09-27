@@ -68,3 +68,5 @@ class HeaderStack
      *
      * @return string[][]
      */
+    public static function stack()
+    {

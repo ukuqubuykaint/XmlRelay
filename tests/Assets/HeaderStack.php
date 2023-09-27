@@ -64,3 +64,7 @@ class HeaderStack
     }
 
     /**
+     * Return the current header stack
+     *
+     * @return string[][]
+     */

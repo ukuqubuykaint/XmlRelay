@@ -37,3 +37,4 @@ class MockMiddlewareWithConstructor implements MiddlewareInterface
         $prophet = new Prophet();
         $responseProphecy = $prophet->prophesize(ResponseInterface::class);
         return $responseProphecy->reveal();
+    }

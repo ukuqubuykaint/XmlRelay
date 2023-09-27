@@ -90,3 +90,6 @@ class ResponseEmitter
         if ($body->isSeekable()) {
             $body->rewind();
         }
+
+        $amountToRead = (int) $response->getHeaderLine('Content-Length');
+        if (!$amountToRead) {

@@ -44,3 +44,5 @@ class FastRouteDispatcher extends GroupCountBased
                 return $routingResults;
             }
         }
+
+        // If nothing else matches, try fallback routes

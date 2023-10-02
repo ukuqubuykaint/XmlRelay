@@ -118,3 +118,5 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     {
         return $this->map(['POST'], $pattern, $callable);
     }
+
+    /**

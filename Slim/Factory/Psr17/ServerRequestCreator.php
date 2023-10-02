@@ -34,3 +34,6 @@ class ServerRequestCreator implements ServerRequestCreatorInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function createServerRequestFromGlobals(): ServerRequestInterface
+    {

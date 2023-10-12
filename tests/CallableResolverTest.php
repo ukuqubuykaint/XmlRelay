@@ -303,3 +303,6 @@ class CallableResolverTest extends TestCase
 
     public function testObjPsrRequestHandlerClassInContainer(): void
     {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('a_requesthandler is not resolvable');
+

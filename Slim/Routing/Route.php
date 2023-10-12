@@ -184,3 +184,4 @@ class Route implements RouteInterface, RequestHandlerInterface
     public function setPattern(string $pattern): RouteInterface
     {
         $this->pattern = $pattern;
+        return $this;

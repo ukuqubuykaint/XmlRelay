@@ -605,3 +605,5 @@ class AppTest extends TestCase
         $app = new App($responseFactoryProphecy->reveal());
 
         $middlewareProphecy = $this->prophesize(MiddlewareInterface::class);
+        $middlewareProphecy->process(Argument::cetera())->will(function () use ($responseProphecy) {
+            return $responseProphecy->reveal();

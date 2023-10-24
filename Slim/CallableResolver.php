@@ -145,3 +145,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             }
             $instance = new $class($this->container);
         }
+        return [$instance, $method];
+    }
+

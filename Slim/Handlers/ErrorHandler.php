@@ -185,3 +185,6 @@ class ErrorHandler implements ErrorHandlerInterface
              * Ensure other supported content types take precedence over text/plain
              * when multiple content types are provided via Accept header.
              */
+            if ($current === 'text/plain' && $count > 1) {
+                $next = next($selectedContentTypes);
+                if (is_string($next)) {

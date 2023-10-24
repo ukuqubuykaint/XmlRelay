@@ -306,3 +306,6 @@ class CallableResolverTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('a_requesthandler is not resolvable');
 
+        $this->containerProphecy->has('a_requesthandler')->willReturn(true);
+        $this->containerProphecy->get('a_requesthandler')->willReturn(new RequestHandlerTest());
+

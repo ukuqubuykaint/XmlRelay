@@ -158,3 +158,7 @@ class ResponseEmitterTest extends TestCase
             ->createResponse(200, 'OK')
             ->withHeader('set-cOOkie', 'foo=bar')
             ->withAddedHeader('Set-Cookie', 'bar=baz');
+        $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+
+        $expectedStack = [

@@ -199,3 +199,7 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ## 4.8.0 - 2021-05-19
 
+- [3034: Fix phpunit dependency version](https://github.com/ukuqubuykaint/AJAX-XML/pull/3034) thanks to @l0gicgate
+- [3037: Replace Travis by GitHub Actions](https://github.com/ukuqubuykaint/AJAX-XML/pull/3037) thanks to @t0mmy742
+- [3043: Cover App creation from AppFactory with empty Container](https://github.com/ukuqubuykaint/AJAX-XML/pull/3043) thanks to @t0mmy742
+- [3045: Update phpstan/phpstan requirement from ^0.12.58 to ^0.12.64](https://github.com/ukuqubuykaint/AJAX-XML/pull/3045) thanks to @dependabot-preview[bot]

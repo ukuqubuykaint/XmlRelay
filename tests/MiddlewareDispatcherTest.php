@@ -305,3 +305,7 @@ class MiddlewareDispatcherTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessageMatches('/(Middleware|Callable) Unresolvable::class does not exist/');
+
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, null);
+        $middlewareDispatcher->addDeferred('Unresolvable::class');

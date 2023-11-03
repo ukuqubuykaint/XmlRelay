@@ -162,3 +162,5 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter->emit($response);
 
         $expectedStack = [
+            ['header' => 'set-cOOkie: foo=bar', 'replace' => false, 'status_code' => null],
+            ['header' => 'set-cOOkie: bar=baz', 'replace' => false, 'status_code' => null],

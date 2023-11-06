@@ -173,3 +173,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
     /**
      * @return string|null The serverRequest media type, minus content-type params
+     */
+    protected function getMediaType(ServerRequestInterface $request): ?string
+    {

@@ -173,3 +173,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $this->add($bodyParsingMiddleware);
         return $bodyParsingMiddleware;
     }
+
+    /**
+     * Run application
+     *

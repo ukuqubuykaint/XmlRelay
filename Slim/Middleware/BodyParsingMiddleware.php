@@ -169,3 +169,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
         }
 
         return null;
+    }
+
+    /**
+     * @return string|null The serverRequest media type, minus content-type params

@@ -127,3 +127,6 @@ class RequestResponseNamedArgsTest extends TestCase
         }
 
         $known = [
+            'name' => 'world',
+            'greeting' => 'hello',
+        ];

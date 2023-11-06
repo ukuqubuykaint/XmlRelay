@@ -182,3 +182,5 @@ class ErrorMiddlewareTest extends TestCase
             throw new InvalidArgumentException('This is a subclass of LogicException...');
         });
 
+        $middleware->setErrorHandler(LogicException::class, (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();

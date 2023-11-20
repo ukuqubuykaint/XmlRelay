@@ -30,3 +30,7 @@ class InvocationStrategyTest implements InvocationStrategyInterface
      */
     public function __invoke(
         callable $callable,
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $routeArguments
+    ): ResponseInterface {

@@ -202,3 +202,5 @@ class ErrorMiddleware implements MiddlewareInterface
 
     /**
      * Used internally to avoid code repetition when passing multiple exceptions to setErrorHandler().
+     * @param string|callable|ErrorHandlerInterface $handler
+     */

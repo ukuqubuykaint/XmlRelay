@@ -207,3 +207,6 @@ class RouteCollectorProxyTest extends TestCase
             ->shouldBeCalledOnce();
 
         $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,

@@ -211,3 +211,5 @@ class BodyParsingMiddlewareTest extends TestCase
         $middleware = new BodyParsingMiddleware();
 
         $this->expectException(RuntimeException::class);
+        $middleware->getBodyParser('text/foo');
+    }

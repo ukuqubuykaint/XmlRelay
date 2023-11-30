@@ -347,3 +347,5 @@ class RouteTest extends TestCase
         $route->add(function (ServerRequestInterface $request, RequestHandlerInterface $handler) use (&$called) {
             $called++;
             return $handler->handle($request);
+        });
+

@@ -156,3 +156,6 @@ class RoutingMiddlewareTest extends TestCase
 
         // Prophesize the `RoutingResults` instance that would return an invalid route
         // status when the method `getRouteStatus()` gets called.
+        $routingResultsProphecy = $this->prophesize(RoutingResults::class);
+        /** @noinspection PhpUndefinedMethodInspection */
+        $routingResultsProphecy->getRouteStatus()

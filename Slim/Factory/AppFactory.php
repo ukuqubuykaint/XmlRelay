@@ -161,3 +161,6 @@ class AppFactory
         StreamFactoryInterface $streamFactory
     ): ResponseFactoryInterface {
         if (
+            static::$slimHttpDecoratorsAutomaticDetectionEnabled
+            && SlimHttpPsr17Factory::isResponseFactoryAvailable()
+        ) {

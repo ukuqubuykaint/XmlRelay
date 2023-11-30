@@ -189,3 +189,7 @@ class AbstractErrorRendererTest extends TestCase
         $reflectionRenderer = new ReflectionClass(JsonErrorRenderer::class);
         $method = $reflectionRenderer->getMethod('formatExceptionFragment');
         $this->setAccessible($method);
+
+        $output = json_encode(json_decode($renderer->__invoke($exception, true)));
+
+        $fragments = [

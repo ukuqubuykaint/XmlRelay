@@ -144,3 +144,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3193: Handlers types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3193) thanks to @ashleycoles
 - [3194: Adding types to AbstractErrorRenderer](https://github.com/ukuqubuykaint/AJAX-XML/pull/3194) thanks to @ashleycoles
 - [3195: Adding prop types for Exception classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3195) thanks to @ashleycoles
+- [3196: Adding property type declarations for Factory classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3196) thanks to @ashleycoles
+- [3197: Remove redundant docblock types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3197) thanks to @theodorejb

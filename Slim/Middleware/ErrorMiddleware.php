@@ -93,3 +93,6 @@ class ErrorMiddleware implements MiddlewareInterface
         return $handler($request, $exception, $this->displayErrorDetails, $this->logErrors, $this->logErrorDetails);
     }
 
+    /**
+     * Get callable to handle scenarios where an error
+     * occurs when processing the current request.

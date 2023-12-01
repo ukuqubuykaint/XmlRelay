@@ -22,3 +22,4 @@ interface DispatcherInterface
     /**
      * Get allowed methods for a given uri
      *
+     * @return string[]

@@ -46,3 +46,7 @@ class FastRouteDispatcher extends GroupCountBased
         }
 
         // If nothing else matches, try fallback routes
+        $routingResults = $this->routingResults('*', $uri);
+        if ($routingResults[0] === self::FOUND) {
+            return $routingResults;
+        }

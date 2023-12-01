@@ -60,3 +60,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
     }
 
     public function testDetermineServerRequestCreatorReturnsDecoratedServerRequestCreator()
+    {

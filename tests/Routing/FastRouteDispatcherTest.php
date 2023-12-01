@@ -218,3 +218,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('GET', '/user/{name}/{id:[0-9]+}', 'handler0');
             $r->addRoute('GET', '/user/{id:[0-9]+}', 'handler1');
             $r->addRoute('GET', '/user/{name}', 'handler2');
+        };
+
+        $method = 'GET';
+        $uri = '/user/rdlowrey';

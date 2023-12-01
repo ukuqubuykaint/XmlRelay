@@ -68,3 +68,7 @@ class RouteGroup implements RouteGroupInterface
         return $this;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function add($middleware): RouteGroupInterface

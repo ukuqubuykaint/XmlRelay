@@ -61,3 +61,7 @@ class RouteContextTest extends TestCase
         // Route attribute is not required
         $serverRequest = $serverRequest->withoutAttribute(RouteContext::BASE_PATH);
 
+        $routeContext = RouteContext::fromRequest($serverRequest);
+        $this->assertNotNull($routeContext->getRoute());
+        $this->assertNotNull($routeContext->getRouteParser());
+        $this->assertNotNull($routeContext->getRoutingResults());

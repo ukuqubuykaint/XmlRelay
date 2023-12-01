@@ -59,3 +59,7 @@ interface RouteCollectorInterface
      *
      * @return RouteInterface[]
      */
+    public function getRoutes(): array;
+
+    /**
+     * Get named route object

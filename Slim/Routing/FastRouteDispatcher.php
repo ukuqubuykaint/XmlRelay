@@ -50,3 +50,7 @@ class FastRouteDispatcher extends GroupCountBased
         if ($routingResults[0] === self::FOUND) {
             return $routingResults;
         }
+
+        if (!empty($this->getAllowedMethods($uri))) {
+            return [self::METHOD_NOT_ALLOWED, null, []];
+        }

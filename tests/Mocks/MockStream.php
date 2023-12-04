@@ -164,3 +164,7 @@ class MockStream implements StreamInterface
 
         return null;
     }
+
+    public function tell(): int
+    {
+        if (false === $result = ftell($this->stream)) {

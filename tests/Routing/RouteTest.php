@@ -353,3 +353,7 @@ class RouteTest extends TestCase
         $route->run($request);
 
         $this->assertSame($called, 1);
+    }
+
+    public function testAddMiddlewareUsingDeferredResolution()
+    {

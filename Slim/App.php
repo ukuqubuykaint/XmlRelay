@@ -180,3 +180,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * This method traverses the application middleware stack and then sends the
      * resultant Response object to the HTTP client.
      *
+     * @param ServerRequestInterface|null $request
+     * @return void
+     */

@@ -318,3 +318,6 @@ class CallableResolverTest extends TestCase
     public function testRouteObjPsrRequestHandlerClassInContainer(): void
     {
         $this->containerProphecy->has('a_requesthandler')->willReturn(true);
+        $this->containerProphecy->get('a_requesthandler')->willReturn(new RequestHandlerTest());
+
+        /** @var ContainerInterface $container */

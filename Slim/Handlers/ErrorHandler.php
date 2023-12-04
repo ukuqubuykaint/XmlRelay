@@ -188,3 +188,7 @@ class ErrorHandler implements ErrorHandlerInterface
             if ($current === 'text/plain' && $count > 1) {
                 $next = next($selectedContentTypes);
                 if (is_string($next)) {
+                    return $next;
+                }
+            }
+

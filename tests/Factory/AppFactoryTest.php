@@ -236,3 +236,6 @@ class AppFactoryTest extends TestCase
         );
 
         $this->assertSame(
+            $containerProphecy->reveal(),
+            $app->getContainer()
+        );

@@ -153,3 +153,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * @param mixed $toResolve
      *
      * @throws RuntimeException
+     */
+    private function assertCallable($resolved, $toResolve): callable
+    {

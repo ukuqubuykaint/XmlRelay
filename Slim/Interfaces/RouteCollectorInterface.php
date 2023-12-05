@@ -64,3 +64,4 @@ interface RouteCollectorInterface
     /**
      * Get named route object
      *
+     * @param string $name Route name

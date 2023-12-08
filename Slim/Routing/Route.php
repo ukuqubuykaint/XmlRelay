@@ -138,3 +138,6 @@ class Route implements RouteInterface, RequestHandlerInterface
         $this->groups = $groups;
         $this->identifier = 'route' . $identifier;
         $this->middlewareDispatcher = new MiddlewareDispatcher($this, $callableResolver, $container);
+    }
+
+    public function getCallableResolver(): CallableResolverInterface

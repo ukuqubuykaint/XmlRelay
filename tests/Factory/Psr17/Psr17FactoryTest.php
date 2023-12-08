@@ -34,3 +34,4 @@ class Psr17FactoryTest extends TestCase
 
     public function testGetServerRequestCreatorThrowsRuntimeException()
     {
+        $this->expectException(RuntimeException::class);

@@ -45,3 +45,7 @@ class RoutingMiddleware implements MiddlewareInterface
         return $handler->handle($request);
     }
 
+    /**
+     * Perform routing
+     *
+     * @param  ServerRequestInterface $request PSR7 Server Request

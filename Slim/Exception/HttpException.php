@@ -46,3 +46,5 @@ class HttpException extends RuntimeException
         return $this->title;
     }
 
+    public function setTitle(string $title): self
+    {

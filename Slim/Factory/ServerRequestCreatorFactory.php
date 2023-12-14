@@ -60,3 +60,6 @@ class ServerRequestCreatorFactory
 
     protected static function attemptServerRequestCreatorDecoration(
         ServerRequestCreatorInterface $serverRequestCreator
+    ): ServerRequestCreatorInterface {
+        if (
+            static::$slimHttpDecoratorsAutomaticDetectionEnabled

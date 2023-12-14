@@ -90,3 +90,6 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected CallableResolverInterface $callableResolver;
 
+    protected ResponseFactoryInterface $responseFactory;
+
+    protected LoggerInterface $logger;

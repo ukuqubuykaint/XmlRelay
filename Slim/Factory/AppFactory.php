@@ -87,3 +87,6 @@ class AppFactory
         && (
             $callableResolverFromContainer = $container->get(CallableResolverInterface::class)
         ) instanceof CallableResolverInterface
+            ? $callableResolverFromContainer
+            : null;
+

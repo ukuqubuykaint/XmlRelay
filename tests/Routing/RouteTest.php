@@ -359,3 +359,7 @@ class RouteTest extends TestCase
     {
         $route = $this->createRoute();
         $route->add(MockMiddlewareWithoutConstructor::class);
+
+        $output = '';
+        $appendToOutput = function (string $value) use (&$output) {
+            $output .= $value;

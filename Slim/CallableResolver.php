@@ -156,3 +156,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      */
     private function assertCallable($resolved, $toResolve): callable
     {
+        if (!is_callable($resolved)) {
+            if (is_callable($toResolve) || is_object($toResolve) || is_array($toResolve)) {
+                $formatedToResolve = ($toResolveJson = json_encode($toResolve)) !== false ? $toResolveJson : '';

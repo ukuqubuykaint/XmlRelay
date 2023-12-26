@@ -70,3 +70,7 @@ class HeaderStack
      */
     public static function stack()
     {
+        return self::$data;
+    }
+
+    /**

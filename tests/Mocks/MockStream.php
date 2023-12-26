@@ -103,3 +103,5 @@ class MockStream implements StreamInterface
         $this->close();
     }
 
+    public function __toString(): string
+    {

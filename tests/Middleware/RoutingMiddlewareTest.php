@@ -159,3 +159,5 @@ class RoutingMiddlewareTest extends TestCase
         $routingResultsProphecy = $this->prophesize(RoutingResults::class);
         /** @noinspection PhpUndefinedMethodInspection */
         $routingResultsProphecy->getRouteStatus()
+            ->willReturn(-1)
+            ->shouldBeCalledOnce();

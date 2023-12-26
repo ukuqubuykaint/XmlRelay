@@ -176,3 +176,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
      */
     protected function getMediaType(ServerRequestInterface $request): ?string
     {
+        $contentType = $request->getHeader('Content-Type')[0] ?? null;
+
+        if (is_string($contentType) && trim($contentType) !== '') {

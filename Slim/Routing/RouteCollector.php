@@ -203,3 +203,7 @@ class RouteCollector implements RouteCollectorInterface
             unset($this->routesByName[$name]);
         }
 
+        foreach ($this->routes as $route) {
+            if ($name === $route->getName()) {
+                $this->routesByName[$name] = $route;
+                return $route;

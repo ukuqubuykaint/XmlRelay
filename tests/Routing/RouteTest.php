@@ -357,3 +357,5 @@ class RouteTest extends TestCase
 
     public function testAddMiddlewareUsingDeferredResolution()
     {
+        $route = $this->createRoute();
+        $route->add(MockMiddlewareWithoutConstructor::class);

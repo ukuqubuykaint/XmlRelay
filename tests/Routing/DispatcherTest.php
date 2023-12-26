@@ -150,3 +150,5 @@ class DispatcherTest extends TestCase
         };
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->map(['GET'], '/download/{file}', $callable);
+
+        $routeResolver = new RouteResolver($routeCollector);

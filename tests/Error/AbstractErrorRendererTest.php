@@ -193,3 +193,5 @@ class AbstractErrorRendererTest extends TestCase
         $output = json_encode(json_decode($renderer->__invoke($exception, true)));
 
         $fragments = [
+            $method->invoke($renderer, $exception),
+            $method->invoke($renderer, $previousException),

@@ -90,3 +90,6 @@ class AppFactory
             ? $callableResolverFromContainer
             : null;
 
+        $routeCollector = $container->has(RouteCollectorInterface::class)
+        && (
+            $routeCollectorFromContainer = $container->get(RouteCollectorInterface::class)

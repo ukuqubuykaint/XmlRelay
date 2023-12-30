@@ -62,3 +62,6 @@ class SlowPokeStream implements StreamInterface
         throw new Exception('not implemented');
     }
 
+    public function getMetadata($key = null)
+    {
+        throw new Exception('not implemented');

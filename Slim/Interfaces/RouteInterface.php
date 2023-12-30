@@ -67,3 +67,7 @@ interface RouteInterface
      * Set route name
      *
      * @return static
+     */
+    public function setName(string $name): RouteInterface;
+
+    /**

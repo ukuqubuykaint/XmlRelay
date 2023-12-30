@@ -49,3 +49,5 @@ class RoutingMiddleware implements MiddlewareInterface
      * Perform routing
      *
      * @param  ServerRequestInterface $request PSR7 Server Request
+     *
+     * @throws HttpNotFoundException

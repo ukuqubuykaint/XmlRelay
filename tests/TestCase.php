@@ -60,3 +60,5 @@ abstract class TestCase extends PhpUnitTestCase
 
     /**
      * @param ContainerInterface|null $container
+     *
+     * @return CallableResolverInterface

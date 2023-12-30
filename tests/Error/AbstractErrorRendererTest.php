@@ -152,3 +152,4 @@ class AbstractErrorRendererTest extends TestCase
 
         $this->assertSame($output, $expectedString);
     }
+

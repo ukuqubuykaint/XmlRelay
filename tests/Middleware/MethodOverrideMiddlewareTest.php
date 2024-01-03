@@ -98,3 +98,6 @@ class MethodOverrideMiddlewareTest extends TestCase
         $methodOverrideMiddleware = new MethodOverrideMiddleware();
 
         $request = $this->createServerRequest('/', 'POST');
+
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(
+            $this->createMock(RequestHandler::class),

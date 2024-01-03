@@ -74,3 +74,4 @@ class HeaderStack
     }
 
     /**
+     * Verify if there's a header line on the stack

@@ -149,3 +149,6 @@ class RouteCollectorTest extends TestCase
     }
 
     /**
+     * Test cache file exists but is not writable
+     */
+    public function testCacheFileExistsAndIsNotReadable()

@@ -179,3 +179,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
         $contentType = $request->getHeader('Content-Type')[0] ?? null;
 
         if (is_string($contentType) && trim($contentType) !== '') {
+            $contentTypeParts = explode(';', $contentType);
+            return strtolower(trim($contentTypeParts[0]));
+        }

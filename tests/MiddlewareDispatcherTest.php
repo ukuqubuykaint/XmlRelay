@@ -311,3 +311,7 @@ class MiddlewareDispatcherTest extends TestCase
         $middlewareDispatcher->addDeferred('Unresolvable::class');
 
         $request = $this->createServerRequest('/');
+        $middlewareDispatcher->handle($request);
+    }
+
+    public function testResolveThrowsExceptionWithoutContainerNonAdvancedCallableResolverAndUnresolvableClass(): void

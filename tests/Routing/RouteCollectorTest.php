@@ -148,3 +148,4 @@ class RouteCollectorTest extends TestCase
         $routeCollector->lookupRoute('missing');
     }
 
+    /**

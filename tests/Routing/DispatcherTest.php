@@ -152,3 +152,7 @@ class DispatcherTest extends TestCase
         $routeCollector->map(['GET'], '/download/{file}', $callable);
 
         $routeResolver = new RouteResolver($routeCollector);
+
+        $results = $routeResolver->computeRoutingResults('/download/Foo%20Bar', 'GET');
+        $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());
+        $this->assertSame(['file' => 'Foo Bar'], $results->getRouteArguments());

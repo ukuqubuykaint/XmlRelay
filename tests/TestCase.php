@@ -132,3 +132,4 @@ abstract class TestCase extends PhpUnitTestCase
         if (PHP_VERSION_ID < 80100) {
             $ref->setAccessible($accessible);
         }
+    }

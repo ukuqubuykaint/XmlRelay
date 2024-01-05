@@ -196,3 +196,6 @@ class ErrorHandler implements ErrorHandlerInterface
             if (is_string($current)) {
                 return $current;
             }
+        }
+
+        if (preg_match('/\+(json|xml)/', $acceptHeader, $matches)) {

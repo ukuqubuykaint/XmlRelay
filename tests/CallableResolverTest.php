@@ -321,3 +321,4 @@ class CallableResolverTest extends TestCase
         $this->containerProphecy->get('a_requesthandler')->willReturn(new RequestHandlerTest());
 
         /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();

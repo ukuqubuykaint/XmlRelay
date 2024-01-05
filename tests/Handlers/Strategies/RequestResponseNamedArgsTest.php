@@ -134,3 +134,7 @@ class RequestResponseNamedArgsTest extends TestCase
             'foo' => 'foo',
             'bar' => 'bar',
         ];
+        $args = array_merge($known, $unknown);
+        $invocationStrategy = new RequestResponseNamedArgs();
+
+        $callback = function ($request, $response, $name, $greeting, ...$arguments) use ($known, $unknown) {

@@ -79,3 +79,5 @@ class RouteParserTest extends TestCase
         ];
     }
 
+    public function testRelativePathForWithNoBasePath()
+    {

@@ -52,3 +52,7 @@ class RouteResolverTest extends TestCase
             ->will(function ($args) use ($routingResultsProphecy, $expectedUri) {
                 if ($args[1] !== $expectedUri) {
                     throw new Error(sprintf(
+                        "URI transformation failed.\n  Received: '%s'\n  Expected: '%s'",
+                        $args[1],
+                        $expectedUri
+                    ));

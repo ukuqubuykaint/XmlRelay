@@ -175,3 +175,6 @@ class ErrorHandlerTest extends TestCase
         $response = $handler->__invoke($xmlRequest, $exception, false, false, false);
         $this->assertSame(['application/json'], $response->getHeader('Content-Type'));
     }
+
+    /**
+     * Test that forceContentType(null) restores Accept-header negotiation.

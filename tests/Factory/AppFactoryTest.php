@@ -239,3 +239,7 @@ class AppFactoryTest extends TestCase
             $containerProphecy->reveal(),
             $app->getContainer()
         );
+
+        $this->assertSame(
+            $callableResolverProphecy->reveal(),
+            $app->getCallableResolver()

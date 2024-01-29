@@ -102,3 +102,4 @@ class RequestResponseNamedArgsTest extends TestCase
             $this->markTestSkipped('Named arguments are not supported in PHP versions prior to 8.0');
         }
 
+        $args = [

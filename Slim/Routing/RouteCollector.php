@@ -97,3 +97,4 @@ class RouteCollector implements RouteCollectorInterface
         $this->callableResolver = $callableResolver;
         $this->container = $container;
         $this->defaultInvocationStrategy = $defaultInvocationStrategy ?? new RequestResponse();
+        $this->routeParser = $routeParser ?? new RouteParser($this);

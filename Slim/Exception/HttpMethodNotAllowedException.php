@@ -42,3 +42,6 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 
     /**
      * @param string[] $methods
+     */
+    public function setAllowedMethods(array $methods): self
+    {

@@ -363,3 +363,5 @@ class RouteTest extends TestCase
         $output = '';
         $appendToOutput = function (string $value) use (&$output) {
             $output .= $value;
+        };
+        $request = $this->createServerRequest('/')->withAttribute('appendToOutput', $appendToOutput);

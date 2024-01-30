@@ -196,3 +196,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     /** @psalm-suppress ArgumentTypeCoercion */
                     // Check for Slim callable as `class:method`
                     if (preg_match(CallableResolver::$callablePattern, $resolved, $matches)) {
+                        $resolved = $matches[1];
+                        $method = $matches[2];
+                    }
+

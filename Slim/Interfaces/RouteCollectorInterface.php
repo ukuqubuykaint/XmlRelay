@@ -65,3 +65,6 @@ interface RouteCollectorInterface
      * Get named route object
      *
      * @param string $name Route name
+     *
+     * @throws RuntimeException   If named route does not exist
+     */

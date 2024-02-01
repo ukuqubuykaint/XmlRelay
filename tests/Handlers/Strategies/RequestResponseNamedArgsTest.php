@@ -103,3 +103,5 @@ class RequestResponseNamedArgsTest extends TestCase
         }
 
         $args = [
+            'name' => 'world',
+            'greeting' => 'hello',

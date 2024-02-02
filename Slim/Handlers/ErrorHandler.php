@@ -199,3 +199,7 @@ class ErrorHandler implements ErrorHandlerInterface
         }
 
         if (preg_match('/\+(json|xml)/', $acceptHeader, $matches)) {
+            $mediaType = 'application/' . $matches[1];
+            if (array_key_exists($mediaType, $this->errorRenderers)) {
+                return $mediaType;
+            }

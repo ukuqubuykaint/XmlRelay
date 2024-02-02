@@ -164,3 +164,7 @@ class AppFactory
             static::$slimHttpDecoratorsAutomaticDetectionEnabled
             && SlimHttpPsr17Factory::isResponseFactoryAvailable()
         ) {
+            return SlimHttpPsr17Factory::createDecoratedResponseFactory($responseFactory, $streamFactory);
+        }
+
+        return $responseFactory;

@@ -205,3 +205,4 @@ class ErrorMiddleware implements MiddlewareInterface
      * @param string|callable|ErrorHandlerInterface $handler
      */
     private function addErrorHandler(string $type, $handler, bool $handleSubclasses): void
+    {

@@ -207,3 +207,7 @@ class RouteCollector implements RouteCollectorInterface
             if ($name === $route->getName()) {
                 $this->routesByName[$name] = $route;
                 return $route;
+            }
+        }
+
+        throw new RuntimeException('Named route does not exist for name: ' . $name);

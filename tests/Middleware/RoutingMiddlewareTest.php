@@ -161,3 +161,6 @@ class RoutingMiddlewareTest extends TestCase
         $routingResultsProphecy->getRouteStatus()
             ->willReturn(-1)
             ->shouldBeCalledOnce();
+        /** @var RoutingResults $routingResults */
+        $routingResults = $routingResultsProphecy->reveal();
+

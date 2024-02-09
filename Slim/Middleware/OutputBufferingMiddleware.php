@@ -43,3 +43,7 @@ class OutputBufferingMiddleware implements MiddlewareInterface
 
         if (!in_array($style, [static::APPEND, static::PREPEND], true)) {
             throw new InvalidArgumentException("Invalid style `{$style}`. Must be `append` or `prepend`");
+        }
+    }
+
+    /**

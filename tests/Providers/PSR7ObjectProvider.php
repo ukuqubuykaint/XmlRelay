@@ -76,3 +76,7 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
      * @param string $reasonPhrase
      * @return ResponseInterface
      */
+    public function createResponse(int $statusCode = 200, string $reasonPhrase = ''): ResponseInterface
+    {
+        return $this
+            ->getResponseFactory()

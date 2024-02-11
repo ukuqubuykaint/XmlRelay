@@ -153,3 +153,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame($output, $expectedString);
     }
 
+    public function testJSONErrorRendererDoesNotDisplayErrorDetails()
+    {
+        $exception = new Exception('Oops..');
+

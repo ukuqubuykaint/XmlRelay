@@ -81,3 +81,4 @@ class RouteParserTest extends TestCase
 
     public function testRelativePathForWithNoBasePath()
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

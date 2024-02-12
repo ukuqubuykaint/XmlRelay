@@ -56,3 +56,6 @@ class RoutingResults
         $this->uri = $uri;
         $this->routeStatus = $routeStatus;
         $this->routeIdentifier = $routeIdentifier;
+        $this->routeArguments = $routeArguments;
+    }
+

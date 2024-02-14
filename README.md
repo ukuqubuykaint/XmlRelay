@@ -149,3 +149,5 @@ Become a financial contributor and help us sustain our community. [Contribute](h
 
 #### Individuals
 
+<a href="https://opencollective.com/xmlrelayphp"><img src="https://opencollective.com/xmlrelayphp/individuals.svg?width=890"></a>
+

@@ -183,3 +183,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * @param ServerRequestInterface|null $request
      * @return void
      */
+    public function run(?ServerRequestInterface $request = null): void
+    {
+        if (!$request) {

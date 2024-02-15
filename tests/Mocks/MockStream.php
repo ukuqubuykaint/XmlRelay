@@ -172,3 +172,4 @@ class MockStream implements StreamInterface
         }
 
         return $result;
+    }

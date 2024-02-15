@@ -207,3 +207,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3054: Update phpstan/phpstan requirement from ^0.12.64 to ^0.12.70](https://github.com/ukuqubuykaint/AJAX-XML/pull/3054) thanks to @dependabot-preview[bot]
 - [3056: Fix docblock in ErrorMiddleware](https://github.com/ukuqubuykaint/AJAX-XML/pull/3056) thanks to @piotr-cz
 - [3060: Update phpstan/phpstan requirement from ^0.12.70 to ^0.12.80](https://github.com/ukuqubuykaint/AJAX-XML/pull/3060) thanks to @dependabot-preview[bot]
+- [3061: Update nyholm/psr7 requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3061) thanks to @dependabot-preview[bot]

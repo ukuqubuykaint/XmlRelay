@@ -184,3 +184,5 @@ class ErrorMiddlewareTest extends TestCase
 
         $middleware->setErrorHandler(LogicException::class, (function (ServerRequestInterface $request, $exception) {
             $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;

@@ -173,3 +173,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      * {@inheritdoc}
      */
     public function group(string $pattern, $callable): RouteGroupInterface
+    {
+        $pattern = $this->groupPattern . $pattern;
+
+        return $this->routeCollector->group($pattern, $callable);

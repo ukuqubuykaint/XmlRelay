@@ -322,3 +322,6 @@ class CallableResolverTest extends TestCase
 
         /** @var ContainerInterface $container */
         $container = $this->containerProphecy->reveal();
+        $request = $this->createServerRequest('/', 'GET');
+        $resolver = new CallableResolver($container);
+        $callable = $resolver->resolveRoute('a_requesthandler');

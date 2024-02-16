@@ -183,3 +183,6 @@ class ResponseEmitterTest extends TestCase
 
     public function testIsResponseEmptyDoesNotReadAllDataFromNonEmptySeekableResponse(): void
     {
+        $body = $this->createStream('Hello');
+        $response = $this
+            ->createResponse(200)

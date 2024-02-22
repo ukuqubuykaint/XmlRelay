@@ -206,3 +206,7 @@ class ErrorMiddleware implements MiddlewareInterface
      */
     private function addErrorHandler(string $type, $handler, bool $handleSubclasses): void
     {
+        if ($handleSubclasses) {
+            $this->subClassHandlers[$type] = $handler;
+        } else {
+            $this->handlers[$type] = $handler;

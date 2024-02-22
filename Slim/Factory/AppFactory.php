@@ -168,3 +168,5 @@ class AppFactory
         }
 
         return $responseFactory;
+    }
+

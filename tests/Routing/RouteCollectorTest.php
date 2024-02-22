@@ -155,3 +155,7 @@ class RouteCollectorTest extends TestCase
     {
         $this->cacheFile = __DIR__ . '/non-readable.cache';
         file_put_contents($this->cacheFile, '<?php return []; ?>');
+
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage(sprintf('Route collector cache file `%s` is not readable', $this->cacheFile));
+

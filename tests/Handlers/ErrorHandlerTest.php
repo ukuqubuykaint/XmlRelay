@@ -182,3 +182,7 @@ class ErrorHandlerTest extends TestCase
     public function testForceContentTypeNullRestoresNegotiation()
     {
         $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+        $handler->forceContentType('application/json');
+
+        $xmlRequest = $this
+            ->createServerRequest('/not-defined', 'GET')

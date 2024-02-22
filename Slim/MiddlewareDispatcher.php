@@ -200,3 +200,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         $method = $matches[2];
                     }
 
+                    if ($this->container && $this->container->has($resolved)) {
+                        $instance = $this->container->get($resolved);
+                        if ($instance instanceof MiddlewareInterface) {
+                            return $instance->process($request, $this->next);

@@ -156,3 +156,7 @@ class DispatcherTest extends TestCase
         $results = $routeResolver->computeRoutingResults('/download/Foo%20Bar', 'GET');
         $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());
         $this->assertSame(['file' => 'Foo Bar'], $results->getRouteArguments());
+
+        $results = $routeResolver->computeRoutingResults('/download/%252e%252e%252fetc%252fpasswd', 'GET');
+        $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());
+        $this->assertSame(['file' => '%2e%2e%2fetc%2fpasswd'], $results->getRouteArguments());

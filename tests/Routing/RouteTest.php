@@ -365,3 +365,7 @@ class RouteTest extends TestCase
             $output .= $value;
         };
         $request = $this->createServerRequest('/')->withAttribute('appendToOutput', $appendToOutput);
+        $route->run($request);
+
+        $this->assertSame('Hello World', $output);
+    }

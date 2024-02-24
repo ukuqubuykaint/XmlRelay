@@ -211,3 +211,6 @@ class RouteCollector implements RouteCollectorInterface
         }
 
         throw new RuntimeException('Named route does not exist for name: ' . $name);
+    }
+
+    /**

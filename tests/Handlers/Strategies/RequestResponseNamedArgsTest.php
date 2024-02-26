@@ -142,3 +142,5 @@ class RequestResponseNamedArgsTest extends TestCase
             $this->assertSame($this->response, $response);
             $this->assertSame($name, $known['name']);
             $this->assertSame($greeting, $known['greeting']);
+            $this->assertSame($unknown, $arguments);
+

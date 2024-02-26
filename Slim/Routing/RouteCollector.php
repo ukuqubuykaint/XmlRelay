@@ -214,3 +214,6 @@ class RouteCollector implements RouteCollectorInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function lookupRoute(string $identifier): RouteInterface

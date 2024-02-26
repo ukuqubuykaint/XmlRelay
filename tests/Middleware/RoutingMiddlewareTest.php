@@ -168,3 +168,5 @@ class RoutingMiddlewareTest extends TestCase
         $routeParserProphecy = $this->prophesize(RouteParser::class);
         /** @var RouteParserInterface $routeParser */
         $routeParser = $routeParserProphecy->reveal();
+
+        // Prophesize the `RouteResolverInterface` that would return the `RoutingResults`

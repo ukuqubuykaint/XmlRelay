@@ -186,3 +186,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
     public function run(?ServerRequestInterface $request = null): void
     {
         if (!$request) {
+            $serverRequestCreator = ServerRequestCreatorFactory::create();
+            $request = $serverRequestCreator->createServerRequestFromGlobals();

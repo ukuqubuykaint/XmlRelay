@@ -315,3 +315,4 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testResolveThrowsExceptionWithoutContainerNonAdvancedCallableResolverAndUnresolvableClass(): void
+    {

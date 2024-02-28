@@ -204,3 +204,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         $instance = $this->container->get($resolved);
                         if ($instance instanceof MiddlewareInterface) {
                             return $instance->process($request, $this->next);
+                        }
+                    } elseif (!function_exists($resolved)) {

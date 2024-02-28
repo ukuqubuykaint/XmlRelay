@@ -301,3 +301,7 @@ class FastRouteDispatcherTest extends TestCase
         $handler = 'handler1';
         $argDict = ['name' => 'rdlowrey', 'id' => '1234'];
 
+        $cases[] = [$method, $uri, $callback, $handler, $argDict];
+
+        // 9 ----- Test GET method fallback on HEAD route miss ------------------------------------>
+

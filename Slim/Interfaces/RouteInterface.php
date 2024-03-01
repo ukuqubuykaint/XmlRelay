@@ -71,3 +71,5 @@ interface RouteInterface
     public function setName(string $name): RouteInterface;
 
     /**
+     * Get the route's unique identifier
+     */

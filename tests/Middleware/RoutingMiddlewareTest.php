@@ -58,3 +58,5 @@ class RoutingMiddlewareTest extends TestCase
             $this->assertInstanceOf(RoutingResults::class, $routingResults);
             return $responseFactory->createResponse();
         })->bindTo($this);
+
+        $routeCollector = $this->getRouteCollector();

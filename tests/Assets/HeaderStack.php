@@ -78,3 +78,7 @@ class HeaderStack
      *
      * @param string $header
      *
+     * @return bool
+     */
+    public static function has($header)
+    {

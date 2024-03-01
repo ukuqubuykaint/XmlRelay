@@ -63,3 +63,5 @@ abstract class TestCase extends PhpUnitTestCase
      *
      * @return CallableResolverInterface
      */
+    protected function getCallableResolver(?ContainerInterface $container = null): CallableResolverInterface
+    {

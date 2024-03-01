@@ -123,3 +123,5 @@ class AppFactoryTest extends TestCase
     }
 
     public function testSetPsr17FactoryProvider()
+    {
+        $psr17FactoryProvider = new Psr17FactoryProvider();

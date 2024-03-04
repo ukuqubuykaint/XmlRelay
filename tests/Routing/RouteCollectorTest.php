@@ -89,3 +89,5 @@ class RouteCollectorTest extends TestCase
         $routeCollector->group('/prefix', $callable);
     }
 
+    public function testGetRouteInvocationStrategy()
+    {

@@ -217,3 +217,7 @@ class RouteCollector implements RouteCollectorInterface
      * {@inheritdoc}
      */
     public function lookupRoute(string $identifier): RouteInterface
+    {
+        if (!isset($this->routes[$identifier])) {
+            throw new RuntimeException('Route not found, looks like your route cache is stale.');
+        }

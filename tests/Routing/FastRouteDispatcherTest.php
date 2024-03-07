@@ -305,3 +305,4 @@ class FastRouteDispatcherTest extends TestCase
 
         // 9 ----- Test GET method fallback on HEAD route miss ------------------------------------>
 
+        // reuse $callback from #8

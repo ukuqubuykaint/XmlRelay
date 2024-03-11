@@ -369,3 +369,7 @@ class RouteTest extends TestCase
 
         $this->assertSame('Hello World', $output);
     }
+
+    public function testAddMiddlewareAsStringNotImplementingInterfaceThrowsException()
+    {
+        $this->expectException(RuntimeException::class);

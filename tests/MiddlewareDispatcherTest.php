@@ -316,3 +316,7 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testResolveThrowsExceptionWithoutContainerNonAdvancedCallableResolverAndUnresolvableClass(): void
     {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessageMatches('/(Middleware|Callable) Unresolvable::class does not exist/');
+
+        $unresolvable = 'Unresolvable::class';

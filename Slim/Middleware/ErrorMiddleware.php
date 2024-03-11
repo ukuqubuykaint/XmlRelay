@@ -210,3 +210,5 @@ class ErrorMiddleware implements MiddlewareInterface
             $this->subClassHandlers[$type] = $handler;
         } else {
             $this->handlers[$type] = $handler;
+        }
+    }

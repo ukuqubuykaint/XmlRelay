@@ -325,3 +325,4 @@ class CallableResolverTest extends TestCase
         $request = $this->createServerRequest('/', 'GET');
         $resolver = new CallableResolver($container);
         $callable = $resolver->resolveRoute('a_requesthandler');
+        $callable($request);

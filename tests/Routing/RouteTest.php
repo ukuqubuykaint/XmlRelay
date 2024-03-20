@@ -373,3 +373,6 @@ class RouteTest extends TestCase
     public function testAddMiddlewareAsStringNotImplementingInterfaceThrowsException()
     {
         $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage(
+            'A middleware must be an object/class name referencing an implementation of ' .
+            'MiddlewareInterface or a callable with a matching signature.'

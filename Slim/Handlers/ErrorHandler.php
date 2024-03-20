@@ -203,3 +203,5 @@ class ErrorHandler implements ErrorHandlerInterface
             if (array_key_exists($mediaType, $this->errorRenderers)) {
                 return $mediaType;
             }
+        }
+

@@ -378,3 +378,6 @@ class RouteTest extends TestCase
             'MiddlewareInterface or a callable with a matching signature.'
         );
 
+        $route = $this->createRoute();
+        $route->add(new MockMiddlewareWithoutInterface());
+    }

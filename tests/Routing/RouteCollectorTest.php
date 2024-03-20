@@ -159,3 +159,5 @@ class RouteCollectorTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage(sprintf('Route collector cache file `%s` is not readable', $this->cacheFile));
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

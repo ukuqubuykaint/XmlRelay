@@ -182,3 +182,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
             $contentTypeParts = explode(';', $contentType);
             return strtolower(trim($contentTypeParts[0]));
         }
+

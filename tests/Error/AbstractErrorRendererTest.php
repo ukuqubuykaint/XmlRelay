@@ -202,3 +202,6 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame($output, $expectedString);
     }
 
+    public function testJSONErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';

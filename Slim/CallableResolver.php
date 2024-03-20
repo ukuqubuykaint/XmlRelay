@@ -159,3 +159,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         if (!is_callable($resolved)) {
             if (is_callable($toResolve) || is_object($toResolve) || is_array($toResolve)) {
                 $formatedToResolve = ($toResolveJson = json_encode($toResolve)) !== false ? $toResolveJson : '';
+            } else {
+                $formatedToResolve = is_string($toResolve) ? $toResolve : '';

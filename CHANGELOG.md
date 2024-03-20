@@ -146,3 +146,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3195: Adding prop types for Exception classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3195) thanks to @ashleycoles
 - [3196: Adding property type declarations for Factory classes](https://github.com/ukuqubuykaint/AJAX-XML/pull/3196) thanks to @ashleycoles
 - [3197: Remove redundant docblock types](https://github.com/ukuqubuykaint/AJAX-XML/pull/3197) thanks to @theodorejb
+- [3199: Update laminas/laminas-diactoros requirement from ^2.9 to ^2.11](https://github.com/ukuqubuykaint/AJAX-XML/pull/3199) thanks to @dependabot[bot]
+- [3200: Update phpstan/phpstan requirement from ^1.6 to ^1.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3200) thanks to @dependabot[bot]

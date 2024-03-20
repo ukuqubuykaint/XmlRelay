@@ -68,3 +68,7 @@ class SlowPokeStream implements StreamInterface
     }
 
     public function getSize(): ?int
+    {
+        return null;
+    }
+

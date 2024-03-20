@@ -190,3 +190,4 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter = new ResponseEmitter();
 
         $responseEmitter->isResponseEmpty($response);
+

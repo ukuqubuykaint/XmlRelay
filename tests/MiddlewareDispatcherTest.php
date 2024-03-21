@@ -320,3 +320,4 @@ class MiddlewareDispatcherTest extends TestCase
         $this->expectExceptionMessageMatches('/(Middleware|Callable) Unresolvable::class does not exist/');
 
         $unresolvable = 'Unresolvable::class';
+

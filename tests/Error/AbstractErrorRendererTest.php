@@ -205,3 +205,4 @@ class AbstractErrorRendererTest extends TestCase
     public function testJSONErrorRendererRenderHttpException()
     {
         $exceptionTitle = 'title';
+

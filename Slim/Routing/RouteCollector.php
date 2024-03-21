@@ -221,3 +221,5 @@ class RouteCollector implements RouteCollectorInterface
         if (!isset($this->routes[$identifier])) {
             throw new RuntimeException('Route not found, looks like your route cache is stale.');
         }
+        return $this->routes[$identifier];
+    }

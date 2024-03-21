@@ -191,3 +191,6 @@ class ResponseEmitterTest extends TestCase
 
         $responseEmitter->isResponseEmpty($response);
 
+        $this->assertTrue($body->isSeekable());
+        $this->assertFalse($body->eof());
+    }

@@ -42,3 +42,4 @@ class RouteResolver implements RouteResolverInterface
         $uri = rawurldecode($uri);
         if ($uri === '' || $uri[0] !== '/') {
             $uri = '/' . $uri;
+        }

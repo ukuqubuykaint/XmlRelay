@@ -212,3 +212,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3069: Classname/Method Callable Arrays](https://github.com/ukuqubuykaint/AJAX-XML/pull/3069) thanks to @ddrv
 - [3078: Update squizlabs/php&#95;codesniffer requirement from ^3.5 to ^3.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3078) thanks to @dependabot[bot]
 - [3079: Update phpspec/prophecy requirement from ^1.12 to ^1.13](https://github.com/ukuqubuykaint/AJAX-XML/pull/3079) thanks to @dependabot[bot]
+- [3080: Update guzzlehttp/psr7 requirement from ^1.7 to ^1.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3080) thanks to @dependabot[bot]
+- [3082: Update phpstan/phpstan requirement from ^0.12.80 to ^0.12.85](https://github.com/ukuqubuykaint/AJAX-XML/pull/3082) thanks to @dependabot[bot]
+

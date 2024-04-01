@@ -182,3 +182,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     /**
      * {@inheritdoc}
      */
+    public function redirect(string $from, $to, int $status = 302): RouteInterface
+    {
+        $responseFactory = $this->responseFactory;

@@ -172,3 +172,4 @@ class AppFactory
 
     public static function setPsr17FactoryProvider(Psr17FactoryProviderInterface $psr17FactoryProvider): void
     {
+        static::$psr17FactoryProvider = $psr17FactoryProvider;

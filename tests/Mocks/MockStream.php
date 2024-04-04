@@ -174,3 +174,6 @@ class MockStream implements StreamInterface
         return $result;
     }
 
+    public function eof(): bool
+    {
+        return !$this->stream || feof($this->stream);

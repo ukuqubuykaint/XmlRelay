@@ -313,3 +313,5 @@ class FastRouteDispatcherTest extends TestCase
         $argDict = [];
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
+
+        // 10 ---- Test existing HEAD route used if available (no fallback) ----------------------->

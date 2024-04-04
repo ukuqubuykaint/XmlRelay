@@ -170,3 +170,5 @@ class AppFactory
         return $responseFactory;
     }
 
+    public static function setPsr17FactoryProvider(Psr17FactoryProviderInterface $psr17FactoryProvider): void
+    {

@@ -161,3 +161,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
                 $formatedToResolve = ($toResolveJson = json_encode($toResolve)) !== false ? $toResolveJson : '';
             } else {
                 $formatedToResolve = is_string($toResolve) ? $toResolve : '';
+            }
+            throw new RuntimeException(sprintf('%s is not resolvable', $formatedToResolve));

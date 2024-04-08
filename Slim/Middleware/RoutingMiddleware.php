@@ -61,3 +61,6 @@ class RoutingMiddleware implements MiddlewareInterface
         $routingResults = $this->resolveRoutingResultsFromRequest($request);
         $routeStatus = $routingResults->getRouteStatus();
 
+        $request = $request->withAttribute(RouteContext::ROUTING_RESULTS, $routingResults);
+
+        switch ($routeStatus) {

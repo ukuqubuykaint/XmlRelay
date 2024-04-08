@@ -321,3 +321,4 @@ class MiddlewareDispatcherTest extends TestCase
 
         $unresolvable = 'Unresolvable::class';
 
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

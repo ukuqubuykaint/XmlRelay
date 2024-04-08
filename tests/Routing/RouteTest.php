@@ -381,3 +381,5 @@ class RouteTest extends TestCase
         $route = $this->createRoute();
         $route->add(new MockMiddlewareWithoutInterface());
     }
+
+    public function testIdentifier()

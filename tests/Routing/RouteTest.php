@@ -211,3 +211,7 @@ class RouteTest extends TestCase
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal()
         );
+        $route->setInvocationStrategy($strategyProphecy->reveal());
+
+        $this->assertSame($strategyProphecy->reveal(), $route->getInvocationStrategy());
+    }

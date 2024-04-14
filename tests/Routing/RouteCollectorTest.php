@@ -91,3 +91,4 @@ class RouteCollectorTest extends TestCase
 
     public function testGetRouteInvocationStrategy()
     {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

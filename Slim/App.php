@@ -111,3 +111,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      */
     public function addMiddleware(MiddlewareInterface $middleware): self
     {
+        $this->middlewareDispatcher->addMiddleware($middleware);

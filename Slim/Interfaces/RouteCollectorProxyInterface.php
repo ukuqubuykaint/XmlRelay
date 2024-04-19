@@ -98,3 +98,5 @@ interface RouteCollectorProxyInterface
      */
     public function any(string $pattern, $callable): RouteInterface;
 
+    /**
+     * Add route with multiple methods

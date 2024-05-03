@@ -47,3 +47,6 @@ jobs:
       - name: Static analysis
         if: matrix.analysis
         run: vendor/bin/phpstan
+
+      - name: Tests
+        run: vendor/bin/phpunit ${{ matrix.analysis && '--coverage-clover clover.xml' || '--no-coverage'  }}

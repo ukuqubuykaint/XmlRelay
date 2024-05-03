@@ -180,3 +180,4 @@ class CallableResolverTest extends TestCase
         $resolver->resolveMiddleware([CallableTest::class ,'toCall']);
         $this->assertSame($container, CallableTest::$CalledContainer);
     }
+

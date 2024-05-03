@@ -135,3 +135,6 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testResponseReplacesPreviouslySetHeaders(): void
+    {
+        $response = $this
+            ->createResponse(200, 'OK')

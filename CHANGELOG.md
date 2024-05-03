@@ -151,3 +151,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3205: Update guzzlehttp/psr7 requirement from ^2.2 to ^2.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3205) thanks to @dependabot[bot]
 - [3206: Update squizlabs/php_codesniffer requirement from ^3.6 to ^3.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3206) thanks to @dependabot[bot]
 - [3207: Update phpstan/phpstan requirement from ^1.7 to ^1.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3207) thanks to @dependabot[bot]
+- [3211: Assign null coalescing to coalesce equal](https://github.com/ukuqubuykaint/AJAX-XML/pull/3211) thanks to @MathiasReker
+- [3213: Void return](https://github.com/ukuqubuykaint/AJAX-XML/pull/3213) thanks to @MathiasReker

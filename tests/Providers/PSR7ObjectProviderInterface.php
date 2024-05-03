@@ -56,3 +56,5 @@ interface PSR7ObjectProviderInterface
 
     /**
      * @param string $contents
+     * @return StreamInterface
+     */

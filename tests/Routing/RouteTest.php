@@ -215,3 +215,4 @@ class RouteTest extends TestCase
 
         $this->assertSame($strategyProphecy->reveal(), $route->getInvocationStrategy());
     }
+

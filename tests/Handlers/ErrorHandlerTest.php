@@ -172,3 +172,4 @@ class ErrorHandlerTest extends TestCase
         $exception = new HttpNotFoundException($xmlRequest);
 
         /** @var ResponseInterface $response */
+        $response = $handler->__invoke($xmlRequest, $exception, false, false, false);

@@ -100,3 +100,6 @@ interface RouteCollectorProxyInterface
 
     /**
      * Add route with multiple methods
+     *
+     * @param string[] $methods Numeric array of HTTP method names
+     * @param string $pattern The route URI pattern

@@ -163,3 +163,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
                 $formatedToResolve = is_string($toResolve) ? $toResolve : '';
             }
             throw new RuntimeException(sprintf('%s is not resolvable', $formatedToResolve));
+        }
+        return $resolved;
+    }

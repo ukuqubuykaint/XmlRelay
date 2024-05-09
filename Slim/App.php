@@ -190,3 +190,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $request = $serverRequestCreator->createServerRequestFromGlobals();
         }
 
+        $response = $this->handle($request);
+        $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);

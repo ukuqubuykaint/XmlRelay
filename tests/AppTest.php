@@ -609,3 +609,4 @@ class AppTest extends TestCase
             return $responseProphecy->reveal();
         });
 
+        $middlewareProphecy2 = $this->prophesize(MiddlewareInterface::class);

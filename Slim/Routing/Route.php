@@ -201,3 +201,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     public function setCallable($callable): RouteInterface
     {
         $this->callable = $callable;
+        return $this;
+    }
+

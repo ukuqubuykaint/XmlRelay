@@ -205,3 +205,6 @@ class ErrorHandler implements ErrorHandlerInterface
             }
         }
 
+        return null;
+    }
+

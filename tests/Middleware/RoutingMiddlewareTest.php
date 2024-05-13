@@ -174,3 +174,7 @@ class RoutingMiddlewareTest extends TestCase
         $routeResolverProphecy = $this->prophesize(RouteResolverInterface::class);
         /** @noinspection PhpUndefinedMethodInspection */
         $routeResolverProphecy->computeRoutingResults(Argument::any(), Argument::any())
+            ->willReturn($routingResults)
+            ->shouldBeCalled();
+        /** @var RouteResolverInterface $routeResolver */
+        $routeResolver = $routeResolverProphecy->reveal();

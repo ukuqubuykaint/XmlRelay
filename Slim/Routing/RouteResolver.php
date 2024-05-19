@@ -43,3 +43,5 @@ class RouteResolver implements RouteResolverInterface
         if ($uri === '' || $uri[0] !== '/') {
             $uri = '/' . $uri;
         }
+        return $this->dispatcher->dispatch($method, $uri);
+    }

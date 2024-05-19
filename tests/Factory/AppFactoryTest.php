@@ -125,3 +125,7 @@ class AppFactoryTest extends TestCase
     public function testSetPsr17FactoryProvider()
     {
         $psr17FactoryProvider = new Psr17FactoryProvider();
+        $psr17FactoryProvider::setFactories([SlimPsr17Factory::class]);
+
+        AppFactory::setPsr17FactoryProvider($psr17FactoryProvider);
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);

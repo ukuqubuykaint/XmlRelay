@@ -103,3 +103,4 @@ interface RouteCollectorProxyInterface
      *
      * @param string[] $methods Numeric array of HTTP method names
      * @param string $pattern The route URI pattern
+     * @param callable|array{class-string, string}|string $callable The route callback routine

@@ -45,3 +45,5 @@ class RouteResolver implements RouteResolverInterface
         }
         return $this->dispatcher->dispatch($method, $uri);
     }
+
+    /**

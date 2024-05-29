@@ -212,3 +212,4 @@ class MiddlewareDispatcherTest extends TestCase
 
         $this->assertSame(1, $handler->getCalledCount());
     }
+

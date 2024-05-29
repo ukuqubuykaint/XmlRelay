@@ -50,3 +50,7 @@ class HttpException extends RuntimeException
     {
         $this->title = $title;
         return $this;
+    }
+
+    public function getDescription(): string
+    {

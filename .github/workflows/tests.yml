@@ -50,3 +50,6 @@ jobs:
 
       - name: Tests
         run: vendor/bin/phpunit ${{ matrix.analysis && '--coverage-clover clover.xml' || '--no-coverage'  }}
+
+      - name: Upload coverage results to Coveralls
+        if: matrix.analysis

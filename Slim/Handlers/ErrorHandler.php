@@ -208,3 +208,6 @@ class ErrorHandler implements ErrorHandlerInterface
         return null;
     }
 
+    /**
+     * Determine which renderer to use based on content type
+     *

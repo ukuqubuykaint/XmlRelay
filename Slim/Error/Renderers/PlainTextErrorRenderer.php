@@ -51,3 +51,4 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
         $text .= sprintf("File: %s\n", $exception->getFile());
 
         $text .= sprintf("Line: %s\n", $exception->getLine());
+

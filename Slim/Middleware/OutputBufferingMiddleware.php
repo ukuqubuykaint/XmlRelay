@@ -47,3 +47,5 @@ class OutputBufferingMiddleware implements MiddlewareInterface
     }
 
     /**
+     * @throws Throwable
+     */

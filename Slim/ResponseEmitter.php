@@ -97,3 +97,6 @@ class ResponseEmitter
         }
 
         if ($amountToRead) {
+            while ($amountToRead > 0 && !$body->eof()) {
+                $length = min($this->responseChunkSize, $amountToRead);
+                $data = $body->read($length);

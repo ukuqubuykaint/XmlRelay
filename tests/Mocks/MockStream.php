@@ -107,3 +107,5 @@ class MockStream implements StreamInterface
     {
         try {
             if ($this->isSeekable()) {
+                $this->seek(0);
+            }

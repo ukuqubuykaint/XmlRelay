@@ -72,3 +72,4 @@ class DispatcherTest extends TestCase
 
         /** @var RoutingResults $result */
         $result = $dispatcher2->dispatch('GET', '/');
+        $this->assertSame(FastRouteDispatcher::FOUND, $result->getRouteStatus());

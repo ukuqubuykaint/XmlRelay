@@ -160,3 +160,4 @@ class AbstractErrorRendererTest extends TestCase
         $renderer = new JsonErrorRenderer();
         $output = json_encode(json_decode($renderer->__invoke($exception, false)));
 
+        $this->assertSame($output, json_encode(['message' => 'Slim Application Error']));

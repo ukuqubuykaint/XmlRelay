@@ -173,3 +173,6 @@ class ErrorHandlerTest extends TestCase
 
         /** @var ResponseInterface $response */
         $response = $handler->__invoke($xmlRequest, $exception, false, false, false);
+        $this->assertSame(['application/json'], $response->getHeader('Content-Type'));
+    }
+

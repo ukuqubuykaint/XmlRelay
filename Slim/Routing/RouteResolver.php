@@ -47,3 +47,4 @@ class RouteResolver implements RouteResolverInterface
     }
 
     /**
+     * @throws RuntimeException

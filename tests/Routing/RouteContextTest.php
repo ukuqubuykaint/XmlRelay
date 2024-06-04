@@ -71,3 +71,4 @@ class RouteContextTest extends TestCase
     }
 
     public static function requiredRouteContextRequestAttributes(): array
+    {

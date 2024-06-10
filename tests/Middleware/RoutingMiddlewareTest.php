@@ -178,3 +178,5 @@ class RoutingMiddlewareTest extends TestCase
             ->shouldBeCalled();
         /** @var RouteResolverInterface $routeResolver */
         $routeResolver = $routeResolverProphecy->reveal();
+
+        // Create the server request.

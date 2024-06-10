@@ -183,3 +183,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
             return strtolower(trim($contentTypeParts[0]));
         }
 
+        return null;

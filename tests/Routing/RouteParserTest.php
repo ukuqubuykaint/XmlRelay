@@ -146,3 +146,7 @@ class RouteParserTest extends TestCase
 
     public function testUrlForWithMissingSegmentData()
     {
+        $this->expectException(InvalidArgumentException::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

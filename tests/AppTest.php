@@ -627,3 +627,5 @@ class AppTest extends TestCase
         $app->addMiddleware($middlewareProphecy2->reveal());
         $app->get('/', function (ServerRequestInterface $request, $response) {
             return $response;
+        });
+

@@ -199,3 +199,6 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame(['application/json'], $response->getHeader('Content-Type'));
 
         $handler->forceContentType(null);
+
+        $exception = new HttpNotFoundException($xmlRequest);
+

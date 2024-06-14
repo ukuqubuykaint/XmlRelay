@@ -210,3 +210,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                             throw new RuntimeException(sprintf('Middleware %s does not exist', $resolved));
                         }
                         $instance = new $resolved($this->container);
+                    }
+
+                    if ($instance && $instance instanceof MiddlewareInterface) {

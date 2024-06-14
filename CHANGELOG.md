@@ -215,3 +215,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3080: Update guzzlehttp/psr7 requirement from ^1.7 to ^1.8](https://github.com/ukuqubuykaint/AJAX-XML/pull/3080) thanks to @dependabot[bot]
 - [3082: Update phpstan/phpstan requirement from ^0.12.80 to ^0.12.85](https://github.com/ukuqubuykaint/AJAX-XML/pull/3082) thanks to @dependabot[bot]
 
+## 4.7.0 - 2020-11-30

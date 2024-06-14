@@ -317,3 +317,6 @@ class FastRouteDispatcherTest extends TestCase
         // 10 ---- Test existing HEAD route used if available (no fallback) ----------------------->
 
         // reuse $callback from #9
+
+        $method = 'HEAD';
+        $uri = '/static1';

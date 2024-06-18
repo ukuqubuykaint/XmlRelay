@@ -167,3 +167,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         return $resolved;
     }
 
+    private function bindToContainer(callable $callable): callable
+    {
+        if (is_array($callable) && $callable[0] instanceof Closure) {
+            $callable = $callable[0];

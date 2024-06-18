@@ -184,3 +184,7 @@ class BodyParsingMiddleware implements MiddlewareInterface
         }
 
         return null;
+    }
+
+    protected static function disableXmlEntityLoader(bool $disable): bool
+    {

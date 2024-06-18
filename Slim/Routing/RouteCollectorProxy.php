@@ -189,3 +189,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         $handler = function () use ($to, $status, $responseFactory) {
             $response = $responseFactory->createResponse($status);
             return $response->withHeader('Location', (string) $to);
+        };

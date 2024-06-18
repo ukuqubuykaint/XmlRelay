@@ -324,3 +324,6 @@ class MiddlewareDispatcherTest extends TestCase
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
 
         $callableResolverProphecy
+            ->resolve($unresolvable)
+            ->willThrow(RuntimeException::class)
+            ->shouldBeCalledOnce();

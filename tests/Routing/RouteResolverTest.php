@@ -56,3 +56,7 @@ class RouteResolverTest extends TestCase
                         $args[1],
                         $expectedUri
                     ));
+                }
+                return $routingResultsProphecy->reveal();
+            })
+            ->shouldBeCalledOnce();

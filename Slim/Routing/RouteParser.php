@@ -76,3 +76,7 @@ class RouteParser implements RouteParserInterface
                 $segments[] = $data[$segment[0]];
             }
 
+            /*
+             * If we get to this logic block we have found all the parameters
+             * for the provided $data which means we don't need to continue testing
+             * less specific expressions

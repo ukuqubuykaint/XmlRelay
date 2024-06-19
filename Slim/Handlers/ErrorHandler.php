@@ -99,3 +99,5 @@ class ErrorHandler implements ErrorHandlerInterface
         ResponseFactoryInterface $responseFactory,
         ?LoggerInterface $logger = null
     ) {
+        $this->callableResolver = $callableResolver;
+        $this->responseFactory = $responseFactory;

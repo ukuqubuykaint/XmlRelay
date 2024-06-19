@@ -86,3 +86,5 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             '        <a href="#" onclick="window.history.go(-1)">Go Back</a>' .
             '    </body>' .
             '</html>',
+            $title,
+            $title,

@@ -92,3 +92,7 @@ class RouteCollectorTest extends TestCase
     public function testGetRouteInvocationStrategy()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $invocationStrategyProphecy = $this->prophesize(InvocationStrategyInterface::class);
+

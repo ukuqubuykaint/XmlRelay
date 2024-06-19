@@ -193,3 +193,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $response = $this->handle($request);
         $responseEmitter = new ResponseEmitter();
         $responseEmitter->emit($response);
+    }
+
+    /**
+     * Handle a request

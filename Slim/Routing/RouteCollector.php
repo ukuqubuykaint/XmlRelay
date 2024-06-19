@@ -224,3 +224,7 @@ class RouteCollector implements RouteCollectorInterface
         return $this->routes[$identifier];
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function group(string $pattern, $callable): RouteGroupInterface

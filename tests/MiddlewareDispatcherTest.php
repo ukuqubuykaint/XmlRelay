@@ -327,3 +327,7 @@ class MiddlewareDispatcherTest extends TestCase
             ->resolve($unresolvable)
             ->willThrow(RuntimeException::class)
             ->shouldBeCalledOnce();
+
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, null, $callableResolverProphecy->reveal());
+        $middlewareDispatcher->addDeferred($unresolvable);

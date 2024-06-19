@@ -180,3 +180,6 @@ class RoutingMiddlewareTest extends TestCase
         $routeResolver = $routeResolverProphecy->reveal();
 
         // Create the server request.
+        $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');
+
+        // Create the routing middleware with the `RouteResolverInterface` defined

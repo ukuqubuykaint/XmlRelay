@@ -158,3 +158,4 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/xmlrelayphp/organization/0/website"><img src="https://opencollective.com/xmlrelayphp/organization/0/avatar.svg"></a>
 <a href="https://opencollective.com/xmlrelayphp/organization/1/website"><img src="https://opencollective.com/xmlrelayphp/organization/1/avatar.svg"></a>
 <a href="https://opencollective.com/xmlrelayphp/organization/2/website"><img src="https://opencollective.com/xmlrelayphp/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/xmlrelayphp/organization/3/website"><img src="https://opencollective.com/xmlrelayphp/organization/3/avatar.svg"></a>

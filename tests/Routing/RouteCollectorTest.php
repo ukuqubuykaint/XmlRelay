@@ -165,3 +165,6 @@ class RouteCollectorTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->setCacheFile($this->cacheFile);
     }
+
+    /**
+     * Test cache file does not exist and directory is not writable

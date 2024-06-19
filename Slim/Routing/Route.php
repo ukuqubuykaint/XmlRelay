@@ -210,3 +210,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     public function getName(): ?string
     {
         return $this->name;
+    }
+
+    /**

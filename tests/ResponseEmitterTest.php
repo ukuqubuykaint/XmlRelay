@@ -194,3 +194,6 @@ class ResponseEmitterTest extends TestCase
         $this->assertTrue($body->isSeekable());
         $this->assertFalse($body->eof());
     }
+
+    public function testIsResponseEmptyDoesNotDrainNonSeekableResponseWithContent(): void
+    {

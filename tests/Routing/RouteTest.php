@@ -386,3 +386,5 @@ class RouteTest extends TestCase
     {
         $route = $this->createRoute();
         $this->assertSame('route0', $route->getIdentifier());
+    }
+

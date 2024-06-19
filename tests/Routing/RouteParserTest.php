@@ -152,3 +152,6 @@ class RouteParserTest extends TestCase
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $route = $routeCollector->map(['GET'], '/{first}/{last}', function () {
+        });
+        $route->setName('test');

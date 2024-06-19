@@ -20,3 +20,5 @@
         </report>
     </coverage>
     <source>
+        <include>
+            <directory>Slim</directory>

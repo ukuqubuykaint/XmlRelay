@@ -100,3 +100,6 @@ class BodyParsingMiddlewareTest extends TestCase
             'text-xml' => [
                 'text/xml',
                 '<person><name>John</name></person>',
+                simplexml_load_string('<person><name>John</name></person>'),
+            ],
+            'invalid-json' => [

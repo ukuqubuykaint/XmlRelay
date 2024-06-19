@@ -197,3 +197,7 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
 
     /**
      * Handle a request
+     *
+     * This method traverses the application middleware stack and then returns the
+     * resultant Response object.
+     *

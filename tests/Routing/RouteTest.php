@@ -388,3 +388,4 @@ class RouteTest extends TestCase
         $this->assertSame('route0', $route->getIdentifier());
     }
 
+    public function testSetName()

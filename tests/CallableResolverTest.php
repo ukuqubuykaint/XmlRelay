@@ -331,3 +331,4 @@ class CallableResolverTest extends TestCase
     }
 
     public function testMiddlewareObjPsrRequestHandlerClassInContainer(): void
+    {

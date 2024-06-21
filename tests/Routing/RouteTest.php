@@ -389,3 +389,6 @@ class RouteTest extends TestCase
     }
 
     public function testSetName()
+    {
+        $route = $this->createRoute();
+        $this->assertSame($route, $route->setName('foo'));

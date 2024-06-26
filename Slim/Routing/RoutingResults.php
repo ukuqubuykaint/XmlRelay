@@ -59,3 +59,7 @@ class RoutingResults
         $this->routeArguments = $routeArguments;
     }
 
+    public function getDispatcher(): DispatcherInterface
+    {
+        return $this->dispatcher;
+    }

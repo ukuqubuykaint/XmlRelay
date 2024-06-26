@@ -95,3 +95,4 @@ class AppFactory
             $routeCollectorFromContainer = $container->get(RouteCollectorInterface::class)
         ) instanceof RouteCollectorInterface
             ? $routeCollectorFromContainer
+            : null;

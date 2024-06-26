@@ -55,3 +55,4 @@ jobs:
         if: matrix.analysis
         uses: coverallsapp/github-action@v2
         with:
+          flag-name: php-${{ matrix.php }}

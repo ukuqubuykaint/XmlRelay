@@ -67,3 +67,4 @@ class RoutingMiddleware implements MiddlewareInterface
             case RoutingResults::FOUND:
                 $routeArguments = $routingResults->getRouteArguments();
                 $routeIdentifier = $routingResults->getRouteIdentifier() ?? '';
+                $route = $this->routeResolver

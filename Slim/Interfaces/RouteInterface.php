@@ -73,3 +73,7 @@ interface RouteInterface
     /**
      * Get the route's unique identifier
      */
+    public function getIdentifier(): string;
+
+    /**
+     * Retrieve a specific route argument

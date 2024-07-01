@@ -39,3 +39,4 @@ class Psr17FactoryTest extends TestCase
                                       ' could not instantiate a server request creator.');
 
         MockPsr17Factory::getServerRequestCreator();
+    }

@@ -158,3 +158,5 @@ class RouteParserTest extends TestCase
 
         $routeParser = $routeCollector->getRouteParser();
         $routeParser->urlFor('test', ['last' => 'world']);
+    }
+

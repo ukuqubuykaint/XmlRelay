@@ -89,3 +89,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
     public function getBodyParser(string $mediaType): callable
     {
         if (!isset($this->bodyParsers[$mediaType])) {
+            throw new RuntimeException('No parser for type ' . $mediaType);
+        }
+        return $this->bodyParsers[$mediaType];

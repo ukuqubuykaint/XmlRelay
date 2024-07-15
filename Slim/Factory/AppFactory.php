@@ -96,3 +96,4 @@ class AppFactory
         ) instanceof RouteCollectorInterface
             ? $routeCollectorFromContainer
             : null;
+

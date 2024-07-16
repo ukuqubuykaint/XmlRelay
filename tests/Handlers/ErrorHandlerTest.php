@@ -176,3 +176,4 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame(['application/json'], $response->getHeader('Content-Type'));
     }
 
+    /**

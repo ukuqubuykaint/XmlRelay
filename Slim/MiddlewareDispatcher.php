@@ -130,3 +130,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             }
         };
 
+        return $this;
+    }

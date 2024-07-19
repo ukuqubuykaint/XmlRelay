@@ -74,3 +74,6 @@ class DispatcherTest extends TestCase
         $result = $dispatcher2->dispatch('GET', '/');
         $this->assertSame(FastRouteDispatcher::FOUND, $result->getRouteStatus());
 
+        unlink($cacheFile);
+    }
+

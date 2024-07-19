@@ -65,3 +65,5 @@ class ServerRequestCreatorFactoryTest extends TestCase
         ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(true);
 
         $serverRequestCreator = ServerRequestCreatorFactory::create();
+
+        $this->assertInstanceOf(SlimHttpServerRequestCreator::class, $serverRequestCreator);

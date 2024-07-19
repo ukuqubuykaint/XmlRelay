@@ -610,3 +610,4 @@ class AppTest extends TestCase
         });
 
         $middlewareProphecy2 = $this->prophesize(MiddlewareInterface::class);
+        $middlewareProphecy2->process(

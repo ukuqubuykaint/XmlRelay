@@ -94,3 +94,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
         return $this->bodyParsers[$mediaType];
     }
 
+    protected function registerDefaultBodyParsers(): void
+    {
+        $this->registerBodyParser('application/json', static function ($input) {

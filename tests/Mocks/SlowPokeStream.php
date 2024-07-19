@@ -72,3 +72,6 @@ class SlowPokeStream implements StreamInterface
         return null;
     }
 
+    public function isReadable(): bool
+    {
+        return true;

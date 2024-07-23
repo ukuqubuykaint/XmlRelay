@@ -155,3 +155,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3213: Void return](https://github.com/ukuqubuykaint/AJAX-XML/pull/3213) thanks to @MathiasReker
 - [3214: Is null](https://github.com/ukuqubuykaint/AJAX-XML/pull/3214) thanks to @MathiasReker
 - [3216: Refactor](https://github.com/ukuqubuykaint/AJAX-XML/pull/3216) thanks to @mehdihasanpour
+- [3218: Refactor some code](https://github.com/ukuqubuykaint/AJAX-XML/pull/3218) thanks to @mehdihasanpour
+- [3221: Cleanup](https://github.com/ukuqubuykaint/AJAX-XML/pull/3221) thanks to @mehdihasanpour

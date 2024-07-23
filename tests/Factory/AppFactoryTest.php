@@ -129,3 +129,5 @@ class AppFactoryTest extends TestCase
 
         AppFactory::setPsr17FactoryProvider($psr17FactoryProvider);
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+
+        $this->assertInstanceOf(SlimResponseFactory::class, AppFactory::determineResponseFactory());

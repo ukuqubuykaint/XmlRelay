@@ -77,3 +77,5 @@ interface RouteInterface
 
     /**
      * Retrieve a specific route argument
+     */
+    public function getArgument(string $name, ?string $default = null): ?string;

@@ -320,3 +320,4 @@ class FastRouteDispatcherTest extends TestCase
 
         $method = 'HEAD';
         $uri = '/static1';
+        $handler = 'handler4';

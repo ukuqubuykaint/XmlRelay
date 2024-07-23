@@ -216,3 +216,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3082: Update phpstan/phpstan requirement from ^0.12.80 to ^0.12.85](https://github.com/ukuqubuykaint/AJAX-XML/pull/3082) thanks to @dependabot[bot]
 
 ## 4.7.0 - 2020-11-30
+
+### Fixed
+- [3027: Fix: FastRoute dispatcher and data generator should match](https://github.com/ukuqubuykaint/AJAX-XML/pull/3027) thanks to @edudobay

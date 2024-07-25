@@ -93,3 +93,4 @@ $app->run();
 
 You may quickly test this using the built-in PHP server:
 ```bash
+php -S localhost:8000 -t public

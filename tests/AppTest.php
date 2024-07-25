@@ -613,3 +613,5 @@ class AppTest extends TestCase
         $middlewareProphecy2->process(
             Argument::type(ServerRequestInterface::class),
             Argument::type(RequestHandlerInterface::class)
+        )->will(function ($args) {
+            /** @var ServerRequestInterface $request */

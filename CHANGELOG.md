@@ -157,3 +157,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3216: Refactor](https://github.com/ukuqubuykaint/AJAX-XML/pull/3216) thanks to @mehdihasanpour
 - [3218: Refactor some code](https://github.com/ukuqubuykaint/AJAX-XML/pull/3218) thanks to @mehdihasanpour
 - [3221: Cleanup](https://github.com/ukuqubuykaint/AJAX-XML/pull/3221) thanks to @mehdihasanpour
+- [3225: Update laminas/laminas-diactoros requirement from ^2.11 to ^2.14](https://github.com/ukuqubuykaint/AJAX-XML/pull/3225) thanks to @dependabot[bot]

@@ -89,3 +89,5 @@ class HtmlErrorRenderer extends AbstractErrorRenderer
             $title,
             $title,
             $html
+        );
+    }

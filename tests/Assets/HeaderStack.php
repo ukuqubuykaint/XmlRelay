@@ -86,3 +86,5 @@ class HeaderStack
             $components = explode(':', $item['header']);
             if (trim($components[0]) === $header) {
                 return true;
+            }
+        }

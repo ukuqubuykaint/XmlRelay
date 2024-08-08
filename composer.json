@@ -81,3 +81,7 @@
             "XmlRelay\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "test": [
+            "@phpunit",
+            "@phpcs",

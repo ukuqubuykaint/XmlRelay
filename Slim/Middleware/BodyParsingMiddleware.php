@@ -188,3 +188,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
     protected static function disableXmlEntityLoader(bool $disable): bool
     {
+        if (LIBXML_VERSION >= 20900) {
+            // libxml >= 2.9.0 disables entity loading by default, so it is
+            // safe to skip the real call (deprecated in PHP 8).

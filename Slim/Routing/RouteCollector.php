@@ -228,3 +228,7 @@ class RouteCollector implements RouteCollectorInterface
      * {@inheritdoc}
      */
     public function group(string $pattern, $callable): RouteGroupInterface
+    {
+        $routeGroup = $this->createGroup($pattern, $callable);
+        $this->routeGroups[] = $routeGroup;
+

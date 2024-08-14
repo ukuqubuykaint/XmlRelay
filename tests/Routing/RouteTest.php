@@ -394,3 +394,6 @@ class RouteTest extends TestCase
         $this->assertSame($route, $route->setName('foo'));
         $this->assertSame('foo', $route->getName());
     }
+
+    public function testControllerMethodAsStringResolvesWithoutContainer()
+    {

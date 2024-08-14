@@ -181,3 +181,5 @@ class MockStream implements StreamInterface
 
     public function isSeekable(): bool
     {
+        return $this->seekable;
+    }

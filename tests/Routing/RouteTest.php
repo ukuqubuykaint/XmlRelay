@@ -397,3 +397,5 @@ class RouteTest extends TestCase
 
     public function testControllerMethodAsStringResolvesWithoutContainer()
     {
+        $callableResolver = new CallableResolver();
+        $responseFactory = $this->getResponseFactory();

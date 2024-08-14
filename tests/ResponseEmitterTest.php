@@ -197,3 +197,7 @@ class ResponseEmitterTest extends TestCase
 
     public function testIsResponseEmptyDoesNotDrainNonSeekableResponseWithContent(): void
     {
+        $resource = popen('echo 12', 'r');
+        $body = $this->getStreamFactory()->createStreamFromResource($resource);
+        $response = $this->createResponse(200)->withBody($body);
+        $responseEmitter = new ResponseEmitter();

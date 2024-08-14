@@ -629,3 +629,4 @@ class AppTest extends TestCase
             return $response;
         });
 
+        $uriProphecy = $this->prophesize(UriInterface::class);

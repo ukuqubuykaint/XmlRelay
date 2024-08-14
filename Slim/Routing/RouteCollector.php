@@ -232,3 +232,7 @@ class RouteCollector implements RouteCollectorInterface
         $routeGroup = $this->createGroup($pattern, $callable);
         $this->routeGroups[] = $routeGroup;
 
+        $routeGroup->collectRoutes();
+        array_pop($this->routeGroups);
+
+        return $routeGroup;

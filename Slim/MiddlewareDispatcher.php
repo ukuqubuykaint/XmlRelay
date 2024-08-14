@@ -217,3 +217,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     }
 
                     $callable = $instance ?? $resolved;
+                    if ($instance && $method) {
+                        $callable = [$instance, $method];
+                    }

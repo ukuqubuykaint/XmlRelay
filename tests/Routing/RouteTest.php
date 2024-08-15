@@ -400,3 +400,4 @@ class RouteTest extends TestCase
         $callableResolver = new CallableResolver();
         $responseFactory = $this->getResponseFactory();
 
+        $deferred = $callableResolver->resolve('\Slim\Tests\Mocks\CallableTest:toCall');

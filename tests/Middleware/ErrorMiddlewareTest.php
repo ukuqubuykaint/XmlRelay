@@ -191,3 +191,4 @@ class ErrorMiddlewareTest extends TestCase
         $middleware->setDefaultErrorHandler((function () {
             $response = $this->createResponse();
             $response->getBody()->write('Oops..');
+            return $response;

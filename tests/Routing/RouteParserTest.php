@@ -160,3 +160,4 @@ class RouteParserTest extends TestCase
         $routeParser->urlFor('test', ['last' => 'world']);
     }
 
+    public function testUrlForRouteThatDoesNotExist()

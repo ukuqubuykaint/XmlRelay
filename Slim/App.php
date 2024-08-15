@@ -205,3 +205,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * @return ResponseInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
+    {

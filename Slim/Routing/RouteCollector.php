@@ -236,3 +236,4 @@ class RouteCollector implements RouteCollectorInterface
         array_pop($this->routeGroups);
 
         return $routeGroup;
+    }

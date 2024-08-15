@@ -399,3 +399,4 @@ class RouteTest extends TestCase
     {
         $callableResolver = new CallableResolver();
         $responseFactory = $this->getResponseFactory();
+

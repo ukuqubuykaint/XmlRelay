@@ -183,3 +183,4 @@ class MockStream implements StreamInterface
     {
         return $this->seekable;
     }
+

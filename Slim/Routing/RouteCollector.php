@@ -237,3 +237,6 @@ class RouteCollector implements RouteCollectorInterface
 
         return $routeGroup;
     }
+
+    /**
+     * @param string|callable $callable

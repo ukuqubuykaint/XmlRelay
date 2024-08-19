@@ -102,3 +102,7 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->callableResolver = $callableResolver;
         $this->responseFactory = $responseFactory;
         $this->logger = $logger ?: $this->getDefaultLogger();
+    }
+
+    /**
+     * Invoke error handler

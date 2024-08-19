@@ -111,3 +111,5 @@ class MockStream implements StreamInterface
             }
 
             return $this->getContents();
+        } catch (Exception $e) {
+            return '';

@@ -64,3 +64,5 @@ class RoutingMiddlewareTest extends TestCase
         $routeResolver = new RouteResolver($routeCollector);
         $routingMiddleware = new RoutingMiddleware($routeResolver, $routeParser);
 
+        $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');
+

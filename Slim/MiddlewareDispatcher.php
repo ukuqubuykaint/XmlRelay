@@ -220,3 +220,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     if ($instance && $method) {
                         $callable = [$instance, $method];
                     }
+

@@ -328,3 +328,4 @@ class FastRouteDispatcherTest extends TestCase
         // 11 ---- More specified routes are not shadowed by less specific of another method ------>
 
         $callback = function (RouteCollector $r) {
+            $r->addRoute('GET', '/user/{name}', 'handler0');

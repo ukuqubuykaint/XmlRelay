@@ -206,3 +206,4 @@ class ErrorHandlerTest extends TestCase
         $response = $handler->__invoke($xmlRequest, $exception, false, false, false);
         $this->assertSame(['application/xml'], $response->getHeader('Content-Type'));
 
+        $exception = new HttpNotFoundException($htmlRequest);

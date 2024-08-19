@@ -201,3 +201,6 @@ class ResponseEmitterTest extends TestCase
         $body = $this->getStreamFactory()->createStreamFromResource($resource);
         $response = $this->createResponse(200)->withBody($body);
         $responseEmitter = new ResponseEmitter();
+
+        $responseEmitter->isResponseEmpty($response);
+

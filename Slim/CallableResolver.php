@@ -176,3 +176,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             /** @var Closure $callable */
             $callable = $callable->bindTo($this->container);
         }
+        return $callable;
+    }
+

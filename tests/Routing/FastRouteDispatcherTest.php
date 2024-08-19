@@ -325,3 +325,6 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 11 ---- More specified routes are not shadowed by less specific of another method ------>
+
+        $callback = function (RouteCollector $r) {

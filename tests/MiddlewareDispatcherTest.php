@@ -335,3 +335,7 @@ class MiddlewareDispatcherTest extends TestCase
         $request = $this->createServerRequest('/');
         $middlewareDispatcher->handle($request);
     }
+
+    public function testExecutesKernelWithEmptyMiddlewareStack(): void
+    {
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);

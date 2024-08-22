@@ -74,3 +74,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * {@inheritdoc}
      */
     public function resolveMiddleware($toResolve): callable
+    {
+        return $this->resolveByPredicate($toResolve, [$this, 'isMiddleware'], 'process');

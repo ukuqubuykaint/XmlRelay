@@ -73,3 +73,5 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $serverRequestDecoratorClassProperty->setValue($slimHttpServerRequestCreator, '');
 
         $slimHttpServerRequestCreator->createServerRequestFromGlobals();
+    }
+

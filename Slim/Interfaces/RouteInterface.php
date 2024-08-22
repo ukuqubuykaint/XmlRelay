@@ -80,3 +80,5 @@ interface RouteInterface
      */
     public function getArgument(string $name, ?string $default = null): ?string;
 
+    /**
+     * Get route arguments

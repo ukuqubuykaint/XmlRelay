@@ -183,3 +183,4 @@ class RoutingMiddlewareTest extends TestCase
         $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');
 
         // Create the routing middleware with the `RouteResolverInterface` defined
+        // above. Perform the routing, which should throw the RuntimeException.

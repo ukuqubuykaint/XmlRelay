@@ -175,3 +175,7 @@ class AppFactory
         static::$psr17FactoryProvider = $psr17FactoryProvider;
     }
 
+    public static function setResponseFactory(ResponseFactoryInterface $responseFactory): void
+    {
+        static::$responseFactory = $responseFactory;
+    }

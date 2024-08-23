@@ -238,3 +238,4 @@ class RouteCollectorProxyTest extends TestCase
             ->map(['PATCH'], $pattern, Argument::is($callable))
             ->willReturn($routeProphecy->reveal())
             ->shouldBeCalledOnce();
+

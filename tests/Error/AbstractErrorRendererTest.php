@@ -213,3 +213,5 @@ class AbstractErrorRendererTest extends TestCase
             ->willReturn($exceptionTitle)
             ->shouldBeCalledOnce();
 
+        $renderer = new JsonErrorRenderer();
+        $output = json_encode(json_decode($renderer->__invoke($httpExceptionProphecy->reveal(), false)));

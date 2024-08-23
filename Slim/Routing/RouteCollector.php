@@ -240,3 +240,7 @@ class RouteCollector implements RouteCollectorInterface
 
     /**
      * @param string|callable $callable
+     */
+    protected function createGroup(string $pattern, $callable): RouteGroupInterface
+    {
+        $routeCollectorProxy = $this->createProxy($pattern);

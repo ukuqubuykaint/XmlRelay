@@ -179,3 +179,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         return $callable;
     }
 
+    /**
+     * @param callable|string|array{class-string, string}|mixed $toResolve
+     *

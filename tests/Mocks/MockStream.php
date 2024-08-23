@@ -184,3 +184,6 @@ class MockStream implements StreamInterface
         return $this->seekable;
     }
 
+    public function seek($offset, $whence = SEEK_SET): void
+    {
+        if (!$this->seekable) {

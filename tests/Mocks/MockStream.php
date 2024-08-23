@@ -187,3 +187,5 @@ class MockStream implements StreamInterface
     public function seek($offset, $whence = SEEK_SET): void
     {
         if (!$this->seekable) {
+            throw new RuntimeException('Stream is not seekable');
+        }

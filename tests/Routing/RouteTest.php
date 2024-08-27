@@ -401,3 +401,4 @@ class RouteTest extends TestCase
         $responseFactory = $this->getResponseFactory();
 
         $deferred = $callableResolver->resolve('\Slim\Tests\Mocks\CallableTest:toCall');
+        $route = new Route(['GET'], '/', $deferred, $responseFactory, $callableResolver);

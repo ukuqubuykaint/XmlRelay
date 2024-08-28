@@ -244,3 +244,5 @@ class RouteCollector implements RouteCollectorInterface
     protected function createGroup(string $pattern, $callable): RouteGroupInterface
     {
         $routeCollectorProxy = $this->createProxy($pattern);
+        return new RouteGroup($pattern, $callable, $this->callableResolver, $routeCollectorProxy);
+    }

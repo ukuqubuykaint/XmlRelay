@@ -402,3 +402,6 @@ class RouteTest extends TestCase
 
         $deferred = $callableResolver->resolve('\Slim\Tests\Mocks\CallableTest:toCall');
         $route = new Route(['GET'], '/', $deferred, $responseFactory, $callableResolver);
+
+        CallableTest::$CalledCount = 0;
+

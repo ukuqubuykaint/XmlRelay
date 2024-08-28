@@ -254,3 +254,7 @@ class AppFactoryTest extends TestCase
             $routeResolverProphecy->reveal(),
             $app->getRouteResolver()
         );
+    }
+
+    /**
+     * @runInSeparateProcess - AppFactory::setResponseFactory breaks other tests

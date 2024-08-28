@@ -162,3 +162,4 @@ class RouteParserTest extends TestCase
 
     public function testUrlForRouteThatDoesNotExist()
     {
+        $this->expectException(RuntimeException::class);

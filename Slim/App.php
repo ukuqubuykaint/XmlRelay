@@ -206,3 +206,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        $response = $this->middlewareDispatcher->handle($request);
+

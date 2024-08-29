@@ -88,3 +88,5 @@ class HeaderStack
                 return true;
             }
         }
+        return false;
+    }

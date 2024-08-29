@@ -22,3 +22,4 @@
     <source>
         <include>
             <directory>Slim</directory>
+        </include>

@@ -82,3 +82,6 @@ interface RouteInterface
 
     /**
      * Get route arguments
+     *
+     * @return array<string, string>
+     */

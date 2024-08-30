@@ -99,3 +99,6 @@ class RouteCollectorTest extends TestCase
         $routeCollector = new RouteCollector(
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal(),
+            $containerProphecy->reveal(),
+            $invocationStrategyProphecy->reveal()
+        );

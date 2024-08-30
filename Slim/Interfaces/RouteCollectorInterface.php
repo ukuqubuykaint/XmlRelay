@@ -72,3 +72,5 @@ interface RouteCollectorInterface
 
     /**
      * Remove named route
+     *
+     * @param string $name Route name

@@ -104,3 +104,6 @@ class BodyParsingMiddlewareTest extends TestCase
             ],
             'invalid-json' => [
                 'application/json;charset=utf8',
+                '{"foo"}/bar',
+                null,
+            ],

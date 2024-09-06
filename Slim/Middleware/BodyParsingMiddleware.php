@@ -193,3 +193,6 @@ class BodyParsingMiddleware implements MiddlewareInterface
             // safe to skip the real call (deprecated in PHP 8).
             return true;
         }
+
+        // @codeCoverageIgnoreStart
+        return libxml_disable_entity_loader($disable);

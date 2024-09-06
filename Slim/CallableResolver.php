@@ -185,3 +185,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * @return callable|string|array{class-string, string}|mixed
      */
     private function prepareToResolve($toResolve)
+    {
+        if (!is_array($toResolve)) {
+            return $toResolve;
+        }

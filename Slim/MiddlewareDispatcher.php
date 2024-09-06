@@ -224,3 +224,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     if ($this->container && $callable instanceof Closure) {
                         $callable = $callable->bindTo($this->container);
                     }
+                }
+
+                if (!is_callable($callable)) {

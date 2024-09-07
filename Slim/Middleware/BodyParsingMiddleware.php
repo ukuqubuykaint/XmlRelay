@@ -196,3 +196,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         // @codeCoverageIgnoreStart
         return libxml_disable_entity_loader($disable);
+        // @codeCoverageIgnoreEnd

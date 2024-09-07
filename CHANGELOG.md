@@ -226,3 +226,7 @@ You can also type-hint to the concrete instance of the container you are using t
 ### Optimizations
 - [3024: Randomize tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/3024) thanks to @pawel-slowik
 
+## 4.6.0 - 2020-11-15
+
+### Fixed
+- [2942: Fix PHPdoc for error handlers in ErrorMiddleware ](https://github.com/ukuqubuykaint/AJAX-XML/pull/2942) thanks to @TiMESPLiNTER

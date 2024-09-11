@@ -62,3 +62,6 @@ class SmallChunksStream implements StreamInterface
         throw new Exception('not implemented');
     }
 
+    public function getSize(): ?int
+    {
+        return self::SIZE;

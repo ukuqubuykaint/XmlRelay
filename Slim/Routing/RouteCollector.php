@@ -246,3 +246,6 @@ class RouteCollector implements RouteCollectorInterface
         $routeCollectorProxy = $this->createProxy($pattern);
         return new RouteGroup($pattern, $callable, $this->callableResolver, $routeCollectorProxy);
     }
+
+    /**
+     * @return RouteCollectorProxyInterface<TContainerInterface>

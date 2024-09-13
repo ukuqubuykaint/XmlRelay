@@ -191,3 +191,4 @@ class MockStream implements StreamInterface
         }
 
         if (fseek($this->stream, $offset, $whence) === -1) {
+            throw new RuntimeException(

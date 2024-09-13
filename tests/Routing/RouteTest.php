@@ -405,3 +405,6 @@ class RouteTest extends TestCase
 
         CallableTest::$CalledCount = 0;
 
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+

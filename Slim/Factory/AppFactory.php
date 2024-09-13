@@ -179,3 +179,7 @@ class AppFactory
     {
         static::$responseFactory = $responseFactory;
     }
+
+    public static function setStreamFactory(StreamFactoryInterface $streamFactory): void
+    {
+        static::$streamFactory = $streamFactory;

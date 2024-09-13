@@ -227,3 +227,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 }
 
                 if (!is_callable($callable)) {
+                    throw new RuntimeException(
+                        sprintf(
+                            'Middleware %s is not resolvable',
+                            $this->middleware

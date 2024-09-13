@@ -630,3 +630,5 @@ class AppTest extends TestCase
         });
 
         $uriProphecy = $this->prophesize(UriInterface::class);
+        $uriProphecy->getPath()->willReturn('/');
+

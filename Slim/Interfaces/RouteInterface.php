@@ -89,3 +89,5 @@ interface RouteInterface
 
     /**
      * Set a route argument
+     *
+     * @deprecated 4.14.1 Use a middleware for custom route arguments now.

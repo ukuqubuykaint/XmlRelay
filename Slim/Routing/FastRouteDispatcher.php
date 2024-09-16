@@ -61,3 +61,6 @@ class FastRouteDispatcher extends GroupCountBased
     /**
      * @param string $httpMethod
      * @param string $uri
+     *
+     * @return array{int, string|null, array<string, string>}
+     */

@@ -39,3 +39,7 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
      * {@inheritdoc}
      */
     public static function setFactories(array $factories): void
+    {
+        static::$factories = $factories;
+    }
+

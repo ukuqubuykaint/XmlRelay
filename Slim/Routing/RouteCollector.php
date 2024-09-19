@@ -102,3 +102,4 @@ class RouteCollector implements RouteCollectorInterface
         if ($cacheFile) {
             $this->setCacheFile($cacheFile);
         }
+    }

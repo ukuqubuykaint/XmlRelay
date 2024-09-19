@@ -75,3 +75,4 @@ class OutputBufferingMiddlewareTest extends TestCase
         $this->assertSame('BodyTest', (string) $response->getBody());
     }
 
+    public function testPrepend()

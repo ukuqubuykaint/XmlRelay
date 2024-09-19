@@ -174,3 +174,6 @@ class RouteCollectorTest extends TestCase
         $cacheFile = __DIR__ . '/non-writable-directory/router.cache';
 
         $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage(sprintf(
+            'Route collector cache file directory `%s` is not writable',
+            dirname($cacheFile)

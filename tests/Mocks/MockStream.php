@@ -192,3 +192,5 @@ class MockStream implements StreamInterface
 
         if (fseek($this->stream, $offset, $whence) === -1) {
             throw new RuntimeException(
+                'Unable to seek to stream position '
+                . $offset . ' with whence ' . var_export($whence, true)

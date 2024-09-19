@@ -209,3 +209,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $response = $this->middlewareDispatcher->handle($request);
 
         /**
+         * This is to be in compliance with RFC 2616, Section 9.

@@ -180,3 +180,7 @@ class RouteCollectorTest extends TestCase
         ));
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $routeCollector->setCacheFile($cacheFile);

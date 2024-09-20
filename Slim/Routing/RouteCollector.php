@@ -249,3 +249,7 @@ class RouteCollector implements RouteCollectorInterface
 
     /**
      * @return RouteCollectorProxyInterface<TContainerInterface>
+     */
+    protected function createProxy(string $pattern): RouteCollectorProxyInterface
+    {
+        /** @var RouteCollectorProxy<TContainerInterface> */

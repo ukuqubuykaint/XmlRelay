@@ -194,3 +194,5 @@ class MockStream implements StreamInterface
             throw new RuntimeException(
                 'Unable to seek to stream position '
                 . $offset . ' with whence ' . var_export($whence, true)
+            );
+        }

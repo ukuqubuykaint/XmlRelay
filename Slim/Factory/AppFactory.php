@@ -183,3 +183,4 @@ class AppFactory
     public static function setStreamFactory(StreamFactoryInterface $streamFactory): void
     {
         static::$streamFactory = $streamFactory;
+    }

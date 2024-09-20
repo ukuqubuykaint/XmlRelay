@@ -218,3 +218,5 @@ class AbstractErrorRendererTest extends TestCase
 
         $this->assertSame(
             $output,
+            json_encode(['message' => $exceptionTitle]),
+            'Should contain http exception title'

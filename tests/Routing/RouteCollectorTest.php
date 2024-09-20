@@ -177,3 +177,6 @@ class RouteCollectorTest extends TestCase
         $this->expectExceptionMessage(sprintf(
             'Route collector cache file directory `%s` is not writable',
             dirname($cacheFile)
+        ));
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

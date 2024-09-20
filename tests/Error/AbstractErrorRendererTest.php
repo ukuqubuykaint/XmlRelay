@@ -215,3 +215,6 @@ class AbstractErrorRendererTest extends TestCase
 
         $renderer = new JsonErrorRenderer();
         $output = json_encode(json_decode($renderer->__invoke($httpExceptionProphecy->reveal(), false)));
+
+        $this->assertSame(
+            $output,

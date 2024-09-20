@@ -210,3 +210,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
 
         /**
          * This is to be in compliance with RFC 2616, Section 9.
+         * If the incoming request method is HEAD, we need to ensure that the response body

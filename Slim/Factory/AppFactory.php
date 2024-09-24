@@ -184,3 +184,5 @@ class AppFactory
     {
         static::$streamFactory = $streamFactory;
     }
+
+    public static function setContainer(ContainerInterface $container): void

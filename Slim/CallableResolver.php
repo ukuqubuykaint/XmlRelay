@@ -189,3 +189,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         if (!is_array($toResolve)) {
             return $toResolve;
         }
+        $candidate = $toResolve;

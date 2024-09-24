@@ -412,3 +412,6 @@ class RouteTest extends TestCase
         $this->assertSame(1, CallableTest::$CalledCount);
     }
 
+    public function testControllerMethodAsStringResolvesWithContainer()
+    {
+        $self = $this;

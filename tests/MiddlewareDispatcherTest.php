@@ -348,3 +348,4 @@ class MiddlewareDispatcherTest extends TestCase
         $dispatcher = $this->createMiddlewareDispatcher($kernel, null);
 
         $response = $dispatcher->handle($requestProphecy->reveal());
+

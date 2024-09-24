@@ -262,3 +262,4 @@ class AppFactoryTest extends TestCase
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testResponseAndStreamFactoryIsBeingInjectedInDecoratedResponseFactory()
     {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

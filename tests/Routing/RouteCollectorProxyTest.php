@@ -245,3 +245,5 @@ class RouteCollectorProxyTest extends TestCase
             null,
             $routeCollectorProphecy->reveal()
         );
+
+        $route = $routeCollectorProxy->patch($pattern, $callable);

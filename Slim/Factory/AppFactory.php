@@ -186,3 +186,7 @@ class AppFactory
     }
 
     public static function setContainer(ContainerInterface $container): void
+    {
+        static::$container = $container;
+    }
+

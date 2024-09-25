@@ -238,3 +238,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Added
 - [2949: Add the support in composer.json](https://github.com/ukuqubuykaint/AJAX-XML/pull/2949) thanks to @ddrv
+- [2958: Strict empty string content type checking in BodyParsingMiddleware::getMediaType](https://github.com/ukuqubuykaint/AJAX-XML/pull/2958) thanks to @Ayesh

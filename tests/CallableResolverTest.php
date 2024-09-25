@@ -347,3 +347,4 @@ class CallableResolverTest extends TestCase
     public function testResolutionToAPsrRequestHandlerClassWithCustomMethod(): void
     {
         $resolver = new CallableResolver(); // No container injected
+        $callable = $resolver->resolve(RequestHandlerTest::class . ':custom');

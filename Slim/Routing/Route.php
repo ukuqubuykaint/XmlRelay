@@ -215,3 +215,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function setName(string $name): RouteInterface
+    {
+        $this->name = $name;

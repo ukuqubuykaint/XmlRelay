@@ -222,3 +222,4 @@ class AbstractErrorRendererTest extends TestCase
             'Should contain http exception title'
         );
     }
+

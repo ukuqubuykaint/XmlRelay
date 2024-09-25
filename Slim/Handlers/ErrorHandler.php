@@ -211,3 +211,4 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Determine which renderer to use based on content type
      *
+     * @throws RuntimeException

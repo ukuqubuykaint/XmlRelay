@@ -263,3 +263,4 @@ class AppFactoryTest extends TestCase
     public function testResponseAndStreamFactoryIsBeingInjectedInDecoratedResponseFactory()
     {
         $responseProphecy = $this->prophesize(ResponseInterface::class);
+

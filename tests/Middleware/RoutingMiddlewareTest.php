@@ -186,3 +186,5 @@ class RoutingMiddlewareTest extends TestCase
         // above. Perform the routing, which should throw the RuntimeException.
         $middleware = new RoutingMiddleware($routeResolver, $routeParser);
         /** @noinspection PhpUnhandledExceptionInspection */
+        $middleware->performRouting($request);
+    }

@@ -190,3 +190,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             return $toResolve;
         }
         $candidate = $toResolve;
+        $class = array_shift($candidate);
+        $method = array_shift($candidate);

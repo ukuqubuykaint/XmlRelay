@@ -220,3 +220,5 @@ class AbstractErrorRendererTest extends TestCase
             $output,
             json_encode(['message' => $exceptionTitle]),
             'Should contain http exception title'
+        );
+    }

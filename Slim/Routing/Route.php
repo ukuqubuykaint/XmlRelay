@@ -218,3 +218,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     public function setName(string $name): RouteInterface
     {
         $this->name = $name;
+        return $this;
+    }

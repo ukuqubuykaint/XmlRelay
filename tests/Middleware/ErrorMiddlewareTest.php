@@ -203,3 +203,7 @@ class ErrorMiddlewareTest extends TestCase
 
         $request = $this->createServerRequest('/foo');
         $app->run($request);
+
+        $this->expectOutputString('This is a subclass of LogicException...');
+    }
+

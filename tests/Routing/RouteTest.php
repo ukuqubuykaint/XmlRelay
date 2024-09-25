@@ -415,3 +415,5 @@ class RouteTest extends TestCase
     public function testControllerMethodAsStringResolvesWithContainer()
     {
         $self = $this;
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

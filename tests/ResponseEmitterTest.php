@@ -206,3 +206,6 @@ class ResponseEmitterTest extends TestCase
 
         $this->assertFalse($body->isSeekable());
         $this->assertSame('12', trim((string) $body));
+    }
+
+    public function testAvoidReadFromSlowStreamAccordingToStatus(): void

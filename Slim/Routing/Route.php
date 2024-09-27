@@ -220,3 +220,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         $this->name = $name;
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */

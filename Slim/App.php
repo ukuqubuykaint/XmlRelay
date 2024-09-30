@@ -216,3 +216,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
          * https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4
          */
         $method = strtoupper($request->getMethod());
+        if ($method === 'HEAD') {
+            $emptyBody = $this->responseFactory->createResponse()->getBody();

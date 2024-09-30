@@ -215,3 +215,7 @@ class ErrorHandler implements ErrorHandlerInterface
      */
     protected function determineRenderer(): callable
     {
+        if ($this->contentType !== null && array_key_exists($this->contentType, $this->errorRenderers)) {
+            $renderer = $this->errorRenderers[$this->contentType];
+        } else {
+            $renderer = $this->defaultErrorRenderer;

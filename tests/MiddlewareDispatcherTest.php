@@ -349,3 +349,7 @@ class MiddlewareDispatcherTest extends TestCase
 
         $response = $dispatcher->handle($requestProphecy->reveal());
 
+        $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldHaveBeenCalled();
+        $this->assertSame($responseProphecy->reveal(), $response);
+    }
+

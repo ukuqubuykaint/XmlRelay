@@ -224,3 +224,7 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function getIdentifier(): string
+    {
+        return $this->identifier;
+    }

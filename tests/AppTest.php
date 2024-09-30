@@ -635,3 +635,5 @@ class AppTest extends TestCase
         $requestProphecy = $this->prophesize(ServerRequestInterface::class);
         $requestProphecy->getMethod()->willReturn('GET');
         $requestProphecy->getUri()->willReturn($uriProphecy->reveal());
+        $requestProphecy->getAttribute(RouteContext::ROUTING_RESULTS)->willReturn(null);
+        $requestProphecy->withAttribute(Argument::type('string'), Argument::any())->will(function ($args) {

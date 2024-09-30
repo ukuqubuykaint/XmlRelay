@@ -196,3 +196,5 @@ class MockStream implements StreamInterface
                 . $offset . ' with whence ' . var_export($whence, true)
             );
         }
+    }
+

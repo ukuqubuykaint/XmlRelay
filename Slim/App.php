@@ -218,3 +218,5 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
         $method = strtoupper($request->getMethod());
         if ($method === 'HEAD') {
             $emptyBody = $this->responseFactory->createResponse()->getBody();
+            return $response->withBody($emptyBody);
+        }

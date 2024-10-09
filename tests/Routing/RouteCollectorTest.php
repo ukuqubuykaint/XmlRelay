@@ -189,3 +189,4 @@ class RouteCollectorTest extends TestCase
     public function testSetCacheFileViaConstructor()
     {
         $cacheFile = __DIR__ . '/router.cache';
+

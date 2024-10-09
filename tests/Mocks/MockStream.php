@@ -198,3 +198,4 @@ class MockStream implements StreamInterface
         }
     }
 
+    public function rewind(): void

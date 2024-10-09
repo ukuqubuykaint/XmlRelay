@@ -190,3 +190,5 @@ class AppFactory
         static::$container = $container;
     }
 
+    public static function setCallableResolver(CallableResolverInterface $callableResolver): void
+    {

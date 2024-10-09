@@ -168,3 +168,4 @@ class RouteParserTest extends TestCase
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $routeParser = $routeCollector->getRouteParser();

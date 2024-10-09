@@ -231,3 +231,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         sprintf(
                             'Middleware %s is not resolvable',
                             $this->middleware
+                        )
+                    );
+                }

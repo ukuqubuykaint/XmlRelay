@@ -209,3 +209,6 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testAvoidReadFromSlowStreamAccordingToStatus(): void
+    {
+        $body = new SlowPokeStream();
+        $response = $this

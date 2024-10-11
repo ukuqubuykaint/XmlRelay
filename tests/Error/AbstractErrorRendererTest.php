@@ -228,3 +228,7 @@ class AbstractErrorRendererTest extends TestCase
     {
         $previousException = new RuntimeException('Oops..');
         $exception = new Exception('Ooops...', 0, $previousException);
+
+        $renderer = new XmlErrorRenderer();
+
+        /** @var stdClass $output */

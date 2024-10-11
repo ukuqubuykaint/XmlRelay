@@ -242,3 +242,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2997: Add hints to methods](https://github.com/ukuqubuykaint/AJAX-XML/pull/2997) thanks to @evgsavosin - [3000: Fix route controller test](https://github.com/ukuqubuykaint/AJAX-XML/pull/3000) thanks to @pawel-slowik
 - [3001: Add missing `$strategy` parameter in a Route test](https://github.com/ukuqubuykaint/AJAX-XML/pull/3001) thanks to @pawel-slowik
 
+### Optimizations
+- [2951: Minor optimizations in if() blocks](https://github.com/ukuqubuykaint/AJAX-XML/pull/2951) thanks to @Ayesh

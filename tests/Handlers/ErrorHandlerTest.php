@@ -215,3 +215,5 @@ class ErrorHandlerTest extends TestCase
 
     public function testHalfValidContentType()
     {
+        $request = $this
+            ->createServerRequest('/', 'GET')

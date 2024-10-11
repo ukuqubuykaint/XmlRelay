@@ -220,3 +220,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
             $emptyBody = $this->responseFactory->createResponse()->getBody();
             return $response->withBody($emptyBody);
         }
+
+        return $response;
+    }

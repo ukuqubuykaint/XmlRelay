@@ -138,3 +138,5 @@ class ResponseEmitterTest extends TestCase
     {
         $response = $this
             ->createResponse(200, 'OK')
+            ->withHeader('X-Foo', 'baz1')
+            ->withAddedHeader('X-Foo', 'baz2');

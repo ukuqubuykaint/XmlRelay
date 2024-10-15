@@ -61,3 +61,7 @@ class RouteResolverTest extends TestCase
             })
             ->shouldBeCalledOnce();
 
+        $routeResolver = new RouteResolver(
+            $routeCollectorProphecy->reveal(),
+            $dispatcherProphecy->reveal()
+        );

@@ -75,3 +75,4 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $slimHttpServerRequestCreator->createServerRequestFromGlobals();
     }
 
+    public function testCreateServerRequestFromGlobalsThrowsRuntimeExceptionIfNotInstanceOfServerRequestInterface()

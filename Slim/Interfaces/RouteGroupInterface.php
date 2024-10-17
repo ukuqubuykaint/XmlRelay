@@ -38,3 +38,5 @@ interface RouteGroupInterface
 
     /**
      * Get the RouteGroup's pattern
+     */
+    public function getPattern(): string;

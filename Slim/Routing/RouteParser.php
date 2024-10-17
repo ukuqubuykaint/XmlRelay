@@ -87,3 +87,6 @@ class RouteParser implements RouteParserInterface
         }
 
         if (empty($segments)) {
+            throw new InvalidArgumentException('Missing data for URL segment: ' . $segmentName);
+        }
+

@@ -132,3 +132,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
         return $this;
     }
+
+    /**
+     * Add a new middleware by class name
+     *

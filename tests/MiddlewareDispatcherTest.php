@@ -213,3 +213,7 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertSame(1, $handler->getCalledCount());
     }
 
+    public function testDeferredResolvedClosureIsBoundToContainer(): void
+    {
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+

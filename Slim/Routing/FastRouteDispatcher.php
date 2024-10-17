@@ -64,3 +64,5 @@ class FastRouteDispatcher extends GroupCountBased
      *
      * @return array{int, string|null, array<string, string>}
      */
+    private function routingResults(string $httpMethod, string $uri): array
+    {

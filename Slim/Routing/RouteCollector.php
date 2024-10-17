@@ -103,3 +103,7 @@ class RouteCollector implements RouteCollectorInterface
             $this->setCacheFile($cacheFile);
         }
     }
+
+    public function getRouteParser(): RouteParserInterface
+    {
+        return $this->routeParser;

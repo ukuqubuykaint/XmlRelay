@@ -43,3 +43,4 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
         static::$factories = $factories;
     }
 
+    /**

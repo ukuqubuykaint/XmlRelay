@@ -192,3 +192,5 @@ class AppFactory
 
     public static function setCallableResolver(CallableResolverInterface $callableResolver): void
     {
+        static::$callableResolver = $callableResolver;
+    }

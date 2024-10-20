@@ -244,3 +244,7 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Optimizations
 - [2951: Minor optimizations in if() blocks](https://github.com/ukuqubuykaint/AJAX-XML/pull/2951) thanks to @Ayesh
+- [2959: Micro optimization: Declare closures in BodyParsingMiddleware as static](https://github.com/ukuqubuykaint/AJAX-XML/pull/2959) thanks to @Ayesh
+- [2978: Split the routing results to its own function.](https://github.com/ukuqubuykaint/AJAX-XML/pull/2978) thanks to @dlundgren
+
+### Dependencies Updated

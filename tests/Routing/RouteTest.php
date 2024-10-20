@@ -417,3 +417,6 @@ class RouteTest extends TestCase
         $self = $this;
 
         $responseProphecy = $this->prophesize(ResponseInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $callable = 'callable';

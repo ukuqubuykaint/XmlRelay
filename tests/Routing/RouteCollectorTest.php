@@ -190,3 +190,7 @@ class RouteCollectorTest extends TestCase
     {
         $cacheFile = __DIR__ . '/router.cache';
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollector = new RouteCollector(

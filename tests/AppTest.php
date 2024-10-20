@@ -641,3 +641,6 @@ class AppTest extends TestCase
             return $this;
         });
 
+
+        $response = $app->handle($requestProphecy->reveal());
+        $middlewareProphecy->process(

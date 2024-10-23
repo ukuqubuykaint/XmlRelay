@@ -218,3 +218,7 @@ class RouteTest extends TestCase
 
     public function testGetGroups()
     {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;
+        };
+

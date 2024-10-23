@@ -66,3 +66,4 @@ class RoutingMiddlewareTest extends TestCase
 
         $request = $this->createServerRequest('https://example.com:443/hello/foo', 'GET');
 
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(

@@ -78,3 +78,5 @@ interface RouteCollectorInterface
      * @throws RuntimeException   If named route does not exist
      */
     public function removeNamedRoute(string $name): RouteCollectorInterface;
+
+    /**

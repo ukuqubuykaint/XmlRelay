@@ -222,3 +222,4 @@ class RouteTest extends TestCase
             return $response;
         };
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

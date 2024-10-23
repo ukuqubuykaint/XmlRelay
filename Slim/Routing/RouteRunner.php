@@ -59,3 +59,7 @@ class RouteRunner implements RequestHandlerInterface
         // If routing hasn't been done, then do it now so we can dispatch
         if ($request->getAttribute(RouteContext::ROUTING_RESULTS) === null) {
             $routingMiddleware = new RoutingMiddleware($this->routeResolver, $this->routeParser);
+            $request = $routingMiddleware->performRouting($request);
+        }
+
+        if ($this->routeCollectorProxy !== null) {

@@ -67,3 +67,5 @@ class SmallChunksStream implements StreamInterface
         return self::SIZE;
     }
 
+    public function isReadable(): bool
+    {

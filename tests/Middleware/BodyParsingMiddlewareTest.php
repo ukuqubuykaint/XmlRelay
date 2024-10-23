@@ -107,3 +107,6 @@ class BodyParsingMiddlewareTest extends TestCase
                 '{"foo"}/bar',
                 null,
             ],
+            'valid-json-but-not-an-array' => [
+                'application/json;charset=utf8',
+                '"foo bar"',

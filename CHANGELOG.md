@@ -158,3 +158,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3218: Refactor some code](https://github.com/ukuqubuykaint/AJAX-XML/pull/3218) thanks to @mehdihasanpour
 - [3221: Cleanup](https://github.com/ukuqubuykaint/AJAX-XML/pull/3221) thanks to @mehdihasanpour
 - [3225: Update laminas/laminas-diactoros requirement from ^2.11 to ^2.14](https://github.com/ukuqubuykaint/AJAX-XML/pull/3225) thanks to @dependabot[bot]
+- [3228: Using assertSame to let assert equal be restricted](https://github.com/ukuqubuykaint/AJAX-XML/pull/3228) thanks to @peter279k
+- [3229: Update laminas/laminas-diactoros requirement from ^2.14 to ^2.17](https://github.com/ukuqubuykaint/AJAX-XML/pull/3229) thanks to @dependabot[bot]
+- [3235: Persist routes indexed by name in RouteCollector for improved performance.](https://github.com/ukuqubuykaint/AJAX-XML/pull/3235) thanks to @BusterNeece

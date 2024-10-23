@@ -65,3 +65,5 @@ class SmallChunksStream implements StreamInterface
     public function getSize(): ?int
     {
         return self::SIZE;
+    }
+

@@ -349,3 +349,4 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver(); // No container injected
         $callable = $resolver->resolve(RequestHandlerTest::class . ':custom');
         $callableRoute = $resolver->resolveRoute(RequestHandlerTest::class . ':custom');
+        $callableMiddleware = $resolver->resolveMiddleware(RequestHandlerTest::class . ':custom');

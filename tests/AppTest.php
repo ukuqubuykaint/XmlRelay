@@ -644,3 +644,5 @@ class AppTest extends TestCase
 
         $response = $app->handle($requestProphecy->reveal());
         $middlewareProphecy->process(
+            Argument::type(ServerRequestInterface::class),
+            Argument::type(RequestHandlerInterface::class)

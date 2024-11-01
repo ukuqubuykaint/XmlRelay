@@ -81,3 +81,4 @@ class DispatcherTest extends TestCase
      * Calling createDispatcher as second time should give you back the same
      * dispatcher as when you called it the first time.
      */
+    public function testCreateDispatcherReturnsSameDispatcherASecondTime()

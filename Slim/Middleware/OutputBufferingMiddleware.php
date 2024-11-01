@@ -58,3 +58,7 @@ class OutputBufferingMiddleware implements MiddlewareInterface
         } catch (Throwable $e) {
             ob_end_clean();
             throw $e;
+        }
+
+        if (!empty($output)) {
+            if ($this->style === static::PREPEND) {

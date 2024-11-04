@@ -110,3 +110,5 @@ class ErrorHandler implements ErrorHandlerInterface
      * @param ServerRequestInterface $request             The most recent Request object
      * @param Throwable              $exception           The caught Exception object
      * @param bool                   $displayErrorDetails Whether or not to display the error details
+     * @param bool                   $logErrors           Whether or not to log errors
+     * @param bool                   $logErrorDetails     Whether or not to log error details

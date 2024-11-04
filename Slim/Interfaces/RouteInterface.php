@@ -97,3 +97,5 @@ interface RouteInterface
     /**
      * Replace route arguments
      *
+     * @param array<string, string> $arguments
+     *

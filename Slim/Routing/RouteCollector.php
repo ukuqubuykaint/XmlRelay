@@ -107,3 +107,6 @@ class RouteCollector implements RouteCollectorInterface
     public function getRouteParser(): RouteParserInterface
     {
         return $this->routeParser;
+    }
+
+    /**

@@ -615,3 +615,6 @@ class AppTest extends TestCase
             Argument::type(RequestHandlerInterface::class)
         )->will(function ($args) {
             /** @var ServerRequestInterface $request */
+            $request = $args[0];
+
+            /** @var RequestHandlerInterface $handler */

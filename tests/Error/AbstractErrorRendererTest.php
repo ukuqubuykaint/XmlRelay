@@ -232,3 +232,5 @@ class AbstractErrorRendererTest extends TestCase
         $renderer = new XmlErrorRenderer();
 
         /** @var stdClass $output */
+        $output = simplexml_load_string($renderer->__invoke($exception, true));
+

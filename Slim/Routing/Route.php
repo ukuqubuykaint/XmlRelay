@@ -228,3 +228,4 @@ class Route implements RouteInterface, RequestHandlerInterface
     {
         return $this->identifier;
     }
+

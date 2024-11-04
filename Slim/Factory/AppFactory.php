@@ -97,3 +97,5 @@ class AppFactory
             ? $routeCollectorFromContainer
             : null;
 
+        $routeResolver = $container->has(RouteResolverInterface::class)
+        && (

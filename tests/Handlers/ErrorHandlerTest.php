@@ -178,3 +178,6 @@ class ErrorHandlerTest extends TestCase
 
     /**
      * Test that forceContentType(null) restores Accept-header negotiation.
+     */
+    public function testForceContentTypeNullRestoresNegotiation()
+    {

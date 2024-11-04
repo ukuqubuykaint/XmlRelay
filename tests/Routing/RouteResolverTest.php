@@ -65,3 +65,4 @@ class RouteResolverTest extends TestCase
             $routeCollectorProphecy->reveal(),
             $dispatcherProphecy->reveal()
         );
+

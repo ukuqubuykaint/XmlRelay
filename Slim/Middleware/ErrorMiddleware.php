@@ -109,3 +109,4 @@ class ErrorMiddleware implements MiddlewareInterface
         if (isset($this->subClassHandlers[$type])) {
             return $this->callableResolver->resolve($this->subClassHandlers[$type]);
         }
+

@@ -89,3 +89,7 @@ class RouteParserTest extends TestCase
         $route = $routeCollector->map(['GET'], '/{first}/{second}', function () {
         });
         $route->setName('test');
+
+        $routeParser = $routeCollector->getRouteParser();
+        $results = $routeParser->relativeUrlFor('test', ['first' => 'hello', 'second' => 'world']);
+

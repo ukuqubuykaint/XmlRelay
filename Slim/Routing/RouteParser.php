@@ -90,3 +90,7 @@ class RouteParser implements RouteParserInterface
             throw new InvalidArgumentException('Missing data for URL segment: ' . $segmentName);
         }
 
+        $url = implode('', $segments);
+        if ($queryParams) {
+            $url .= '?' . http_build_query($queryParams);
+        }

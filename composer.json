@@ -87,3 +87,6 @@
             "@phpcs",
             "@phpstan",
             "@psalm"
+        ],
+        "phpunit": "phpunit",
+        "phpcs": "phpcs",

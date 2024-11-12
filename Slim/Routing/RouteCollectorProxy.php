@@ -139,3 +139,7 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      * {@inheritdoc}
      */
     public function delete(string $pattern, $callable): RouteInterface
+    {
+        return $this->map(['DELETE'], $pattern, $callable);
+    }
+

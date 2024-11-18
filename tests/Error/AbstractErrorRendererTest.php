@@ -234,3 +234,5 @@ class AbstractErrorRendererTest extends TestCase
         /** @var stdClass $output */
         $output = simplexml_load_string($renderer->__invoke($exception, true));
 
+        $this->assertSame((string) $output->message[0], 'Slim Application Error');
+        $this->assertSame((string) $output->exception[0]->type, 'Exception');

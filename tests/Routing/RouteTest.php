@@ -423,3 +423,5 @@ class RouteTest extends TestCase
 
         $callableResolverProphecy
             ->resolve(Argument::is($callable))
+            ->willReturn(function (
+                ServerRequestInterface $request,

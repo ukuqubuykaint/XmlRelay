@@ -200,3 +200,7 @@ class MockStream implements StreamInterface
 
     public function rewind(): void
     {
+        $this->seek(0);
+    }
+
+    public function isWritable(): bool

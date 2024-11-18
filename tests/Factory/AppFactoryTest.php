@@ -264,3 +264,5 @@ class AppFactoryTest extends TestCase
     {
         $responseProphecy = $this->prophesize(ResponseInterface::class);
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy

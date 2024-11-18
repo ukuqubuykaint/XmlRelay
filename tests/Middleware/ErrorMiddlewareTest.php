@@ -207,3 +207,5 @@ class ErrorMiddlewareTest extends TestCase
         $this->expectOutputString('This is a subclass of LogicException...');
     }
 
+    public function testSuperclassExceptionHandlerDoesNotHandleSubclassException()
+    {

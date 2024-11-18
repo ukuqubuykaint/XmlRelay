@@ -219,3 +219,5 @@ class ErrorHandler implements ErrorHandlerInterface
             $renderer = $this->errorRenderers[$this->contentType];
         } else {
             $renderer = $this->defaultErrorRenderer;
+        }
+

@@ -194,3 +194,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         $method = array_shift($candidate);
         if (is_string($class) && is_string($method)) {
             return $class . ':' . $method;
+        }
+        return $toResolve;

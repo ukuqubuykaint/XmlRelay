@@ -221,3 +221,5 @@ class MiddlewareDispatcherTest extends TestCase
         $callable = function (
             ServerRequestInterface $request,
             RequestHandlerInterface $handler
+        ) use ($self) {
+            $self->assertInstanceOf(ContainerInterface::class, $this);

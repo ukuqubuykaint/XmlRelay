@@ -236,3 +236,7 @@ class AbstractErrorRendererTest extends TestCase
 
         $this->assertSame((string) $output->message[0], 'Slim Application Error');
         $this->assertSame((string) $output->exception[0]->type, 'Exception');
+        $this->assertSame((string) $output->exception[0]->message, 'Ooops...');
+        $this->assertSame((string) $output->exception[1]->type, 'RuntimeException');
+        $this->assertSame((string) $output->exception[1]->message, 'Oops..');
+    }

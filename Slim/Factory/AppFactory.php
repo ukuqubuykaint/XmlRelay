@@ -194,3 +194,7 @@ class AppFactory
     {
         static::$callableResolver = $callableResolver;
     }
+
+    public static function setRouteCollector(RouteCollectorInterface $routeCollector): void
+    {
+        static::$routeCollector = $routeCollector;

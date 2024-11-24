@@ -274,3 +274,5 @@ class AppFactoryTest extends TestCase
 
         AppFactory::setResponseFactory($responseFactoryProphecy->reveal());
         AppFactory::setStreamFactory($streamFactoryProphecy->reveal());
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
+

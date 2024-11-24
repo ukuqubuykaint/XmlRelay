@@ -198,3 +198,7 @@ class RouteCollectorTest extends TestCase
             $callableResolverProphecy->reveal(),
             null,
             null,
+            null,
+            $cacheFile
+        );
+        $this->assertSame($cacheFile, $routeCollector->getCacheFile());

@@ -337,3 +337,6 @@ class FastRouteDispatcherTest extends TestCase
         $handler = 'handler1';
         $argDict = ['name' => 'rdlowrey'];
 
+        $cases[] = [$method, $uri, $callback, $handler, $argDict];
+
+        // 12 ---- Handler of more specific routes is used, if it occurs first -------------------->

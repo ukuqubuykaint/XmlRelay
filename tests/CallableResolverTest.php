@@ -356,3 +356,5 @@ class CallableResolverTest extends TestCase
         $this->assertSame('custom', $callable[1]);
 
         $this->assertIsArray($callableRoute);
+        $this->assertInstanceOf(RequestHandlerTest::class, $callableRoute[0]);
+        $this->assertSame('custom', $callableRoute[1]);

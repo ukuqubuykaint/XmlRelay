@@ -256,3 +256,7 @@ class RouteCollector implements RouteCollectorInterface
         return new RouteCollectorProxy(
             $this->responseFactory,
             $this->callableResolver,
+            $this->container,
+            $this,
+            $pattern
+        );

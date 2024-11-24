@@ -204,3 +204,6 @@ class MockStream implements StreamInterface
     }
 
     public function isWritable(): bool
+    {
+        return $this->writable;
+    }

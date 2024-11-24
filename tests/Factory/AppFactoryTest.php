@@ -269,3 +269,4 @@ class AppFactoryTest extends TestCase
             ->createResponse(200, '')
             ->willReturn($responseProphecy->reveal())
             ->shouldBeCalledOnce();
+

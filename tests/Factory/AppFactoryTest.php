@@ -266,3 +266,6 @@ class AppFactoryTest extends TestCase
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
         $responseFactoryProphecy
+            ->createResponse(200, '')
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();

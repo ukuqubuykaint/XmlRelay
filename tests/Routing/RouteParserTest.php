@@ -170,3 +170,5 @@ class RouteParserTest extends TestCase
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeParser = $routeCollector->getRouteParser();
 
+        $routeParser->urlFor('test');
+    }

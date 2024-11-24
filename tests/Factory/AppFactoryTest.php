@@ -270,3 +270,7 @@ class AppFactoryTest extends TestCase
             ->willReturn($responseProphecy->reveal())
             ->shouldBeCalledOnce();
 
+        $streamFactoryProphecy = $this->prophesize(StreamFactoryInterface::class);
+
+        AppFactory::setResponseFactory($responseFactoryProphecy->reveal());
+        AppFactory::setStreamFactory($streamFactoryProphecy->reveal());

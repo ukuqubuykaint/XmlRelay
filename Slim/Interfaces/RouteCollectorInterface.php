@@ -80,3 +80,6 @@ interface RouteCollectorInterface
     public function removeNamedRoute(string $name): RouteCollectorInterface;
 
     /**
+     * Lookup a route via the route's unique identifier
+     *
+     * @throws RuntimeException   If route of identifier does not exist

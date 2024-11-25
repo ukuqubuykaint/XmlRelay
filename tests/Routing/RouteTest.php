@@ -226,3 +226,4 @@ class RouteTest extends TestCase
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
         $strategyProphecy = $this->prophesize(InvocationStrategyInterface::class);
         $routeCollectorProxyProphecy = $this->prophesize(RouteCollectorProxyInterface::class);
+

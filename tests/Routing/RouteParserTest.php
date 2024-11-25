@@ -94,3 +94,6 @@ class RouteParserTest extends TestCase
         $results = $routeParser->relativeUrlFor('test', ['first' => 'hello', 'second' => 'world']);
 
         $this->assertSame('/hello/world', $results);
+    }
+
+    public function testBasePathIsIgnoreInRelativePathFor()

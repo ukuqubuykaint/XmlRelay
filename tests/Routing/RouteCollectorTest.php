@@ -107,3 +107,4 @@ class RouteCollectorTest extends TestCase
     }
 
     public function testRemoveNamedRoute()
+    {

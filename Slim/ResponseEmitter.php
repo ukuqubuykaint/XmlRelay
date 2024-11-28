@@ -116,3 +116,7 @@ class ResponseEmitter
                 }
             }
         }
+    }
+
+    /**
+     * Asserts response body is empty or status code is 204, 205 or 304

@@ -65,3 +65,5 @@ class ServerRequestCreatorFactory
             static::$slimHttpDecoratorsAutomaticDetectionEnabled
             && SlimHttpServerRequestCreator::isServerRequestDecoratorAvailable()
         ) {
+            return new SlimHttpServerRequestCreator($serverRequestCreator);
+        }

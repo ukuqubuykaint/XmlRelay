@@ -340,3 +340,4 @@ class FastRouteDispatcherTest extends TestCase
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
         // 12 ---- Handler of more specific routes is used, if it occurs first -------------------->
+

@@ -202,3 +202,4 @@ class RouteCollectorTest extends TestCase
             $cacheFile
         );
         $this->assertSame($cacheFile, $routeCollector->getCacheFile());
+    }

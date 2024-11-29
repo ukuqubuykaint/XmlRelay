@@ -239,3 +239,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 return $callable($request, $this->next);
             }
         };
+
+        return $this;

@@ -252,3 +252,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2954: Update laminas/laminas-diactoros requirement from ^2.1 to ^2.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/2954) thanks to @dependabot-preview[bot]
 - [2955: Update guzzlehttp/psr7 requirement from ^1.5 to ^1.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/2955) thanks to @dependabot-preview[bot]
 - [2956: Update xmlrelay/psr7 requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/2956) thanks to @dependabot-preview[bot]
+- [2957: Update nyholm/psr7 requirement from ^1.1 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/2957) thanks to @dependabot-preview[bot]

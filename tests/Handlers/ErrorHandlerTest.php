@@ -220,3 +220,6 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Content-Type', 'unknown/json+');
 
         $handler = $this->createMock(ErrorHandler::class);
+        $newErrorRenderers = [
+            'application/xml' => XmlErrorRenderer::class,
+            'text/xml' => XmlErrorRenderer::class,

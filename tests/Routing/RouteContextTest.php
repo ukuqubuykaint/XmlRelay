@@ -86,3 +86,6 @@ class RouteContextTest extends TestCase
     public function testCannotCreateInstanceIfRequestIsMissingAttributes(string $attribute): void
     {
         $this->expectException(RuntimeException::class);
+
+        $serverRequest = $this->createServerRequestWithRouteAttributes()->withoutAttribute($attribute);
+

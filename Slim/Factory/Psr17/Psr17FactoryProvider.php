@@ -46,3 +46,7 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
     /**
      * {@inheritdoc}
      */
+    public static function addFactory(string $factory): void
+    {
+        array_unshift(static::$factories, $factory);
+    }

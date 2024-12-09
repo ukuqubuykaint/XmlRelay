@@ -103,3 +103,4 @@ For more information on how to configure your web server, see the [Documentation
 ## Tests
 To execute the test suite, you'll need to install all development dependencies.
 
+```bash

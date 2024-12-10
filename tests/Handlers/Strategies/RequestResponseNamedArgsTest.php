@@ -120,3 +120,6 @@ class RequestResponseNamedArgsTest extends TestCase
         $this->assertSame($this->response, $invocationStrategy($callback, $this->request, $this->response, $args));
     }
 
+    public function testCallingWithMixedKnownAndUnknownParametersAndVariadic()
+    {
+        if (PHP_VERSION_ID < self::PHP_8_0_VERSION_ID) {

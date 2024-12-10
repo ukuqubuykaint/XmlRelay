@@ -90,3 +90,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             return $this->bindToContainer($toResolve);
         }
         $resolved = $toResolve;
+        if ($predicate($toResolve)) {
+            $resolved = [$toResolve, $defaultMethod];
+        }
+        if (is_string($toResolve)) {

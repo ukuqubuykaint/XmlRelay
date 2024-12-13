@@ -173,3 +173,7 @@ class RouteParserTest extends TestCase
         $routeParser->urlFor('test');
     }
 
+    public function testFullUrlFor()
+    {
+        $uriProphecy = $this->prophesize(UriInterface::class);
+        $uriProphecy

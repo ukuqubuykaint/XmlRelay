@@ -357,3 +357,7 @@ class MiddlewareDispatcherTest extends TestCase
     {
         $requestProphecy = $this->prophesize(ServerRequestInterface::class);
         $requestProphecy->getHeader(Argument::type('string'))->willReturn([]);
+        $requestProphecy->withAddedHeader(Argument::type('string'), Argument::type('string'))->will(function ($args) {
+            $headers = $this->reveal()->getHeader($args[0]);
+
+            $headers[] = $args[1];

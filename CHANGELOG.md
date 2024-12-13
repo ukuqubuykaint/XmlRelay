@@ -255,3 +255,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2957: Update nyholm/psr7 requirement from ^1.1 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/2957) thanks to @dependabot-preview[bot]
 - [2963: Update phpstan/phpstan requirement from ^0.12.23 to ^0.12.25](https://github.com/ukuqubuykaint/AJAX-XML/pull/2963) thanks to @dependabot-preview[bot]
 - [2965: Update adriansuter/php-autoload-override requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/2965) thanks to @dependabot-preview[bot]
+- [2967: Update nyholm/psr7 requirement from ^1.2 to ^1.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/2967) thanks to @dependabot-preview[bot]
+- [2969: Update nyholm/psr7-server requirement from ^0.4.1 to ^1.0.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/2969) thanks to @dependabot-preview[bot]
+- [2970: Update phpstan/phpstan requirement from ^0.12.25 to ^0.12.26](https://github.com/ukuqubuykaint/AJAX-XML/pull/2970) thanks to @dependabot-preview[bot]

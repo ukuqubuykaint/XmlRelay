@@ -223,3 +223,6 @@ class ErrorHandlerTest extends TestCase
         $newErrorRenderers = [
             'application/xml' => XmlErrorRenderer::class,
             'text/xml' => XmlErrorRenderer::class,
+            'text/html' => HtmlErrorRenderer::class,
+        ];
+

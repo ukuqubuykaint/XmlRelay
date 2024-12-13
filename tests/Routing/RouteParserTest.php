@@ -172,3 +172,4 @@ class RouteParserTest extends TestCase
 
         $routeParser->urlFor('test');
     }
+

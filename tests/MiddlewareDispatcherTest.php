@@ -353,3 +353,7 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertSame($responseProphecy->reveal(), $response);
     }
 
+    public function testExecutesMiddlewareLastInFirstOut(): void
+    {
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $requestProphecy->getHeader(Argument::type('string'))->willReturn([]);

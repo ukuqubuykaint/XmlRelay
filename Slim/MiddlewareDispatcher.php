@@ -241,3 +241,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         };
 
         return $this;
+    }
+
+    /**
+     * Add a (non-standard) callable middleware to the stack

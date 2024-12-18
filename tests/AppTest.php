@@ -649,3 +649,6 @@ class AppTest extends TestCase
         )->shouldHaveBeenCalled();
         $middlewareProphecy2->process(
             Argument::type(ServerRequestInterface::class),
+            Argument::type(RequestHandlerInterface::class)
+        )->shouldHaveBeenCalled();
+

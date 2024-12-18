@@ -221,3 +221,4 @@ class ErrorHandler implements ErrorHandlerInterface
             $renderer = $this->defaultErrorRenderer;
         }
 
+        return $this->callableResolver->resolve($renderer);

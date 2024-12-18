@@ -73,3 +73,5 @@ class RoutingMiddleware implements MiddlewareInterface
                 return $request->withAttribute(RouteContext::ROUTE, $route);
 
             case RoutingResults::NOT_FOUND:
+                throw new HttpNotFoundException($request);
+

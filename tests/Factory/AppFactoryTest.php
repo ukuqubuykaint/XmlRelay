@@ -279,3 +279,4 @@ class AppFactoryTest extends TestCase
         $app = AppFactory::create();
 
         $responseFactory = $app->getResponseFactory();
+        $response = $responseFactory->createResponse();

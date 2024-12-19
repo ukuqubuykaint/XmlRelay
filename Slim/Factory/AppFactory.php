@@ -204,3 +204,4 @@ class AppFactory
     {
         static::$routeResolver = $routeResolver;
     }
+

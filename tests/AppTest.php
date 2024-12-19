@@ -652,3 +652,6 @@ class AppTest extends TestCase
             Argument::type(RequestHandlerInterface::class)
         )->shouldHaveBeenCalled();
 
+        $this->assertSame($responseProphecy->reveal(), $response);
+    }
+

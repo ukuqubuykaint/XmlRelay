@@ -425,3 +425,5 @@ class RouteTest extends TestCase
             ->resolve(Argument::is($callable))
             ->willReturn(function (
                 ServerRequestInterface $request,
+                ResponseInterface $response
+            ) use (

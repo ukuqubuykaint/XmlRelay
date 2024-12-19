@@ -201,3 +201,6 @@ class AppFactory
     }
 
     public static function setRouteResolver(RouteResolverInterface $routeResolver): void
+    {
+        static::$routeResolver = $routeResolver;
+    }

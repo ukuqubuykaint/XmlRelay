@@ -655,3 +655,4 @@ class AppTest extends TestCase
         $this->assertSame($responseProphecy->reveal(), $response);
     }
 
+    public function testAddMiddlewareUsingDeferredResolution(): void

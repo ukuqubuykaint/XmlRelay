@@ -163,3 +163,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3235: Persist routes indexed by name in RouteCollector for improved performance.](https://github.com/ukuqubuykaint/AJAX-XML/pull/3235) thanks to @BusterNeece
 
 ## 4.10.0 - 2022-03-14
+
+- [3120: Add a new PSR-17 factory to Psr17FactoryProvider](https://github.com/ukuqubuykaint/AJAX-XML/pull/3120) thanks to @solventt
+- [3123: Replace deprecated setMethods() in tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/3123) thanks to @solventt

@@ -341,3 +341,7 @@ class FastRouteDispatcherTest extends TestCase
 
         // 12 ---- Handler of more specific routes is used, if it occurs first -------------------->
 
+        $callback = function (RouteCollector $r) {
+            $r->addRoute('GET', '/user/{name}', 'handler0');
+            $r->addRoute('POST', '/user/{name:[a-z]+}', 'handler1');
+            $r->addRoute('POST', '/user/{name}', 'handler2');

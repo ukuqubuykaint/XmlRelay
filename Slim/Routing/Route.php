@@ -231,3 +231,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function getArgument(string $name, ?string $default = null): ?string

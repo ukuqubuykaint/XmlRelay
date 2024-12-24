@@ -281,3 +281,7 @@ class AppFactoryTest extends TestCase
         $responseFactory = $app->getResponseFactory();
         $response = $responseFactory->createResponse();
 
+        $streamFactoryProperty = new ReflectionProperty(DecoratedResponse::class, 'streamFactory');
+        $this->setAccessible($streamFactoryProperty);
+
+        $this->assertSame($streamFactoryProphecy->reveal(), $streamFactoryProperty->getValue($response));

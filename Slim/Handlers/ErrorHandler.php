@@ -118,3 +118,5 @@ class ErrorHandler implements ErrorHandlerInterface
         Throwable $exception,
         bool $displayErrorDetails,
         bool $logErrors,
+        bool $logErrorDetails
+    ): ResponseInterface {

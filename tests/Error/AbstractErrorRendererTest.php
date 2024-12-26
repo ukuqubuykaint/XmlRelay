@@ -240,3 +240,4 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame((string) $output->exception[1]->type, 'RuntimeException');
         $this->assertSame((string) $output->exception[1]->message, 'Oops..');
     }
+

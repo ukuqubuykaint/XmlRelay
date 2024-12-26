@@ -285,3 +285,6 @@ class AppFactoryTest extends TestCase
         $this->setAccessible($streamFactoryProperty);
 
         $this->assertSame($streamFactoryProphecy->reveal(), $streamFactoryProperty->getValue($response));
+    }
+
+    public function testCreateAppWithContainerUsesContainerDependenciesWhenPresent()

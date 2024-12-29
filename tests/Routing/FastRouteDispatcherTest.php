@@ -238,3 +238,5 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 4 -------------------------------------------------------------------------------------->
+

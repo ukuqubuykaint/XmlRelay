@@ -67,3 +67,6 @@ class ServerRequestCreatorFactory
         ) {
             return new SlimHttpServerRequestCreator($serverRequestCreator);
         }
+
+        return $serverRequestCreator;
+    }

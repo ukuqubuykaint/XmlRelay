@@ -112,3 +112,4 @@ interface RouteCollectorProxyInterface
      *
      * This method accepts a route pattern and a callback. All route
      * declarations in the callback will be prepended by the group(s)
+     * that it is in.

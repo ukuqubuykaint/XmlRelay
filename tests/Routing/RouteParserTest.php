@@ -177,3 +177,7 @@ class RouteParserTest extends TestCase
     {
         $uriProphecy = $this->prophesize(UriInterface::class);
         $uriProphecy
+            ->getScheme()
+            ->willReturn('http')
+            ->shouldBeCalledOnce();
+

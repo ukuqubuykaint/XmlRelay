@@ -189,3 +189,4 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Accept', 'application/xml');
 
         $htmlRequest = $this
+            ->createServerRequest('/not-defined', 'GET')

@@ -89,3 +89,7 @@ class RouteContextTest extends TestCase
 
         $serverRequest = $this->createServerRequestWithRouteAttributes()->withoutAttribute($attribute);
 
+        RouteContext::fromRequest($serverRequest);
+    }
+
+    private function createServerRequestWithRouteAttributes(): ServerRequestInterface

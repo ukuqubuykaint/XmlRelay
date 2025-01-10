@@ -82,3 +82,7 @@ class DispatcherTest extends TestCase
      * dispatcher as when you called it the first time.
      */
     public function testCreateDispatcherReturnsSameDispatcherASecondTime()
+    {
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());

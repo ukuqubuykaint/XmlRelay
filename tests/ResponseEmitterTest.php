@@ -148,3 +148,5 @@ class ResponseEmitterTest extends TestCase
             ['header' => 'X-Foo: baz2', 'replace' => false, 'status_code' => null],
             ['header' => 'HTTP/1.1 200 OK', 'replace' => true, 'status_code' => 200],
         ];
+
+        $this->assertSame($expectedStack, HeaderStack::stack());

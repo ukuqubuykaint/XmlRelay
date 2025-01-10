@@ -76,3 +76,5 @@ class FastRouteDispatcher extends GroupCountBased
             /** @var array{0: int, 1?: string, 2?: array<string, string>} $result */
             $result = $this->dispatchVariableRoute($this->variableRouteData[$httpMethod], $uri);
             if ($result[0] === self::FOUND) {
+                /** @var array{int, string, array<string, string>} $result */
+                return [self::FOUND, $result[1], $result[2]];

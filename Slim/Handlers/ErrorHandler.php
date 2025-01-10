@@ -120,3 +120,5 @@ class ErrorHandler implements ErrorHandlerInterface
         bool $logErrors,
         bool $logErrorDetails
     ): ResponseInterface {
+        $this->displayErrorDetails = $displayErrorDetails;
+        $this->logErrors = $logErrors;

@@ -71,3 +71,4 @@ class RoutingMiddlewareTest extends TestCase
             null
         );
         $middlewareDispatcher->addCallable($middleware);
+        $middlewareDispatcher->addMiddleware($routingMiddleware);

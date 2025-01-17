@@ -123,3 +123,4 @@ class ResponseEmitter
      */
     public function isResponseEmpty(ResponseInterface $response): bool
     {
+        if (in_array($response->getStatusCode(), [204, 205, 304], true)) {

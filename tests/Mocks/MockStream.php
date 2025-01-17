@@ -124,3 +124,5 @@ class MockStream implements StreamInterface
             }
             $this->detach();
         }
+    }
+

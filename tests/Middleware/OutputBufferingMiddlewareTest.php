@@ -76,3 +76,4 @@ class OutputBufferingMiddlewareTest extends TestCase
     }
 
     public function testPrepend()
+    {

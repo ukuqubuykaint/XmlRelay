@@ -75,3 +75,4 @@ class SlowPokeStream implements StreamInterface
     public function isReadable(): bool
     {
         return true;
+    }

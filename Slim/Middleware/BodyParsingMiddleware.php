@@ -97,3 +97,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
     protected function registerDefaultBodyParsers(): void
     {
         $this->registerBodyParser('application/json', static function ($input) {
+            /** @var string $input */

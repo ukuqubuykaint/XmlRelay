@@ -363,3 +363,5 @@ class CallableResolverTest extends TestCase
         $this->assertInstanceOf(RequestHandlerTest::class, $callableMiddleware[0]);
         $this->assertSame('custom', $callableMiddleware[1]);
     }
+
+    public function testObjMiddlewareClass(): void

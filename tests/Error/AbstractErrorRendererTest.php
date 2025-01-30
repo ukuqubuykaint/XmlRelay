@@ -241,3 +241,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame((string) $output->exception[1]->message, 'Oops..');
     }
 
+    public function testXMLErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';
+

@@ -181,3 +181,7 @@ class RouteParserTest extends TestCase
             ->willReturn('http')
             ->shouldBeCalledOnce();
 
+        $uriProphecy
+            ->getAuthority()
+            ->willReturn('example.com:8080')
+            ->shouldBeCalledOnce();

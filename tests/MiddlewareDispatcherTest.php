@@ -224,3 +224,5 @@ class MiddlewareDispatcherTest extends TestCase
         ) use ($self) {
             $self->assertInstanceOf(ContainerInterface::class, $this);
             return $handler->handle($request);
+        };
+

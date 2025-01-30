@@ -142,3 +142,7 @@ class AppFactoryTest extends TestCase
         Psr17FactoryProvider::setFactories([MockPsr17FactoryWithoutStreamFactory::class]);
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(true);
 
+        $app = AppFactory::create();
+
+        $this->assertInstanceOf(SlimResponseFactory::class, $app->getResponseFactory());
+    }

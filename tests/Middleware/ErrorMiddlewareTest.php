@@ -224,3 +224,5 @@ class ErrorMiddlewareTest extends TestCase
             $response = $this->createResponse();
             $response->getBody()->write($exception->getMessage());
             return $response;
+        })->bindTo($this), false); // - false; don't handle subclass
+

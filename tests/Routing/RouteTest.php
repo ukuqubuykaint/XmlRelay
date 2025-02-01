@@ -427,3 +427,6 @@ class RouteTest extends TestCase
                 ServerRequestInterface $request,
                 ResponseInterface $response
             ) use (
+                $self,
+                $responseProphecy
+            ) {

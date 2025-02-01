@@ -209,3 +209,6 @@ class AppFactory
     {
         static::$middlewareDispatcher = $middlewareDispatcher;
     }
+
+    public static function setSlimHttpDecoratorsAutomaticDetection(bool $enabled): void
+    {

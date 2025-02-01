@@ -233,3 +233,7 @@ class Route implements RouteInterface, RequestHandlerInterface
      * {@inheritdoc}
      */
     public function getArgument(string $name, ?string $default = null): ?string
+    {
+        if (array_key_exists($name, $this->arguments)) {
+            return $this->arguments[$name];
+        }

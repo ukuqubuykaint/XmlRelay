@@ -212,3 +212,6 @@ class ResponseEmitterTest extends TestCase
     {
         $body = new SlowPokeStream();
         $response = $this
+            ->createResponse(204, 'No content')
+            ->withBody($body);
+

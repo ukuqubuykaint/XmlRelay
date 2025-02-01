@@ -226,3 +226,7 @@ class ErrorMiddlewareTest extends TestCase
             return $response;
         })->bindTo($this), false); // - false; don't handle subclass
 
+        $middleware->setDefaultErrorHandler((function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;

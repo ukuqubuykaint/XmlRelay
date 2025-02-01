@@ -208,3 +208,4 @@ class AppFactory
     public static function setMiddlewareDispatcher(MiddlewareDispatcherInterface $middlewareDispatcher): void
     {
         static::$middlewareDispatcher = $middlewareDispatcher;
+    }

@@ -207,3 +207,7 @@ class MockStream implements StreamInterface
     {
         return $this->writable;
     }
+
+    public function write($string): int
+    {
+        if (!$this->writable) {

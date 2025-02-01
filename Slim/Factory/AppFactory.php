@@ -205,3 +205,6 @@ class AppFactory
         static::$routeResolver = $routeResolver;
     }
 
+    public static function setMiddlewareDispatcher(MiddlewareDispatcherInterface $middlewareDispatcher): void
+    {
+        static::$middlewareDispatcher = $middlewareDispatcher;

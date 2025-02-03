@@ -224,3 +224,6 @@ class ErrorHandler implements ErrorHandlerInterface
         return $this->callableResolver->resolve($renderer);
     }
 
+    /**
+     * Register an error renderer for a specific content-type
+     *

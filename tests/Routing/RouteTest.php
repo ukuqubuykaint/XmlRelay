@@ -430,3 +430,4 @@ class RouteTest extends TestCase
                 $self,
                 $responseProphecy
             ) {
+                $self->assertSame($responseProphecy->reveal(), $response);

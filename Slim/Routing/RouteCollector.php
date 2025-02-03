@@ -269,3 +269,4 @@ class RouteCollector implements RouteCollectorInterface
     {
         $route = $this->createRoute($methods, $pattern, $handler);
         $this->routes[$route->getIdentifier()] = $route;
+

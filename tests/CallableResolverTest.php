@@ -365,3 +365,7 @@ class CallableResolverTest extends TestCase
     }
 
     public function testObjMiddlewareClass(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('{} is not resolvable');
+

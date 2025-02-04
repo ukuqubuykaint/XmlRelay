@@ -240,3 +240,4 @@ class FastRouteDispatcherTest extends TestCase
 
         // 4 -------------------------------------------------------------------------------------->
 
+        // reuse $callback from #3

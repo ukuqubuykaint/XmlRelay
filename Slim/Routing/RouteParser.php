@@ -105,3 +105,7 @@ class RouteParser implements RouteParserInterface
     {
         $basePath = $this->routeCollector->getBasePath();
         $url = $this->relativeUrlFor($routeName, $data, $queryParams);
+
+        if ($basePath) {
+            $url = $basePath . $url;
+        }

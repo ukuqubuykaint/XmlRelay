@@ -259,3 +259,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2969: Update nyholm/psr7-server requirement from ^0.4.1 to ^1.0.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/2969) thanks to @dependabot-preview[bot]
 - [2970: Update phpstan/phpstan requirement from ^0.12.25 to ^0.12.26](https://github.com/ukuqubuykaint/AJAX-XML/pull/2970) thanks to @dependabot-preview[bot]
 - [2971: Update phpstan/phpstan requirement from ^0.12.26 to ^0.12.27](https://github.com/ukuqubuykaint/AJAX-XML/pull/2971) thanks to @dependabot-preview[bot]
+- [2972: Update phpstan/phpstan requirement from ^0.12.27 to ^0.12.28](https://github.com/ukuqubuykaint/AJAX-XML/pull/2972) thanks to @dependabot-preview[bot]

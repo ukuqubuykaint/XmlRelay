@@ -185,3 +185,6 @@ class RouteParserTest extends TestCase
             ->getAuthority()
             ->willReturn('example.com:8080')
             ->shouldBeCalledOnce();
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);
+        $routeProphecy

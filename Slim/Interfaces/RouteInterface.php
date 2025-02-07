@@ -103,3 +103,7 @@ interface RouteInterface
      */
     public function setArguments(array $arguments): self;
 
+    /**
+     * @param MiddlewareInterface|string|callable $middleware
+     */
+    public function add($middleware): self;

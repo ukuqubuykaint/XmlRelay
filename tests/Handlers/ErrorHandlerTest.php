@@ -192,3 +192,7 @@ class ErrorHandlerTest extends TestCase
             ->createServerRequest('/not-defined', 'GET')
             ->withHeader('Accept', 'text/html');
 
+        $exception = new HttpNotFoundException($xmlRequest);
+
+        /** @var ResponseInterface $response */
+        $response = $handler->__invoke($xmlRequest, $exception, false, false, false);

@@ -94,3 +94,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             $resolved = [$toResolve, $defaultMethod];
         }
         if (is_string($toResolve)) {
+            [$instance, $method] = $this->resolveSlimNotation($toResolve);
+            if ($method === null && $predicate($instance)) {
+                $method = $defaultMethod;
+            }

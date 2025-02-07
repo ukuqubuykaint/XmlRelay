@@ -197,3 +197,5 @@ class CallableResolverTest extends TestCase
         $callable();
         $this->assertSame(1, CallableTest::$CalledCount);
 
+        $callableRoute();
+        $this->assertSame(2, CallableTest::$CalledCount);

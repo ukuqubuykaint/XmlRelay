@@ -110,3 +110,4 @@ class MethodOverrideMiddlewareTest extends TestCase
 
     public function testNoOverrideRewindEofBodyStream()
     {
+        $responseFactory = $this->getResponseFactory();

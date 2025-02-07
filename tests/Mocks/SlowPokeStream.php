@@ -76,3 +76,4 @@ class SlowPokeStream implements StreamInterface
     {
         return true;
     }
+

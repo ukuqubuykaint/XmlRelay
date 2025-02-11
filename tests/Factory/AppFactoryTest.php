@@ -288,3 +288,7 @@ class AppFactoryTest extends TestCase
     }
 
     public function testCreateAppWithContainerUsesContainerDependenciesWhenPresent()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $routeResolverProphecy = $this->prophesize(RouteResolverInterface::class);

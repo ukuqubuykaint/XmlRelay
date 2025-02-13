@@ -211,3 +211,7 @@ class MockStream implements StreamInterface
     public function write($string): int
     {
         if (!$this->writable) {
+            throw new RuntimeException('Cannot write to a non-writable stream');
+        }
+
+        // We can't know the size after writing anything

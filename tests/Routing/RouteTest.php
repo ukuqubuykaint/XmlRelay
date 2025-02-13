@@ -433,3 +433,6 @@ class RouteTest extends TestCase
                 $self->assertSame($responseProphecy->reveal(), $response);
                 return $response;
             })
+            ->shouldBeCalledOnce();
+
+        $deferred = $callableResolverProphecy->reveal()->resolve($callable);

@@ -196,3 +196,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             return $class . ':' . $method;
         }
         return $toResolve;
+    }

@@ -68,3 +68,6 @@ class RouteResolverTest extends TestCase
 
         $routeResolver->computeRoutingResults($uri, $method);
     }
+
+    public function testResolveRoute()
+    {

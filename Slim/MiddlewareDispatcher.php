@@ -141,3 +141,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * added one (last in, first out).
      * @return MiddlewareDispatcher<TContainerInterface>
      */
+    public function addDeferred(string $middleware): self
+    {
+        $next = $this->tip;
+        $this->tip = new class (

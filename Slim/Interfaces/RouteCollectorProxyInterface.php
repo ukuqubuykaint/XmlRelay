@@ -116,3 +116,5 @@ interface RouteCollectorProxyInterface
      * @param string|callable $callable
      */
     public function group(string $pattern, $callable): RouteGroupInterface;
+
+    /**

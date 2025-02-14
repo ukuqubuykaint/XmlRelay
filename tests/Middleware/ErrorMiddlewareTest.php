@@ -134,3 +134,4 @@ class ErrorMiddlewareTest extends TestCase
         $logger = $this->getMockLogger();
 
         $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+        $exception = MockCustomException::class;

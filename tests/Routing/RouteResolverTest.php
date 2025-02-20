@@ -71,3 +71,5 @@ class RouteResolverTest extends TestCase
 
     public function testResolveRoute()
     {
+        $identifier = 'test';
+

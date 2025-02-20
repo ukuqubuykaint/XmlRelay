@@ -167,3 +167,6 @@ class AbstractErrorRendererTest extends TestCase
     {
         $exception = new Exception("Invalid \xB1\x31 UTF-8 sequence");
 
+        $renderer = new JsonErrorRenderer();
+        $output = $renderer->__invoke($exception, true);
+

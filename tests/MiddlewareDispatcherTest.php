@@ -226,3 +226,5 @@ class MiddlewareDispatcherTest extends TestCase
             return $handler->handle($request);
         };
 
+        $containerProphecy->has('callable')->willReturn(true);
+        $containerProphecy->get('callable')->willReturn($callable);

@@ -263,3 +263,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2973: Update phpstan/phpstan requirement from ^0.12.28 to ^0.12.29](https://github.com/ukuqubuykaint/AJAX-XML/pull/2973) thanks to @dependabot-preview[bot]
 - [2975: Update phpstan/phpstan requirement from ^0.12.29 to ^0.12.30](https://github.com/ukuqubuykaint/AJAX-XML/pull/2975) thanks to @dependabot-preview[bot]
 - [2976: Update phpstan/phpstan requirement from ^0.12.30 to ^0.12.31](https://github.com/ukuqubuykaint/AJAX-XML/pull/2976) thanks to @dependabot-preview[bot]
+- [2980: Update phpstan/phpstan requirement from ^0.12.31 to ^0.12.32](https://github.com/ukuqubuykaint/AJAX-XML/pull/2980) thanks to @dependabot-preview[bot]
+- [2981: Update phpspec/prophecy requirement from ^1.10 to ^1.11](https://github.com/ukuqubuykaint/AJAX-XML/pull/2981) thanks to @dependabot-preview[bot]
+- [2986: Update phpstan/phpstan requirement from ^0.12.32 to ^0.12.33](https://github.com/ukuqubuykaint/AJAX-XML/pull/2986) thanks to @dependabot-preview[bot]

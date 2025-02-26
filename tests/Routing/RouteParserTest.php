@@ -188,3 +188,6 @@ class RouteParserTest extends TestCase
 
         $routeProphecy = $this->prophesize(RouteInterface::class);
         $routeProphecy
+            ->getPattern()
+            ->willReturn('/{token}')
+            ->shouldBeCalledOnce();

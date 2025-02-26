@@ -215,3 +215,7 @@ class MockStream implements StreamInterface
         }
 
         // We can't know the size after writing anything
+        $this->size = null;
+
+        if (false === $result = fwrite($this->stream, $string)) {
+            throw new RuntimeException('Unable to write to stream');

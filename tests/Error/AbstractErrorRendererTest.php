@@ -251,3 +251,7 @@ class AbstractErrorRendererTest extends TestCase
             ->getTitle()
             ->willReturn($exceptionTitle)
             ->shouldBeCalledOnce();
+
+        $renderer = new XmlErrorRenderer();
+
+        /** @var stdClass $output */

@@ -227,3 +227,5 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Register an error renderer for a specific content-type
      *
+     * @param string  $contentType  The content-type this renderer should be registered to
+     * @param ErrorRendererInterface|string|callable $errorRenderer The error renderer

@@ -237,3 +237,4 @@ class Route implements RouteInterface, RequestHandlerInterface
         if (array_key_exists($name, $this->arguments)) {
             return $this->arguments[$name];
         }
+        return $default;

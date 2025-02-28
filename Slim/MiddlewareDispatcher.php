@@ -254,3 +254,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     public function addCallable(callable $middleware): self
     {
         $next = $this->tip;
+
+        if ($this->container && $middleware instanceof Closure) {
+            /** @var Closure $middleware */
+            $middleware = $middleware->bindTo($this->container);

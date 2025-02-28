@@ -195,3 +195,6 @@ class RouteParserTest extends TestCase
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
 
         $routeCollectorProphecy
+            ->getBasePath()
+            ->willReturn('/app')
+            ->shouldBeCalledOnce();

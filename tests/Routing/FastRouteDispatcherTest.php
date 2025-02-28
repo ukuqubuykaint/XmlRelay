@@ -354,3 +354,5 @@ class FastRouteDispatcherTest extends TestCase
 
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
+        // 13 ---- Route with constant suffix ----------------------------------------------------->
+

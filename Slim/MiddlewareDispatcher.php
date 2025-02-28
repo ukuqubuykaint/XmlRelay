@@ -252,3 +252,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
      * @return MiddlewareDispatcher<TContainerInterface>
      */
     public function addCallable(callable $middleware): self
+    {
+        $next = $this->tip;

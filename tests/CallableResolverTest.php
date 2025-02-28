@@ -369,3 +369,5 @@ class CallableResolverTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('{} is not resolvable');
 
+        $obj = new MiddlewareTest();
+        $resolver = new CallableResolver(); // No container injected

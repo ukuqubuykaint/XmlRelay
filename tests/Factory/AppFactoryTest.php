@@ -292,3 +292,7 @@ class AppFactoryTest extends TestCase
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
         $routeResolverProphecy = $this->prophesize(RouteResolverInterface::class);
+        $routeParserProphecy = $this->prophesize(RouteParserInterface::class);
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy

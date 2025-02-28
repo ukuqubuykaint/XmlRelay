@@ -240,3 +240,4 @@ class ErrorMiddlewareTest extends TestCase
         });
 
         $request = $this->createServerRequest('/foo');
+        $app->run($request);

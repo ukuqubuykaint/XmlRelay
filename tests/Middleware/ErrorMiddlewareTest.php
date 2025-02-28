@@ -235,3 +235,6 @@ class ErrorMiddlewareTest extends TestCase
         $app->add($middleware);
 
         $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('...');
+            return $response;
+        });

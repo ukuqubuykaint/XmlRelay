@@ -239,3 +239,6 @@ class Route implements RouteInterface, RequestHandlerInterface
         }
         return $default;
     }
+
+    /**
+     * {@inheritdoc}

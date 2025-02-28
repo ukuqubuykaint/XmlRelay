@@ -216,3 +216,6 @@ class ResponseEmitterTest extends TestCase
             ->withBody($body);
 
         $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+
+        $this->assertFalse($body->eof());

@@ -364,3 +364,6 @@ class MiddlewareDispatcherTest extends TestCase
             $this->getHeader($args[0])->willReturn($headers);
             $this->hasHeader($args[0])->willReturn(true);
             return $this;
+        });
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

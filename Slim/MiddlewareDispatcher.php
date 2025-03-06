@@ -259,3 +259,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             /** @var Closure $middleware */
             $middleware = $middleware->bindTo($this->container);
         }
+
+        $this->tip = new class ($middleware, $next) implements RequestHandlerInterface {
+            /**
+             * @var callable

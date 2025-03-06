@@ -219,3 +219,5 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter->emit($response);
 
         $this->assertFalse($body->eof());
+        $this->expectOutputString('');
+    }

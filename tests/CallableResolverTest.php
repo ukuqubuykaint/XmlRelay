@@ -373,3 +373,6 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver(); // No container injected
         $resolver->resolve($obj);
     }
+
+    public function testRouteObjMiddlewareClass(): void
+    {

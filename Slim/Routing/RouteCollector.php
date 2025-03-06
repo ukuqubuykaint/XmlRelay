@@ -277,3 +277,4 @@ class RouteCollector implements RouteCollectorInterface
 
         $this->routeCounter++;
 
+        return $route;

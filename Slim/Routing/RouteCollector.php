@@ -273,3 +273,7 @@ class RouteCollector implements RouteCollectorInterface
         $routeName = $route->getName();
         if ($routeName !== null && !isset($this->routesByName[$routeName])) {
             $this->routesByName[$routeName] = $route;
+        }
+
+        $this->routeCounter++;
+

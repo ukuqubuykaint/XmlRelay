@@ -263,3 +263,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         $this->tip = new class ($middleware, $next) implements RequestHandlerInterface {
             /**
              * @var callable
+             */
+            private $middleware;
+
+            /**

@@ -268,3 +268,4 @@ class RouteCollectorProxyTest extends TestCase
 
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
         $routeCollectorProphecy
+            ->map(['DELETE'], $pattern, Argument::is($callable))

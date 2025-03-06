@@ -258,3 +258,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
         if ($this->container && $middleware instanceof Closure) {
             /** @var Closure $middleware */
             $middleware = $middleware->bindTo($this->container);
+        }

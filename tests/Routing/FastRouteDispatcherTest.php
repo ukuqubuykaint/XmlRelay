@@ -356,3 +356,4 @@ class FastRouteDispatcherTest extends TestCase
 
         // 13 ---- Route with constant suffix ----------------------------------------------------->
 
+        $callback = function (RouteCollector $r) {

@@ -376,3 +376,4 @@ class CallableResolverTest extends TestCase
 
     public function testRouteObjMiddlewareClass(): void
     {
+        $this->expectException(RuntimeException::class);

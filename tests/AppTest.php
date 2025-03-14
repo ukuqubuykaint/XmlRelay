@@ -672,3 +672,4 @@ class AppTest extends TestCase
         $containerProphecy = $this->prophesize(ContainerInterface::class);
         $containerProphecy->has('middleware')->willReturn(true);
         $containerProphecy->get('middleware')->willReturn($middlewareProphecy);
+

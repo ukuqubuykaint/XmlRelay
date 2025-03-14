@@ -242,3 +242,6 @@ class ErrorHandlerTest extends TestCase
         $contentType = $method->invoke($handler, $request);
 
         $this->assertNull($contentType);
+    }
+
+    public function testDetermineContentTypeTextPlainMultiAcceptHeader()

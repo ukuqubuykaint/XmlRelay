@@ -219,3 +219,5 @@ class MockStream implements StreamInterface
 
         if (false === $result = fwrite($this->stream, $string)) {
             throw new RuntimeException('Unable to write to stream');
+        }
+

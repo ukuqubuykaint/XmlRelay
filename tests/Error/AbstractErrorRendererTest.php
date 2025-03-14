@@ -256,3 +256,4 @@ class AbstractErrorRendererTest extends TestCase
 
         /** @var stdClass $output */
         $output = simplexml_load_string($renderer->__invoke($httpExceptionProphecy->reveal(), true));
+

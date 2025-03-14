@@ -198,3 +198,5 @@ class RouteParserTest extends TestCase
             ->getBasePath()
             ->willReturn('/app')
             ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy

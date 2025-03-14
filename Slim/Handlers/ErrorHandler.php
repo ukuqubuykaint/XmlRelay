@@ -233,3 +233,6 @@ class ErrorHandler implements ErrorHandlerInterface
     public function registerErrorRenderer(string $contentType, $errorRenderer): void
     {
         $this->errorRenderers[$contentType] = $errorRenderer;
+    }
+
+    /**

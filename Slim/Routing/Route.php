@@ -245,3 +245,6 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function getArguments(): array
     {
+        return $this->arguments;
+    }
+

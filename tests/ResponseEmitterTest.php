@@ -221,3 +221,5 @@ class ResponseEmitterTest extends TestCase
         $this->assertFalse($body->eof());
         $this->expectOutputString('');
     }
+
+    public function testIsResponseEmptyWithEmptyBody(): void

@@ -279,3 +279,4 @@ class RouteCollector implements RouteCollectorInterface
 
         return $route;
     }
+

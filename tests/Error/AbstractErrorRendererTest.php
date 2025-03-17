@@ -257,3 +257,6 @@ class AbstractErrorRendererTest extends TestCase
         /** @var stdClass $output */
         $output = simplexml_load_string($renderer->__invoke($httpExceptionProphecy->reveal(), true));
 
+        $this->assertSame((string) $output->message[0], $exceptionTitle, 'Should contain http exception title');
+    }
+

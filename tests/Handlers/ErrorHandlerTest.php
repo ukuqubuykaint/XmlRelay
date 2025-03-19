@@ -245,3 +245,7 @@ class ErrorHandlerTest extends TestCase
     }
 
     public function testDetermineContentTypeTextPlainMultiAcceptHeader()
+    {
+        $request = $this
+            ->createServerRequest('/', 'GET')
+            ->withHeader('Content-Type', 'text/plain')

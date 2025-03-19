@@ -439,3 +439,6 @@ class RouteTest extends TestCase
         $callableResolverProphecy
             ->resolve(Argument::is($deferred))
             ->willReturn($deferred)
+            ->shouldBeCalledOnce();
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

@@ -298,3 +298,5 @@ class AppFactoryTest extends TestCase
         $routeCollectorProphecy
             ->getRouteParser()
             ->willReturn($routeParserProphecy->reveal())
+            ->shouldBeCalledOnce();
+

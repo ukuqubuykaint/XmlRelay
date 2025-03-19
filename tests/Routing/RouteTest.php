@@ -436,3 +436,6 @@ class RouteTest extends TestCase
             ->shouldBeCalledOnce();
 
         $deferred = $callableResolverProphecy->reveal()->resolve($callable);
+        $callableResolverProphecy
+            ->resolve(Argument::is($deferred))
+            ->willReturn($deferred)

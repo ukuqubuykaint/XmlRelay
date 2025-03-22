@@ -221,3 +221,5 @@ class MockStream implements StreamInterface
             throw new RuntimeException('Unable to write to stream');
         }
 
+        return $result;
+    }

@@ -678,3 +678,7 @@ class AppTest extends TestCase
         $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) {
             return $response;
         });
+
+        $uriProphecy = $this->prophesize(UriInterface::class);
+        $uriProphecy->getPath()->willReturn('/');
+

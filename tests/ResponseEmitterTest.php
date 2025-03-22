@@ -223,3 +223,6 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testIsResponseEmptyWithEmptyBody(): void
+    {
+        $response = $this->createResponse(200);
+        $responseEmitter = new ResponseEmitter();

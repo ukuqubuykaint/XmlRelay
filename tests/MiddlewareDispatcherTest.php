@@ -374,3 +374,6 @@ class MiddlewareDispatcherTest extends TestCase
             return $this;
         });
         $responseProphecy->withAddedHeader(Argument::type('string'), Argument::type('string'))->will(function ($args) {
+            $headers = $this->reveal()->getHeader($args[0]);
+
+            $headers[] = $args[1];

@@ -281,3 +281,5 @@ class RouteCollector implements RouteCollectorInterface
     }
 
     /**
+     * @param string[] $methods
+     * @param callable|array{class-string, string}|string $callable

@@ -236,3 +236,4 @@ class ErrorHandler implements ErrorHandlerInterface
     }
 
     /**
+     * Set the default error renderer

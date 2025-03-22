@@ -270,3 +270,6 @@ class RouteCollectorProxyTest extends TestCase
         $routeCollectorProphecy
             ->map(['DELETE'], $pattern, Argument::is($callable))
             ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(

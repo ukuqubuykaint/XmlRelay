@@ -166,3 +166,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 - [3120: Add a new PSR-17 factory to Psr17FactoryProvider](https://github.com/ukuqubuykaint/AJAX-XML/pull/3120) thanks to @solventt
 - [3123: Replace deprecated setMethods() in tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/3123) thanks to @solventt
+- [3126: Update guzzlehttp/psr7 requirement from ^2.0 to ^2.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3126) thanks to @dependabot[bot]

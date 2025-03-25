@@ -78,3 +78,7 @@ class FastRouteDispatcher extends GroupCountBased
             if ($result[0] === self::FOUND) {
                 /** @var array{int, string, array<string, string>} $result */
                 return [self::FOUND, $result[1], $result[2]];
+            }
+        }
+
+        return [self::NOT_FOUND, null, []];

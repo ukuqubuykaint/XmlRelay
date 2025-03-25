@@ -145,3 +145,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
     {
         $next = $this->tip;
         $this->tip = new class (
+            $middleware,
+            $next,
+            $this->container,
+            $this->callableResolver

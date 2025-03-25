@@ -134,3 +134,4 @@ class RequestResponseNamedArgsTest extends TestCase
             'foo' => 'foo',
             'bar' => 'bar',
         ];
+        $args = array_merge($known, $unknown);

@@ -78,3 +78,7 @@ class RoutingMiddlewareTest extends TestCase
     public function testRouteIsNotStoredOnMethodNotAllowed()
     {
         $routeCollector = $this->getRouteCollector();
+        $routeParser = new RouteParser($routeCollector);
+        $routeResolver = new RouteResolver($routeCollector);
+        $routingMiddleware = new RoutingMiddleware($routeResolver, $routeParser);
+

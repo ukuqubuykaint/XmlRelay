@@ -130,3 +130,7 @@ class RequestResponseNamedArgsTest extends TestCase
             'name' => 'world',
             'greeting' => 'hello',
         ];
+        $unknown = [
+            'foo' => 'foo',
+            'bar' => 'bar',
+        ];

@@ -146,3 +146,4 @@ class AppFactoryTest extends TestCase
 
         $this->assertInstanceOf(SlimResponseFactory::class, $app->getResponseFactory());
     }
+

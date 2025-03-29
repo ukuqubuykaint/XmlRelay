@@ -109,3 +109,7 @@ class RouteParser implements RouteParserInterface
         if ($basePath) {
             $url = $basePath . $url;
         }
+
+        return $url;
+    }
+

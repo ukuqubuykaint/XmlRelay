@@ -442,3 +442,5 @@ class RouteTest extends TestCase
             ->shouldBeCalledOnce();
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()

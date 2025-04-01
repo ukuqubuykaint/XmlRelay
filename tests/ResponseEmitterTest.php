@@ -226,3 +226,5 @@ class ResponseEmitterTest extends TestCase
     {
         $response = $this->createResponse(200);
         $responseEmitter = new ResponseEmitter();
+
+        $this->assertTrue($responseEmitter->isResponseEmpty($response));

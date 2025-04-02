@@ -203,3 +203,5 @@ class RouteParserTest extends TestCase
             ->getNamedRoute('test')
             ->willReturn($routeProphecy->reveal())
             ->shouldBeCalledOnce();
+
+        $routeParser = new RouteParser($routeCollectorProphecy->reveal());

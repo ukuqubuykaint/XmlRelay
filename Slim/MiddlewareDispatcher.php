@@ -270,3 +270,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
              * @var RequestHandlerInterface
              */
             private $next;
+
+            public function __construct(callable $middleware, RequestHandlerInterface $next)
+            {
+                $this->middleware = $middleware;

@@ -385,3 +385,6 @@ class CallableResolverTest extends TestCase
     }
 
     public function testMiddlewareObjMiddlewareClass(): void
+    {
+        $obj = new MiddlewareTest();
+        $request = $this->createServerRequest('/', 'GET');

@@ -223,3 +223,7 @@ class MockStream implements StreamInterface
 
         return $result;
     }
+
+    public function isReadable(): bool
+    {
+        return $this->readable;

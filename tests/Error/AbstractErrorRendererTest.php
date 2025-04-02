@@ -260,3 +260,5 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertSame((string) $output->message[0], $exceptionTitle, 'Should contain http exception title');
     }
 
+    public function testPlainTextErrorRendererFormatFragmentMethod()
+    {

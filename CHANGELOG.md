@@ -273,3 +273,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3010: Update guzzlehttp/psr7 requirement from ^1.6 to ^1.7](https://github.com/ukuqubuykaint/AJAX-XML/pull/3010) thanks to @dependabot-preview[bot]
 - [3011: Update phpspec/prophecy requirement from ^1.11 to ^1.12](https://github.com/ukuqubuykaint/AJAX-XML/pull/3011) thanks to @dependabot-preview[bot]
 - [3012: Update xmlrelay/http requirement from ^1.0 to ^1.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3012) thanks to @dependabot-preview[bot]
+- [3013: Update xmlrelay/psr7 requirement from ^1.1 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3013) thanks to @dependabot-preview[bot]
+- [3014: Update laminas/laminas-diactoros requirement from ^2.3 to ^2.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3014) thanks to @dependabot-preview[bot]

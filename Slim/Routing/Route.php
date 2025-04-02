@@ -250,3 +250,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function setArguments(array $arguments, bool $includeInSavedArguments = true): RouteInterface
+    {

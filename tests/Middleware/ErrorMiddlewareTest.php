@@ -244,3 +244,6 @@ class ErrorMiddlewareTest extends TestCase
 
         $this->expectOutputString('Oops..');
     }
+
+    public function testHandleMultipleExceptionsAddedAsArray()
+    {

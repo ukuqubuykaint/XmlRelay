@@ -268,3 +268,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
             /**
              * @var RequestHandlerInterface
+             */
+            private $next;

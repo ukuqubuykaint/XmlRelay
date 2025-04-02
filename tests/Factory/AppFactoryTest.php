@@ -300,3 +300,7 @@ class AppFactoryTest extends TestCase
             ->willReturn($routeParserProphecy->reveal())
             ->shouldBeCalledOnce();
 
+        $middlewareDispatcherProphecy = $this->prophesize(MiddlewareDispatcherInterface::class);
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+

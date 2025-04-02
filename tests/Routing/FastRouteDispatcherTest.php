@@ -364,3 +364,4 @@ class FastRouteDispatcherTest extends TestCase
         $method = 'GET';
         $uri = '/user/rdlowrey/edit';
         $handler = 'handler1';
+        $argDict = ['name' => 'rdlowrey'];

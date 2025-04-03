@@ -229,3 +229,4 @@ class ResponseEmitterTest extends TestCase
 
         $this->assertTrue($responseEmitter->isResponseEmpty($response));
     }
+

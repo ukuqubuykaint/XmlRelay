@@ -230,3 +230,7 @@ class ResponseEmitterTest extends TestCase
         $this->assertTrue($responseEmitter->isResponseEmpty($response));
     }
 
+    public function testIsResponseEmptyWithZeroAsBody(): void
+    {
+        $body = $this->createStream('0');
+        $response = $this

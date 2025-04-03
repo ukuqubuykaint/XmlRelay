@@ -389,3 +389,6 @@ class CallableResolverTest extends TestCase
         $obj = new MiddlewareTest();
         $request = $this->createServerRequest('/', 'GET');
         $resolver = new CallableResolver(); // No container injected
+        $callableRouteMiddleware = $resolver->resolveMiddleware($obj);
+        $callableRouteMiddleware($request, $this->createMock(RequestHandlerInterface::class));
+        $this->assertSame(1, MiddlewareTest::$CalledCount);

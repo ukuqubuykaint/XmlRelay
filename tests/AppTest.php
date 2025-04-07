@@ -688,3 +688,6 @@ class AppTest extends TestCase
 
         $response = $app->handle($requestProphecy->reveal());
         $this->assertSame('Hello World', (string) $response->getBody());
+    }
+
+    public function testAddRoutingMiddleware(): void

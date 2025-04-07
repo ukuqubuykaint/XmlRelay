@@ -286,3 +286,4 @@ class RouteCollector implements RouteCollectorInterface
      */
     protected function createRoute(array $methods, string $pattern, $callable): RouteInterface
     {
+        return new Route(

@@ -253,3 +253,6 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function setArguments(array $arguments, bool $includeInSavedArguments = true): RouteInterface
     {
+        if ($includeInSavedArguments) {
+            $this->savedArguments = $arguments;
+        }

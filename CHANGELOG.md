@@ -276,3 +276,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3013: Update xmlrelay/psr7 requirement from ^1.1 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3013) thanks to @dependabot-preview[bot]
 - [3014: Update laminas/laminas-diactoros requirement from ^2.3 to ^2.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3014) thanks to @dependabot-preview[bot]
 - [3018: Update phpstan/phpstan requirement from ^0.12.37 to ^0.12.54](https://github.com/ukuqubuykaint/AJAX-XML/pull/3018) thanks to @dependabot-preview[bot]
+
+## 4.5.0 - 2020-04-14
+

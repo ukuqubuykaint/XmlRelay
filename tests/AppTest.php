@@ -691,3 +691,4 @@ class AppTest extends TestCase
     }
 
     public function testAddRoutingMiddleware(): void
+    {

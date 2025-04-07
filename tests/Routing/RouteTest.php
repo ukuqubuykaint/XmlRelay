@@ -446,3 +446,4 @@ class RouteTest extends TestCase
             ->createResponse()
             ->willReturn($responseProphecy->reveal());
 
+        $route = new Route(

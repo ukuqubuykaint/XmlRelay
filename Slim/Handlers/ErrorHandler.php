@@ -237,3 +237,7 @@ class ErrorHandler implements ErrorHandlerInterface
 
     /**
      * Set the default error renderer
+     *
+     * @param string                                 $contentType   The content type of the default error renderer
+     * @param ErrorRendererInterface|string|callable $errorRenderer The default error renderer
+     */

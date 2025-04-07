@@ -228,3 +228,6 @@ class MockStream implements StreamInterface
     {
         return $this->readable;
     }
+
+    public function read($length): string
+    {

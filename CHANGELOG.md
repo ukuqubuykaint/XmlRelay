@@ -167,3 +167,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3120: Add a new PSR-17 factory to Psr17FactoryProvider](https://github.com/ukuqubuykaint/AJAX-XML/pull/3120) thanks to @solventt
 - [3123: Replace deprecated setMethods() in tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/3123) thanks to @solventt
 - [3126: Update guzzlehttp/psr7 requirement from ^2.0 to ^2.1](https://github.com/ukuqubuykaint/AJAX-XML/pull/3126) thanks to @dependabot[bot]
+- [3127: PHPStan v1.0](https://github.com/ukuqubuykaint/AJAX-XML/pull/3127) thanks to @t0mmy742
+- [3128: Update phpstan/phpstan requirement from ^1.0 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3128) thanks to @dependabot[bot]
+- [3129: Deprecate PHP 7.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3129) thanks to @l0gicgate
+- [3130: Removed double defined PHP 7.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3130) thanks to @flangofas

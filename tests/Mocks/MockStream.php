@@ -126,3 +126,5 @@ class MockStream implements StreamInterface
         }
     }
 
+    public function detach()
+    {

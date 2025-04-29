@@ -147,3 +147,6 @@ class AppFactoryTest extends TestCase
         $this->assertInstanceOf(SlimResponseFactory::class, $app->getResponseFactory());
     }
 
+    /**
+     * @runInSeparateProcess - AppFactory::setResponseFactory breaks other tests
+     */

@@ -128,3 +128,7 @@ class ResponseEmitter
         }
         $stream = $response->getBody();
         $seekable = $stream->isSeekable();
+        if ($seekable) {
+            $stream->rewind();
+        }
+        return $seekable ? $stream->read(1) === '' : $stream->eof();

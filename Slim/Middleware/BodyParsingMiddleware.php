@@ -98,3 +98,5 @@ class BodyParsingMiddleware implements MiddlewareInterface
     {
         $this->registerBodyParser('application/json', static function ($input) {
             /** @var string $input */
+            $result = json_decode($input, true);
+

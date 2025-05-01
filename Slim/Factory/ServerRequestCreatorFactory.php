@@ -70,3 +70,6 @@ class ServerRequestCreatorFactory
 
         return $serverRequestCreator;
     }
+
+    public static function setPsr17FactoryProvider(Psr17FactoryProviderInterface $psr17FactoryProvider): void
+    {

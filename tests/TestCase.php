@@ -78,3 +78,7 @@ abstract class TestCase extends PhpUnitTestCase
     protected function createMiddlewareDispatcher(
         RequestHandlerInterface $requestHandler,
         ?ContainerInterface $container = null,
+        ?CallableResolverInterface $callableResolver = null
+    ): MiddlewareDispatcher {
+        return new MiddlewareDispatcher(
+            $requestHandler,

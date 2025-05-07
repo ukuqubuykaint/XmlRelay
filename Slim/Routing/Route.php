@@ -257,3 +257,6 @@ class Route implements RouteInterface, RequestHandlerInterface
             $this->savedArguments = $arguments;
         }
 
+        $this->arguments = $arguments;
+        return $this;
+    }

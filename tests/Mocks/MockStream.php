@@ -235,3 +235,5 @@ class MockStream implements StreamInterface
             throw new RuntimeException('Cannot read from non-readable stream');
         }
 
+        return fread($this->stream, $length);
+    }

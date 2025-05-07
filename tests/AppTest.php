@@ -692,3 +692,7 @@ class AppTest extends TestCase
 
     public function testAddRoutingMiddleware(): void
     {
+        /** @var ResponseFactoryInterface $responseFactory */
+        $responseFactory = $this->prophesize(ResponseFactoryInterface::class)->reveal();
+
+        // Create the app.

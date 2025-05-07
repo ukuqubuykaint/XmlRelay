@@ -307,3 +307,6 @@ class AppFactoryTest extends TestCase
         $containerProphecy
             ->has(ResponseFactoryInterface::class)
             ->willReturn(true)
+            ->shouldBeCalledOnce();
+
+        $containerProphecy

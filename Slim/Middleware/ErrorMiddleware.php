@@ -119,3 +119,5 @@ class ErrorMiddleware implements MiddlewareInterface
         return $this->getDefaultErrorHandler();
     }
 
+    /**
+     * Get default error handler

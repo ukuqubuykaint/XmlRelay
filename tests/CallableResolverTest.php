@@ -392,3 +392,7 @@ class CallableResolverTest extends TestCase
         $callableRouteMiddleware = $resolver->resolveMiddleware($obj);
         $callableRouteMiddleware($request, $this->createMock(RequestHandlerInterface::class));
         $this->assertSame(1, MiddlewareTest::$CalledCount);
+    }
+
+    public function testNotObjectInContainerThrowException(): void
+    {

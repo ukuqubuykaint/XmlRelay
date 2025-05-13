@@ -237,3 +237,7 @@ class MockStream implements StreamInterface
 
         return fread($this->stream, $length);
     }
+
+    public function getContents(): string
+    {
+        if (!isset($this->stream)) {

@@ -447,3 +447,6 @@ class RouteTest extends TestCase
             ->willReturn($responseProphecy->reveal());
 
         $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,

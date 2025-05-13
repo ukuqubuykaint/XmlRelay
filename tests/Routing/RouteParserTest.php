@@ -205,3 +205,7 @@ class RouteParserTest extends TestCase
             ->shouldBeCalledOnce();
 
         $routeParser = new RouteParser($routeCollectorProphecy->reveal());
+        $result = $routeParser->fullUrlFor($uriProphecy->reveal(), 'test', ['token' => '123']);
+
+        $expectedResult = 'http://example.com:8080/app/123';
+        $this->assertSame($expectedResult, $result);

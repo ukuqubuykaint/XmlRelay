@@ -241,3 +241,6 @@ class MockStream implements StreamInterface
     public function getContents(): string
     {
         if (!isset($this->stream)) {
+            throw new RuntimeException('Unable to read stream contents');
+        }
+

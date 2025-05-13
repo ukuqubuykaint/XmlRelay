@@ -396,3 +396,6 @@ class CallableResolverTest extends TestCase
 
     public function testNotObjectInContainerThrowException(): void
     {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('callable_service container entry is not an object');
+

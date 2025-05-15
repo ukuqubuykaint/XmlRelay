@@ -259,3 +259,5 @@ class ErrorHandlerTest extends TestCase
         ];
 
         $class = new ReflectionClass(ErrorHandler::class);
+
+        $reflectionProperty = $class->getProperty('responseFactory');

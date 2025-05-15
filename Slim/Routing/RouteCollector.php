@@ -292,3 +292,4 @@ class RouteCollector implements RouteCollectorInterface
             $callable,
             $this->responseFactory,
             $this->callableResolver,
+            $this->container,

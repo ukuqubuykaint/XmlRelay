@@ -237,3 +237,4 @@ class ResponseEmitterTest extends TestCase
             ->createResponse(200)
             ->withBody($body);
         $responseEmitter = new ResponseEmitter();
+

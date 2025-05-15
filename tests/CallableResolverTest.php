@@ -399,3 +399,5 @@ class CallableResolverTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('callable_service container entry is not an object');
 
+        $this->containerProphecy->has('callable_service')->willReturn(true);
+        $this->containerProphecy->get('callable_service')->willReturn('NOT AN OBJECT');

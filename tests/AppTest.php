@@ -697,3 +697,4 @@ class AppTest extends TestCase
 
         // Create the app.
         $app = new App($responseFactory);
+

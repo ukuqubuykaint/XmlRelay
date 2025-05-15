@@ -281,3 +281,5 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Added
 - [2928](https://github.com/ukuqubuykaint/AJAX-XML/pull/2928) Test against PHP 7.4
+- [2937](https://github.com/ukuqubuykaint/AJAX-XML/pull/2937) Add support for PSR-3
+

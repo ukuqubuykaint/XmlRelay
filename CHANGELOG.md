@@ -171,3 +171,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3128: Update phpstan/phpstan requirement from ^1.0 to ^1.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3128) thanks to @dependabot[bot]
 - [3129: Deprecate PHP 7.3](https://github.com/ukuqubuykaint/AJAX-XML/pull/3129) thanks to @l0gicgate
 - [3130: Removed double defined PHP 7.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3130) thanks to @flangofas
+- [3132: Add new `RequestResponseNamedArgs` route strategy](https://github.com/ukuqubuykaint/AJAX-XML/pull/3132) thanks to @adoy

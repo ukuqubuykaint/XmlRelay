@@ -112,3 +112,5 @@ class RouteCollector implements RouteCollectorInterface
     /**
      * Get default route invocation strategy
      */
+    public function getDefaultInvocationStrategy(): InvocationStrategyInterface
+    {

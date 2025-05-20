@@ -94,3 +94,4 @@
         "psalm": "psalm --no-cache"
     },
     "suggest": {
+        "ext-simplexml": "Needed to support XML format in BodyParsingMiddleware",

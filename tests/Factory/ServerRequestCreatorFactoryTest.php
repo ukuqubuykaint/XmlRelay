@@ -76,3 +76,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
      #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testDetermineServerRequestCreatorThrowsRuntimeException()
     {
+        $this->expectException(RuntimeException::class);
+
+        Psr17FactoryProvider::setFactories([]);

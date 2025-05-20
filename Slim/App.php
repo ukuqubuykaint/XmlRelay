@@ -124,3 +124,6 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      */
     public function addRoutingMiddleware(): RoutingMiddleware
     {
+        $routingMiddleware = new RoutingMiddleware(
+            $this->getRouteResolver(),
+            $this->getRouteCollector()->getRouteParser()

@@ -103,3 +103,6 @@ class AppFactory
         ) instanceof RouteResolverInterface
             ? $routeResolverFromContainer
             : null;
+
+        $middlewareDispatcher = $container->has(MiddlewareDispatcherInterface::class)
+        && (

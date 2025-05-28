@@ -283,3 +283,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2928](https://github.com/ukuqubuykaint/AJAX-XML/pull/2928) Test against PHP 7.4
 - [2937](https://github.com/ukuqubuykaint/AJAX-XML/pull/2937) Add support for PSR-3
 
+### Fixed
+- [2916](https://github.com/ukuqubuykaint/AJAX-XML/pull/2916) Rename phpcs.xml to phpcs.xml.dist
+- [2917](https://github.com/ukuqubuykaint/AJAX-XML/pull/2917) Update .editorconfig

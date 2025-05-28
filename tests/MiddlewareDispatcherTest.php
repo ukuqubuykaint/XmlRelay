@@ -382,3 +382,7 @@ class MiddlewareDispatcherTest extends TestCase
             return $this;
         });
         $responseProphecy->withStatus(Argument::type('int'))->will(function ($args) {
+            $this->getStatusCode()->willReturn($args[0]);
+            return $this;
+        });
+

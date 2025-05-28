@@ -238,3 +238,4 @@ class ResponseEmitterTest extends TestCase
             ->withBody($body);
         $responseEmitter = new ResponseEmitter();
 
+        $this->assertFalse($responseEmitter->isResponseEmpty($response));

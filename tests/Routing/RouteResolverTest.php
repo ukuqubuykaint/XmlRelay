@@ -85,3 +85,6 @@ class RouteResolverTest extends TestCase
         $routeResolver = new RouteResolver(
             $routeCollectorProphecy->reveal(),
             $dispatcherProphecy->reveal()
+        );
+
+        $routeResolver->resolveRoute($identifier);

@@ -450,3 +450,5 @@ class RouteTest extends TestCase
             ['GET'],
             '/',
             $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal()

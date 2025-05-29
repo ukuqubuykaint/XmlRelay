@@ -239,3 +239,6 @@ class ResponseEmitterTest extends TestCase
         $responseEmitter = new ResponseEmitter();
 
         $this->assertFalse($responseEmitter->isResponseEmpty($response));
+    }
+
+    public function testWillHandleInvalidConnectionStatusWithADeterminateBody(): void

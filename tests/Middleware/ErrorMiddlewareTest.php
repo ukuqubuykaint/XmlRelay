@@ -255,3 +255,6 @@ class ErrorMiddlewareTest extends TestCase
         $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
 
         $app->add(function ($request, $handler) {
+            throw new InvalidArgumentException('This is an invalid argument exception...');
+        });
+

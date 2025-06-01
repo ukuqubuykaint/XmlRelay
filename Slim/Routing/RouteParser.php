@@ -113,3 +113,5 @@ class RouteParser implements RouteParserInterface
         return $url;
     }
 
+    /**
+     * {@inheritdoc}

@@ -135,3 +135,7 @@ class RequestResponseNamedArgsTest extends TestCase
             'bar' => 'bar',
         ];
         $args = array_merge($known, $unknown);
+        $invocationStrategy = new RequestResponseNamedArgs();
+
+        $callback = function ($request, $response, $name, $greeting, ...$arguments) use ($known, $unknown) {
+            $this->assertSame($this->request, $request);

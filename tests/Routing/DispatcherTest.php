@@ -89,3 +89,7 @@ class DispatcherTest extends TestCase
         $dispatcher = new Dispatcher($routeCollector);
 
         $method = new ReflectionMethod(Dispatcher::class, 'createDispatcher');
+        $this->setAccessible($method);
+
+        $fastRouteDispatcher = $method->invoke($dispatcher);
+        $fastRouteDispatcher2 = $method->invoke($dispatcher);

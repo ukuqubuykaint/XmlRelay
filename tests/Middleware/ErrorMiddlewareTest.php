@@ -258,3 +258,7 @@ class ErrorMiddlewareTest extends TestCase
             throw new InvalidArgumentException('This is an invalid argument exception...');
         });
 
+        $handler = (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;

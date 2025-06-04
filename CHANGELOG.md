@@ -290,3 +290,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2932](https://github.com/ukuqubuykaint/AJAX-XML/pull/2932) Update the Tidelift enterprise language
 - [2938](https://github.com/ukuqubuykaint/AJAX-XML/pull/2938) Modify usage of deprecated expectExceptionMessageRegExp() method
 
+## 4.4.0 - 2020-01-04
+
+### Added
+- [2862](https://github.com/ukuqubuykaint/AJAX-XML/pull/2862) Optionally handle subclasses of exceptions in custom error handler

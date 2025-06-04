@@ -244,3 +244,6 @@ class MockStream implements StreamInterface
             throw new RuntimeException('Unable to read stream contents');
         }
 
+        if (false === $contents = stream_get_contents($this->stream)) {
+            throw new RuntimeException('Unable to read stream contents');
+        }

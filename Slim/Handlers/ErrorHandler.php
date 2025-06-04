@@ -241,3 +241,7 @@ class ErrorHandler implements ErrorHandlerInterface
      * @param string                                 $contentType   The content type of the default error renderer
      * @param ErrorRendererInterface|string|callable $errorRenderer The default error renderer
      */
+    public function setDefaultErrorRenderer(string $contentType, $errorRenderer): void
+    {
+        $this->defaultErrorRendererContentType = $contentType;
+        $this->defaultErrorRenderer = $errorRenderer;

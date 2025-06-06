@@ -262,3 +262,6 @@ class AbstractErrorRendererTest extends TestCase
 
     public function testPlainTextErrorRendererFormatFragmentMethod()
     {
+        $message = 'Oops.. <br>';
+        $exception = new Exception($message, 500);
+        $renderer = new PlainTextErrorRenderer();

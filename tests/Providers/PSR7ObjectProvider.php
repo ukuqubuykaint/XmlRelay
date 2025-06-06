@@ -89,3 +89,4 @@ class PSR7ObjectProvider implements PSR7ObjectProviderInterface
     public function getResponseFactory(): ResponseFactoryInterface
     {
         return new Psr17Factory();
+    }

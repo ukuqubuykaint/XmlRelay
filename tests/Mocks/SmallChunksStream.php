@@ -81,3 +81,4 @@ class SmallChunksStream implements StreamInterface
     {
         return false;
     }
+

@@ -452,3 +452,4 @@ class RouteTest extends TestCase
             $deferred,
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal()
+        );

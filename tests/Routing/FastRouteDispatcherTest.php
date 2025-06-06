@@ -369,3 +369,5 @@ class FastRouteDispatcherTest extends TestCase
         $cases[] = [$method, $uri, $callback, $handler, $argDict];
 
         // 14 ---- Handle multiple methods with the same handler ---------------------------------->
+
+        $callback = function (RouteCollector $r) {

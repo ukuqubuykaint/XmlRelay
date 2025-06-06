@@ -457,3 +457,5 @@ class RouteTest extends TestCase
         $request = $this->createServerRequest('/');
         $response = $route->run($request);
 
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+    }

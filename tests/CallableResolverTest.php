@@ -401,3 +401,6 @@ class CallableResolverTest extends TestCase
 
         $this->containerProphecy->has('callable_service')->willReturn(true);
         $this->containerProphecy->get('callable_service')->willReturn('NOT AN OBJECT');
+
+        /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();

@@ -294,3 +294,5 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Added
 - [2862](https://github.com/ukuqubuykaint/AJAX-XML/pull/2862) Optionally handle subclasses of exceptions in custom error handler
+- [2869](https://github.com/ukuqubuykaint/AJAX-XML/pull/2869) php-di/php-di added in composer suggestion
+- [2874](https://github.com/ukuqubuykaint/AJAX-XML/pull/2874) Add `null` to param type-hints

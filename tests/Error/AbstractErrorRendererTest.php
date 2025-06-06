@@ -265,3 +265,6 @@ class AbstractErrorRendererTest extends TestCase
         $message = 'Oops.. <br>';
         $exception = new Exception($message, 500);
         $renderer = new PlainTextErrorRenderer();
+        $reflectionRenderer = new ReflectionClass(PlainTextErrorRenderer::class);
+
+        $method = $reflectionRenderer->getMethod('formatExceptionFragment');

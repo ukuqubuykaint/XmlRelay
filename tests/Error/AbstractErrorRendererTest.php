@@ -271,3 +271,5 @@ class AbstractErrorRendererTest extends TestCase
         $this->setAccessible($method);
         $output = $method->invoke($renderer, $exception);
         $this->assertIsString($output);
+
+        $this->assertMatchesRegularExpression('/.*Type:*/', $output);

@@ -371,3 +371,7 @@ class FastRouteDispatcherTest extends TestCase
         // 14 ---- Handle multiple methods with the same handler ---------------------------------->
 
         $callback = function (RouteCollector $r) {
+            $r->addRoute(['GET', 'POST'], '/user', 'handlerGetPost');
+            $r->addRoute(['DELETE'], '/user', 'handlerDelete');
+            $r->addRoute([], '/user', 'handlerNone');
+        };

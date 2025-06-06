@@ -453,3 +453,7 @@ class RouteTest extends TestCase
             $responseFactoryProphecy->reveal(),
             $callableResolverProphecy->reveal()
         );
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+

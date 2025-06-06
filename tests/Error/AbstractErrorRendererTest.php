@@ -268,3 +268,6 @@ class AbstractErrorRendererTest extends TestCase
         $reflectionRenderer = new ReflectionClass(PlainTextErrorRenderer::class);
 
         $method = $reflectionRenderer->getMethod('formatExceptionFragment');
+        $this->setAccessible($method);
+        $output = $method->invoke($renderer, $exception);
+        $this->assertIsString($output);

@@ -698,3 +698,5 @@ class AppTest extends TestCase
         // Create the app.
         $app = new App($responseFactory);
 
+        // Add the routing middleware.
+        $routingMiddleware = $app->addRoutingMiddleware();

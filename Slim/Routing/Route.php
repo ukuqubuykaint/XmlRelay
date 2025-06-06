@@ -260,3 +260,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         $this->arguments = $arguments;
         return $this;
     }
+
+    /**
+     * @return RouteGroupInterface[]
+     */

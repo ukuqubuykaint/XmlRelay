@@ -150,3 +150,7 @@ class AppFactoryTest extends TestCase
     /**
      * @runInSeparateProcess - AppFactory::setResponseFactory breaks other tests
      */
+    #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
+    public function testAppIsCreatedWithInstancesFromSetters()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

@@ -101,3 +101,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             $resolved = [$instance, $method ?? '__invoke'];
         }
         $callable = $this->assertCallable($resolved, $toResolve);
+        return $this->bindToContainer($callable);
+    }

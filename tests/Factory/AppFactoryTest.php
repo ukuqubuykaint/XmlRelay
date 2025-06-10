@@ -154,3 +154,4 @@ class AppFactoryTest extends TestCase
     public function testAppIsCreatedWithInstancesFromSetters()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $containerProphecy = $this->prophesize(ContainerInterface::class);

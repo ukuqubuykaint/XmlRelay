@@ -95,3 +95,5 @@ class RouteGroup implements RouteGroupInterface
         foreach ($this->middleware as $middleware) {
             $dispatcher->add($middleware);
         }
+
+        return $this;

@@ -82,3 +82,7 @@ class SmallChunksStream implements StreamInterface
         return false;
     }
 
+    public function read($length): string
+    {
+        $size = min($this->amountToRead, self::CHUNK_SIZE, $length);
+        $this->amountToRead -= $size;

@@ -90,3 +90,4 @@ class SmallChunksStream implements StreamInterface
         return str_repeat('.', min($length, $size));
     }
 
+    public function rewind(): void

@@ -138,3 +138,4 @@ class ErrorMiddlewareTest extends TestCase
         $handler = $middleware->getErrorHandler($exception);
         $this->assertInstanceOf(ErrorHandler::class, $handler);
     }
+

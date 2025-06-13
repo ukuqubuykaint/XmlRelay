@@ -86,3 +86,5 @@ class FastRouteDispatcher extends GroupCountBased
 
     /**
      * @param string $uri
+     *
+     * @return string[]

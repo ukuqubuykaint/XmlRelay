@@ -152,3 +152,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function any(string $pattern, $callable): RouteInterface

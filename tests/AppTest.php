@@ -620,3 +620,4 @@ class AppTest extends TestCase
             /** @var RequestHandlerInterface $handler */
             $handler = $args[1];
 
+            return $handler->handle($request);

@@ -81,3 +81,6 @@ class RoutingMiddleware implements MiddlewareInterface
                 throw $exception;
 
             default:
+                throw new RuntimeException('An unexpected error occurred while performing routing.');
+        }
+    }

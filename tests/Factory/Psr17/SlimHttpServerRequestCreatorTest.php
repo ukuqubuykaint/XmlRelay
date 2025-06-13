@@ -87,3 +87,6 @@ class SlimHttpServerRequestCreatorTest extends TestCase
         $serverRequestCreatorProphecy = $this->prophesize(ServerRequestCreatorInterface::class);
         $serverRequestCreatorProphecy
             ->createServerRequestFromGlobals()
+            ->willReturn($serverRequestProphecy->reveal())
+            ->shouldBeCalledOnce();
+

@@ -115,3 +115,5 @@ class RouteParser implements RouteParserInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function fullUrlFor(UriInterface $uri, string $routeName, array $data = [], array $queryParams = []): string

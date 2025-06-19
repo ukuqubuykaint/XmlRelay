@@ -700,3 +700,7 @@ class AppTest extends TestCase
 
         // Add the routing middleware.
         $routingMiddleware = $app->addRoutingMiddleware();
+
+        // Check that the routing middleware really has been added to the tip of the app middleware stack.
+        $middlewareDispatcherProperty = new ReflectionProperty(App::class, 'middlewareDispatcher');
+        $this->setAccessible($middlewareDispatcherProperty);

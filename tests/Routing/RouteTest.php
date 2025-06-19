@@ -459,3 +459,6 @@ class RouteTest extends TestCase
 
         $this->assertInstanceOf(ResponseInterface::class, $response);
     }
+
+    /**
+     * Ensure that the response returned by a route callable is the response

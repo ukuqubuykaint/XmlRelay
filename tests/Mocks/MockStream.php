@@ -251,3 +251,4 @@ class MockStream implements StreamInterface
         return $contents;
     }
 
+    public function getMetadata($key = null)

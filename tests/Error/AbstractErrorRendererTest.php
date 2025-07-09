@@ -273,3 +273,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertIsString($output);
 
         $this->assertMatchesRegularExpression('/.*Type:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Code:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Message*/', $output);
+        $this->assertMatchesRegularExpression('/.*File*/', $output);
+        $this->assertMatchesRegularExpression('/.*Line*/', $output);

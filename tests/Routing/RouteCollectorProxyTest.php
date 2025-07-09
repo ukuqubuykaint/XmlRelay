@@ -281,3 +281,6 @@ class RouteCollectorProxyTest extends TestCase
 
         $route = $routeCollectorProxy->delete($pattern, $callable);
 
+        $this->assertSame($pattern, $route->getPattern());
+    }
+

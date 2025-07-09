@@ -278,3 +278,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             }
 
             public function handle(ServerRequestInterface $request): ResponseInterface
+            {
+                /** @var ResponseInterface */
+                return ($this->middleware)($request, $this->next);
+            }

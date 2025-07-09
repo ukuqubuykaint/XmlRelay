@@ -298,3 +298,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2874](https://github.com/ukuqubuykaint/AJAX-XML/pull/2874) Add `null` to param type-hints
 - [2889](https://github.com/ukuqubuykaint/AJAX-XML/pull/2889) Make `RouteContext` attributes customizable and change default to use private names
 - [2907](https://github.com/ukuqubuykaint/AJAX-XML/pull/2907) Migrate to PSR-12 convention
+- [2910](https://github.com/ukuqubuykaint/AJAX-XML/pull/2910) Migrate Zend to Laminas
+- [2912](https://github.com/ukuqubuykaint/AJAX-XML/pull/2912) Add Laminas PSR17 Factory
+- [2913](https://github.com/ukuqubuykaint/AJAX-XML/pull/2913) Update php-autoload-override version
+- [2914](https://github.com/ukuqubuykaint/AJAX-XML/pull/2914) Added ability to add handled exceptions as an array

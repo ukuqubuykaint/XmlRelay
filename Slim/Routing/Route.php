@@ -264,3 +264,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * @return RouteGroupInterface[]
      */
+    public function getGroups(): array
+    {
+        return $this->groups;

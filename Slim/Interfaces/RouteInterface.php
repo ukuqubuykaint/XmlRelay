@@ -109,3 +109,7 @@ interface RouteInterface
     public function add($middleware): self;
 
     public function addMiddleware(MiddlewareInterface $middleware): self;
+
+    /**
+     * Prepare the route for use
+     *

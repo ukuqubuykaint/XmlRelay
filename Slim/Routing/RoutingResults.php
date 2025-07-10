@@ -71,3 +71,4 @@ class RoutingResults
 
     public function getUri(): string
     {
+        return $this->uri;

@@ -139,3 +139,5 @@ class ErrorMiddlewareTest extends TestCase
         $this->assertInstanceOf(ErrorHandler::class, $handler);
     }
 
+    public function testSuperclassExceptionHandlerHandlesExceptionWithSubclassExactMatch()
+    {

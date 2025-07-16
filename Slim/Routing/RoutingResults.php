@@ -72,3 +72,6 @@ class RoutingResults
     public function getUri(): string
     {
         return $this->uri;
+    }
+
+    public function getRouteStatus(): int

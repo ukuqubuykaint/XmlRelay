@@ -152,3 +152,6 @@ class ResponseEmitterTest extends TestCase
         $this->assertSame($expectedStack, HeaderStack::stack());
     }
 
+    public function testResponseDoesNotReplacePreviouslySetSetCookieHeaders(): void
+    {
+        $response = $this

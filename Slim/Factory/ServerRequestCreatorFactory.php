@@ -77,3 +77,5 @@ class ServerRequestCreatorFactory
     }
 
     public static function setServerRequestCreator(ServerRequestCreatorInterface $serverRequestCreator): void
+    {
+        self::$serverRequestCreator = $serverRequestCreator;

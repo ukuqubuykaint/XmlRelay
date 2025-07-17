@@ -156,3 +156,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function any(string $pattern, $callable): RouteInterface
     {
+        return $this->map(['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], $pattern, $callable);
+    }
+

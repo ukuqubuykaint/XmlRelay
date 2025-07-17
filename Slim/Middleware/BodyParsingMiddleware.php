@@ -102,3 +102,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
             if (!is_array($result)) {
                 return null;
+            }

@@ -464,3 +464,4 @@ class RouteTest extends TestCase
      * Ensure that the response returned by a route callable is the response
      * object that is returned by __invoke().
      */
+    public function testProcessWhenReturningAResponse()

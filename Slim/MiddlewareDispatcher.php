@@ -282,3 +282,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 /** @var ResponseInterface */
                 return ($this->middleware)($request, $this->next);
             }
+        };
+
+        return $this;

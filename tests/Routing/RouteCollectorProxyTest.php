@@ -284,3 +284,4 @@ class RouteCollectorProxyTest extends TestCase
         $this->assertSame($pattern, $route->getPattern());
     }
 
+    public function testOptions()

@@ -302,3 +302,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2912](https://github.com/ukuqubuykaint/AJAX-XML/pull/2912) Add Laminas PSR17 Factory
 - [2913](https://github.com/ukuqubuykaint/AJAX-XML/pull/2913) Update php-autoload-override version
 - [2914](https://github.com/ukuqubuykaint/AJAX-XML/pull/2914) Added ability to add handled exceptions as an array
+
+### Fixed
+- [2864](https://github.com/ukuqubuykaint/AJAX-XML/pull/2864) Optimize error message in error handling if displayErrorDetails was not set

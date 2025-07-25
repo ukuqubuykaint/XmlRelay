@@ -248,3 +248,6 @@ class ErrorHandler implements ErrorHandlerInterface
     }
 
     /**
+     * Set the renderer for the error logger
+     *
+     * @param ErrorRendererInterface|string|callable $logErrorRenderer

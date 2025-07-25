@@ -264,3 +264,5 @@ class ErrorMiddlewareTest extends TestCase
             return $response;
         });
 
+        $middleware->setErrorHandler([LogicException::class, InvalidArgumentException::class], $handler->bindTo($this));
+

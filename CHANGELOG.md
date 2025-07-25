@@ -305,3 +305,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Fixed
 - [2864](https://github.com/ukuqubuykaint/AJAX-XML/pull/2864) Optimize error message in error handling if displayErrorDetails was not set
+- [2876](https://github.com/ukuqubuykaint/AJAX-XML/pull/2876) Update links from http to https

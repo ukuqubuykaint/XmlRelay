@@ -375,3 +375,5 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute(['DELETE'], '/user', 'handlerDelete');
             $r->addRoute([], '/user', 'handlerNone');
         };
+
+        $argDict = [];

@@ -408,3 +408,6 @@ class CallableResolverTest extends TestCase
         $resolver->resolve('callable_service');
     }
 
+    public function testMethodNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);

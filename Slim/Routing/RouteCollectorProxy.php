@@ -164,3 +164,6 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
      */
     public function map(array $methods, string $pattern, $callable): RouteInterface
     {
+        $pattern = $this->groupPattern . $pattern;
+
+        return $this->routeCollector->map($methods, $pattern, $callable);

@@ -120,3 +120,5 @@ class MethodOverrideMiddlewareTest extends TestCase
 
         $request = $this->createServerRequest('/', 'POST');
 
+        // Prophesize the body stream for which `eof()` returns `true` and the
+        // `rewind()` has to be called.

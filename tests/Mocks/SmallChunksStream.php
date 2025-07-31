@@ -93,3 +93,4 @@ class SmallChunksStream implements StreamInterface
     public function rewind(): void
     {
         throw new Exception('not implemented');
+    }

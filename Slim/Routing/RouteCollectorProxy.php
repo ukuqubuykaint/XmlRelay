@@ -169,3 +169,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
         return $this->routeCollector->map($methods, $pattern, $callable);
     }
 
+    /**

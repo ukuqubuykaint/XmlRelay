@@ -97,3 +97,5 @@ class SlowPokeStream implements StreamInterface
 
     public function rewind(): void
     {
+        throw new Exception('not implemented');
+    }

@@ -155,3 +155,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
             private RequestHandlerInterface $next;
 
             private ?ContainerInterface $container;
+
+            private ?CallableResolverInterface $callableResolver;
+

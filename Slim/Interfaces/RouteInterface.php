@@ -113,3 +113,4 @@ interface RouteInterface
     /**
      * Prepare the route for use
      *
+     * @param array<string, string> $arguments

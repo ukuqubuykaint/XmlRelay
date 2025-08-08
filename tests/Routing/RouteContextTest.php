@@ -101,3 +101,4 @@ class RouteContextTest extends TestCase
         return $this->createServerRequest('/')
                     ->withAttribute(RouteContext::BASE_PATH, '')
                     ->withAttribute(RouteContext::ROUTE, $route)
+                    ->withAttribute(RouteContext::ROUTE_PARSER, $routeParser)

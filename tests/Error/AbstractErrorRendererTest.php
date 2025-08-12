@@ -277,3 +277,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertMatchesRegularExpression('/.*Message*/', $output);
         $this->assertMatchesRegularExpression('/.*File*/', $output);
         $this->assertMatchesRegularExpression('/.*Line*/', $output);
+
+        // ensure the renderer doesn't reformat the message
+        $this->assertMatchesRegularExpression("/.*$message/", $output);
+    }

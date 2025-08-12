@@ -390,3 +390,4 @@ class MiddlewareDispatcherTest extends TestCase
         $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))
             ->will(function ($args) use ($responseProphecy): ResponseInterface {
                 $request = $args[0];
+                return $responseProphecy->reveal()

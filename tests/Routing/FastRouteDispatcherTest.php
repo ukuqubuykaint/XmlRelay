@@ -377,3 +377,7 @@ class FastRouteDispatcherTest extends TestCase
         };
 
         $argDict = [];
+        $cases[] = ['GET', '/user', $callback, 'handlerGetPost', $argDict];
+        $cases[] = ['POST', '/user', $callback, 'handlerGetPost', $argDict];
+        $cases[] = ['DELETE', '/user', $callback, 'handlerDelete', $argDict];
+

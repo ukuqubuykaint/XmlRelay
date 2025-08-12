@@ -465,3 +465,4 @@ class RouteTest extends TestCase
      * object that is returned by __invoke().
      */
     public function testProcessWhenReturningAResponse()
+    {

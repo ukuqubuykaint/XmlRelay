@@ -252,3 +252,4 @@ class ErrorHandler implements ErrorHandlerInterface
      *
      * @param ErrorRendererInterface|string|callable $logErrorRenderer
      */
+    public function setLogErrorRenderer($logErrorRenderer): void

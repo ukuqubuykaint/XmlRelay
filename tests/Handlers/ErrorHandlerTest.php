@@ -269,3 +269,6 @@ class ErrorHandlerTest extends TestCase
         $reflectionProperty->setValue($handler, $errorRenderers);
 
         $method = $class->getMethod('determineContentType');
+        $this->setAccessible($method);
+
+        $contentType = $method->invoke($handler, $request);

@@ -281,3 +281,4 @@ class AbstractErrorRendererTest extends TestCase
         // ensure the renderer doesn't reformat the message
         $this->assertMatchesRegularExpression("/.*$message/", $output);
     }
+

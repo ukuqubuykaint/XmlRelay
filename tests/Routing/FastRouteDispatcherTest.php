@@ -385,3 +385,6 @@ class FastRouteDispatcherTest extends TestCase
 
         $callback = function (RouteCollector $r) {
             $r->addRoute('POST', '/user.json', 'handler0');
+            $r->addRoute('GET', '/{entity}.json', 'handler1');
+        };
+

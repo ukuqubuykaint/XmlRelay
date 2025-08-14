@@ -266,3 +266,6 @@ class ErrorMiddlewareTest extends TestCase
 
         $middleware->setErrorHandler([LogicException::class, InvalidArgumentException::class], $handler->bindTo($this));
 
+        $middleware->setDefaultErrorHandler((function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');

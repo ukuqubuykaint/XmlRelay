@@ -381,3 +381,7 @@ class FastRouteDispatcherTest extends TestCase
         $cases[] = ['POST', '/user', $callback, 'handlerGetPost', $argDict];
         $cases[] = ['DELETE', '/user', $callback, 'handlerDelete', $argDict];
 
+        // 17 ----
+
+        $callback = function (RouteCollector $r) {
+            $r->addRoute('POST', '/user.json', 'handler0');

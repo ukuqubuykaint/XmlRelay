@@ -88,3 +88,6 @@ class FastRouteDispatcher extends GroupCountBased
      * @param string $uri
      *
      * @return string[]
+     */
+    public function getAllowedMethods(string $uri): array
+    {

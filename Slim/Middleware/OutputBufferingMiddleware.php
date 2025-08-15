@@ -69,3 +69,4 @@ class OutputBufferingMiddleware implements MiddlewareInterface
                 $response->getBody()->write($output);
             }
         }
+

@@ -256,3 +256,7 @@ class ErrorHandler implements ErrorHandlerInterface
     {
         $this->logErrorRenderer = $logErrorRenderer;
     }
+
+    /**
+     * Write to the error log if $logErrors has been set to true
+     */

@@ -394,3 +394,7 @@ class MiddlewareDispatcherTest extends TestCase
                     ->withStatus(204)
                     ->withHeader('X-SEQ-PRE-REQ-HANDLER', $request->getHeader('X-SEQ-PRE-REQ-HANDLER'));
             });
+
+        $middleware0Prophecy = $this->prophesize(MiddlewareInterface::class);
+        $middleware0Prophecy
+            ->process(

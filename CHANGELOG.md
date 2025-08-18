@@ -310,3 +310,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2878](https://github.com/ukuqubuykaint/AJAX-XML/pull/2878) check body is writable only on ouput buffering append
 - [2896](https://github.com/ukuqubuykaint/AJAX-XML/pull/2896) Render errors uniformly
 - [2902](https://github.com/ukuqubuykaint/AJAX-XML/pull/2902) Fix prophecies
+- [2908](https://github.com/ukuqubuykaint/AJAX-XML/pull/2908) Use autoload-dev for `XmlRelay\Tests` namespace
+
+### Removed
+- [2871](https://github.com/ukuqubuykaint/AJAX-XML/pull/2871) Remove explicit type-hint

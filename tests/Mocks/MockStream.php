@@ -252,3 +252,6 @@ class MockStream implements StreamInterface
     }
 
     public function getMetadata($key = null)
+    {
+        if (!isset($this->stream)) {
+            return $key ? null : [];

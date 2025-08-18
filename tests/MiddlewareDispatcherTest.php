@@ -391,3 +391,6 @@ class MiddlewareDispatcherTest extends TestCase
             ->will(function ($args) use ($responseProphecy): ResponseInterface {
                 $request = $args[0];
                 return $responseProphecy->reveal()
+                    ->withStatus(204)
+                    ->withHeader('X-SEQ-PRE-REQ-HANDLER', $request->getHeader('X-SEQ-PRE-REQ-HANDLER'));
+            });

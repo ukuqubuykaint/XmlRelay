@@ -467,3 +467,6 @@ class RouteTest extends TestCase
     public function testProcessWhenReturningAResponse()
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('foo');
+            return $response;
+        };

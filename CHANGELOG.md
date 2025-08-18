@@ -306,3 +306,7 @@ You can also type-hint to the concrete instance of the container you are using t
 ### Fixed
 - [2864](https://github.com/ukuqubuykaint/AJAX-XML/pull/2864) Optimize error message in error handling if displayErrorDetails was not set
 - [2876](https://github.com/ukuqubuykaint/AJAX-XML/pull/2876) Update links from http to https
+- [2877](https://github.com/ukuqubuykaint/AJAX-XML/pull/2877) Fix docblock for `XmlRelay\Routing\RouteCollector::cacheFile`
+- [2878](https://github.com/ukuqubuykaint/AJAX-XML/pull/2878) check body is writable only on ouput buffering append
+- [2896](https://github.com/ukuqubuykaint/AJAX-XML/pull/2896) Render errors uniformly
+- [2902](https://github.com/ukuqubuykaint/AJAX-XML/pull/2902) Fix prophecies

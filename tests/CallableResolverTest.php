@@ -413,3 +413,7 @@ class CallableResolverTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('callable_service:notFound is not resolvable');
 
+        $this->containerProphecy->has('callable_service')->willReturn(true);
+        $this->containerProphecy->get('callable_service')->willReturn(new CallableTest());
+
+        /** @var ContainerInterface $container */

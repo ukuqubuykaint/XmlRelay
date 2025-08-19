@@ -272,3 +272,6 @@ class ErrorMiddlewareTest extends TestCase
             return $response;
         })->bindTo($this));
 
+        $app->add($middleware);
+
+        $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {

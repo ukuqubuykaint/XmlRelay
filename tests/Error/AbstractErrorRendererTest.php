@@ -282,3 +282,7 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertMatchesRegularExpression("/.*$message/", $output);
     }
 
+    public function testPlainTextErrorRendererDisplaysErrorDetails()
+    {
+        $previousException = new RuntimeException('Oops..');
+        $exception = new Exception('Ooops...', 0, $previousException);

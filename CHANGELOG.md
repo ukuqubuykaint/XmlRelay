@@ -314,3 +314,5 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Removed
 - [2871](https://github.com/ukuqubuykaint/AJAX-XML/pull/2871) Remove explicit type-hint
+- [2872](https://github.com/ukuqubuykaint/AJAX-XML/pull/2872) Remove type-hint
+

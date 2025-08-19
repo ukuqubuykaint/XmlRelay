@@ -242,3 +242,4 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testWillHandleInvalidConnectionStatusWithADeterminateBody(): void
+    {

@@ -255,3 +255,7 @@ class MockStream implements StreamInterface
     {
         if (!isset($this->stream)) {
             return $key ? null : [];
+        }
+
+        if (null === $key) {
+            return stream_get_meta_data($this->stream);

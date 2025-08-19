@@ -272,3 +272,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function add($middleware): RouteInterface
+    {

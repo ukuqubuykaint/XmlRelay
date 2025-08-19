@@ -470,3 +470,4 @@ class RouteTest extends TestCase
             $response->getBody()->write('foo');
             return $response;
         };
+        $route = $this->createRoute(['GET'], '/', $callable);

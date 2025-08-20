@@ -118,3 +118,4 @@ interface RouteInterface
     public function prepare(array $arguments): self;
 
     /**
+     * Run route

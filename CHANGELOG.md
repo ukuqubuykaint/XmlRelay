@@ -177,3 +177,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3137: Update phpspec/prophecy requirement from ^1.14 to ^1.15](https://github.com/ukuqubuykaint/AJAX-XML/pull/3137) thanks to @dependabot[bot]
 - [3138: Update license year](https://github.com/ukuqubuykaint/AJAX-XML/pull/3138) thanks to @Awilum
 - [3139: Fixed #1730 (reintroduced in 4.x)](https://github.com/ukuqubuykaint/AJAX-XML/pull/3139) thanks to @adoy
+- [3145: Update phpstan/phpstan requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3145) thanks to @dependabot[bot]

@@ -320,3 +320,5 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Added
 - [2819](https://github.com/ukuqubuykaint/AJAX-XML/pull/2819) Added description to addRoutingMiddleware()
+- [2820](https://github.com/ukuqubuykaint/AJAX-XML/pull/2820) Update link to homepage in composer.json
+- [2828](https://github.com/ukuqubuykaint/AJAX-XML/pull/2828) Allow URIs with leading multi-slashes

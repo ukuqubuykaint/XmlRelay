@@ -263,3 +263,5 @@ class ErrorHandler implements ErrorHandlerInterface
     protected function writeToErrorLog(): void
     {
         $renderer = $this->callableResolver->resolve($this->logErrorRenderer);
+
+        /** @var string $error */

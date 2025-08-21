@@ -716,3 +716,6 @@ class AppTest extends TestCase
         $middlewareProperty = $reflection->getProperty('middleware');
         $this->setAccessible($middlewareProperty);
 
+        $this->assertSame($routingMiddleware, $middlewareProperty->getValue($tip));
+        $this->assertInstanceOf(RoutingMiddleware::class, $routingMiddleware);
+    }

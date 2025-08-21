@@ -334,3 +334,7 @@ class AppFactoryTest extends TestCase
             ->willReturn($routeCollectorProphecy->reveal())
             ->shouldBeCalledOnce();
 
+        $containerProphecy
+            ->has(RouteResolverInterface::class)
+            ->willReturn(true)
+            ->shouldBeCalledOnce();

@@ -260,3 +260,4 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Write to the error log if $logErrors has been set to true
      */
+    protected function writeToErrorLog(): void

@@ -273,3 +273,4 @@ class ErrorHandlerTest extends TestCase
 
         $contentType = $method->invoke($handler, $request);
 
+        $this->assertSame('text/xml', $contentType);

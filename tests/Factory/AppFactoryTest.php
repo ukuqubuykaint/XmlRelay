@@ -338,3 +338,4 @@ class AppFactoryTest extends TestCase
             ->has(RouteResolverInterface::class)
             ->willReturn(true)
             ->shouldBeCalledOnce();
+

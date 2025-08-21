@@ -316,3 +316,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2871](https://github.com/ukuqubuykaint/AJAX-XML/pull/2871) Remove explicit type-hint
 - [2872](https://github.com/ukuqubuykaint/AJAX-XML/pull/2872) Remove type-hint
 
+## 4.3.0 - 2019-10-05
+
+### Added
+- [2819](https://github.com/ukuqubuykaint/AJAX-XML/pull/2819) Added description to addRoutingMiddleware()

@@ -322,3 +322,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2819](https://github.com/ukuqubuykaint/AJAX-XML/pull/2819) Added description to addRoutingMiddleware()
 - [2820](https://github.com/ukuqubuykaint/AJAX-XML/pull/2820) Update link to homepage in composer.json
 - [2828](https://github.com/ukuqubuykaint/AJAX-XML/pull/2828) Allow URIs with leading multi-slashes
+- [2832](https://github.com/ukuqubuykaint/AJAX-XML/pull/2832) Refactor `FastRouteDispatcher`
+- [2835](https://github.com/ukuqubuykaint/AJAX-XML/pull/2835) Rename `pathFor` to `urlFor` in docblock
+- [2846](https://github.com/ukuqubuykaint/AJAX-XML/pull/2846) Correcting the branch name as per issue-2843

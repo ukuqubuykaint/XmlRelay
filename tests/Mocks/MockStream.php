@@ -132,3 +132,4 @@ class MockStream implements StreamInterface
             return null;
         }
 
+        $result = $this->stream;

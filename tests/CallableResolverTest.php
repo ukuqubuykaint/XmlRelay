@@ -205,3 +205,4 @@ class CallableResolverTest extends TestCase
     }
 
     public function testResolutionToAnInvokableClassInContainer(): void
+    {

@@ -231,3 +231,4 @@ class RouteTest extends TestCase
             '/group',
             $callable,
             $callableResolverProphecy->reveal(),
+            $routeCollectorProxyProphecy->reveal()

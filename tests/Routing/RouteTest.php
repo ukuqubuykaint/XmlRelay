@@ -475,3 +475,4 @@ class RouteTest extends TestCase
         $request = $this->createServerRequest('/');
         $response = $route->run($request);
 
+        $this->assertSame('foo', (string) $response->getBody());

@@ -621,3 +621,6 @@ class AppTest extends TestCase
             $handler = $args[1];
 
             return $handler->handle($request);
+        });
+
+        $app->add($middlewareProphecy->reveal());

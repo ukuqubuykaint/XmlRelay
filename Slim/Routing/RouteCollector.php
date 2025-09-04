@@ -114,3 +114,5 @@ class RouteCollector implements RouteCollectorInterface
      */
     public function getDefaultInvocationStrategy(): InvocationStrategyInterface
     {
+        return $this->defaultInvocationStrategy;
+    }

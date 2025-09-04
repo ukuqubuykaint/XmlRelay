@@ -79,3 +79,7 @@ class ServerRequestCreatorFactoryTest extends TestCase
         $this->expectException(RuntimeException::class);
 
         Psr17FactoryProvider::setFactories([]);
+        ServerRequestCreatorFactory::create();
+    }
+
+    public function testSetPsr17FactoryProvider()

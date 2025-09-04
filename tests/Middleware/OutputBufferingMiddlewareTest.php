@@ -86,3 +86,7 @@ class OutputBufferingMiddlewareTest extends TestCase
             return $response;
         };
         $outputBufferingMiddleware = new OutputBufferingMiddleware($this->getStreamFactory(), 'prepend');
+
+        $request = $this->createServerRequest('/', 'GET');
+
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(

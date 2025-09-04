@@ -123,3 +123,5 @@ class RouteCollectorTest extends TestCase
 
         $routeCollector->removeNamedRoute('test');
         $routes = $routeCollector->getRoutes();
+        $this->assertCount(0, $routes);
+    }

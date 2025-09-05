@@ -102,3 +102,5 @@ class RouteContextTest extends TestCase
                     ->withAttribute(RouteContext::BASE_PATH, '')
                     ->withAttribute(RouteContext::ROUTE, $route)
                     ->withAttribute(RouteContext::ROUTE_PARSER, $routeParser)
+                    ->withAttribute(RouteContext::ROUTING_RESULTS, $routingResults);
+    }

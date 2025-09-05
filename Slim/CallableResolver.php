@@ -109,3 +109,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      */
     private function isRoute($toResolve): bool
     {
+        return $toResolve instanceof RequestHandlerInterface;
+    }
+
+    /**

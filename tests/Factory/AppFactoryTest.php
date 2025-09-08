@@ -159,3 +159,6 @@ class AppFactoryTest extends TestCase
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
         $routeParserProphecy = $this->prophesize(RouteParserInterface::class);
         $routeResolverProphecy = $this->prophesize(RouteResolverInterface::class);
+        $middlewareDispatcherProphecy = $this->prophesize(MiddlewareDispatcherInterface::class);
+
+        $routeCollectorProphecy->getRouteParser()->willReturn($routeParserProphecy);

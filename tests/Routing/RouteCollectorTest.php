@@ -125,3 +125,7 @@ class RouteCollectorTest extends TestCase
         $routes = $routeCollector->getRoutes();
         $this->assertCount(0, $routes);
     }
+
+    public function testRemoveNamedRouteWithARouteThatDoesNotExist()
+    {
+        $this->expectException(RuntimeException::class);

@@ -104,3 +104,4 @@ class DispatcherTest extends TestCase
 
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+

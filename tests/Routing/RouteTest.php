@@ -234,3 +234,7 @@ class RouteTest extends TestCase
             $routeCollectorProxyProphecy->reveal()
         );
         $groups = [$routeGroup];
+
+        $route = new Route(
+            ['GET'],
+            '/',

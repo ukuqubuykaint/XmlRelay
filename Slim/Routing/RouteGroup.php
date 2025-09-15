@@ -104,3 +104,4 @@ class RouteGroup implements RouteGroupInterface
      */
     public function getPattern(): string
     {
+        return $this->pattern;

@@ -122,3 +122,7 @@ class MethodOverrideMiddlewareTest extends TestCase
 
         // Prophesize the body stream for which `eof()` returns `true` and the
         // `rewind()` has to be called.
+        $bodyProphecy = $this->prophesize(StreamInterface::class);
+        /** @noinspection PhpUndefinedMethodInspection */
+        $bodyProphecy->eof()
+            ->willReturn(true)

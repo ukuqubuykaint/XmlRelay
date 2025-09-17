@@ -150,3 +150,6 @@ class ErrorMiddlewareTest extends TestCase
             throw new LogicException('This is a LogicException...');
         });
         $middleware->setErrorHandler(LogicException::class, (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;

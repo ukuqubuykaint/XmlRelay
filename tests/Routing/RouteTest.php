@@ -238,3 +238,6 @@ class RouteTest extends TestCase
         $route = new Route(
             ['GET'],
             '/',
+            $callable,
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),

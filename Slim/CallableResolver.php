@@ -113,3 +113,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     }
 
     /**
+     * @param mixed $toResolve

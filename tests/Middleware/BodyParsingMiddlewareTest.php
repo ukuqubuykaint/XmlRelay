@@ -126,3 +126,6 @@ class BodyParsingMiddlewareTest extends TestCase
                 null,
                 '"foo bar"',
                 null,
+            ],
+            'invalid-contenttype' => [
+                'foo',

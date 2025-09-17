@@ -155,3 +155,5 @@ class ResponseEmitterTest extends TestCase
     public function testResponseDoesNotReplacePreviouslySetSetCookieHeaders(): void
     {
         $response = $this
+            ->createResponse(200, 'OK')
+            ->withHeader('set-cOOkie', 'foo=bar')

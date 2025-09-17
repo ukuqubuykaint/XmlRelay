@@ -325,3 +325,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2832](https://github.com/ukuqubuykaint/AJAX-XML/pull/2832) Refactor `FastRouteDispatcher`
 - [2835](https://github.com/ukuqubuykaint/AJAX-XML/pull/2835) Rename `pathFor` to `urlFor` in docblock
 - [2846](https://github.com/ukuqubuykaint/AJAX-XML/pull/2846) Correcting the branch name as per issue-2843
+- [2849](https://github.com/ukuqubuykaint/AJAX-XML/pull/2849) Create class alias for FastRoute\RouteCollector
+- [2855](https://github.com/ukuqubuykaint/AJAX-XML/pull/2855) Add list of allowed methods to HttpMethodNotAllowedException
+- [2860](https://github.com/ukuqubuykaint/AJAX-XML/pull/2860) Add base path to `$request` and use `RouteContext` to read
+

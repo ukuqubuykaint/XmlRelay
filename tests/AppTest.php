@@ -719,3 +719,5 @@ class AppTest extends TestCase
         $this->assertSame($routingMiddleware, $middlewareProperty->getValue($tip));
         $this->assertInstanceOf(RoutingMiddleware::class, $routingMiddleware);
     }
+
+    public function testAddErrorMiddleware(): void

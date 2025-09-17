@@ -88,3 +88,4 @@ class RoutingMiddleware implements MiddlewareInterface
     /**
      * Resolves the route from the given request
      */
+    protected function resolveRoutingResultsFromRequest(ServerRequestInterface $request): RoutingResults

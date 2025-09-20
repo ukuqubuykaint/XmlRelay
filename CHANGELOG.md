@@ -329,3 +329,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2855](https://github.com/ukuqubuykaint/AJAX-XML/pull/2855) Add list of allowed methods to HttpMethodNotAllowedException
 - [2860](https://github.com/ukuqubuykaint/AJAX-XML/pull/2860) Add base path to `$request` and use `RouteContext` to read
 
+### Fixed
+- [2839](https://github.com/ukuqubuykaint/AJAX-XML/pull/2839) Fix description for handler signature in phpdocs
+- [2844](https://github.com/ukuqubuykaint/AJAX-XML/pull/2844) Handle base path by routeCollector instead of RouteCollectorProxy
+- [2845](https://github.com/ukuqubuykaint/AJAX-XML/pull/2845) Fix composer scripts

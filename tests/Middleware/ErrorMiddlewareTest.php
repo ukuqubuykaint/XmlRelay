@@ -283,3 +283,6 @@ class ErrorMiddlewareTest extends TestCase
         $app->run($request);
 
         $this->expectOutputString('This is an invalid argument exception...');
+    }
+
+    public function testErrorHandlerHandlesThrowables()

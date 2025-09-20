@@ -333,3 +333,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2839](https://github.com/ukuqubuykaint/AJAX-XML/pull/2839) Fix description for handler signature in phpdocs
 - [2844](https://github.com/ukuqubuykaint/AJAX-XML/pull/2844) Handle base path by routeCollector instead of RouteCollectorProxy
 - [2845](https://github.com/ukuqubuykaint/AJAX-XML/pull/2845) Fix composer scripts
+- [2851](https://github.com/ukuqubuykaint/AJAX-XML/pull/2851) Fix example of 'Hello World' app

@@ -266,3 +266,4 @@ class ErrorHandler implements ErrorHandlerInterface
 
         /** @var string $error */
         $error = $renderer($this->exception, $this->logErrorDetails);
+

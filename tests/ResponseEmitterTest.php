@@ -244,3 +244,7 @@ class ResponseEmitterTest extends TestCase
     public function testWillHandleInvalidConnectionStatusWithADeterminateBody(): void
     {
         $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://temp', 'r+'));
+        $body->write('Hello!' . "\n");
+        $body->write('Hello!' . "\n");
+
+        // Tell connection_status() to fail.

@@ -343,3 +343,4 @@ class AppFactoryTest extends TestCase
             ->get(RouteResolverInterface::class)
             ->willReturn($routeResolverProphecy->reveal())
             ->shouldBeCalledOnce();
+

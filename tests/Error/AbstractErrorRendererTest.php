@@ -288,3 +288,6 @@ class AbstractErrorRendererTest extends TestCase
         $exception = new Exception('Ooops...', 0, $previousException);
 
         $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($exception, true);
+
+        $this->assertMatchesRegularExpression('/Ooops.../', $output);

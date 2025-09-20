@@ -391,3 +391,4 @@ class FastRouteDispatcherTest extends TestCase
         $cases[] = ['GET', '/user.json', $callback, 'handler1', ['entity' => 'user']];
 
         // 18 ----
+

@@ -286,3 +286,4 @@ class ErrorMiddlewareTest extends TestCase
     }
 
     public function testErrorHandlerHandlesThrowables()
+    {

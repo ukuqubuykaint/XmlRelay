@@ -483,3 +483,6 @@ class RouteTest extends TestCase
      * added to the response object body.
      */
     public function testRouteCallableDoesNotAppendEchoedOutput()
+    {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            echo "foo";

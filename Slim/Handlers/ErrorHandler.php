@@ -131,3 +131,6 @@ class ErrorHandler implements ErrorHandlerInterface
             $this->contentType = $this->determineContentType($request);
         }
 
+        if ($logErrors) {
+            $this->writeToErrorLog();
+        }

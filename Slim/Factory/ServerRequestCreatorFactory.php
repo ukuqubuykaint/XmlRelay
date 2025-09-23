@@ -80,3 +80,6 @@ class ServerRequestCreatorFactory
     {
         self::$serverRequestCreator = $serverRequestCreator;
     }
+
+    public static function setSlimHttpDecoratorsAutomaticDetection(bool $enabled): void
+    {

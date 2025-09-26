@@ -721,3 +721,6 @@ class AppTest extends TestCase
     }
 
     public function testAddErrorMiddleware(): void
+    {
+        /** @var ResponseFactoryInterface $responseFactory */
+        $responseFactory = $this->prophesize(ResponseFactoryInterface::class)->reveal();

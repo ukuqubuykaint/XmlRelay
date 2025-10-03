@@ -334,3 +334,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2844](https://github.com/ukuqubuykaint/AJAX-XML/pull/2844) Handle base path by routeCollector instead of RouteCollectorProxy
 - [2845](https://github.com/ukuqubuykaint/AJAX-XML/pull/2845) Fix composer scripts
 - [2851](https://github.com/ukuqubuykaint/AJAX-XML/pull/2851) Fix example of 'Hello World' app
+- [2854](https://github.com/ukuqubuykaint/AJAX-XML/pull/2854) Fix undefined property in tests
+
+### Removed

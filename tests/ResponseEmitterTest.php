@@ -248,3 +248,5 @@ class ResponseEmitterTest extends TestCase
         $body->write('Hello!' . "\n");
 
         // Tell connection_status() to fail.
+        $GLOBALS['connection_status_return'] = CONNECTION_ABORTED;
+

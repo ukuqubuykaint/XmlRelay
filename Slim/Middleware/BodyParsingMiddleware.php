@@ -109,3 +109,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         $this->registerBodyParser('application/x-www-form-urlencoded', static function ($input) {
             /** @var string $input */
+            parse_str($input, $data);

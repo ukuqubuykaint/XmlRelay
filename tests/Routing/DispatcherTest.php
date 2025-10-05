@@ -109,3 +109,4 @@ class DispatcherTest extends TestCase
         $routeCollector->map($methods, $uri, function () {
         });
 
+        $dispatcher = new Dispatcher($routeCollector);

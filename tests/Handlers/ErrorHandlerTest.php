@@ -212,3 +212,4 @@ class ErrorHandlerTest extends TestCase
         $response = $handler->__invoke($htmlRequest, $exception, false, false, false);
         $this->assertSame(['text/html'], $response->getHeader('Content-Type'));
     }
+

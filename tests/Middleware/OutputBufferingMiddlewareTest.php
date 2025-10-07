@@ -92,3 +92,5 @@ class OutputBufferingMiddlewareTest extends TestCase
         $middlewareDispatcher = $this->createMiddlewareDispatcher(
             $this->createMock(RequestHandlerInterface::class),
             null
+        );
+        $middlewareDispatcher->addCallable($middleware);

@@ -115,3 +115,7 @@ class RouteParserTest extends TestCase
     }
 
     /**
+     * @dataProvider urlForCases
+     * @param $withBasePath
+     * @param $pattern
+     * @param $arguments

@@ -119,3 +119,7 @@ class RouteParserTest extends TestCase
      * @param $withBasePath
      * @param $pattern
      * @param $arguments
+     * @param $queryParams
+     * @param $expectedResult
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('urlForCases')]

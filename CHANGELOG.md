@@ -181,3 +181,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3146: Inherit HttpException from RuntimeException](https://github.com/ukuqubuykaint/AJAX-XML/pull/3146) thanks to @nbayramberdiyev
 - [3148: Upgrade to HTML5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3148) thanks to @nbayramberdiyev
 - [3172: Update nyholm/psr7 requirement from ^1.4 to ^1.5](https://github.com/ukuqubuykaint/AJAX-XML/pull/3172) thanks to @dependabot[bot]
+
+## 4.9.0 - 2021-10-05

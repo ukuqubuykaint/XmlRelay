@@ -213,3 +213,4 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame(['text/html'], $response->getHeader('Content-Type'));
     }
 
+    public function testHalfValidContentType()

@@ -123,3 +123,4 @@ class RouteParserTest extends TestCase
      * @param $expectedResult
      */
     #[\PHPUnit\Framework\Attributes\DataProvider('urlForCases')]
+    public function testUrlForWithBasePath($withBasePath, $pattern, $arguments, $queryParams, $expectedResult)

@@ -179,3 +179,7 @@ class AbstractErrorRendererTest extends TestCase
             $decoded['exception'][0]['message']
         );
     }
+
+    public function testJSONErrorRendererDisplaysPreviousError()
+    {
+        $previousException = new Exception('Oh no!');

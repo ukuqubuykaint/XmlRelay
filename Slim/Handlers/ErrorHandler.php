@@ -271,3 +271,7 @@ class ErrorHandler implements ErrorHandlerInterface
             $error .= "\nTips: To display error details in HTTP response ";
             $error .= 'set "displayErrorDetails" to true in the ErrorHandler constructor.';
         }
+
+        $this->logError($error);
+    }
+

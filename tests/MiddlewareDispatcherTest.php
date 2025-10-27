@@ -403,3 +403,7 @@ class MiddlewareDispatcherTest extends TestCase
             )
             ->will(function ($args): ResponseInterface {
                 return $args[1]->handle($args[0]->withAddedHeader('X-SEQ-PRE-REQ-HANDLER', '0'))
+                    ->withAddedHeader('X-SEQ-POST-REQ-HANDLER', '0');
+            });
+
+        $middleware1Prophecy = $this->prophesize(MiddlewareInterface::class);

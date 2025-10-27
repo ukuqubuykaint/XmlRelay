@@ -288,3 +288,7 @@ class ErrorMiddlewareTest extends TestCase
     public function testErrorHandlerHandlesThrowables()
     {
         $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+

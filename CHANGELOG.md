@@ -337,3 +337,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2854](https://github.com/ukuqubuykaint/AJAX-XML/pull/2854) Fix undefined property in tests
 
 ### Removed
+- [2853](https://github.com/ukuqubuykaint/AJAX-XML/pull/2853) Remove unused classes
+

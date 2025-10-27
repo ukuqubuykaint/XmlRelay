@@ -277,3 +277,5 @@ class ErrorHandlerTest extends TestCase
     }
 
     public function testDetermineContentTypeApplicationJsonOrXml()
+    {
+        $request = $this

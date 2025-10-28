@@ -133,3 +133,4 @@ class ErrorMiddleware implements MiddlewareInterface
                 $this->logger
             );
         }
+

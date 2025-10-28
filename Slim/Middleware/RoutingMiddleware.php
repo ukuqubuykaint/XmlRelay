@@ -90,3 +90,4 @@ class RoutingMiddleware implements MiddlewareInterface
      */
     protected function resolveRoutingResultsFromRequest(ServerRequestInterface $request): RoutingResults
     {
+        return $this->routeResolver->computeRoutingResults(

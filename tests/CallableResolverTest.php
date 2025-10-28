@@ -213,3 +213,5 @@ class CallableResolverTest extends TestCase
         $container = $this->containerProphecy->reveal();
 
         $resolver = new CallableResolver($container);
+        $callable = $resolver->resolve('an_invokable');
+        $callableRoute = $resolver->resolveRoute('an_invokable');

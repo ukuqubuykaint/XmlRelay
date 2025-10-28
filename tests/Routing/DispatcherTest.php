@@ -110,3 +110,5 @@ class DispatcherTest extends TestCase
         });
 
         $dispatcher = new Dispatcher($routeCollector);
+        $results = $dispatcher->getAllowedMethods('/');
+

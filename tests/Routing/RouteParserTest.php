@@ -124,3 +124,7 @@ class RouteParserTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\DataProvider('urlForCases')]
     public function testUrlForWithBasePath($withBasePath, $pattern, $arguments, $queryParams, $expectedResult)
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+

@@ -75,3 +75,7 @@ class RoutingResults
     }
 
     public function getRouteStatus(): int
+    {
+        return $this->routeStatus;
+    }
+

@@ -303,3 +303,5 @@ class RouteCollectorProxyTest extends TestCase
         $routeCollectorProphecy
             ->map(['OPTIONS'], $pattern, Argument::is($callable))
             ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+

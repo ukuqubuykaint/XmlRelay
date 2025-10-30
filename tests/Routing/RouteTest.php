@@ -486,3 +486,6 @@ class RouteTest extends TestCase
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
             echo "foo";
+            return $response->withStatus(201);
+        };
+        $route = $this->createRoute(['GET'], '/', $callable);

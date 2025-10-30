@@ -250,3 +250,7 @@ class ResponseEmitterTest extends TestCase
         // Tell connection_status() to fail.
         $GLOBALS['connection_status_return'] = CONNECTION_ABORTED;
 
+        $response = $this
+            ->createResponse()
+            ->withHeader('Content-Length', $body->getSize())
+            ->withBody($body);

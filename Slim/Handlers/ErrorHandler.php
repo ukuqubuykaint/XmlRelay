@@ -275,3 +275,6 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->logError($error);
     }
 
+    /**
+     * Wraps the error_log function so that this can be easily tested
+     */

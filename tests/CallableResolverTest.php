@@ -434,3 +434,4 @@ class CallableResolverTest extends TestCase
         $container = $this->containerProphecy->reveal();
         $resolver = new CallableResolver($container);
         $resolver->resolveRoute('callable_service:notFound');
+    }

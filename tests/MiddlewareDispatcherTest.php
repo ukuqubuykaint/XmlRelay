@@ -407,3 +407,6 @@ class MiddlewareDispatcherTest extends TestCase
             });
 
         $middleware1Prophecy = $this->prophesize(MiddlewareInterface::class);
+        $middleware1Prophecy
+            ->process(
+                Argument::type(ServerRequestInterface::class),

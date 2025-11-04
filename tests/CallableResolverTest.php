@@ -435,3 +435,4 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver($container);
         $resolver->resolveRoute('callable_service:notFound');
     }
+

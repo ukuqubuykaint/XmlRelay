@@ -237,3 +237,5 @@ class MiddlewareDispatcherTest extends TestCase
         $middlewareDispatcher->handle($request);
     }
 
+    public function testAddCallableBindsClosureToContainer(): void
+    {

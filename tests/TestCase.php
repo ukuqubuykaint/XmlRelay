@@ -91,3 +91,4 @@ abstract class TestCase extends PhpUnitTestCase
      * @param string $uri
      * @param string $method
      * @param array  $data
+     * @return ServerRequestInterface

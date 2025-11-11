@@ -339,3 +339,4 @@ You can also type-hint to the concrete instance of the container you are using t
 ### Removed
 - [2853](https://github.com/ukuqubuykaint/AJAX-XML/pull/2853) Remove unused classes
 
+## 4.2.0 - 2019-08-20

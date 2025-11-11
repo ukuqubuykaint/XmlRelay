@@ -436,3 +436,7 @@ class CallableResolverTest extends TestCase
         $resolver->resolveRoute('callable_service:notFound');
     }
 
+    public function testMiddlewareMethodNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('callable_service:notFound is not resolvable');

@@ -351,3 +351,6 @@ class AppFactoryTest extends TestCase
 
         $containerProphecy
             ->get(MiddlewareDispatcherInterface::class)
+            ->willReturn($middlewareDispatcherProphecy->reveal())
+            ->shouldBeCalledOnce();
+

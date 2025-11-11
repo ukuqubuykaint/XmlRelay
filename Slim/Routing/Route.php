@@ -283,3 +283,7 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function addMiddleware(MiddlewareInterface $middleware): RouteInterface
     {
+        $this->middlewareDispatcher->addMiddleware($middleware);
+        return $this;
+    }
+

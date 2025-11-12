@@ -81,3 +81,7 @@ class RoutingResults
 
     public function getRouteIdentifier(): ?string
     {
+        return $this->routeIdentifier;
+    }
+
+    /**

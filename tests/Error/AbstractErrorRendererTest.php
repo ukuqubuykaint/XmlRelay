@@ -183,3 +183,4 @@ class AbstractErrorRendererTest extends TestCase
     public function testJSONErrorRendererDisplaysPreviousError()
     {
         $previousException = new Exception('Oh no!');
+        $exception = new Exception('Oops..', 0, $previousException);

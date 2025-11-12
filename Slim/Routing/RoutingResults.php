@@ -79,3 +79,5 @@ class RoutingResults
         return $this->routeStatus;
     }
 
+    public function getRouteIdentifier(): ?string
+    {

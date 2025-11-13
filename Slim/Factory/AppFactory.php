@@ -117,3 +117,7 @@ class AppFactory
             $callableResolver,
             $routeCollector,
             $routeResolver,
+            $middlewareDispatcher
+        );
+    }
+

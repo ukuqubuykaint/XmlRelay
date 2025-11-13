@@ -165,3 +165,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 ?CallableResolverInterface $callableResolver = null
             ) {
                 $this->middleware = $middleware;
+                $this->next = $next;
+                $this->container = $container;
+                $this->callableResolver = $callableResolver;
+            }

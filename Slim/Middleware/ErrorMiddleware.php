@@ -135,3 +135,7 @@ class ErrorMiddleware implements MiddlewareInterface
         }
 
         return $this->callableResolver->resolve($this->defaultErrorHandler);
+    }
+
+    /**
+     * Set callable as the default Slim application error handler.

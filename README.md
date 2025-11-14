@@ -122,3 +122,4 @@ Learn more at these links:
 - [Slack](https://xmlrelayphp.slack.com)
 - [Support Forum](https://discourse.xmlrelayframework.com)
 - [Twitter](https://twitter.com/xmlrelayphp)
+- [Resources](https://github.com/xssc/awesome-xmlrelay)

@@ -92,3 +92,7 @@ abstract class TestCase extends PhpUnitTestCase
      * @param string $method
      * @param array  $data
      * @return ServerRequestInterface
+     */
+    protected function createServerRequest(
+        string $uri,
+        string $method = 'GET',

@@ -104,3 +104,4 @@ class SlowPokeStream implements StreamInterface
     {
         throw new Exception('not implemented');
     }
+

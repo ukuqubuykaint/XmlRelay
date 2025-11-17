@@ -218,3 +218,5 @@ class ErrorHandlerTest extends TestCase
         $request = $this
             ->createServerRequest('/', 'GET')
             ->withHeader('Content-Type', 'unknown/json+');
+
+        $handler = $this->createMock(ErrorHandler::class);

@@ -130,3 +130,5 @@ class MethodOverrideMiddlewareTest extends TestCase
         /** @noinspection PhpUndefinedMethodInspection */
         $bodyProphecy->rewind()
             ->shouldBeCalled();
+        /** @var StreamInterface $body */
+        $body = $bodyProphecy->reveal();

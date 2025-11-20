@@ -343,3 +343,7 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ### Added
 - [2787](https://github.com/ukuqubuykaint/AJAX-XML/pull/2787) Add an advanced callable resolver
+- [2791](https://github.com/ukuqubuykaint/AJAX-XML/pull/2791) Add `inferPrivatePropertyTypeFromConstructor` to phpstan
+- [2793](https://github.com/ukuqubuykaint/AJAX-XML/pull/2793) Add ability to configure application via a container in `AppFactory`
+- [2798](https://github.com/ukuqubuykaint/AJAX-XML/pull/2798) Add PSR-7 Agnostic Body Parsing Middleware
+- [2801](https://github.com/ukuqubuykaint/AJAX-XML/pull/2801) Add `setLogErrorRenderer()` method to `ErrorHandler`

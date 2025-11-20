@@ -278,3 +278,6 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Wraps the error_log function so that this can be easily tested
      */
+    protected function logError(string $error): void
+    {
+        $this->logger->error($error);

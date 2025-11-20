@@ -281,3 +281,6 @@ class ErrorHandler implements ErrorHandlerInterface
     protected function logError(string $error): void
     {
         $this->logger->error($error);
+    }
+
+    /**

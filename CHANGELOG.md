@@ -347,3 +347,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2793](https://github.com/ukuqubuykaint/AJAX-XML/pull/2793) Add ability to configure application via a container in `AppFactory`
 - [2798](https://github.com/ukuqubuykaint/AJAX-XML/pull/2798) Add PSR-7 Agnostic Body Parsing Middleware
 - [2801](https://github.com/ukuqubuykaint/AJAX-XML/pull/2801) Add `setLogErrorRenderer()` method to `ErrorHandler`
+- [2807](https://github.com/ukuqubuykaint/AJAX-XML/pull/2807) Add check for XmlRelay callable notation if no resolver given
+- [2803](https://github.com/ukuqubuykaint/AJAX-XML/pull/2803) Add ability to emit non seekable streams in `ResponseEmitter`
+- [2817](https://github.com/ukuqubuykaint/AJAX-XML/pull/2817) Add the ability to pass in a custom `MiddlewareDispatcherInterface` to the `App`
+

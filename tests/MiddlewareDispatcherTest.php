@@ -410,3 +410,6 @@ class MiddlewareDispatcherTest extends TestCase
         $middleware1Prophecy
             ->process(
                 Argument::type(ServerRequestInterface::class),
+                Argument::type(RequestHandlerInterface::class)
+            )
+            ->will(function ($args): ResponseInterface {

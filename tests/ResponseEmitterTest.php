@@ -261,3 +261,4 @@ class ResponseEmitterTest extends TestCase
         $this->expectOutputString("Hello!\nHello!\n");
 
         // Tell connection_status() to pass.
+        unset($GLOBALS['connection_status_return']);

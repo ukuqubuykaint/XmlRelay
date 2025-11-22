@@ -413,3 +413,5 @@ class MiddlewareDispatcherTest extends TestCase
                 Argument::type(RequestHandlerInterface::class)
             )
             ->will(function ($args): ResponseInterface {
+                return $args[1]->handle($args[0]->withAddedHeader('X-SEQ-PRE-REQ-HANDLER', '1'))
+                    ->withAddedHeader('X-SEQ-POST-REQ-HANDLER', '1');

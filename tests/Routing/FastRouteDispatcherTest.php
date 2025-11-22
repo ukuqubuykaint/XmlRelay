@@ -404,3 +404,7 @@ class FastRouteDispatcherTest extends TestCase
             $r->addRoute('HEAD', '/a/{foo}', 'handler0');
             $r->addRoute('GET', '/b/{foo}', 'handler1');
         };
+
+        $cases[] = ['HEAD', '/b/bar', $callback, 'handler1', ['foo' => 'bar']];
+
+        // 20 ----

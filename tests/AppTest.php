@@ -732,3 +732,6 @@ class AppTest extends TestCase
         $app = new App($responseFactory);
 
         // Add the error middleware.
+        $errorMiddleware = $app->addErrorMiddleware(true, true, true, $logger);
+
+        // Check that the error middleware really has been added to the tip of the app middleware stack.

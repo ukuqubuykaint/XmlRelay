@@ -291,3 +291,5 @@ class AbstractErrorRendererTest extends TestCase
         $output = $renderer->__invoke($exception, true);
 
         $this->assertMatchesRegularExpression('/Ooops.../', $output);
+    }
+

@@ -357,3 +357,4 @@ class AppFactoryTest extends TestCase
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
         $app = AppFactory::createFromContainer($containerProphecy->reveal());
 
+        $this->assertSame($app->getResponseFactory(), $responseFactoryProphecy->reveal());

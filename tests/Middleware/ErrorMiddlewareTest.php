@@ -298,3 +298,5 @@ class ErrorMiddlewareTest extends TestCase
             throw new Error('Oops..');
         });
 
+        $middleware->setDefaultErrorHandler((function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();

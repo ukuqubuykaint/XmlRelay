@@ -279,3 +279,7 @@ class ErrorHandlerTest extends TestCase
     public function testDetermineContentTypeApplicationJsonOrXml()
     {
         $request = $this
+            ->createServerRequest('/', 'GET')
+            ->withHeader('Content-Type', 'text/json')
+            ->withHeader('Accept', 'application/xhtml+xml');
+

@@ -408,3 +408,4 @@ class FastRouteDispatcherTest extends TestCase
         $cases[] = ['HEAD', '/b/bar', $callback, 'handler1', ['foo' => 'bar']];
 
         // 20 ----
+

@@ -358,3 +358,4 @@ class AppFactoryTest extends TestCase
         $app = AppFactory::createFromContainer($containerProphecy->reveal());
 
         $this->assertSame($app->getResponseFactory(), $responseFactoryProphecy->reveal());
+        $this->assertSame($app->getContainer(), $containerProphecy->reveal());

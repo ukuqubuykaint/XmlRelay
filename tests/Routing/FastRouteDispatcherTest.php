@@ -409,3 +409,4 @@ class FastRouteDispatcherTest extends TestCase
 
         // 20 ----
 
+        $callback = function (RouteCollector $r) {

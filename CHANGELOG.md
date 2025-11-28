@@ -351,3 +351,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2803](https://github.com/ukuqubuykaint/AJAX-XML/pull/2803) Add ability to emit non seekable streams in `ResponseEmitter`
 - [2817](https://github.com/ukuqubuykaint/AJAX-XML/pull/2817) Add the ability to pass in a custom `MiddlewareDispatcherInterface` to the `App`
 
+### Fixed

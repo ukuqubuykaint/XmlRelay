@@ -293,3 +293,4 @@ class AbstractErrorRendererTest extends TestCase
         $this->assertMatchesRegularExpression('/Ooops.../', $output);
     }
 
+    public function testPlainTextErrorRendererNotDisplaysErrorDetails()

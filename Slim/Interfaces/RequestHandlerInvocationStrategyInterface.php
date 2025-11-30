@@ -12,3 +12,4 @@ namespace Slim\Interfaces;
 
 interface RequestHandlerInvocationStrategyInterface extends InvocationStrategyInterface
 {
+}

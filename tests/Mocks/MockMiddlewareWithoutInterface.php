@@ -12,3 +12,4 @@ namespace Slim\Tests\Mocks;
 
 class MockMiddlewareWithoutInterface
 {
+}

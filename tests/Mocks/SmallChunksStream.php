@@ -109,3 +109,4 @@ class SmallChunksStream implements StreamInterface
     {
         return strlen($string);
     }
+}

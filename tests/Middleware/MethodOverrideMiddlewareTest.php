@@ -132,3 +132,7 @@ class MethodOverrideMiddlewareTest extends TestCase
             ->shouldBeCalled();
         /** @var StreamInterface $body */
         $body = $bodyProphecy->reveal();
+        $request = $request->withBody($body);
+
+        $middlewareDispatcher = $this->createMiddlewareDispatcher(
+            $this->createMock(RequestHandler::class),

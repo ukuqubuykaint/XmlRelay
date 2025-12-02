@@ -167,3 +167,4 @@ class AppFactoryTest extends TestCase
         AppFactory::setResponseFactory($responseFactoryProphecy->reveal());
         AppFactory::setContainer($containerProphecy->reveal());
         AppFactory::setCallableResolver($callableResolverProphecy->reveal());
+        AppFactory::setRouteCollector($routeCollectorProphecy->reveal());

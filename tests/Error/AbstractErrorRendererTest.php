@@ -184,3 +184,5 @@ class AbstractErrorRendererTest extends TestCase
     {
         $previousException = new Exception('Oh no!');
         $exception = new Exception('Oops..', 0, $previousException);
+
+        $renderer = new JsonErrorRenderer();

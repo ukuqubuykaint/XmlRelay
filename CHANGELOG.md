@@ -186,3 +186,5 @@ You can also type-hint to the concrete instance of the container you are using t
 
 - [3058: Implement exception class for Gone Http error](https://github.com/ukuqubuykaint/AJAX-XML/pull/3058) thanks to @TheKernelPanic
 - [3086: Update xmlrelay/psr7 requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3086) thanks to @dependabot[bot]
+- [3087: Update nyholm/psr7-server requirement from ^1.0.1 to ^1.0.2](https://github.com/ukuqubuykaint/AJAX-XML/pull/3087) thanks to @dependabot[bot]
+- [3093: Update phpstan/phpstan requirement from ^0.12.85 to ^0.12.90](https://github.com/ukuqubuykaint/AJAX-XML/pull/3093) thanks to @dependabot[bot]

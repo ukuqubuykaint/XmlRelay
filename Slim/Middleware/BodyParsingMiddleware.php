@@ -116,3 +116,4 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
         $xmlCallable = static function ($input) {
             /** @var string $input */
+

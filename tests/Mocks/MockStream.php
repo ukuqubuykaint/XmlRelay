@@ -143,3 +143,7 @@ class MockStream implements StreamInterface
     public function getSize(): ?int
     {
         if (null !== $this->size) {
+            return $this->size;
+        }
+
+        if (!isset($this->stream)) {

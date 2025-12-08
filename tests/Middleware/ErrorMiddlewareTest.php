@@ -300,3 +300,6 @@ class ErrorMiddlewareTest extends TestCase
 
         $middleware->setDefaultErrorHandler((function (ServerRequestInterface $request, $exception) {
             $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;
+        })->bindTo($this));

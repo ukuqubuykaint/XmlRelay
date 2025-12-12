@@ -303,3 +303,6 @@ class ErrorMiddlewareTest extends TestCase
             $response->getBody()->write($exception->getMessage());
             return $response;
         })->bindTo($this));
+
+        $app->add($middleware);
+

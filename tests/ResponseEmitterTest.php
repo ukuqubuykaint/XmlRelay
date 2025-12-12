@@ -264,3 +264,4 @@ class ResponseEmitterTest extends TestCase
         unset($GLOBALS['connection_status_return']);
     }
 
+    public function testWillHandleInvalidConnectionStatusWithAnIndeterminateBody(): void

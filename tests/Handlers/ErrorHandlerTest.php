@@ -283,3 +283,5 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Content-Type', 'text/json')
             ->withHeader('Accept', 'application/xhtml+xml');
 
+        $handler = $this->createMock(ErrorHandler::class);
+

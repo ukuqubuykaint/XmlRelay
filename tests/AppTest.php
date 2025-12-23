@@ -741,3 +741,6 @@ class AppTest extends TestCase
         $middlewareDispatcher = $middlewareDispatcherProperty->getValue($app);
 
         $tipProperty = new ReflectionProperty(MiddlewareDispatcher::class, 'tip');
+        $this->setAccessible($tipProperty);
+        /** @var RequestHandlerInterface $tip */
+        $tip = $tipProperty->getValue($middlewareDispatcher);

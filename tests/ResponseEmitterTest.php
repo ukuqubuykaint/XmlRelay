@@ -268,3 +268,4 @@ class ResponseEmitterTest extends TestCase
     {
         $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://input', 'r+'));
 
+        // Tell connection_status() to fail.

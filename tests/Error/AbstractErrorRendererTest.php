@@ -294,3 +294,4 @@ class AbstractErrorRendererTest extends TestCase
     }
 
     public function testPlainTextErrorRendererNotDisplaysErrorDetails()
+    {

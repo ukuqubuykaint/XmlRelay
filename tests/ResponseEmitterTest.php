@@ -265,3 +265,6 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testWillHandleInvalidConnectionStatusWithAnIndeterminateBody(): void
+    {
+        $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://input', 'r+'));
+

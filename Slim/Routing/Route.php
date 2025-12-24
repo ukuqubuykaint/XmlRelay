@@ -290,3 +290,4 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function prepare(array $arguments): RouteInterface

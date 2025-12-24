@@ -286,3 +286,6 @@ class ErrorHandlerTest extends TestCase
         $handler = $this->createMock(ErrorHandler::class);
 
         $errorRenderers = [
+            'application/xml' => XmlErrorRenderer::class
+        ];
+

@@ -352,3 +352,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2817](https://github.com/ukuqubuykaint/AJAX-XML/pull/2817) Add the ability to pass in a custom `MiddlewareDispatcherInterface` to the `App`
 
 ### Fixed
+- [2789](https://github.com/ukuqubuykaint/AJAX-XML/pull/2789) Fix Cookie header detection in `ResponseEmitter`
+- [2796](https://github.com/ukuqubuykaint/AJAX-XML/pull/2796) Fix http message format
+- [2800](https://github.com/ukuqubuykaint/AJAX-XML/pull/2800) Fix null comparisons more clear in `ErrorHandler`
+- [2802](https://github.com/ukuqubuykaint/AJAX-XML/pull/2802) Fix incorrect search of a header in stack

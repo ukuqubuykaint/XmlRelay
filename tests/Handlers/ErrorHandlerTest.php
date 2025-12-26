@@ -289,3 +289,4 @@ class ErrorHandlerTest extends TestCase
             'application/xml' => XmlErrorRenderer::class
         ];
 
+        $class = new ReflectionClass(ErrorHandler::class);

@@ -492,3 +492,5 @@ class RouteTest extends TestCase
 
         $request = $this->createServerRequest('/');
 
+        // We capture output buffer here only to clean test CLI output
+        ob_start();

@@ -169,3 +169,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 $this->container = $container;
                 $this->callableResolver = $callableResolver;
             }
+
+            public function handle(ServerRequestInterface $request): ResponseInterface
+            {

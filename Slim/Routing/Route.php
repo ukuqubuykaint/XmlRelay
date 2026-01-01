@@ -167,3 +167,5 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function getMethods(): array
     {
+        return $this->methods;
+    }

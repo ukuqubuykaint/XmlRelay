@@ -172,3 +172,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
 
             public function handle(ServerRequestInterface $request): ResponseInterface
             {
+                if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {
+                    $callable = $this->callableResolver->resolveMiddleware($this->middleware);

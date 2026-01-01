@@ -93,3 +93,5 @@ class FastRouteDispatcher extends GroupCountBased
     {
         if ($this->allowedMethodsUri === $uri) {
             return $this->allowedMethods;
+        }
+

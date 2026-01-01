@@ -89,3 +89,7 @@ class RoutingResults
      * so we return them as-is with no URL decoding.
      *
      * @param bool $urlDecode Ignored. Retained for backwards compatibility.
+     * @return array<string, string>
+     *
+     * @psalm-suppress PossiblyUnusedParam
+     */

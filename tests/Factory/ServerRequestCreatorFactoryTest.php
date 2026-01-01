@@ -95,3 +95,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
         $this->assertInstanceOf(SlimServerRequest::class, $serverRequestCreator->createServerRequestFromGlobals());
     }
 
+    /**

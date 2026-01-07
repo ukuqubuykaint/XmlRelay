@@ -356,3 +356,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2796](https://github.com/ukuqubuykaint/AJAX-XML/pull/2796) Fix http message format
 - [2800](https://github.com/ukuqubuykaint/AJAX-XML/pull/2800) Fix null comparisons more clear in `ErrorHandler`
 - [2802](https://github.com/ukuqubuykaint/AJAX-XML/pull/2802) Fix incorrect search of a header in stack
+- [2806](https://github.com/ukuqubuykaint/AJAX-XML/pull/2806) Simplify `Route::prepare()` method argument preparation
+- [2809](https://github.com/ukuqubuykaint/AJAX-XML/pull/2809) Eliminate a duplicate code via HOF in `MiddlewareDispatcher`
+- [2816](https://github.com/ukuqubuykaint/AJAX-XML/pull/2816) Fix RouteCollectorProxy::redirect() bug

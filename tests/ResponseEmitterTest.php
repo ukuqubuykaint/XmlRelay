@@ -269,3 +269,7 @@ class ResponseEmitterTest extends TestCase
         $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://input', 'r+'));
 
         // Tell connection_status() to fail.
+        $GLOBALS['connection_status_return'] = CONNECTION_TIMEOUT;
+
+        $response = $this
+            ->createResponse()

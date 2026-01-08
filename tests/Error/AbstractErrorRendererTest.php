@@ -295,3 +295,29 @@ class AbstractErrorRendererTest extends TestCase
 
     public function testPlainTextErrorRendererNotDisplaysErrorDetails()
     {
+        $previousException = new RuntimeException('Oops..');
+        $exception = new Exception('Ooops...', 0, $previousException);
+
+        $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($exception, false);
+
+        $this->assertSame("Slim Application Error\n", $output, 'Should show only one string');
+    }
+
+    public function testPlainTextErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';
+
+        $httpExceptionProphecy = $this->prophesize(HttpException::class);
+
+        $httpExceptionProphecy
+            ->getTitle()
+            ->willReturn($exceptionTitle)
+            ->shouldBeCalledOnce();
+
+        $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($httpExceptionProphecy->reveal(), true);
+
+        $this->assertStringContainsString($exceptionTitle, $output, 'Should contain http exception title');
+    }
+}

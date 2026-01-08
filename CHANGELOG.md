@@ -359,3 +359,5 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2806](https://github.com/ukuqubuykaint/AJAX-XML/pull/2806) Simplify `Route::prepare()` method argument preparation
 - [2809](https://github.com/ukuqubuykaint/AJAX-XML/pull/2809) Eliminate a duplicate code via HOF in `MiddlewareDispatcher`
 - [2816](https://github.com/ukuqubuykaint/AJAX-XML/pull/2816) Fix RouteCollectorProxy::redirect() bug
+
+### Removed

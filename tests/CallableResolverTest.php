@@ -450,3 +450,6 @@ class CallableResolverTest extends TestCase
         $resolver->resolveMiddleware('callable_service:notFound');
     }
 
+    public function testFunctionNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);

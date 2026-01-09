@@ -190,3 +190,134 @@ class AbstractErrorRendererTest extends TestCase
         $method = $reflectionRenderer->getMethod('formatExceptionFragment');
         $this->setAccessible($method);
 
+        $output = json_encode(json_decode($renderer->__invoke($exception, true)));
+
+        $fragments = [
+            $method->invoke($renderer, $exception),
+            $method->invoke($renderer, $previousException),
+        ];
+
+        $expectedString = json_encode(['message' => 'Slim Application Error', 'exception' => $fragments]);
+
+        $this->assertSame($output, $expectedString);
+    }
+
+    public function testJSONErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';
+
+        $httpExceptionProphecy = $this->prophesize(HttpException::class);
+
+        $httpExceptionProphecy
+            ->getTitle()
+            ->willReturn($exceptionTitle)
+            ->shouldBeCalledOnce();
+
+        $renderer = new JsonErrorRenderer();
+        $output = json_encode(json_decode($renderer->__invoke($httpExceptionProphecy->reveal(), false)));
+
+        $this->assertSame(
+            $output,
+            json_encode(['message' => $exceptionTitle]),
+            'Should contain http exception title'
+        );
+    }
+
+
+    public function testXMLErrorRendererDisplaysErrorDetails()
+    {
+        $previousException = new RuntimeException('Oops..');
+        $exception = new Exception('Ooops...', 0, $previousException);
+
+        $renderer = new XmlErrorRenderer();
+
+        /** @var stdClass $output */
+        $output = simplexml_load_string($renderer->__invoke($exception, true));
+
+        $this->assertSame((string) $output->message[0], 'Slim Application Error');
+        $this->assertSame((string) $output->exception[0]->type, 'Exception');
+        $this->assertSame((string) $output->exception[0]->message, 'Ooops...');
+        $this->assertSame((string) $output->exception[1]->type, 'RuntimeException');
+        $this->assertSame((string) $output->exception[1]->message, 'Oops..');
+    }
+
+    public function testXMLErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';
+
+        $httpExceptionProphecy = $this->prophesize(HttpException::class);
+
+        $httpExceptionProphecy
+            ->getTitle()
+            ->willReturn($exceptionTitle)
+            ->shouldBeCalledOnce();
+
+        $renderer = new XmlErrorRenderer();
+
+        /** @var stdClass $output */
+        $output = simplexml_load_string($renderer->__invoke($httpExceptionProphecy->reveal(), true));
+
+        $this->assertSame((string) $output->message[0], $exceptionTitle, 'Should contain http exception title');
+    }
+
+    public function testPlainTextErrorRendererFormatFragmentMethod()
+    {
+        $message = 'Oops.. <br>';
+        $exception = new Exception($message, 500);
+        $renderer = new PlainTextErrorRenderer();
+        $reflectionRenderer = new ReflectionClass(PlainTextErrorRenderer::class);
+
+        $method = $reflectionRenderer->getMethod('formatExceptionFragment');
+        $this->setAccessible($method);
+        $output = $method->invoke($renderer, $exception);
+        $this->assertIsString($output);
+
+        $this->assertMatchesRegularExpression('/.*Type:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Code:*/', $output);
+        $this->assertMatchesRegularExpression('/.*Message*/', $output);
+        $this->assertMatchesRegularExpression('/.*File*/', $output);
+        $this->assertMatchesRegularExpression('/.*Line*/', $output);
+
+        // ensure the renderer doesn't reformat the message
+        $this->assertMatchesRegularExpression("/.*$message/", $output);
+    }
+
+    public function testPlainTextErrorRendererDisplaysErrorDetails()
+    {
+        $previousException = new RuntimeException('Oops..');
+        $exception = new Exception('Ooops...', 0, $previousException);
+
+        $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($exception, true);
+
+        $this->assertMatchesRegularExpression('/Ooops.../', $output);
+    }
+
+    public function testPlainTextErrorRendererNotDisplaysErrorDetails()
+    {
+        $previousException = new RuntimeException('Oops..');
+        $exception = new Exception('Ooops...', 0, $previousException);
+
+        $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($exception, false);
+
+        $this->assertSame("Slim Application Error\n", $output, 'Should show only one string');
+    }
+
+    public function testPlainTextErrorRendererRenderHttpException()
+    {
+        $exceptionTitle = 'title';
+
+        $httpExceptionProphecy = $this->prophesize(HttpException::class);
+
+        $httpExceptionProphecy
+            ->getTitle()
+            ->willReturn($exceptionTitle)
+            ->shouldBeCalledOnce();
+
+        $renderer = new PlainTextErrorRenderer();
+        $output = $renderer->__invoke($httpExceptionProphecy->reveal(), true);
+
+        $this->assertStringContainsString($exceptionTitle, $output, 'Should contain http exception title');
+    }
+}

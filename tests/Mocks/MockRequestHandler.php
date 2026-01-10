@@ -42,3 +42,4 @@ class MockRequestHandler implements RequestHandlerInterface
     {
         return $this->calledCount;
     }
+}

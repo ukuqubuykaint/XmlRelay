@@ -284,3 +284,5 @@ class ErrorHandler implements ErrorHandlerInterface
     }
 
     /**
+     * Returns a default logger implementation.
+     */

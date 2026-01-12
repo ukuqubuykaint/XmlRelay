@@ -494,3 +494,6 @@ class RouteTest extends TestCase
 
         // We capture output buffer here only to clean test CLI output
         ob_start();
+        $response = $route->run($request);
+        ob_end_clean();
+

@@ -754,3 +754,6 @@ class AppTest extends TestCase
     }
 
     public function testAddBodyParsingMiddleware(): void
+    {
+        /** @var ResponseFactoryInterface $responseFactory */
+        $responseFactory = $this->prophesize(ResponseFactoryInterface::class)->reveal();

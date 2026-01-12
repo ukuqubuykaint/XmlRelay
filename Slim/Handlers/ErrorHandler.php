@@ -286,3 +286,6 @@ class ErrorHandler implements ErrorHandlerInterface
     /**
      * Returns a default logger implementation.
      */
+    protected function getDefaultLogger(): LoggerInterface
+    {
+        return new Logger();

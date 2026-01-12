@@ -361,3 +361,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2816](https://github.com/ukuqubuykaint/AJAX-XML/pull/2816) Fix RouteCollectorProxy::redirect() bug
 
 ### Removed
+- [2811](https://github.com/ukuqubuykaint/AJAX-XML/pull/2811) Remove `DeferredCallable`
+
+## 4.1.0 - 2019-08-06
+

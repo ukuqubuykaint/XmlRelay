@@ -750,3 +750,7 @@ class AppTest extends TestCase
         $this->setAccessible($middlewareProperty);
 
         $this->assertSame($errorMiddleware, $middlewareProperty->getValue($tip));
+        $this->assertInstanceOf(ErrorMiddleware::class, $errorMiddleware);
+    }
+
+    public function testAddBodyParsingMiddleware(): void

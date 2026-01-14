@@ -100,3 +100,7 @@ class OutputBufferingMiddlewareTest extends TestCase
         $this->assertSame('TestBody', (string) $response->getBody());
     }
 
+    public function testOutputBufferIsCleanedWhenThrowableIsCaught()
+    {
+        $this->getResponseFactory();
+        $middleware = (function ($request, $handler) {

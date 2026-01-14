@@ -243,3 +243,4 @@ class MiddlewareDispatcherTest extends TestCase
 
         $self = $this;
         $callable = function (
+            ServerRequestInterface $request,

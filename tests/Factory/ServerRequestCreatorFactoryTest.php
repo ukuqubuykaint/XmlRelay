@@ -96,3 +96,7 @@ class ServerRequestCreatorFactoryTest extends TestCase
     }
 
     /**
+     * @runInSeparateProcess - ServerRequestCreatorFactory::setServerRequestCreator breaks other tests
+     */
+    #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
+    public function testSetServerRequestCreatorWithoutDecorators()

@@ -134,3 +134,6 @@ class RouteParserTest extends TestCase
             $routeCollector->setBasePath('/app');
         }
 
+        $route = $routeCollector->map(['GET'], $pattern, function () {
+        });
+        $route->setName('test');

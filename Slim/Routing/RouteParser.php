@@ -118,3 +118,7 @@ class RouteParser implements RouteParserInterface
      */
     public function fullUrlFor(UriInterface $uri, string $routeName, array $data = [], array $queryParams = []): string
     {
+        $path = $this->urlFor($routeName, $data, $queryParams);
+        $scheme = $uri->getScheme();
+        $authority = $uri->getAuthority();
+        $protocol = ($scheme ? $scheme . ':' : '') . ($authority ? '//' . $authority : '');

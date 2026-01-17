@@ -160,3 +160,4 @@ class ResponseEmitterTest extends TestCase
             ->withAddedHeader('Set-Cookie', 'bar=baz');
         $responseEmitter = new ResponseEmitter();
         $responseEmitter->emit($response);
+

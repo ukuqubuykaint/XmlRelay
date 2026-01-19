@@ -223,3 +223,4 @@ class CallableResolverTest extends TestCase
         $callableRoute();
         $this->assertSame(2, InvokableTest::$CalledCount);
 
+        $callableMiddleware();

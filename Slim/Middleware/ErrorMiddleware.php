@@ -144,3 +144,4 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      * @param string|callable|ErrorHandler $handler
      * @see ErrorHandlerInterface
+     *

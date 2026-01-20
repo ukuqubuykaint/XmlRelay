@@ -92,3 +92,5 @@ class RoutingMiddleware implements MiddlewareInterface
     {
         return $this->routeResolver->computeRoutingResults(
             $request->getUri()->getPath(),
+            $request->getMethod()
+        );

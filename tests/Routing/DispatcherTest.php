@@ -126,3 +126,5 @@ class DispatcherTest extends TestCase
         $callable = function () {
         };
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $route = $routeCollector->map($methods, $uri, $callable);
+

@@ -289,3 +289,7 @@ class ErrorHandler implements ErrorHandlerInterface
     protected function getDefaultLogger(): LoggerInterface
     {
         return new Logger();
+    }
+
+    protected function respond(): ResponseInterface
+    {

@@ -757,3 +757,7 @@ class AppTest extends TestCase
     {
         /** @var ResponseFactoryInterface $responseFactory */
         $responseFactory = $this->prophesize(ResponseFactoryInterface::class)->reveal();
+
+        // Create the app.
+        $app = new App($responseFactory);
+

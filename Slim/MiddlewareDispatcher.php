@@ -177,3 +177,5 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     /** @var ResponseInterface */
                     return $callable($request, $this->next);
                 }
+
+                $callable = null;

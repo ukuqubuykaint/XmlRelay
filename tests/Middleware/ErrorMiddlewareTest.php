@@ -164,3 +164,4 @@ class ErrorMiddlewareTest extends TestCase
             $response->getBody()->write('...');
             return $response;
         });
+        $request = $this->createServerRequest('/foo');

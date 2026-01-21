@@ -640,3 +640,5 @@ class AppTest extends TestCase
             $this->getAttribute($args[0])->willReturn($args[1]);
             return $this;
         });
+
+

@@ -417,3 +417,5 @@ class MiddlewareDispatcherTest extends TestCase
                     ->withAddedHeader('X-SEQ-POST-REQ-HANDLER', '1');
             });
 
+        MockSequenceMiddleware::$id = '2';
+

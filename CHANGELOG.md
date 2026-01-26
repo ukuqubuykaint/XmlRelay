@@ -365,3 +365,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ## 4.1.0 - 2019-08-06
 
+### Added

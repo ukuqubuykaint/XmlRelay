@@ -104,3 +104,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
         ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(false);
         $serverRequestProphecy = $this->prophesize(ServerRequestInterface::class);
 
+        $serverRequestCreatorProphecy = $this->prophesize(ServerRequestCreatorInterface::class);
+        $serverRequestCreatorProphecy
+            ->createServerRequestFromGlobals()

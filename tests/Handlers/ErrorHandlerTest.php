@@ -224,3 +224,4 @@ class ErrorHandlerTest extends TestCase
             'application/xml' => XmlErrorRenderer::class,
             'text/xml' => XmlErrorRenderer::class,
             'text/html' => HtmlErrorRenderer::class,
+        ];

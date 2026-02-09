@@ -139,3 +139,5 @@ class RouteCollectorTest extends TestCase
 
     public function testLookupRouteThrowsExceptionIfRouteNotFound()
     {
+        $this->expectException(RuntimeException::class);
+

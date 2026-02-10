@@ -179,3 +179,6 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                 }
 
                 $callable = null;
+
+                if ($this->callableResolver instanceof CallableResolverInterface) {
+                    try {

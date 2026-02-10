@@ -98,3 +98,5 @@ class FastRouteDispatcher extends GroupCountBased
         $allowedMethods = [];
         foreach ($this->staticRouteMap as $method => $uriMap) {
             if (isset($uriMap[$uri])) {
+                $allowedMethods[$method] = true;
+            }

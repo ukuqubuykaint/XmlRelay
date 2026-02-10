@@ -642,3 +642,4 @@ class AppTest extends TestCase
         });
 
 
+        $response = $app->handle($requestProphecy->reveal());

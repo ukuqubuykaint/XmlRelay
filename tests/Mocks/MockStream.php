@@ -149,3 +149,6 @@ class MockStream implements StreamInterface
         if (!isset($this->stream)) {
             return null;
         }
+
+        // Clear the stat cache if the stream has a URI
+        if ($this->uri) {

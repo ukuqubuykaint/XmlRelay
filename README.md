@@ -126,3 +126,4 @@ Learn more at these links:
 
 ## Security
 
+If you discover security related issues, please email security@xmlrelayframework.com instead of using the issue tracker.

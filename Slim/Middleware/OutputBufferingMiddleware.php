@@ -72,3 +72,4 @@ class OutputBufferingMiddleware implements MiddlewareInterface
 
         return $response;
     }
+}

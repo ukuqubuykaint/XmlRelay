@@ -140,3 +140,87 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
      * @param bool                 $logErrorDetails
      * @param LoggerInterface|null $logger
      *
+     * @return ErrorMiddleware
+     */
+    public function addErrorMiddleware(
+        bool $displayErrorDetails,
+        bool $logErrors,
+        bool $logErrorDetails,
+        ?LoggerInterface $logger = null
+    ): ErrorMiddleware {
+        $errorMiddleware = new ErrorMiddleware(
+            $this->getCallableResolver(),
+            $this->getResponseFactory(),
+            $displayErrorDetails,
+            $logErrors,
+            $logErrorDetails,
+            $logger
+        );
+        $this->add($errorMiddleware);
+        return $errorMiddleware;
+    }
+
+    /**
+     * Add the Slim body parsing middleware to the app middleware stack
+     *
+     * @param callable[] $bodyParsers
+     *
+     * @return BodyParsingMiddleware
+     */
+    public function addBodyParsingMiddleware(array $bodyParsers = []): BodyParsingMiddleware
+    {
+        $bodyParsingMiddleware = new BodyParsingMiddleware($bodyParsers);
+        $this->add($bodyParsingMiddleware);
+        return $bodyParsingMiddleware;
+    }
+
+    /**
+     * Run application
+     *
+     * This method traverses the application middleware stack and then sends the
+     * resultant Response object to the HTTP client.
+     *
+     * @param ServerRequestInterface|null $request
+     * @return void
+     */
+    public function run(?ServerRequestInterface $request = null): void
+    {
+        if (!$request) {
+            $serverRequestCreator = ServerRequestCreatorFactory::create();
+            $request = $serverRequestCreator->createServerRequestFromGlobals();
+        }
+
+        $response = $this->handle($request);
+        $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+    }
+
+    /**
+     * Handle a request
+     *
+     * This method traverses the application middleware stack and then returns the
+     * resultant Response object.
+     *
+     * @param ServerRequestInterface $request
+     * @return ResponseInterface
+     */
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        $response = $this->middlewareDispatcher->handle($request);
+
+        /**
+         * This is to be in compliance with RFC 2616, Section 9.
+         * If the incoming request method is HEAD, we need to ensure that the response body
+         * is empty as the request may fall back on a GET route handler due to FastRoute's
+         * routing logic which could potentially append content to the response body
+         * https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4
+         */
+        $method = strtoupper($request->getMethod());
+        if ($method === 'HEAD') {
+            $emptyBody = $this->responseFactory->createResponse()->getBody();
+            return $response->withBody($emptyBody);
+        }
+
+        return $response;
+    }
+}

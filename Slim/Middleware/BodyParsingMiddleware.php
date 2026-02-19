@@ -123,3 +123,79 @@ class BodyParsingMiddleware implements MiddlewareInterface
 
             self::disableXmlEntityLoader($backup);
             libxml_clear_errors();
+            libxml_use_internal_errors($backup_errors);
+
+            if ($result === false) {
+                return null;
+            }
+
+            return $result;
+        };
+
+        $this->registerBodyParser('application/xml', $xmlCallable);
+        $this->registerBodyParser('text/xml', $xmlCallable);
+    }
+
+    /**
+     * @return null|array<mixed>|object
+     */
+    protected function parseBody(ServerRequestInterface $request)
+    {
+        $mediaType = $this->getMediaType($request);
+        if ($mediaType === null) {
+            return null;
+        }
+
+        // Check if this specific media type has a parser registered first
+        if (!isset($this->bodyParsers[$mediaType])) {
+            // If not, look for a media type with a structured syntax suffix (RFC 6839)
+            $parts = explode('+', $mediaType);
+            if (count($parts) >= 2) {
+                $mediaType = 'application/' . $parts[count($parts) - 1];
+            }
+        }
+
+        if (isset($this->bodyParsers[$mediaType])) {
+            $body = (string)$request->getBody();
+            $parsed = $this->bodyParsers[$mediaType]($body);
+
+            if ($parsed !== null && !is_object($parsed) && !is_array($parsed)) {
+                throw new RuntimeException(
+                    'Request body media type parser return value must be an array, an object, or null'
+                );
+            }
+
+            return $parsed;
+        }
+
+        return null;
+    }
+
+    /**
+     * @return string|null The serverRequest media type, minus content-type params
+     */
+    protected function getMediaType(ServerRequestInterface $request): ?string
+    {
+        $contentType = $request->getHeader('Content-Type')[0] ?? null;
+
+        if (is_string($contentType) && trim($contentType) !== '') {
+            $contentTypeParts = explode(';', $contentType);
+            return strtolower(trim($contentTypeParts[0]));
+        }
+
+        return null;
+    }
+
+    protected static function disableXmlEntityLoader(bool $disable): bool
+    {
+        if (LIBXML_VERSION >= 20900) {
+            // libxml >= 2.9.0 disables entity loading by default, so it is
+            // safe to skip the real call (deprecated in PHP 8).
+            return true;
+        }
+
+        // @codeCoverageIgnoreStart
+        return libxml_disable_entity_loader($disable);
+        // @codeCoverageIgnoreEnd
+    }
+}

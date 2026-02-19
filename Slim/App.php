@@ -223,3 +223,4 @@ class App extends RouteCollectorProxy implements RequestHandlerInterface
 
         return $response;
     }
+}

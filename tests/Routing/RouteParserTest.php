@@ -142,3 +142,5 @@ class RouteParserTest extends TestCase
         $results = $routeParser->urlFor('test', $arguments, $queryParams);
 
         $this->assertSame($expectedResult, $results);
+    }
+

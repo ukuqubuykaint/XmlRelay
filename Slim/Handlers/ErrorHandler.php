@@ -135,3 +135,6 @@ class ErrorHandler implements ErrorHandlerInterface
             $this->writeToErrorLog();
         }
 
+        return $this->respond();
+    }
+

@@ -252,3 +252,7 @@ class MiddlewareDispatcherTest extends TestCase
             $self->assertSame($containerProphecy->reveal(), $this);
             return $handler->handle($request);
         };
+
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, $containerProphecy->reveal());
+        $middlewareDispatcher->addCallable($callable);

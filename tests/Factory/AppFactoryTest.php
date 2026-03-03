@@ -171,3 +171,5 @@ class AppFactoryTest extends TestCase
         AppFactory::setRouteResolver($routeResolverProphecy->reveal());
         AppFactory::setMiddlewareDispatcher($middlewareDispatcherProphecy->reveal());
 
+        $app = AppFactory::create();
+

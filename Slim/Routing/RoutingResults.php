@@ -100,3 +100,6 @@ class RoutingResults
 
     /**
      * @return string[]
+     */
+    public function getAllowedMethods(): array
+    {

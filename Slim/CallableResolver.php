@@ -127,3 +127,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      */
     private function resolveSlimNotation(string $toResolve): array
     {
+        /** @psalm-suppress ArgumentTypeCoercion */
+        preg_match(CallableResolver::$callablePattern, $toResolve, $matches);
+        [$class, $method] = $matches ? [$matches[1], $matches[2]] : [$toResolve, null];

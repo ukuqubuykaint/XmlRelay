@@ -125,3 +125,6 @@ class AppFactory
      * @throws RuntimeException
      */
     public static function determineResponseFactory(): ResponseFactoryInterface
+    {
+        if (static::$responseFactory) {
+            if (static::$streamFactory) {

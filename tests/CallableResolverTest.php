@@ -232,3 +232,5 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver(); // No container injected
         $callable = $resolver->resolve('Slim\Tests\Mocks\InvokableTest');
         $callableRoute = $resolver->resolveRoute('Slim\Tests\Mocks\InvokableTest');
+        $callableMiddleware = $resolver->resolveMiddleware('Slim\Tests\Mocks\InvokableTest');
+

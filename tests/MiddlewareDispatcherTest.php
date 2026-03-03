@@ -251,3 +251,4 @@ class MiddlewareDispatcherTest extends TestCase
         ) {
             $self->assertSame($containerProphecy->reveal(), $this);
             return $handler->handle($request);
+        };

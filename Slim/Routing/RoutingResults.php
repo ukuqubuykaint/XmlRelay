@@ -96,3 +96,7 @@ class RoutingResults
     public function getRouteArguments(bool $urlDecode = true): array
     {
         return $this->routeArguments;
+    }
+
+    /**
+     * @return string[]

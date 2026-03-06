@@ -138,3 +138,4 @@ class RouteCollector implements RouteCollectorInterface
     {
         if (file_exists($cacheFile) && !is_readable($cacheFile)) {
             throw new RuntimeException(
+                sprintf('Route collector cache file `%s` is not readable', $cacheFile)

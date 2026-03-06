@@ -166,3 +166,4 @@ class ResponseEmitterTest extends TestCase
             ['header' => 'set-cOOkie: bar=baz', 'replace' => false, 'status_code' => null],
             ['header' => 'HTTP/1.1 200 OK', 'replace' => true, 'status_code' => 200],
         ];
+

@@ -144,3 +144,7 @@ class RouteParserTest extends TestCase
         $this->assertSame($expectedResult, $results);
     }
 
+    public function testUrlForWithMissingSegmentData()
+    {
+        $this->expectException(InvalidArgumentException::class);
+

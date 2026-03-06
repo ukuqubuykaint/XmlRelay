@@ -225,3 +225,7 @@ class ErrorHandlerTest extends TestCase
             'text/xml' => XmlErrorRenderer::class,
             'text/html' => HtmlErrorRenderer::class,
         ];
+
+        $class = new ReflectionClass(ErrorHandler::class);
+
+        $reflectionProperty = $class->getProperty('responseFactory');

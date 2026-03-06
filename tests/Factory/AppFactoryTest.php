@@ -173,3 +173,5 @@ class AppFactoryTest extends TestCase
 
         $app = AppFactory::create();
 
+        $this->assertSame(
+            $responseFactoryProphecy->reveal(),

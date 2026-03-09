@@ -132,3 +132,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
         [$class, $method] = $matches ? [$matches[1], $matches[2]] : [$toResolve, null];
 
         if ($this->container && $this->container->has($class)) {
+            $instance = $this->container->get($class);
+            if (!is_object($instance)) {

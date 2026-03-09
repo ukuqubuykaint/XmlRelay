@@ -138,3 +138,6 @@ class ErrorHandler implements ErrorHandlerInterface
         return $this->respond();
     }
 
+    /**
+     * Force the content type for all error handler responses.
+     *

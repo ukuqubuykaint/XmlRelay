@@ -116,3 +116,4 @@ class ServerRequestCreatorFactoryTest extends TestCase
 
         $this->assertSame($serverRequestProphecy->reveal(), $serverRequestCreator->createServerRequestFromGlobals());
     }
+

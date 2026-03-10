@@ -141,3 +141,5 @@ class BodyParsingMiddlewareTest extends TestCase
                 'text/xml',
                 '<person><name>John</name></invalid>',
                 null,
+            ],
+        ];

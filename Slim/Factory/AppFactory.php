@@ -128,3 +128,5 @@ class AppFactory
     {
         if (static::$responseFactory) {
             if (static::$streamFactory) {
+                return static::attemptResponseFactoryDecoration(static::$responseFactory, static::$streamFactory);
+            }

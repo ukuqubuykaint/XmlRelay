@@ -148,3 +148,4 @@ class RouteParserTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

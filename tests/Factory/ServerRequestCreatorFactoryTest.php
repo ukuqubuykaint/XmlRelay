@@ -117,3 +117,7 @@ class ServerRequestCreatorFactoryTest extends TestCase
         $this->assertSame($serverRequestProphecy->reveal(), $serverRequestCreator->createServerRequestFromGlobals());
     }
 
+    /**
+     * @runInSeparateProcess - ServerRequestCreatorFactory::setServerRequestCreator breaks other tests
+     */
+    #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]

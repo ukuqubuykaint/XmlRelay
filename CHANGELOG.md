@@ -199,3 +199,4 @@ You can also type-hint to the concrete instance of the container you are using t
 
 ## 4.8.0 - 2021-05-19
 
+- [3034: Fix phpunit dependency version](https://github.com/ukuqubuykaint/AJAX-XML/pull/3034) thanks to @l0gicgate

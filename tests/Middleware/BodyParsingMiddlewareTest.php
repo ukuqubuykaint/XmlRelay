@@ -143,3 +143,4 @@ class BodyParsingMiddlewareTest extends TestCase
                 null,
             ],
         ];
+    }

@@ -153,3 +153,6 @@ class RouteCollectorTest extends TestCase
      */
     public function testCacheFileExistsAndIsNotReadable()
     {
+        $this->cacheFile = __DIR__ . '/non-readable.cache';
+        file_put_contents($this->cacheFile, '<?php return []; ?>');
+

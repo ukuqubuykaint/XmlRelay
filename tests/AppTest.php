@@ -761,3 +761,7 @@ class AppTest extends TestCase
         // Create the app.
         $app = new App($responseFactory);
 
+        // Add the error middleware.
+        $bodyParsingMiddleware = $app->addBodyParsingMiddleware();
+
+        // Check that the body parsing middleware really has been added to the tip of the app middleware stack.

@@ -294,3 +294,7 @@ class Route implements RouteInterface, RequestHandlerInterface
     {
         $this->arguments = array_replace($this->savedArguments, $arguments);
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}

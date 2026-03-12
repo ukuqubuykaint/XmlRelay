@@ -364,3 +364,7 @@ class AppFactoryTest extends TestCase
         $this->assertSame($app->getRouteResolver(), $routeResolverProphecy->reveal());
         $this->assertSame($app->getMiddlewareDispatcher(), $middlewareDispatcherProphecy->reveal());
     }
+
+    public function testCreateAppWithEmptyContainer()
+    {
+        $containerProphecy = $this->prophesize(ContainerInterface::class);

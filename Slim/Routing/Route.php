@@ -172,3 +172,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function getPattern(): string
+    {

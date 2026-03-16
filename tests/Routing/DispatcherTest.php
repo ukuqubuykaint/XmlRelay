@@ -135,3 +135,6 @@ class DispatcherTest extends TestCase
         $this->assertSame('GET', $results->getMethod());
         $this->assertSame('/hello/Foo%20Bar', $results->getUri());
         $this->assertSame($route->getIdentifier(), $results->getRouteIdentifier());
+        $this->assertSame(['name' => 'Foo%20Bar'], $results->getRouteArguments());
+        $this->assertSame(['name' => 'Foo%20Bar'], $results->getRouteArguments(false));
+        $this->assertSame($methods, $results->getAllowedMethods());

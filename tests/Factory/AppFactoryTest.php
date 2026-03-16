@@ -368,3 +368,5 @@ class AppFactoryTest extends TestCase
     public function testCreateAppWithEmptyContainer()
     {
         $containerProphecy = $this->prophesize(ContainerInterface::class);
+
+        $containerProphecy

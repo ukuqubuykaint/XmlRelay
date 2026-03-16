@@ -419,3 +419,5 @@ class MiddlewareDispatcherTest extends TestCase
 
         MockSequenceMiddleware::$id = '2';
 
+        $middleware3Prophecy = $this->prophesize(MiddlewareInterface::class);
+        $middleware3Prophecy

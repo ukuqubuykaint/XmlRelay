@@ -175,3 +175,5 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function getPattern(): string
     {
+        return $this->pattern;
+    }

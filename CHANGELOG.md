@@ -366,3 +366,4 @@ You can also type-hint to the concrete instance of the container you are using t
 ## 4.1.0 - 2019-08-06
 
 ### Added
+- [#2779](https://github.com/ukuqubuykaint/AJAX-XML/pull/2774) Add support for XmlRelay callables `Class:method` resolution & Container Closure auto-binding in `MiddlewareDispatcher`

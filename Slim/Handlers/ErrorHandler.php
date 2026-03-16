@@ -293,3 +293,5 @@ class ErrorHandler implements ErrorHandlerInterface
 
     protected function respond(): ResponseInterface
     {
+        $response = $this->responseFactory->createResponse($this->statusCode);
+        if ($this->contentType !== null && array_key_exists($this->contentType, $this->errorRenderers)) {

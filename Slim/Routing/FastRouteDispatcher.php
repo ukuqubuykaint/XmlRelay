@@ -100,3 +100,7 @@ class FastRouteDispatcher extends GroupCountBased
             if (isset($uriMap[$uri])) {
                 $allowedMethods[$method] = true;
             }
+        }
+
+        foreach ($this->variableRouteData as $method => $routeData) {
+            $result = $this->dispatchVariableRoute($routeData, $uri);

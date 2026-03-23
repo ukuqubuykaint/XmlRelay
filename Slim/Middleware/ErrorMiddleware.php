@@ -145,3 +145,5 @@ class ErrorMiddleware implements MiddlewareInterface
      * @param string|callable|ErrorHandler $handler
      * @see ErrorHandlerInterface
      *
+     * 1. Instance of \Psr\Http\Message\ServerRequestInterface
+     * 2. Instance of \Throwable

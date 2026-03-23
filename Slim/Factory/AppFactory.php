@@ -130,3 +130,7 @@ class AppFactory
             if (static::$streamFactory) {
                 return static::attemptResponseFactoryDecoration(static::$responseFactory, static::$streamFactory);
             }
+            return static::$responseFactory;
+        }
+
+        $psr17FactoryProvider = static::$psr17FactoryProvider ?? new Psr17FactoryProvider();

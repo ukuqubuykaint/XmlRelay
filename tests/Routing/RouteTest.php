@@ -497,3 +497,7 @@ class RouteTest extends TestCase
         $response = $route->run($request);
         ob_end_clean();
 
+        // Output buffer is ignored without optional middleware
+        $this->assertSame('', (string) $response->getBody());
+        $this->assertSame(201, $response->getStatusCode());
+    }

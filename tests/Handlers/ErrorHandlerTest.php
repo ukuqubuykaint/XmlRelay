@@ -293,3 +293,7 @@ class ErrorHandlerTest extends TestCase
 
         $reflectionProperty = $class->getProperty('responseFactory');
         $this->setAccessible($reflectionProperty);
+        $reflectionProperty->setValue($handler, $this->getResponseFactory());
+
+        $reflectionProperty = $class->getProperty('errorRenderers');
+        $this->setAccessible($reflectionProperty);

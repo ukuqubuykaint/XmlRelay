@@ -330,3 +330,6 @@ class RouteCollectorProxyTest extends TestCase
         $routeProphecy
             ->getPattern()
             ->willReturn($pattern)
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);

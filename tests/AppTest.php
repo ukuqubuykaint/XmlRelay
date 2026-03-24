@@ -769,3 +769,4 @@ class AppTest extends TestCase
         $this->setAccessible($middlewareDispatcherProperty);
         /** @var MiddlewareDispatcher $middlewareDispatcher */
         $middlewareDispatcher = $middlewareDispatcherProperty->getValue($app);
+

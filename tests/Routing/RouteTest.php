@@ -501,3 +501,6 @@ class RouteTest extends TestCase
         $this->assertSame('', (string) $response->getBody());
         $this->assertSame(201, $response->getStatusCode());
     }
+
+    /**
+     * Ensure that if a string is returned by a route callable, then it is

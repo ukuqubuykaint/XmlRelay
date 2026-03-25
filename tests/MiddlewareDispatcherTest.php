@@ -424,3 +424,4 @@ class MiddlewareDispatcherTest extends TestCase
             ->process(
                 Argument::type(ServerRequestInterface::class),
                 Argument::type(RequestHandlerInterface::class)
+            )

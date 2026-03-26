@@ -295,3 +295,6 @@ class ErrorHandler implements ErrorHandlerInterface
     {
         $response = $this->responseFactory->createResponse($this->statusCode);
         if ($this->contentType !== null && array_key_exists($this->contentType, $this->errorRenderers)) {
+            $response = $response->withHeader('Content-type', $this->contentType);
+        } else {
+            $response = $response->withHeader('Content-type', $this->defaultErrorRendererContentType);

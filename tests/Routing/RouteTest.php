@@ -504,3 +504,5 @@ class RouteTest extends TestCase
 
     /**
      * Ensure that if a string is returned by a route callable, then it is
+     * added to the response object that is returned by __invoke().
+     */

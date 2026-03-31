@@ -466,3 +466,5 @@ class CallableResolverTest extends TestCase
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('Callable notFound does not exist');
 
+        /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();

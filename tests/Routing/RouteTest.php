@@ -506,3 +506,7 @@ class RouteTest extends TestCase
      * Ensure that if a string is returned by a route callable, then it is
      * added to the response object that is returned by __invoke().
      */
+    public function testRouteCallableAppendsCorrectOutputToResponse()
+    {
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('foo');

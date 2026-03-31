@@ -777,3 +777,7 @@ class AppTest extends TestCase
 
         $reflection = new ReflectionClass($tip);
         $middlewareProperty = $reflection->getProperty('middleware');
+        $this->setAccessible($middlewareProperty);
+
+        $this->assertSame($bodyParsingMiddleware, $middlewareProperty->getValue($tip));
+        $this->assertInstanceOf(BodyParsingMiddleware::class, $bodyParsingMiddleware);

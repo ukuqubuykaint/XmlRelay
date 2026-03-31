@@ -301,3 +301,5 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function setArgument(string $name, string $value, bool $includeInSavedArguments = true): RouteInterface
     {
+        if ($includeInSavedArguments) {
+            $this->savedArguments[$name] = $value;

@@ -298,3 +298,6 @@ class ErrorHandler implements ErrorHandlerInterface
             $response = $response->withHeader('Content-type', $this->contentType);
         } else {
             $response = $response->withHeader('Content-type', $this->defaultErrorRendererContentType);
+        }
+
+        if ($this->exception instanceof HttpMethodNotAllowedException) {

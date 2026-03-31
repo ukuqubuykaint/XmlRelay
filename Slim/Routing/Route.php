@@ -300,3 +300,4 @@ class Route implements RouteInterface, RequestHandlerInterface
      * {@inheritdoc}
      */
     public function setArgument(string $name, string $value, bool $includeInSavedArguments = true): RouteInterface
+    {

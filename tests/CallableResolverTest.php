@@ -462,3 +462,6 @@ class CallableResolverTest extends TestCase
     }
 
     public function testRouteFunctionNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Callable notFound does not exist');

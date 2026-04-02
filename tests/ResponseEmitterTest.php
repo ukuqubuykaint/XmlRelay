@@ -278,3 +278,5 @@ class ResponseEmitterTest extends TestCase
 
         $responseEmitter = new ResponseEmitter();
 
+        $mirror = new ReflectionClass(ResponseEmitter::class);
+        $emitBodyMethod = $mirror->getMethod('emitBody');

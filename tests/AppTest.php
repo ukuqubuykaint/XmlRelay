@@ -781,3 +781,6 @@ class AppTest extends TestCase
 
         $this->assertSame($bodyParsingMiddleware, $middlewareProperty->getValue($tip));
         $this->assertInstanceOf(BodyParsingMiddleware::class, $bodyParsingMiddleware);
+    }
+
+    public function testAddMiddlewareOnRoute(): void

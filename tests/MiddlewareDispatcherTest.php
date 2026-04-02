@@ -429,3 +429,7 @@ class MiddlewareDispatcherTest extends TestCase
                 return $args[1]->handle($args[0]->withAddedHeader('X-SEQ-PRE-REQ-HANDLER', '3'))
                     ->withAddedHeader('X-SEQ-POST-REQ-HANDLER', '3');
             });
+
+        /** @var RequestHandlerInterface $kernel */
+        $kernel = $kernelProphecy->reveal();
+        $dispatcher = $this->createMiddlewareDispatcher($kernel, null);

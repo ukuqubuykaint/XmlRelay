@@ -302,3 +302,5 @@ class ErrorHandlerTest extends TestCase
         $method = $class->getMethod('determineContentType');
         $this->setAccessible($method);
 
+        $contentType = $method->invoke($handler, $request);
+

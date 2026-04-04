@@ -303,3 +303,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     {
         if ($includeInSavedArguments) {
             $this->savedArguments[$name] = $value;
+        }
+

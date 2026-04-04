@@ -510,3 +510,4 @@ class RouteTest extends TestCase
     {
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
             $response->getBody()->write('foo');
+            return $response;

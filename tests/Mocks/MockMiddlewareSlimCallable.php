@@ -25,3 +25,4 @@ class MockMiddlewareSlimCallable
     {
         return $handler->handle($request);
     }
+}

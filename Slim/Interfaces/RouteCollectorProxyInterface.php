@@ -123,3 +123,4 @@ interface RouteCollectorProxyInterface
      * @param string|UriInterface $to
      */
     public function redirect(string $from, $to, int $status = 302): RouteInterface;
+}

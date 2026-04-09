@@ -62,3 +62,4 @@ class HttpException extends RuntimeException
         $this->description = $description;
         return $this;
     }
+}

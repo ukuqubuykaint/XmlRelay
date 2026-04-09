@@ -50,3 +50,4 @@ interface RouteParserInterface
      * @param array<string, string | array<array-key, string>> $queryParams Optional query string parameters
      */
     public function fullUrlFor(UriInterface $uri, string $routeName, array $data = [], array $queryParams = []): string;
+}

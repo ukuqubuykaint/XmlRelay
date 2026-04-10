@@ -152,3 +152,62 @@ class RouteParserTest extends TestCase
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $route = $routeCollector->map(['GET'], '/{first}/{last}', function () {
+        });
+        $route->setName('test');
+
+        $routeParser = $routeCollector->getRouteParser();
+        $routeParser->urlFor('test', ['last' => 'world']);
+    }
+
+    public function testUrlForRouteThatDoesNotExist()
+    {
+        $this->expectException(RuntimeException::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
+        $routeParser = $routeCollector->getRouteParser();
+
+        $routeParser->urlFor('test');
+    }
+
+    public function testFullUrlFor()
+    {
+        $uriProphecy = $this->prophesize(UriInterface::class);
+        $uriProphecy
+            ->getScheme()
+            ->willReturn('http')
+            ->shouldBeCalledOnce();
+
+        $uriProphecy
+            ->getAuthority()
+            ->willReturn('example.com:8080')
+            ->shouldBeCalledOnce();
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);
+        $routeProphecy
+            ->getPattern()
+            ->willReturn('/{token}')
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+
+        $routeCollectorProphecy
+            ->getBasePath()
+            ->willReturn('/app')
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy
+            ->getNamedRoute('test')
+            ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeParser = new RouteParser($routeCollectorProphecy->reveal());
+        $result = $routeParser->fullUrlFor($uriProphecy->reveal(), 'test', ['token' => '123']);
+
+        $expectedResult = 'http://example.com:8080/app/123';
+        $this->assertSame($expectedResult, $result);
+    }
+}

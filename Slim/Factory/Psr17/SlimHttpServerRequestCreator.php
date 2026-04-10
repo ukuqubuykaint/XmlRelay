@@ -53,3 +53,4 @@ class SlimHttpServerRequestCreator implements ServerRequestCreatorInterface
     {
         return class_exists(static::$serverRequestDecoratorClass);
     }
+}

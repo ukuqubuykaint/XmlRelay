@@ -29,3 +29,4 @@ abstract class HttpSpecializedException extends HttpException
         // @phpstan-ignore-next-line
         parent::__construct($request, $this->message, $this->code, $previous);
     }
+}

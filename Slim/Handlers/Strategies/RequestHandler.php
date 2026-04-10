@@ -46,3 +46,4 @@ class RequestHandler implements RequestHandlerInvocationStrategyInterface
         /** @var ResponseInterface */
         return $callable($request);
     }
+}

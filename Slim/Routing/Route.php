@@ -305,3 +305,4 @@ class Route implements RouteInterface, RequestHandlerInterface
             $this->savedArguments[$name] = $value;
         }
 
+        $this->arguments[$name] = $value;

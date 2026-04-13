@@ -388,3 +388,6 @@ class AppFactoryTest extends TestCase
             ->has(RouteResolverInterface::class)
             ->willReturn(false)
             ->shouldBeCalledOnce();
+
+        $containerProphecy
+            ->has(MiddlewareDispatcherInterface::class)

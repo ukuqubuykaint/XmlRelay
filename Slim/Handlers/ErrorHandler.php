@@ -301,3 +301,6 @@ class ErrorHandler implements ErrorHandlerInterface
         }
 
         if ($this->exception instanceof HttpMethodNotAllowedException) {
+            $allowedMethods = implode(', ', $this->exception->getAllowedMethods());
+            $response = $response->withHeader('Allow', $allowedMethods);
+        }

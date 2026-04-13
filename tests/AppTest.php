@@ -785,3 +785,4 @@ class AppTest extends TestCase
 
     public function testAddMiddlewareOnRoute(): void
     {
+        $output = '';

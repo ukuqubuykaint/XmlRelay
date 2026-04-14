@@ -513,3 +513,4 @@ class RouteTest extends TestCase
             return $response;
         };
         $route = $this->createRoute(['GET'], '/', $callable);
+

@@ -786,3 +786,7 @@ class AppTest extends TestCase
     public function testAddMiddlewareOnRoute(): void
     {
         $output = '';
+
+        $streamProphecy = $this->prophesize(StreamInterface::class);
+        $streamProphecy->__toString()->willReturn('Hello World');
+

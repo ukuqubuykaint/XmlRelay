@@ -471,3 +471,7 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver($container);
         $resolver->resolveRoute('notFound');
     }
+
+    public function testMiddlewareFunctionNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);

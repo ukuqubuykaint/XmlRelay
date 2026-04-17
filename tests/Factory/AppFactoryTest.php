@@ -391,3 +391,7 @@ class AppFactoryTest extends TestCase
 
         $containerProphecy
             ->has(MiddlewareDispatcherInterface::class)
+            ->willReturn(false)
+            ->shouldBeCalledOnce();
+
+        AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);

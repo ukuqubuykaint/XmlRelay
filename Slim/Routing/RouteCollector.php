@@ -142,3 +142,7 @@ class RouteCollector implements RouteCollectorInterface
             );
         }
 
+        if (!file_exists($cacheFile) && !is_writable(dirname($cacheFile))) {
+            throw new RuntimeException(
+                sprintf('Route collector cache file directory `%s` is not writable', dirname($cacheFile))
+            );

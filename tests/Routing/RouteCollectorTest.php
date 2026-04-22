@@ -166,3 +166,4 @@ class RouteCollectorTest extends TestCase
         $routeCollector->setCacheFile($this->cacheFile);
     }
 
+    /**

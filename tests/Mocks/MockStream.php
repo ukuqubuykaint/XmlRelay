@@ -168,3 +168,7 @@ class MockStream implements StreamInterface
     public function tell(): int
     {
         if (false === $result = ftell($this->stream)) {
+            throw new RuntimeException('Unable to determine stream position');
+        }
+
+        return $result;

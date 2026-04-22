@@ -146,3 +146,7 @@ class RouteCollector implements RouteCollectorInterface
             throw new RuntimeException(
                 sprintf('Route collector cache file directory `%s` is not writable', dirname($cacheFile))
             );
+        }
+
+        $this->cacheFile = $cacheFile;
+        return $this;

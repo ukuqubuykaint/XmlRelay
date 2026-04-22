@@ -115,3 +115,5 @@ class RoutingMiddlewareTest extends TestCase
     public function testRouteIsNotStoredOnNotFound()
     {
         $routeCollector = $this->getRouteCollector();
+        $routeParser = new RouteParser($routeCollector);
+        $routeResolver = new RouteResolver($routeCollector);

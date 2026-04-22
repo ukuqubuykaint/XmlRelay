@@ -177,3 +177,7 @@ class AppFactoryTest extends TestCase
             $responseFactoryProphecy->reveal(),
             $app->getResponseFactory()
         );
+
+        $this->assertSame(
+            $containerProphecy->reveal(),
+            $app->getContainer()

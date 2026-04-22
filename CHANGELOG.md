@@ -204,3 +204,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3043: Cover App creation from AppFactory with empty Container](https://github.com/ukuqubuykaint/AJAX-XML/pull/3043) thanks to @t0mmy742
 - [3045: Update phpstan/phpstan requirement from ^0.12.58 to ^0.12.64](https://github.com/ukuqubuykaint/AJAX-XML/pull/3045) thanks to @dependabot-preview[bot]
 - [3047: documentation: min php 7.2 required](https://github.com/ukuqubuykaint/AJAX-XML/pull/3047) thanks to @Rotzbua
+- [3054: Update phpstan/phpstan requirement from ^0.12.64 to ^0.12.70](https://github.com/ukuqubuykaint/AJAX-XML/pull/3054) thanks to @dependabot-preview[bot]

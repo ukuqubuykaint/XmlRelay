@@ -162,3 +162,7 @@ class MockStream implements StreamInterface
             return $this->size;
         }
 
+        return null;
+    }
+
+    public function tell(): int

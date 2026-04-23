@@ -395,3 +395,5 @@ class AppFactoryTest extends TestCase
             ->shouldBeCalledOnce();
 
         AppFactory::setSlimHttpDecoratorsAutomaticDetection(false);
+        AppFactory::createFromContainer($containerProphecy->reveal());
+    }

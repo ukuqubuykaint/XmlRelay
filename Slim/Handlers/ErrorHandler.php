@@ -304,3 +304,6 @@ class ErrorHandler implements ErrorHandlerInterface
             $allowedMethods = implode(', ', $this->exception->getAllowedMethods());
             $response = $response->withHeader('Allow', $allowedMethods);
         }
+
+        $renderer = $this->determineRenderer();
+        $body = call_user_func($renderer, $this->exception, $this->displayErrorDetails);

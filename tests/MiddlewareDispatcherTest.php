@@ -437,3 +437,6 @@ class MiddlewareDispatcherTest extends TestCase
         $dispatcher->addMiddleware($middleware1Prophecy->reveal());
         $dispatcher->addDeferred(MockSequenceMiddleware::class);
         $dispatcher->add($middleware3Prophecy->reveal());
+
+        $response = $dispatcher->handle($requestProphecy->reveal());
+

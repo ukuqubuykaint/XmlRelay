@@ -283,3 +283,7 @@ class ResponseEmitterTest extends TestCase
         $this->setAccessible($emitBodyMethod);
         $emitBodyMethod->invoke($responseEmitter, $response);
 
+        $this->expectOutputString("");
+
+        // Tell connection_status() to pass.
+        unset($GLOBALS['connection_status_return']);

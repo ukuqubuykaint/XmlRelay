@@ -135,3 +135,4 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             $instance = $this->container->get($class);
             if (!is_object($instance)) {
                 throw new RuntimeException(sprintf('%s container entry is not an object', $class));
+            }

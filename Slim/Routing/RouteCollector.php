@@ -150,3 +150,7 @@ class RouteCollector implements RouteCollectorInterface
 
         $this->cacheFile = $cacheFile;
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}

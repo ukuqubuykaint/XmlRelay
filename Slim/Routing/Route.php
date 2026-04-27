@@ -307,3 +307,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
         $this->arguments[$name] = $value;
         return $this;
+    }
+
+    /**

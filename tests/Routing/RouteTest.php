@@ -520,3 +520,5 @@ class RouteTest extends TestCase
         $this->assertSame('foo', (string) $response->getBody());
     }
 
+    public function testInvokeWithException()
+    {

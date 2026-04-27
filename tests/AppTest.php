@@ -794,3 +794,5 @@ class AppTest extends TestCase
         $responseProphecy->getBody()->willReturn($streamProphecy->reveal());
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy->createResponse()->willReturn($responseProphecy->reveal());
+

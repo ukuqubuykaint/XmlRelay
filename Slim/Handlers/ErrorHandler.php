@@ -311,3 +311,6 @@ class ErrorHandler implements ErrorHandlerInterface
             /** @var string $body */
             $response->getBody()->write($body);
         }
+
+        return $response;
+    }

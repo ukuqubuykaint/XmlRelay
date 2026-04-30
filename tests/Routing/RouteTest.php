@@ -522,3 +522,6 @@ class RouteTest extends TestCase
 
     public function testInvokeWithException()
     {
+        $this->expectException(Exception::class);
+
+        $callable = function (ServerRequestInterface $request, ResponseInterface $response) {

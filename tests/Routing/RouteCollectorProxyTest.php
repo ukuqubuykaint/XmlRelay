@@ -353,3 +353,4 @@ class RouteCollectorProxyTest extends TestCase
     public function testMap()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);

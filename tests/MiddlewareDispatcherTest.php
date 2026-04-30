@@ -440,3 +440,4 @@ class MiddlewareDispatcherTest extends TestCase
 
         $response = $dispatcher->handle($requestProphecy->reveal());
 
+        $this->assertSame(['3', '2', '1', '0'], $response->getHeader('X-SEQ-PRE-REQ-HANDLER'));

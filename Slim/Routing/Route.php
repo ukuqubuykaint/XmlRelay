@@ -310,3 +310,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     }
 
     /**
+     * {@inheritdoc}
+     */

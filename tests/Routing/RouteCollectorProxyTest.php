@@ -354,3 +354,6 @@ class RouteCollectorProxyTest extends TestCase
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
         $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/';
+        $methods = ['GET', 'POST'];

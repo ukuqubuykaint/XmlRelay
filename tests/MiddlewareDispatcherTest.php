@@ -443,3 +443,4 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertSame(['3', '2', '1', '0'], $response->getHeader('X-SEQ-PRE-REQ-HANDLER'));
         $this->assertSame(['0', '1', '2', '3'], $response->getHeader('X-SEQ-POST-REQ-HANDLER'));
         $this->assertSame(204, $response->getStatusCode());
+    }

@@ -311,3 +311,5 @@ class ErrorHandlerTest extends TestCase
      * Ensure that an acceptable media-type is found in the Accept header even
      * if it's not the first in the list.
      */
+    public function testAcceptableMediaTypeIsNotFirstInList()
+    {

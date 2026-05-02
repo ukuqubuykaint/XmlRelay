@@ -313,3 +313,6 @@ class ErrorHandlerTest extends TestCase
      */
     public function testAcceptableMediaTypeIsNotFirstInList()
     {
+        $request = $this
+            ->createServerRequest('/', 'GET')
+            ->withHeader('Accept', 'text/plain,text/html');

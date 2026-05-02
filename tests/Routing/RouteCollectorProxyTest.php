@@ -357,3 +357,5 @@ class RouteCollectorProxyTest extends TestCase
 
         $pattern = '/';
         $methods = ['GET', 'POST'];
+        $callable = function () {
+        };

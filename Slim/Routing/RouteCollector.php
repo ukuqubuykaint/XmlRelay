@@ -154,3 +154,4 @@ class RouteCollector implements RouteCollectorInterface
 
     /**
      * {@inheritdoc}
+     */

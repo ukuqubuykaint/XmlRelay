@@ -444,3 +444,6 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertSame(['0', '1', '2', '3'], $response->getHeader('X-SEQ-POST-REQ-HANDLER'));
         $this->assertSame(204, $response->getStatusCode());
     }
+
+    public function testDoesNotInstantiateDeferredMiddlewareInCaseOfAnEarlyReturningOuterMiddleware(): void
+    {

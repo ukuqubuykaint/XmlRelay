@@ -312,3 +312,5 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function run(ServerRequestInterface $request): ResponseInterface
+    {

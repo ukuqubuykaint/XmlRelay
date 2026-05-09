@@ -316,3 +316,6 @@ class ErrorHandlerTest extends TestCase
         $request = $this
             ->createServerRequest('/', 'GET')
             ->withHeader('Accept', 'text/plain,text/html');
+
+        // provide access to the determineContentType() as it's a protected method
+        $class = new ReflectionClass(ErrorHandler::class);

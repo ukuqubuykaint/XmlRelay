@@ -122,3 +122,7 @@ class ServerRequestCreatorFactoryTest extends TestCase
      */
     #[\PHPUnit\Framework\Attributes\RunInSeparateProcess]
     public function testSetServerRequestCreatorWithDecorators()
+    {
+        ServerRequestCreatorFactory::setSlimHttpDecoratorsAutomaticDetection(true);
+        $serverRequestProphecy = $this->prophesize(ServerRequestInterface::class);
+

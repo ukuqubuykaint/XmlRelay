@@ -173,3 +173,4 @@ class ResponseEmitterTest extends TestCase
     public function testIsResponseEmptyWithNonEmptyBodyAndTriggeringStatusCode(): void
     {
         $body = $this->createStream('Hello');
+        $response = $this

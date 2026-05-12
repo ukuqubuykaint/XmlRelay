@@ -530,3 +530,6 @@ class RouteTest extends TestCase
         $route = $this->createRoute(['GET'], '/', $callable);
 
         $request = $this->createServerRequest('/');
+        $route->run($request);
+    }
+

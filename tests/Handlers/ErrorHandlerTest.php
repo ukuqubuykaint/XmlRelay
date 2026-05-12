@@ -321,3 +321,7 @@ class ErrorHandlerTest extends TestCase
         $class = new ReflectionClass(ErrorHandler::class);
         $method = $class->getMethod('determineContentType');
         $this->setAccessible($method);
+
+        // use a mock object here as ErrorHandler cannot be directly instantiated
+        $handler = $this->createMock(ErrorHandler::class);
+

@@ -314,3 +314,5 @@ class Route implements RouteInterface, RequestHandlerInterface
      */
     public function run(ServerRequestInterface $request): ResponseInterface
     {
+        if (!$this->groupMiddlewareAppended) {
+            $this->appendGroupMiddlewareToRoute();

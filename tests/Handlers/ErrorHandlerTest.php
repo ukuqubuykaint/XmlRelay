@@ -319,3 +319,5 @@ class ErrorHandlerTest extends TestCase
 
         // provide access to the determineContentType() as it's a protected method
         $class = new ReflectionClass(ErrorHandler::class);
+        $method = $class->getMethod('determineContentType');
+        $this->setAccessible($method);

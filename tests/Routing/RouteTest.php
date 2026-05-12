@@ -525,3 +525,6 @@ class RouteTest extends TestCase
         $this->expectException(Exception::class);
 
         $callable = function (ServerRequestInterface $request, ResponseInterface $response) {
+            throw new Exception();
+        };
+        $route = $this->createRoute(['GET'], '/', $callable);

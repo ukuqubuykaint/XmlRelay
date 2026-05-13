@@ -533,3 +533,6 @@ class RouteTest extends TestCase
         $route->run($request);
     }
 
+    /**
+     * Ensure that `foundHandler` is called on actual callable
+     */

@@ -482,3 +482,5 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver($container);
         $resolver->resolveMiddleware('notFound');
     }
+
+    public function testClassNotFoundThrowException(): void

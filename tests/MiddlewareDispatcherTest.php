@@ -447,3 +447,5 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testDoesNotInstantiateDeferredMiddlewareInCaseOfAnEarlyReturningOuterMiddleware(): void
     {
+        $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);

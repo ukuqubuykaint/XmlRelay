@@ -484,3 +484,6 @@ class CallableResolverTest extends TestCase
     }
 
     public function testClassNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Callable Unknown::notFound() does not exist');

@@ -325,3 +325,6 @@ class ErrorHandlerTest extends TestCase
         // use a mock object here as ErrorHandler cannot be directly instantiated
         $handler = $this->createMock(ErrorHandler::class);
 
+        // call determineContentType()
+        $return = $method->invoke($handler, $request);
+

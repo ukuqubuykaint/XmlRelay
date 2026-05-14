@@ -120,3 +120,7 @@ class RoutingMiddlewareTest extends TestCase
         $routingMiddleware = new RoutingMiddleware($routeResolver, $routeParser);
 
         $request = $this->createServerRequest('https://example.com:443/goodbye', 'GET');
+        $requestHandlerProphecy = $this->prophesize(RequestHandlerInterface::class);
+        /** @var RequestHandlerInterface $requestHandler */
+        $requestHandler = $requestHandlerProphecy->reveal();
+

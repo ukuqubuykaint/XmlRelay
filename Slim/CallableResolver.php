@@ -136,3 +136,5 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             if (!is_object($instance)) {
                 throw new RuntimeException(sprintf('%s container entry is not an object', $class));
             }
+        } else {
+            if (!class_exists($class)) {

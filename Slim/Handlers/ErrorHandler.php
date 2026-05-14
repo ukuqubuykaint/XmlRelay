@@ -144,3 +144,7 @@ class ErrorHandler implements ErrorHandlerInterface
      * @param string|null $contentType The content type. Null restores Accept-header negotiation.
      */
     public function forceContentType(?string $contentType): void
+    {
+        $this->isContentTypeForced = $contentType !== null;
+        $this->contentType = $contentType;
+    }

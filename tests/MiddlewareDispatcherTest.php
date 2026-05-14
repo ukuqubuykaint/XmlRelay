@@ -260,3 +260,6 @@ class MiddlewareDispatcherTest extends TestCase
         $request = $this->createServerRequest('/');
         $middlewareDispatcher->handle($request);
     }
+
+    public function testResolvableReturnsInstantiatedObject(): void
+    {

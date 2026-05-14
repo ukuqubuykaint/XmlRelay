@@ -328,3 +328,5 @@ class ErrorHandlerTest extends TestCase
         // call determineContentType()
         $return = $method->invoke($handler, $request);
 
+        $this->assertSame('text/html', $return);
+    }

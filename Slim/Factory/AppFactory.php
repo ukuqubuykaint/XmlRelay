@@ -136,3 +136,7 @@ class AppFactory
         $psr17FactoryProvider = static::$psr17FactoryProvider ?? new Psr17FactoryProvider();
 
         /** @var Psr17Factory $psr17factory */
+        foreach ($psr17FactoryProvider->getFactories() as $psr17factory) {
+            if ($psr17factory::isResponseFactoryAvailable()) {
+                $responseFactory = $psr17factory::getResponseFactory();
+

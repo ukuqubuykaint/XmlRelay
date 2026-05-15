@@ -138,3 +138,6 @@ final class CallableResolver implements AdvancedCallableResolverInterface
             }
         } else {
             if (!class_exists($class)) {
+                if ($method) {
+                    $class .= '::' . $method . '()';
+                }

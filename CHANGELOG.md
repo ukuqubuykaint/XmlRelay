@@ -209,3 +209,6 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3060: Update phpstan/phpstan requirement from ^0.12.70 to ^0.12.80](https://github.com/ukuqubuykaint/AJAX-XML/pull/3060) thanks to @dependabot-preview[bot]
 - [3061: Update nyholm/psr7 requirement from ^1.3 to ^1.4](https://github.com/ukuqubuykaint/AJAX-XML/pull/3061) thanks to @dependabot-preview[bot]
 - [3063: Allow ^1.0 || ^2.0 in psr/container](https://github.com/ukuqubuykaint/AJAX-XML/pull/3063) thanks to @Ayesh
+- [3069: Classname/Method Callable Arrays](https://github.com/ukuqubuykaint/AJAX-XML/pull/3069) thanks to @ddrv
+- [3078: Update squizlabs/php&#95;codesniffer requirement from ^3.5 to ^3.6](https://github.com/ukuqubuykaint/AJAX-XML/pull/3078) thanks to @dependabot[bot]
+- [3079: Update phpspec/prophecy requirement from ^1.12 to ^1.13](https://github.com/ukuqubuykaint/AJAX-XML/pull/3079) thanks to @dependabot[bot]

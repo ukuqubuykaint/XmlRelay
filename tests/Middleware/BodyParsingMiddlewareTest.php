@@ -146,3 +146,6 @@ class BodyParsingMiddlewareTest extends TestCase
     }
 
     /**
+     * @dataProvider parsingProvider
+     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('parsingProvider')]

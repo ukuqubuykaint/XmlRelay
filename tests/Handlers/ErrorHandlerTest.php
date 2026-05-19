@@ -331,3 +331,5 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame('text/html', $return);
     }
 
+    public function testRegisterErrorRenderer()
+    {

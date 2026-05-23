@@ -210,3 +210,4 @@ class RouteParserTest extends TestCase
         $expectedResult = 'http://example.com:8080/app/123';
         $this->assertSame($expectedResult, $result);
     }
+}

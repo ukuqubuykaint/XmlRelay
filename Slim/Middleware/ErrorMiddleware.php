@@ -212,3 +212,4 @@ class ErrorMiddleware implements MiddlewareInterface
             $this->handlers[$type] = $handler;
         }
     }
+}

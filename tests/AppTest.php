@@ -809,3 +809,6 @@ class AppTest extends TestCase
 
             $output .= 'In1';
 
+            /** @var ResponseInterface $response */
+            $response = $handler->handle($request);
+

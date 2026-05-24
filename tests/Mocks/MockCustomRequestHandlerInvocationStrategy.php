@@ -27,3 +27,4 @@ class MockCustomRequestHandlerInvocationStrategy implements RequestHandlerInvoca
         self::$CalledCount += 1;
         return $callable($request);
     }
+}

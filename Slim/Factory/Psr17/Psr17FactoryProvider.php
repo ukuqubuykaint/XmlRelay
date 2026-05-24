@@ -50,3 +50,4 @@ class Psr17FactoryProvider implements Psr17FactoryProviderInterface
     {
         array_unshift(static::$factories, $factory);
     }
+}

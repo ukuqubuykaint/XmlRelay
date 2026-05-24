@@ -147,3 +147,69 @@ class ErrorMiddleware implements MiddlewareInterface
      *
      * 1. Instance of \Psr\Http\Message\ServerRequestInterface
      * 2. Instance of \Throwable
+     * 3. Boolean $displayErrorDetails
+     * 4. Boolean $logErrors
+     * 5. Boolean $logErrorDetails
+     *
+     * The callable MUST return an instance of
+     * \Psr\Http\Message\ResponseInterface.
+     *
+     */
+    public function setDefaultErrorHandler($handler): self
+    {
+        $this->defaultErrorHandler = $handler;
+        return $this;
+    }
+
+    /**
+     * Set callable to handle scenarios where an error
+     * occurs when processing the current request.
+     *
+     * The callable signature MUST match the ErrorHandlerInterface
+     *
+     * Pass true to $handleSubclasses to make the handler handle all subclasses of
+     * the type as well. Pass an array of classes to make the same function handle multiple exceptions.
+     *
+     * @param string|string[] $typeOrTypes Exception/Throwable name.
+     * ie: RuntimeException::class or an array of classes
+     * ie: [HttpNotFoundException::class, HttpMethodNotAllowedException::class]
+     * @param string|callable|ErrorHandlerInterface $handler
+     *
+     * @see ErrorHandlerInterface
+     *
+     * 1. Instance of \Psr\Http\Message\ServerRequestInterface
+     * 2. Instance of \Throwable
+     * 3. Boolean $displayErrorDetails
+     * 4. Boolean $logErrors
+     * 5. Boolean $logErrorDetails
+     *
+     * The callable MUST return an instance of
+     * \Psr\Http\Message\ResponseInterface.
+     *
+     */
+    public function setErrorHandler($typeOrTypes, $handler, bool $handleSubclasses = false): self
+    {
+        if (is_array($typeOrTypes)) {
+            foreach ($typeOrTypes as $type) {
+                $this->addErrorHandler($type, $handler, $handleSubclasses);
+            }
+        } else {
+            $this->addErrorHandler($typeOrTypes, $handler, $handleSubclasses);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Used internally to avoid code repetition when passing multiple exceptions to setErrorHandler().
+     * @param string|callable|ErrorHandlerInterface $handler
+     */
+    private function addErrorHandler(string $type, $handler, bool $handleSubclasses): void
+    {
+        if ($handleSubclasses) {
+            $this->subClassHandlers[$type] = $handler;
+        } else {
+            $this->handlers[$type] = $handler;
+        }
+    }
+}

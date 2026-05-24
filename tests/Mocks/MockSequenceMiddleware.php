@@ -39,3 +39,4 @@ class MockSequenceMiddleware implements MiddlewareInterface
 
         return $response->withAddedHeader('X-SEQ-POST-REQ-HANDLER', static::$id);
     }
+}

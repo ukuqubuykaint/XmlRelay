@@ -536,3 +536,339 @@ class RouteTest extends TestCase
     /**
      * Ensure that `foundHandler` is called on actual callable
      */
+    public function testInvokeDeferredCallableWithNoContainer()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $callableResolver = new CallableResolver();
+        $invocationStrategy = new InvocationStrategyTest();
+
+        $deferred = '\Slim\Tests\Mocks\CallableTest:toCall';
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            null,
+            $invocationStrategy
+        );
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertEquals([new CallableTest(), 'toCall'], InvocationStrategyTest::$LastCalledFor);
+    }
+
+    /**
+     * Ensure that `foundHandler` is called on actual callable
+     */
+    public function testInvokeDeferredCallableWithContainer()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has('\Slim\Tests\Mocks\CallableTest')->willReturn(true);
+        $containerProphecy->get('\Slim\Tests\Mocks\CallableTest')->willReturn(new CallableTest());
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+        $strategy = new InvocationStrategyTest();
+
+        $deferred = '\Slim\Tests\Mocks\CallableTest:toCall';
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal(),
+            $strategy
+        );
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertEquals([new CallableTest(), 'toCall'], InvocationStrategyTest::$LastCalledFor);
+    }
+
+    public function testInvokeUsesRequestHandlerStrategyForRequestHandlers()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has(RequestHandlerTest::class)->willReturn(true);
+        $containerProphecy->get(RequestHandlerTest::class)->willReturn(new RequestHandlerTest());
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+
+        $deferred = RequestHandlerTest::class;
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal()
+        );
+
+        $request = $this->createServerRequest('/', 'GET');
+        $route->run($request);
+
+        /** @var InvocationStrategyInterface $strategy */
+        $strategy = $containerProphecy
+            ->reveal()
+            ->get(RequestHandlerTest::class)::$strategy;
+
+        $this->assertSame(RequestHandler::class, $strategy);
+    }
+
+    public function testInvokeUsesUserSetStrategyForRequestHandlers()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has(RequestHandlerTest::class)->willReturn(true);
+        $containerProphecy->get(RequestHandlerTest::class)->willReturn(new RequestHandlerTest());
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+
+        $deferred = RequestHandlerTest::class;
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal()
+        );
+
+        $strategy = new MockCustomRequestHandlerInvocationStrategy();
+        $route->setInvocationStrategy($strategy);
+
+        $request = $this->createServerRequest('/', 'GET');
+        $route->run($request);
+
+        $this->assertSame(1, $strategy::$CalledCount);
+    }
+
+    public function testRequestHandlerStrategyAppendsRouteArgumentsAsAttributesToRequest()
+    {
+        $self = $this;
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has(RequestHandlerTest::class)->willReturn(true);
+        $containerProphecy->get(RequestHandlerTest::class)->willReturn(new RequestHandlerTest());
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+
+        $deferred = RequestHandlerTest::class;
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal()
+        );
+
+        $strategy = new RequestHandler(true);
+        $route->setInvocationStrategy($strategy);
+        $route->setArguments(['id' => 1]);
+
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $requestProphecy->withAttribute(Argument::type('string'), Argument::any())->will(function ($args) use ($self) {
+            $name = $args[0];
+            $value = $args[1];
+
+            $self->assertSame('id', $name);
+            $self->assertSame(1, $value);
+
+            return $this;
+        })->shouldBeCalledOnce();
+
+        $route->run($requestProphecy->reveal());
+    }
+
+    /**
+     * Ensure that the pattern can be dynamically changed
+     */
+    public function testPatternCanBeChanged()
+    {
+        $route = $this->createRoute();
+        $route->setPattern('/hola/{nombre}');
+
+        $this->assertSame('/hola/{nombre}', $route->getPattern());
+    }
+
+    /**
+     * Ensure that the callable can be changed
+     */
+    public function testChangingCallableWithNoContainer()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $callableResolver = new CallableResolver();
+        $strategy = new InvocationStrategyTest();
+
+        $deferred = 'NonExistent:toCall';
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            null,
+            $strategy
+        );
+        $route->setCallable('\Slim\Tests\Mocks\CallableTest:toCall'); //Then we fix it here.
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertEquals([new CallableTest(), 'toCall'], InvocationStrategyTest::$LastCalledFor);
+    }
+
+    /**
+     * Ensure that the callable can be changed
+     */
+    public function testChangingCallableWithContainer()
+    {
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has('CallableTest2')->willReturn(true);
+        $containerProphecy->get('CallableTest2')->willReturn(new CallableTest());
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+        $strategy = new InvocationStrategyTest();
+
+        $deferred = 'NonExistent:toCall';
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal(),
+            $strategy
+        );
+        $route->setCallable('CallableTest2:toCall'); //Then we fix it here.
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertSame(
+            [$containerProphecy->reveal()->get('CallableTest2'), 'toCall'],
+            InvocationStrategyTest::$LastCalledFor
+        );
+    }
+
+    public function testRouteCallableIsResolvedUsingContainerWhenCallableResolverIsPresent()
+    {
+        $streamProphecy = $this->prophesize(StreamInterface::class);
+
+        $value = '';
+        $streamProphecy
+            ->write(Argument::type('string'))
+            ->will(function ($args) use ($value) {
+                $value .= $args[0];
+                $this->__toString()->willReturn($value);
+                return strlen($value);
+            });
+
+        $streamProphecy
+            ->__toString()
+            ->willReturn($value);
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $responseProphecy
+            ->getBody()
+            ->willReturn($streamProphecy->reveal())
+            ->shouldBeCalledTimes(2);
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has('CallableTest3')->willReturn(true);
+        $containerProphecy->get('CallableTest3')->willReturn(new CallableTest());
+        $containerProphecy->has('ClosureMiddleware')->willReturn(true);
+        $containerProphecy->get('ClosureMiddleware')->willReturn(function () use ($responseFactoryProphecy) {
+            $response = $responseFactoryProphecy->reveal()->createResponse();
+            $response->getBody()->write('Hello');
+            return $response;
+        });
+
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+        $strategy = new InvocationStrategyTest();
+
+        $deferred = 'CallableTest3';
+        $route = new Route(
+            ['GET'],
+            '/',
+            $deferred,
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal(),
+            $strategy
+        );
+        $route->add('ClosureMiddleware');
+
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertSame('Hello', (string) $response->getBody());
+    }
+}

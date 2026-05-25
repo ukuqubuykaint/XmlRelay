@@ -168,3 +168,4 @@ Support this project with your organization. Your logo will show up here with a 
 
 ## License
 
+The XmlRelay is licensed under the MIT license. See [License File](LICENSE.md) for more information.

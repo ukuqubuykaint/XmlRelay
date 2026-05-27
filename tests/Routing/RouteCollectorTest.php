@@ -167,3 +167,4 @@ class RouteCollectorTest extends TestCase
     }
 
     /**
+     * Test cache file does not exist and directory is not writable

@@ -333,3 +333,7 @@ class ErrorHandlerTest extends TestCase
 
     public function testRegisterErrorRenderer()
     {
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+        $handler->registerErrorRenderer('application/slim', PlainTextErrorRenderer::class);
+
+        $reflectionClass = new ReflectionClass(ErrorHandler::class);

@@ -319,3 +319,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         }
 
         return $this->middlewareDispatcher->handle($request);
+    }
+
+    /**
+     * @return void

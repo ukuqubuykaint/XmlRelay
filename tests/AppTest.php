@@ -812,3 +812,5 @@ class AppTest extends TestCase
             /** @var ResponseInterface $response */
             $response = $handler->handle($request);
 
+            $output .= 'Out1';
+

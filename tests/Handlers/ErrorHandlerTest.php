@@ -337,3 +337,7 @@ class ErrorHandlerTest extends TestCase
         $handler->registerErrorRenderer('application/slim', PlainTextErrorRenderer::class);
 
         $reflectionClass = new ReflectionClass(ErrorHandler::class);
+        $reflectionProperty = $reflectionClass->getProperty('errorRenderers');
+        $this->setAccessible($reflectionProperty);
+        $errorRenderers = $reflectionProperty->getValue($handler);
+

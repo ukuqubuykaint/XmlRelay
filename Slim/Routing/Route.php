@@ -323,3 +323,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * @return void
+     */
+    protected function appendGroupMiddlewareToRoute(): void

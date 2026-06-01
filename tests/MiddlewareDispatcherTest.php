@@ -452,3 +452,5 @@ class MiddlewareDispatcherTest extends TestCase
         $responseProphecy = $this->prophesize(ResponseInterface::class);
 
         $middlewareProphecy = $this->prophesize(MiddlewareInterface::class);
+        $middlewareProphecy->process(Argument::cetera())->willReturn($responseProphecy->reveal());
+

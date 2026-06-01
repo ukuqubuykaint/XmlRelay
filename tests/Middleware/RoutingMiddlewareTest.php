@@ -125,3 +125,7 @@ class RoutingMiddlewareTest extends TestCase
         $requestHandler = $requestHandlerProphecy->reveal();
 
         $middlewareDispatcher = $this->createMiddlewareDispatcher($requestHandler, null);
+        $middlewareDispatcher->addMiddleware($routingMiddleware);
+
+        try {
+            $middlewareDispatcher->handle($request);

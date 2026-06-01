@@ -148,3 +148,4 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->isContentTypeForced = $contentType !== null;
         $this->contentType = $contentType;
     }
+

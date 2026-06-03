@@ -185,3 +185,7 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         $callable = $this->callableResolver->resolve($this->middleware);
                     } catch (RuntimeException $e) {
                         // Do Nothing
+                    }
+                }
+
+                if (!$callable) {

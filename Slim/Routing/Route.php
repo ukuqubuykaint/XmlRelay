@@ -327,3 +327,7 @@ class Route implements RouteInterface, RequestHandlerInterface
     protected function appendGroupMiddlewareToRoute(): void
     {
         $inner = $this->middlewareDispatcher;
+        $this->middlewareDispatcher = new MiddlewareDispatcher($inner, $this->callableResolver, $this->container);
+
+        foreach (array_reverse($this->groups) as $group) {
+            $group->appendMiddlewareToDispatcher($this->middlewareDispatcher);

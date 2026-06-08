@@ -367,3 +367,6 @@ class RouteCollectorProxyTest extends TestCase
             ->shouldBeCalledOnce();
 
         $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->map($methods, $pattern, Argument::is($callable))
+            ->willReturn($routeProphecy->reveal())

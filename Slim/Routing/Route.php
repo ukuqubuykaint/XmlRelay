@@ -331,3 +331,7 @@ class Route implements RouteInterface, RequestHandlerInterface
 
         foreach (array_reverse($this->groups) as $group) {
             $group->appendMiddlewareToDispatcher($this->middlewareDispatcher);
+        }
+
+        $this->groupMiddlewareAppended = true;
+    }

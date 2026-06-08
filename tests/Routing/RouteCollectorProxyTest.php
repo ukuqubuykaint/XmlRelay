@@ -370,3 +370,7 @@ class RouteCollectorProxyTest extends TestCase
         $routeCollectorProphecy
             ->map($methods, $pattern, Argument::is($callable))
             ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),

@@ -343,3 +343,6 @@ class ErrorHandlerTest extends TestCase
 
         $this->assertArrayHasKey('application/slim', $errorRenderers);
     }
+
+    public function testSetDefaultErrorRenderer()
+    {

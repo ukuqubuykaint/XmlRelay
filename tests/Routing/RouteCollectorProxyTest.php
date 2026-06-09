@@ -374,3 +374,4 @@ class RouteCollectorProxyTest extends TestCase
 
         $routeCollectorProxy = new RouteCollectorProxy(
             $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),

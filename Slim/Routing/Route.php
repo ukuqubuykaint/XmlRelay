@@ -335,3 +335,6 @@ class Route implements RouteInterface, RequestHandlerInterface
 
         $this->groupMiddlewareAppended = true;
     }
+
+    /**
+     * {@inheritdoc}

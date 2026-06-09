@@ -342,3 +342,4 @@ class ErrorHandlerTest extends TestCase
         $errorRenderers = $reflectionProperty->getValue($handler);
 
         $this->assertArrayHasKey('application/slim', $errorRenderers);
+    }

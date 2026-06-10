@@ -465,3 +465,7 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertFalse(MockSequenceMiddleware::$hasBeenInstantiated);
         $this->assertSame($responseProphecy->reveal(), $response);
         $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldNotHaveBeenCalled();
+    }
+
+    public function testThrowsExceptionForDeferredNonMiddlewareInterfaceClasses(): void
+    {

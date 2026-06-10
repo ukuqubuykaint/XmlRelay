@@ -469,3 +469,7 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testThrowsExceptionForDeferredNonMiddlewareInterfaceClasses(): void
     {
+        $this->expectException(RuntimeException::class);
+
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);

@@ -168,3 +168,7 @@ class RouteCollectorTest extends TestCase
 
     /**
      * Test cache file does not exist and directory is not writable
+     */
+    public function testCacheFileDoesNotExistsAndDirectoryIsNotWritable()
+    {
+        $cacheFile = __DIR__ . '/non-writable-directory/router.cache';

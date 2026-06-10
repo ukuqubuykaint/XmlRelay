@@ -149,3 +149,6 @@ class ErrorHandler implements ErrorHandlerInterface
         $this->contentType = $contentType;
     }
 
+    protected function determineStatusCode(): int
+    {
+        if ($this->method === 'OPTIONS') {

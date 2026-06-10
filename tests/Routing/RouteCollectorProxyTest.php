@@ -252,3 +252,4 @@ class RouteCollectorProxyTest extends TestCase
     }
 
     public function testDelete()
+    {

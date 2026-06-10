@@ -340,3 +340,7 @@ class Route implements RouteInterface, RequestHandlerInterface
      * {@inheritdoc}
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {
+            $callable = $this->callableResolver->resolveRoute($this->callable);
+        } else {

@@ -346,3 +346,7 @@ class ErrorHandlerTest extends TestCase
 
     public function testSetDefaultErrorRenderer()
     {
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+        $handler->setDefaultErrorRenderer('text/plain', PlainTextErrorRenderer::class);
+
+        $reflectionClass = new ReflectionClass(ErrorHandler::class);

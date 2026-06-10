@@ -338,3 +338,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
     /**
      * {@inheritdoc}
+     */
+    public function handle(ServerRequestInterface $request): ResponseInterface

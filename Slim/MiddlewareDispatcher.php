@@ -193,3 +193,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                     $instance = null;
                     $method = null;
 
+                    /** @psalm-suppress ArgumentTypeCoercion */

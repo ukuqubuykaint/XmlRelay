@@ -352,3 +352,6 @@ class ErrorHandlerTest extends TestCase
         $reflectionClass = new ReflectionClass(ErrorHandler::class);
         $reflectionProperty = $reflectionClass->getProperty('defaultErrorRenderer');
         $this->setAccessible($reflectionProperty);
+        $defaultErrorRenderer = $reflectionProperty->getValue($handler);
+
+        $defaultErrorRendererContentTypeProperty = $reflectionClass->getProperty('defaultErrorRendererContentType');

@@ -381,3 +381,4 @@ class RouteCollectorProxyTest extends TestCase
 
         $route = $routeCollectorProxy->map($methods, $pattern, $callable);
 
+        $this->assertSame($pattern, $route->getPattern());

@@ -475,3 +475,7 @@ class MiddlewareDispatcherTest extends TestCase
         $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);
 
         /** @var RequestHandlerInterface $kernel */
+        $kernel = $kernelProphecy->reveal();
+        $dispatcher = $this->createMiddlewareDispatcher($kernel, null);
+        $dispatcher->addDeferred(stdClass::class);
+        $dispatcher->handle($requestProphecy->reveal());

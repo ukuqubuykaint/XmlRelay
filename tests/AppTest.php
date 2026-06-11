@@ -827,3 +827,6 @@ class AppTest extends TestCase
 
             /** @var RequestHandlerInterface $handler */
             $handler = $args[1];
+
+            $output .= 'In2';
+

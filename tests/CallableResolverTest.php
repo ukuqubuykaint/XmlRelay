@@ -505,3 +505,4 @@ class CallableResolverTest extends TestCase
         $resolver->resolveRoute('Unknown:notFound');
     }
 
+    public function testMiddlewareClassNotFoundThrowException(): void

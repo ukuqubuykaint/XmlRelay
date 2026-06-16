@@ -140,3 +140,5 @@ class DispatcherTest extends TestCase
         $this->assertSame($methods, $results->getAllowedMethods());
         $this->assertSame($dispatcher, $results->getDispatcher());
     }
+
+    public function testRouteArgumentsAreDecodedOnlyOnce()

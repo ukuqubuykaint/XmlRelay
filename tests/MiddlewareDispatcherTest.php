@@ -483,3 +483,4 @@ class MiddlewareDispatcherTest extends TestCase
         $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldNotHaveBeenCalled();
     }
 
+    public function testCanBeExecutedMultipleTimes(): void

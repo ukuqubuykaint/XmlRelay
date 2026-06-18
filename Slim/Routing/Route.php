@@ -344,3 +344,7 @@ class Route implements RouteInterface, RequestHandlerInterface
         if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {
             $callable = $this->callableResolver->resolveRoute($this->callable);
         } else {
+            $callable = $this->callableResolver->resolve($this->callable);
+        }
+        $strategy = $this->invocationStrategy;
+

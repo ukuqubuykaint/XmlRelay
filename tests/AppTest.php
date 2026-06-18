@@ -834,3 +834,5 @@ class AppTest extends TestCase
             $response = $handler->handle($request);
 
             $output .= 'Out2';
+
+            return $response;

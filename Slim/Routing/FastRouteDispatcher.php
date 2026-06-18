@@ -105,3 +105,6 @@ class FastRouteDispatcher extends GroupCountBased
         foreach ($this->variableRouteData as $method => $routeData) {
             $result = $this->dispatchVariableRoute($routeData, $uri);
             if ($result[0] === self::FOUND) {
+                $allowedMethods[$method] = true;
+            }
+        }

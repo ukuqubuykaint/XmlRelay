@@ -121,3 +121,4 @@ abstract class TestCase extends PhpUnitTestCase
     {
         $psr7ObjectProvider = new PSR7ObjectProvider();
         return $psr7ObjectProvider->createStream($contents);
+    }

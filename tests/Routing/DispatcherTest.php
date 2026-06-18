@@ -142,3 +142,6 @@ class DispatcherTest extends TestCase
     }
 
     public function testRouteArgumentsAreDecodedOnlyOnce()
+    {
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

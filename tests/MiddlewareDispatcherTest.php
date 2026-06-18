@@ -484,3 +484,4 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testCanBeExecutedMultipleTimes(): void
+    {

@@ -350,3 +350,5 @@ class Route implements RouteInterface, RequestHandlerInterface
 
         $strategyImplements = class_implements($strategy);
 
+        if (
+            is_array($callable)

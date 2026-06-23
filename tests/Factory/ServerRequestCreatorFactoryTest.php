@@ -131,3 +131,6 @@ class ServerRequestCreatorFactoryTest extends TestCase
             ->createServerRequestFromGlobals()
             ->willReturn($serverRequestProphecy->reveal())
             ->shouldBeCalledOnce();
+
+        ServerRequestCreatorFactory::setServerRequestCreator($serverRequestCreatorProphecy->reveal());
+

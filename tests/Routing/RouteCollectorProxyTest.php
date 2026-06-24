@@ -386,3 +386,7 @@ class RouteCollectorProxyTest extends TestCase
 
     public function testRedirect()
     {
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+
+        $from = '/from';

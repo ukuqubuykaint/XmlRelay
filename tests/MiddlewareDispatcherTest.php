@@ -485,3 +485,6 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testCanBeExecutedMultipleTimes(): void
     {
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+        $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);

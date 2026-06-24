@@ -836,3 +836,4 @@ class AppTest extends TestCase
             $output .= 'Out2';
 
             return $response;
+        });

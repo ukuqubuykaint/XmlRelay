@@ -390,3 +390,6 @@ class RouteCollectorProxyTest extends TestCase
         $callableResolver = new CallableResolver($containerProphecy->reveal());
 
         $from = '/from';
+        $to = '/to';
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

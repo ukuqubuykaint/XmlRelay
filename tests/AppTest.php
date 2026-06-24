@@ -837,3 +837,6 @@ class AppTest extends TestCase
 
             return $response;
         });
+
+        $app = new App($responseFactoryProphecy->reveal());
+        $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) use (&$output) {

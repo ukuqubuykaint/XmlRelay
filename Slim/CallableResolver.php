@@ -149,3 +149,7 @@ final class CallableResolver implements AdvancedCallableResolverInterface
     }
 
     /**
+     * @param mixed $resolved
+     * @param mixed $toResolve
+     *
+     * @throws RuntimeException

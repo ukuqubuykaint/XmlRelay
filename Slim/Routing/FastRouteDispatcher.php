@@ -113,3 +113,4 @@ class FastRouteDispatcher extends GroupCountBased
 
         return $this->allowedMethods = array_keys($allowedMethods);
     }
+}

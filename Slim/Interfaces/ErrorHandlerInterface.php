@@ -23,3 +23,4 @@ interface ErrorHandlerInterface
         bool $logErrors,
         bool $logErrorDetails
     ): ResponseInterface;
+}

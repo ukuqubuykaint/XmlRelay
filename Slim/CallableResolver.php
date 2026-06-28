@@ -153,3 +153,48 @@ final class CallableResolver implements AdvancedCallableResolverInterface
      * @param mixed $toResolve
      *
      * @throws RuntimeException
+     */
+    private function assertCallable($resolved, $toResolve): callable
+    {
+        if (!is_callable($resolved)) {
+            if (is_callable($toResolve) || is_object($toResolve) || is_array($toResolve)) {
+                $formatedToResolve = ($toResolveJson = json_encode($toResolve)) !== false ? $toResolveJson : '';
+            } else {
+                $formatedToResolve = is_string($toResolve) ? $toResolve : '';
+            }
+            throw new RuntimeException(sprintf('%s is not resolvable', $formatedToResolve));
+        }
+        return $resolved;
+    }
+
+    private function bindToContainer(callable $callable): callable
+    {
+        if (is_array($callable) && $callable[0] instanceof Closure) {
+            $callable = $callable[0];
+        }
+        if ($this->container && $callable instanceof Closure) {
+            /** @var Closure $callable */
+            $callable = $callable->bindTo($this->container);
+        }
+        return $callable;
+    }
+
+    /**
+     * @param callable|string|array{class-string, string}|mixed $toResolve
+     *
+     * @return callable|string|array{class-string, string}|mixed
+     */
+    private function prepareToResolve($toResolve)
+    {
+        if (!is_array($toResolve)) {
+            return $toResolve;
+        }
+        $candidate = $toResolve;
+        $class = array_shift($candidate);
+        $method = array_shift($candidate);
+        if (is_string($class) && is_string($method)) {
+            return $class . ':' . $method;
+        }
+        return $toResolve;
+    }
+}

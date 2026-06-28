@@ -108,3 +108,9 @@ class FastRouteDispatcher extends GroupCountBased
                 $allowedMethods[$method] = true;
             }
         }
+
+        $this->allowedMethodsUri = $uri;
+
+        return $this->allowedMethods = array_keys($allowedMethods);
+    }
+}

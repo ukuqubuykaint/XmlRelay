@@ -316,3 +316,4 @@ class ErrorMiddlewareTest extends TestCase
 
         $this->expectOutputString('Oops..');
     }
+}

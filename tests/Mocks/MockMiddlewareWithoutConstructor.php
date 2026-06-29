@@ -35,3 +35,4 @@ class MockMiddlewareWithoutConstructor implements MiddlewareInterface
 
         return $handler->handle($request);
     }
+}

@@ -176,3 +176,144 @@ class ErrorMiddlewareTest extends TestCase
         $callableResolver = $app->getCallableResolver();
         $logger = $this->getMockLogger();
 
+        $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+
+        $app->add(function ($request, $handler) {
+            throw new InvalidArgumentException('This is a subclass of LogicException...');
+        });
+
+        $middleware->setErrorHandler(LogicException::class, (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;
+        })->bindTo($this), true); // - true; handle subclass
+
+        $middleware->setDefaultErrorHandler((function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;
+        })->bindTo($this));
+
+        $app->add($middleware);
+
+        $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('...');
+            return $response;
+        });
+
+        $request = $this->createServerRequest('/foo');
+        $app->run($request);
+
+        $this->expectOutputString('This is a subclass of LogicException...');
+    }
+
+    public function testSuperclassExceptionHandlerDoesNotHandleSubclassException()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+
+        $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+
+        $app->add(function ($request, $handler) {
+            throw new InvalidArgumentException('This is a subclass of LogicException...');
+        });
+
+        $middleware->setErrorHandler(LogicException::class, (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;
+        })->bindTo($this), false); // - false; don't handle subclass
+
+        $middleware->setDefaultErrorHandler((function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;
+        })->bindTo($this));
+
+        $app->add($middleware);
+
+        $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('...');
+            return $response;
+        });
+
+        $request = $this->createServerRequest('/foo');
+        $app->run($request);
+
+        $this->expectOutputString('Oops..');
+    }
+
+    public function testHandleMultipleExceptionsAddedAsArray()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+
+        $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+
+        $app->add(function ($request, $handler) {
+            throw new InvalidArgumentException('This is an invalid argument exception...');
+        });
+
+        $handler = (function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;
+        });
+
+        $middleware->setErrorHandler([LogicException::class, InvalidArgumentException::class], $handler->bindTo($this));
+
+        $middleware->setDefaultErrorHandler((function () {
+            $response = $this->createResponse();
+            $response->getBody()->write('Oops..');
+            return $response;
+        })->bindTo($this));
+
+        $app->add($middleware);
+
+        $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('...');
+            return $response;
+        });
+
+        $request = $this->createServerRequest('/foo');
+        $app->run($request);
+
+        $this->expectOutputString('This is an invalid argument exception...');
+    }
+
+    public function testErrorHandlerHandlesThrowables()
+    {
+        $responseFactory = $this->getResponseFactory();
+        $app = new App($responseFactory);
+        $callableResolver = $app->getCallableResolver();
+        $logger = $this->getMockLogger();
+
+        $middleware = new ErrorMiddleware($callableResolver, $this->getResponseFactory(), false, false, false, $logger);
+
+        $app->add(function ($request, $handler) {
+            throw new Error('Oops..');
+        });
+
+        $middleware->setDefaultErrorHandler((function (ServerRequestInterface $request, $exception) {
+            $response = $this->createResponse();
+            $response->getBody()->write($exception->getMessage());
+            return $response;
+        })->bindTo($this));
+
+        $app->add($middleware);
+
+        $app->get('/foo', function (ServerRequestInterface $request, ResponseInterface $response) {
+            $response->getBody()->write('...');
+            return $response;
+        });
+
+        $request = $this->createServerRequest('/foo');
+        $app->run($request);
+
+        $this->expectOutputString('Oops..');
+    }
+}

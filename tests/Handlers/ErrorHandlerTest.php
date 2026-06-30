@@ -358,3 +358,6 @@ class ErrorHandlerTest extends TestCase
         $this->setAccessible($defaultErrorRendererContentTypeProperty);
         $defaultErrorRendererContentType = $defaultErrorRendererContentTypeProperty->getValue($handler);
 
+        $this->assertSame(PlainTextErrorRenderer::class, $defaultErrorRenderer);
+        $this->assertSame('text/plain', $defaultErrorRendererContentType);
+    }

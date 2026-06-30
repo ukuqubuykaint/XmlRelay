@@ -512,3 +512,6 @@ class CallableResolverTest extends TestCase
 
         /** @var ContainerInterface $container */
         $container = $this->containerProphecy->reveal();
+        $resolver = new CallableResolver($container);
+        $resolver->resolveMiddleware('Unknown:notFound');
+    }

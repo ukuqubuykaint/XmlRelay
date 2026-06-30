@@ -364,3 +364,4 @@ class ErrorHandlerTest extends TestCase
 
     public function testOptions()
     {
+        $request = $this->createServerRequest('/', 'OPTIONS');

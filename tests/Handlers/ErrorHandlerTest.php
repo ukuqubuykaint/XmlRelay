@@ -361,3 +361,6 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame(PlainTextErrorRenderer::class, $defaultErrorRenderer);
         $this->assertSame('text/plain', $defaultErrorRendererContentType);
     }
+
+    public function testOptions()
+    {

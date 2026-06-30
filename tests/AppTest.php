@@ -840,3 +840,6 @@ class AppTest extends TestCase
 
         $app = new App($responseFactoryProphecy->reveal());
         $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) use (&$output) {
+            $output .= 'Center';
+            return $response;
+        })

@@ -356,3 +356,7 @@ class Route implements RouteInterface, RequestHandlerInterface
             && !in_array(RequestHandlerInvocationStrategyInterface::class, $strategyImplements)
         ) {
             $strategy = new RequestHandler();
+        }
+
+        $response = $this->responseFactory->createResponse();
+        return $strategy($callable, $request, $response, $this->arguments);

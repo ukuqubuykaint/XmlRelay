@@ -843,3 +843,6 @@ class AppTest extends TestCase
             $output .= 'Center';
             return $response;
         })
+            ->add($middlewareProphecy->reveal())
+            ->addMiddleware($middlewareProphecy2->reveal());
+

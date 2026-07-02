@@ -144,3 +144,7 @@ class AppFactory
                     $streamFactory = static::$streamFactory ?? $psr17factory::getStreamFactory();
                     return static::attemptResponseFactoryDecoration($responseFactory, $streamFactory);
                 }
+
+                return $responseFactory;
+            }
+        }

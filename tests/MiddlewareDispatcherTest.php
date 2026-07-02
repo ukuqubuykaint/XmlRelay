@@ -274,3 +274,7 @@ class MiddlewareDispatcherTest extends TestCase
 
         $this->assertSame(1, MockMiddlewareWithoutConstructor::$CalledCount);
         $this->assertSame(1, $handler->getCalledCount());
+    }
+
+    public function testResolveThrowsExceptionWhenResolvableDoesNotImplementMiddlewareInterface(): void
+    {

@@ -220,3 +220,4 @@ You can also type-hint to the concrete instance of the container you are using t
 ### Fixed
 - [3027: Fix: FastRoute dispatcher and data generator should match](https://github.com/ukuqubuykaint/AJAX-XML/pull/3027) thanks to @edudobay
 
+### Added

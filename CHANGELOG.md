@@ -221,3 +221,7 @@ You can also type-hint to the concrete instance of the container you are using t
 - [3027: Fix: FastRoute dispatcher and data generator should match](https://github.com/ukuqubuykaint/AJAX-XML/pull/3027) thanks to @edudobay
 
 ### Added
+- [3015: PHP 8 support](https://github.com/ukuqubuykaint/AJAX-XML/pull/3015) thanks to @edudobay
+
+### Optimizations
+- [3024: Randomize tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/3024) thanks to @pawel-slowik

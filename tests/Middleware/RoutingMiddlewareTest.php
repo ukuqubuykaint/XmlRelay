@@ -133,3 +133,6 @@ class RoutingMiddlewareTest extends TestCase
         } catch (HttpNotFoundException $exception) {
             $request = $exception->getRequest();
 
+            // route is not available
+            $route = $request->getAttribute(RouteContext::ROUTE);
+            $this->assertNull($route);

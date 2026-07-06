@@ -153,3 +153,4 @@ class ErrorHandler implements ErrorHandlerInterface
     {
         if ($this->method === 'OPTIONS') {
             return 200;
+        }

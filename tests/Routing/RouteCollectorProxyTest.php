@@ -397,3 +397,5 @@ class RouteCollectorProxyTest extends TestCase
             ->withHeader('Location', $to)
             ->willReturn($responseProphecy->reveal())
             ->shouldBeCalledOnce();
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);

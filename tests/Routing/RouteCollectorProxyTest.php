@@ -399,3 +399,7 @@ class RouteCollectorProxyTest extends TestCase
             ->shouldBeCalledOnce();
 
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->will(function () use ($responseProphecy) {
+                $this

@@ -522,3 +522,4 @@ class CallableResolverTest extends TestCase
         $this->expectExceptionMessage('Callable Unknown::notFound() does not exist');
 
         /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();

@@ -497,3 +497,7 @@ class MiddlewareDispatcherTest extends TestCase
         $dispatcher->add($middlewareProphecy->reveal());
 
         $response1 = $dispatcher->handle($requestProphecy->reveal());
+        $response2 = $dispatcher->handle($requestProphecy->reveal());
+
+        $this->assertSame($responseProphecy->reveal(), $response1);
+        $this->assertSame($responseProphecy->reveal(), $response2);

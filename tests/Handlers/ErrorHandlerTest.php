@@ -368,3 +368,4 @@ class ErrorHandlerTest extends TestCase
         $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
         $exception = new HttpMethodNotAllowedException($request);
         $exception->setAllowedMethods(['POST', 'PUT']);
+

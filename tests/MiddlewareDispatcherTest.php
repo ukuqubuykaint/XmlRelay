@@ -501,3 +501,5 @@ class MiddlewareDispatcherTest extends TestCase
 
         $this->assertSame($responseProphecy->reveal(), $response1);
         $this->assertSame($responseProphecy->reveal(), $response2);
+        $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldNotHaveBeenCalled();
+    }

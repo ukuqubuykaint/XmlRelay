@@ -503,3 +503,5 @@ class MiddlewareDispatcherTest extends TestCase
         $this->assertSame($responseProphecy->reveal(), $response2);
         $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldNotHaveBeenCalled();
     }
+
+    public function testCanBeReExecutedRecursivelyDuringDispatch(): void

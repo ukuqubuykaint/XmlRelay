@@ -505,3 +505,6 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testCanBeReExecutedRecursivelyDuringDispatch(): void
+    {
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $responseProphecy = $this->prophesize(ResponseInterface::class);

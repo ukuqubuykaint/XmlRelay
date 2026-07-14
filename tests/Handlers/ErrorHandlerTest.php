@@ -369,3 +369,7 @@ class ErrorHandlerTest extends TestCase
         $exception = new HttpMethodNotAllowedException($request);
         $exception->setAllowedMethods(['POST', 'PUT']);
 
+        /** @var ResponseInterface $res */
+        $res = $handler->__invoke($request, $exception, true, false, true);
+
+        $this->assertSame(200, $res->getStatusCode());

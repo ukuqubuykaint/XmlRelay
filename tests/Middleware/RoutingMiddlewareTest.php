@@ -136,3 +136,7 @@ class RoutingMiddlewareTest extends TestCase
             // route is not available
             $route = $request->getAttribute(RouteContext::ROUTE);
             $this->assertNull($route);
+
+            // routeParser is available
+            $routeParser = $request->getAttribute(RouteContext::ROUTE_PARSER);
+            $this->assertNotNull($routeParser);

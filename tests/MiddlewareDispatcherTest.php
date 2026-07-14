@@ -282,3 +282,4 @@ class MiddlewareDispatcherTest extends TestCase
         $this->expectExceptionMessage('MiddlewareInterfaceNotImplemented is not resolvable');
 
         $containerProphecy = $this->prophesize(ContainerInterface::class);
+

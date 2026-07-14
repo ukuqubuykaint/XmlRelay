@@ -403,3 +403,6 @@ class RouteCollectorProxyTest extends TestCase
             ->createResponse()
             ->will(function () use ($responseProphecy) {
                 $this
+                    ->createResponse(302)
+                    ->willReturn($responseProphecy)
+                    ->shouldBeCalledOnce();

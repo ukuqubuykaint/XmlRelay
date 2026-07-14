@@ -526,3 +526,6 @@ class CallableResolverTest extends TestCase
         $resolver = new CallableResolver($container);
         $resolver->resolve(['Unknown', 'notFound']);
     }
+
+    public function testRouteCallableClassNotFoundThrowException(): void
+    {

@@ -376,3 +376,4 @@ class ErrorHandlerTest extends TestCase
         $this->assertTrue($res->hasHeader('Allow'));
         $this->assertSame('POST, PUT', $res->getHeaderLine('Allow'));
     }
+

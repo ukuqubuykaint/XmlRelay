@@ -858,3 +858,6 @@ class AppTest extends TestCase
             return $this;
         });
 
+        $app->handle($requestProphecy->reveal());
+
+        $this->assertSame('In2In1CenterOut1Out2', $output);

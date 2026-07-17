@@ -243,3 +243,7 @@ class ErrorHandlerTest extends TestCase
 
         $this->assertNull($contentType);
     }
+
+    public function testDetermineContentTypeTextPlainMultiAcceptHeader()
+    {
+        $request = $this

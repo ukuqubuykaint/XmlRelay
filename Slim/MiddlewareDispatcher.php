@@ -199,3 +199,4 @@ class MiddlewareDispatcher implements MiddlewareDispatcherInterface
                         $resolved = $matches[1];
                         $method = $matches[2];
                     }
+

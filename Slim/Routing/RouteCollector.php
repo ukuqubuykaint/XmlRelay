@@ -163,3 +163,6 @@ class RouteCollector implements RouteCollectorInterface
     /**
      * Set the base path used in urlFor()
      */
+    public function setBasePath(string $basePath): RouteCollectorInterface
+    {
+        $this->basePath = $basePath;

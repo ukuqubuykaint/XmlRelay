@@ -283,3 +283,5 @@ class MiddlewareDispatcherTest extends TestCase
 
         $containerProphecy = $this->prophesize(ContainerInterface::class);
 
+        $containerProphecy
+            ->has('MiddlewareInterfaceNotImplemented')

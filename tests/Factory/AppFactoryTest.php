@@ -197,3 +197,4 @@ class AppFactoryTest extends TestCase
             $routeResolverProphecy->reveal(),
             $app->getRouteResolver()
         );
+

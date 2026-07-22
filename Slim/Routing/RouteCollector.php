@@ -166,3 +166,6 @@ class RouteCollector implements RouteCollectorInterface
     public function setBasePath(string $basePath): RouteCollectorInterface
     {
         $this->basePath = $basePath;
+
+        return $this;
+    }

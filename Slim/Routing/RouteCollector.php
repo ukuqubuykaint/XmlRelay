@@ -169,3 +169,7 @@ class RouteCollector implements RouteCollectorInterface
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */

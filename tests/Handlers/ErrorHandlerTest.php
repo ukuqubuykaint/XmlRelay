@@ -377,3 +377,4 @@ class ErrorHandlerTest extends TestCase
         $this->assertSame('POST, PUT', $res->getHeaderLine('Allow'));
     }
 
+    public function testWriteToErrorLog()

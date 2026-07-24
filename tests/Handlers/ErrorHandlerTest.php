@@ -381,3 +381,5 @@ class ErrorHandlerTest extends TestCase
     {
         $request = $this
             ->createServerRequest('/', 'GET')
+            ->withHeader('Accept', 'application/json');
+

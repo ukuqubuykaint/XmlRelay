@@ -867,3 +867,4 @@ class AppTest extends TestCase
     {
         $output = '';
 
+        $streamProphecy = $this->prophesize(StreamInterface::class);

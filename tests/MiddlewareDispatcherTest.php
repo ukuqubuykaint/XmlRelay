@@ -510,3 +510,5 @@ class MiddlewareDispatcherTest extends TestCase
         $responseProphecy = $this->prophesize(ResponseInterface::class);
         $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);
 
+        $requestProphecy->hasHeader('X-NESTED')->willReturn(false);
+        $requestProphecy->withAddedHeader('X-NESTED', '1')->will(function () {

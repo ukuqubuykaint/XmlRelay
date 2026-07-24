@@ -863,3 +863,5 @@ class AppTest extends TestCase
         $this->assertSame('In2In1CenterOut1Out2', $output);
     }
 
+    public function testAddMiddlewareOnRouteGroup(): void
+    {

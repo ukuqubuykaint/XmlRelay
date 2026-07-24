@@ -378,3 +378,6 @@ class ErrorHandlerTest extends TestCase
     }
 
     public function testWriteToErrorLog()
+    {
+        $request = $this
+            ->createServerRequest('/', 'GET')

@@ -424,3 +424,5 @@ class RouteCollectorProxyTest extends TestCase
 
         $route = $routeCollectorProxy->redirect($from, $to);
         $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+

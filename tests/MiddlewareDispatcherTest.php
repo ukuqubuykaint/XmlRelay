@@ -512,3 +512,6 @@ class MiddlewareDispatcherTest extends TestCase
 
         $requestProphecy->hasHeader('X-NESTED')->willReturn(false);
         $requestProphecy->withAddedHeader('X-NESTED', '1')->will(function () {
+            $this->hasHeader('X-NESTED')->willReturn(true);
+            return $this;
+        });

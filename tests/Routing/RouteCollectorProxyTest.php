@@ -421,3 +421,6 @@ class RouteCollectorProxyTest extends TestCase
             $containerProphecy->reveal(),
             $routeCollector
         );
+
+        $route = $routeCollectorProxy->redirect($from, $to);
+        $request = $this->createServerRequest('/');

@@ -198,3 +198,4 @@ class AppFactoryTest extends TestCase
             $app->getRouteResolver()
         );
 
+        $this->assertSame(

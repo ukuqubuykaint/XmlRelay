@@ -56,3 +56,4 @@ class PlainTextErrorRenderer extends AbstractErrorRenderer
 
         return $text;
     }
+}

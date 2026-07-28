@@ -265,3 +265,4 @@ class MockStream implements StreamInterface
 
         return $meta[$key] ?? null;
     }
+}

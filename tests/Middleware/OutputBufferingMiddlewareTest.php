@@ -125,3 +125,4 @@ class OutputBufferingMiddlewareTest extends TestCase
             $this->assertSame('', ob_get_contents());
         }
     }
+}

@@ -37,3 +37,4 @@ class InvocationStrategyTest implements InvocationStrategyInterface
         static::$LastCalledFor = $callable;
         return $response;
     }
+}

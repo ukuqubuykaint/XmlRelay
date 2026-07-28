@@ -184,3 +184,85 @@ class MockStream implements StreamInterface
         return $this->seekable;
     }
 
+    public function seek($offset, $whence = SEEK_SET): void
+    {
+        if (!$this->seekable) {
+            throw new RuntimeException('Stream is not seekable');
+        }
+
+        if (fseek($this->stream, $offset, $whence) === -1) {
+            throw new RuntimeException(
+                'Unable to seek to stream position '
+                . $offset . ' with whence ' . var_export($whence, true)
+            );
+        }
+    }
+
+    public function rewind(): void
+    {
+        $this->seek(0);
+    }
+
+    public function isWritable(): bool
+    {
+        return $this->writable;
+    }
+
+    public function write($string): int
+    {
+        if (!$this->writable) {
+            throw new RuntimeException('Cannot write to a non-writable stream');
+        }
+
+        // We can't know the size after writing anything
+        $this->size = null;
+
+        if (false === $result = fwrite($this->stream, $string)) {
+            throw new RuntimeException('Unable to write to stream');
+        }
+
+        return $result;
+    }
+
+    public function isReadable(): bool
+    {
+        return $this->readable;
+    }
+
+    public function read($length): string
+    {
+        if (!$this->readable) {
+            throw new RuntimeException('Cannot read from non-readable stream');
+        }
+
+        return fread($this->stream, $length);
+    }
+
+    public function getContents(): string
+    {
+        if (!isset($this->stream)) {
+            throw new RuntimeException('Unable to read stream contents');
+        }
+
+        if (false === $contents = stream_get_contents($this->stream)) {
+            throw new RuntimeException('Unable to read stream contents');
+        }
+
+        return $contents;
+    }
+
+    public function getMetadata($key = null)
+    {
+        if (!isset($this->stream)) {
+            return $key ? null : [];
+        }
+
+        if (null === $key) {
+            return stream_get_meta_data($this->stream);
+        }
+
+        $meta = stream_get_meta_data($this->stream);
+
+        return $meta[$key] ?? null;
+    }
+}

@@ -539,3 +539,13 @@ class CallableResolverTest extends TestCase
     }
 
     public function testMiddlewareCallableClassNotFoundThrowException(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Callable Unknown::notFound() does not exist');
+
+        /** @var ContainerInterface $container */
+        $container = $this->containerProphecy->reveal();
+        $resolver = new CallableResolver($container);
+        $resolver->resolveMiddleware(['Unknown', 'notFound']);
+    }
+}

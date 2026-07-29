@@ -85,3 +85,4 @@ class ServerRequestCreatorFactory
     {
         static::$slimHttpDecoratorsAutomaticDetectionEnabled = $enabled;
     }
+}

@@ -515,3 +515,7 @@ class MiddlewareDispatcherTest extends TestCase
             $this->hasHeader('X-NESTED')->willReturn(true);
             return $this;
         });
+
+        $responseProphecy->getHeader(Argument::type('string'))->willReturn([]);
+        $responseProphecy->withAddedHeader(Argument::type('string'), Argument::type('string'))->will(function ($args) {
+            $headers = $this->reveal()->getHeader($args[0]);

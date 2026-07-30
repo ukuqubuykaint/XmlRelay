@@ -426,3 +426,7 @@ class RouteCollectorProxyTest extends TestCase
         $request = $this->createServerRequest('/');
         $response = $route->run($request);
 
+        $this->assertSame($responseProphecy->reveal(), $response);
+    }
+
+    public function testGroup()

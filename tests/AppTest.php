@@ -879,3 +879,7 @@ class AppTest extends TestCase
         $middlewareProphecy = $this->prophesize(MiddlewareInterface::class);
         $middlewareProphecy->process(
             Argument::type(ServerRequestInterface::class),
+            Argument::type(RequestHandlerInterface::class)
+        )->will(function ($args) use (&$output) {
+            /** @var ServerRequestInterface $request */
+            $request = $args[0];

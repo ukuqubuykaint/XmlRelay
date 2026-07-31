@@ -383,3 +383,7 @@ class ErrorHandlerTest extends TestCase
             ->createServerRequest('/', 'GET')
             ->withHeader('Accept', 'application/json');
 
+        $logger = $this->getMockLogger();
+
+        $handler = new ErrorHandler(
+            $this->getCallableResolver(),

@@ -432,3 +432,7 @@ class RouteCollectorProxyTest extends TestCase
     public function testGroup()
     {
         $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/group';
+        $callable = function () {

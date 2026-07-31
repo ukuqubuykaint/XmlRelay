@@ -883,3 +883,7 @@ class AppTest extends TestCase
         )->will(function ($args) use (&$output) {
             /** @var ServerRequestInterface $request */
             $request = $args[0];
+
+            /** @var RequestHandlerInterface $handler */
+            $handler = $args[1];
+

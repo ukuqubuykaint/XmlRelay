@@ -436,3 +436,6 @@ class RouteCollectorProxyTest extends TestCase
 
         $pattern = '/group';
         $callable = function () {
+        };
+
+        $routeGroupProphecy = $this->prophesize(RouteGroupInterface::class);

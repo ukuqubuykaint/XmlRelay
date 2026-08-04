@@ -389,3 +389,7 @@ class ErrorHandlerTest extends TestCase
             $this->getCallableResolver(),
             $this->getResponseFactory(),
             $logger
+        );
+
+        $logger->expects(self::once())
+            ->method('error')

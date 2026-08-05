@@ -397,3 +397,7 @@ class ErrorHandlerTest extends TestCase
                 self::assertStringNotContainsString(
                     'set "displayErrorDetails" to true in the ErrorHandler constructor',
                     $error
+                );
+            });
+
+        $exception = new HttpNotFoundException($request);

@@ -527,3 +527,4 @@ class MiddlewareDispatcherTest extends TestCase
         });
 
         /** @var RequestHandlerInterface $kernel */
+        $kernel = $kernelProphecy->reveal();

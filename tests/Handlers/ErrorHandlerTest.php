@@ -393,3 +393,7 @@ class ErrorHandlerTest extends TestCase
 
         $logger->expects(self::once())
             ->method('error')
+            ->willReturnCallback(static function (string $error) {
+                self::assertStringNotContainsString(
+                    'set "displayErrorDetails" to true in the ErrorHandler constructor',
+                    $error

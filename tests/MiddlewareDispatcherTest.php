@@ -522,3 +522,4 @@ class MiddlewareDispatcherTest extends TestCase
 
             $headers[] = $args[1];
             $this->getHeader($args[0])->willReturn($headers);
+            $this->hasHeader($args[0])->willReturn(true);

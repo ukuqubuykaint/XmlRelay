@@ -526,3 +526,4 @@ class MiddlewareDispatcherTest extends TestCase
             return $this;
         });
 
+        /** @var RequestHandlerInterface $kernel */

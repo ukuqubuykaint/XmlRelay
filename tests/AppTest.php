@@ -902,3 +902,4 @@ class AppTest extends TestCase
             Argument::type(ServerRequestInterface::class),
             Argument::type(RequestHandlerInterface::class)
         )->will(function ($args) use (&$output) {
+            /** @var ServerRequestInterface $request */

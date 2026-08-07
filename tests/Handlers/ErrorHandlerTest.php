@@ -406,3 +406,5 @@ class ErrorHandlerTest extends TestCase
 
     public function testWriteToErrorLogShowTip()
     {
+        $request = $this
+            ->createServerRequest('/', 'GET')

@@ -530,3 +530,4 @@ class MiddlewareDispatcherTest extends TestCase
         $kernel = $kernelProphecy->reveal();
         $dispatcher = $this->createMiddlewareDispatcher($kernel, null);
 
+        $middlewareProphecy = $this->prophesize(MiddlewareInterface::class);

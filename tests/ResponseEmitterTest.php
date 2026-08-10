@@ -182,3 +182,4 @@ class ResponseEmitterTest extends TestCase
     }
 
     public function testIsResponseEmptyDoesNotReadAllDataFromNonEmptySeekableResponse(): void
+    {

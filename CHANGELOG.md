@@ -235,3 +235,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [2982: Removing cloning statements in tests](https://github.com/ukuqubuykaint/AJAX-XML/pull/2982) thanks to @l0gicgate
 - [3017: Fix request creator factory test](https://github.com/ukuqubuykaint/AJAX-XML/pull/3017) thanks to @pawel-slowik
 - [3022: Ensure RouteParser Always Present After Routing](https://github.com/ukuqubuykaint/AJAX-XML/pull/3022) thanks to @l0gicgate
+

@@ -411,3 +411,7 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Accept', 'application/json');
 
         $logger = $this->getMockLogger();
+
+        $handler = new ErrorHandler(
+            $this->getCallableResolver(),
+            $this->getResponseFactory(),

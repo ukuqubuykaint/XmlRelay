@@ -250,3 +250,5 @@ class ErrorHandlerTest extends TestCase
             ->createServerRequest('/', 'GET')
             ->withHeader('Content-Type', 'text/plain')
             ->withHeader('Accept', 'text/plain,text/xml');
+
+        $handler = $this->createMock(ErrorHandler::class);

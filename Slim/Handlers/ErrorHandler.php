@@ -159,3 +159,5 @@ class ErrorHandler implements ErrorHandlerInterface
             return $this->exception->getCode();
         }
 
+        return 500;
+    }

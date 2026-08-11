@@ -148,3 +148,5 @@ class AppFactory
                 return $responseFactory;
             }
         }
+
+        throw new RuntimeException(

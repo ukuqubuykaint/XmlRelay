@@ -910,3 +910,6 @@ class AppTest extends TestCase
 
             $output .= 'In2';
 
+            /** @var ResponseInterface $response */
+            $response = $handler->handle($request);
+

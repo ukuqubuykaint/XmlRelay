@@ -252,3 +252,5 @@ class ErrorHandlerTest extends TestCase
             ->withHeader('Accept', 'text/plain,text/xml');
 
         $handler = $this->createMock(ErrorHandler::class);
+
+        $errorRenderers = [

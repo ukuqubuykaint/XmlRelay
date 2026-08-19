@@ -184,3 +184,7 @@ class RouteCollectorTest extends TestCase
 
         $routeCollector = new RouteCollector($responseFactoryProphecy->reveal(), $callableResolverProphecy->reveal());
         $routeCollector->setCacheFile($cacheFile);
+    }
+
+    public function testSetCacheFileViaConstructor()
+    {

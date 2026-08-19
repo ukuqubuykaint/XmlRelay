@@ -417,3 +417,6 @@ class ErrorHandlerTest extends TestCase
             $this->getResponseFactory(),
             $logger
         );
+
+        $logger->expects(self::once())
+            ->method('error')

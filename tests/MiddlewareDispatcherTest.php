@@ -537,3 +537,4 @@ class MiddlewareDispatcherTest extends TestCase
                 Argument::type(RequestHandlerInterface::class)
             )
             ->will(function ($args) use ($dispatcher, $responseProphecy): ResponseInterface {
+                $request = $args[0];

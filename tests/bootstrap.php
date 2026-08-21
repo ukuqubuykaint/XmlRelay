@@ -45,3 +45,4 @@ Override::apply($classLoader, [
             return stripos($path, 'non-writable-directory') === false;
         }
     ]
+]);

@@ -14,3 +14,4 @@ If a PR has `WIP` in its title, then it is not to be merged. The person who rais
 
 ## Assign a merged PR to a milestone
 
+By ensuring that all merged PRs are assigned to a milestone, we can easily find which PRs were in which release.

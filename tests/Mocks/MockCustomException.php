@@ -14,3 +14,4 @@ use Exception;
 
 class MockCustomException extends Exception
 {
+}

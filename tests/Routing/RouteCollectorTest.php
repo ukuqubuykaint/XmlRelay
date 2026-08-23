@@ -188,3 +188,19 @@ class RouteCollectorTest extends TestCase
 
     public function testSetCacheFileViaConstructor()
     {
+        $cacheFile = __DIR__ . '/router.cache';
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $routeCollector = new RouteCollector(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            null,
+            null,
+            $cacheFile
+        );
+        $this->assertSame($cacheFile, $routeCollector->getCacheFile());
+    }
+}

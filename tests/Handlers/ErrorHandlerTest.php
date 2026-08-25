@@ -254,3 +254,4 @@ class ErrorHandlerTest extends TestCase
         $handler = $this->createMock(ErrorHandler::class);
 
         $errorRenderers = [
+            'text/plain' => PlainTextErrorRenderer::class,

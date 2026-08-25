@@ -291,3 +291,7 @@ class MiddlewareDispatcherTest extends TestCase
         $containerProphecy
             ->get('MiddlewareInterfaceNotImplemented')
             ->willReturn(new stdClass())
+            ->shouldBeCalledOnce();
+
+        $handler = new MockRequestHandler();
+        $middlewareDispatcher = $this->createMiddlewareDispatcher($handler, $containerProphecy->reveal());

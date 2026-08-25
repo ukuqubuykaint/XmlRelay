@@ -170,3 +170,4 @@ class ErrorHandler implements ErrorHandlerInterface
      * as willdurand/negotiation for any other situation.
      */
     protected function determineContentType(ServerRequestInterface $request): ?string
+    {

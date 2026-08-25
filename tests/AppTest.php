@@ -676,3 +676,4 @@ class AppTest extends TestCase
         $app = new App($responseFactoryProphecy->reveal(), $containerProphecy->reveal());
         $app->add('middleware');
         $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) {
+            return $response;

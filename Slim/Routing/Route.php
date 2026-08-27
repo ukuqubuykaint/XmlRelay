@@ -190,3 +190,6 @@ class Route implements RouteInterface, RequestHandlerInterface
     /**
      * {@inheritdoc}
      */
+    public function getCallable()
+    {
+        return $this->callable;

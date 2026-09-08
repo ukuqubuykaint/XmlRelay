@@ -538,3 +538,7 @@ class MiddlewareDispatcherTest extends TestCase
             )
             ->will(function ($args) use ($dispatcher, $responseProphecy): ResponseInterface {
                 $request = $args[0];
+                if ($request->hasHeader('X-NESTED')) {
+                    return $responseProphecy->reveal()->withAddedHeader('X-TRACE', 'nested');
+                }
+

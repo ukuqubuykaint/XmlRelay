@@ -38,3 +38,4 @@ class RequestResponse implements InvocationStrategyInterface
         /** @var ResponseInterface */
         return $callable($request, $response, $routeArguments);
     }
+}

@@ -176,3 +176,126 @@ class RouteCollector implements RouteCollectorInterface
     public function getRoutes(): array
     {
         return $this->routes;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeNamedRoute(string $name): RouteCollectorInterface
+    {
+        $route = $this->getNamedRoute($name);
+
+        unset($this->routesByName[$name], $this->routes[$route->getIdentifier()]);
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getNamedRoute(string $name): RouteInterface
+    {
+        if (isset($this->routesByName[$name])) {
+            $route = $this->routesByName[$name];
+            if ($route->getName() === $name) {
+                return $route;
+            }
+
+            unset($this->routesByName[$name]);
+        }
+
+        foreach ($this->routes as $route) {
+            if ($name === $route->getName()) {
+                $this->routesByName[$name] = $route;
+                return $route;
+            }
+        }
+
+        throw new RuntimeException('Named route does not exist for name: ' . $name);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function lookupRoute(string $identifier): RouteInterface
+    {
+        if (!isset($this->routes[$identifier])) {
+            throw new RuntimeException('Route not found, looks like your route cache is stale.');
+        }
+        return $this->routes[$identifier];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function group(string $pattern, $callable): RouteGroupInterface
+    {
+        $routeGroup = $this->createGroup($pattern, $callable);
+        $this->routeGroups[] = $routeGroup;
+
+        $routeGroup->collectRoutes();
+        array_pop($this->routeGroups);
+
+        return $routeGroup;
+    }
+
+    /**
+     * @param string|callable $callable
+     */
+    protected function createGroup(string $pattern, $callable): RouteGroupInterface
+    {
+        $routeCollectorProxy = $this->createProxy($pattern);
+        return new RouteGroup($pattern, $callable, $this->callableResolver, $routeCollectorProxy);
+    }
+
+    /**
+     * @return RouteCollectorProxyInterface<TContainerInterface>
+     */
+    protected function createProxy(string $pattern): RouteCollectorProxyInterface
+    {
+        /** @var RouteCollectorProxy<TContainerInterface> */
+        return new RouteCollectorProxy(
+            $this->responseFactory,
+            $this->callableResolver,
+            $this->container,
+            $this,
+            $pattern
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function map(array $methods, string $pattern, $handler): RouteInterface
+    {
+        $route = $this->createRoute($methods, $pattern, $handler);
+        $this->routes[$route->getIdentifier()] = $route;
+
+        $routeName = $route->getName();
+        if ($routeName !== null && !isset($this->routesByName[$routeName])) {
+            $this->routesByName[$routeName] = $route;
+        }
+
+        $this->routeCounter++;
+
+        return $route;
+    }
+
+    /**
+     * @param string[] $methods
+     * @param callable|array{class-string, string}|string $callable
+     */
+    protected function createRoute(array $methods, string $pattern, $callable): RouteInterface
+    {
+        return new Route(
+            $methods,
+            $pattern,
+            $callable,
+            $this->responseFactory,
+            $this->callableResolver,
+            $this->container,
+            $this->defaultInvocationStrategy,
+            $this->routeGroups,
+            $this->routeCounter
+        );
+    }
+}

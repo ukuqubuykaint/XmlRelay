@@ -298,3 +298,4 @@ class RouteCollector implements RouteCollectorInterface
             $this->routeCounter
         );
     }
+}

@@ -124,3 +124,4 @@ class RouteParser implements RouteParserInterface
         $protocol = ($scheme ? $scheme . ':' : '') . ($authority ? '//' . $authority : '');
         return $protocol . $path;
     }
+}

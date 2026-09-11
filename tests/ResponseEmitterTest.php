@@ -288,3 +288,4 @@ class ResponseEmitterTest extends TestCase
         // Tell connection_status() to pass.
         unset($GLOBALS['connection_status_return']);
     }
+}

@@ -921,3 +921,5 @@ class AppTest extends TestCase
         $app = new App($responseFactoryProphecy->reveal());
         $app->group('/foo', function (RouteCollectorProxy $proxy) use (&$output) {
             $proxy->get('/bar', function (ServerRequestInterface $request, ResponseInterface $response) use (&$output) {
+                $output .= 'Center';
+                return $response;

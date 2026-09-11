@@ -423,3 +423,4 @@ class ErrorHandlerTest extends TestCase
             ->willReturnCallback(static function (string $error) {
                 self::assertStringContainsString(
                     'set "displayErrorDetails" to true in the ErrorHandler constructor',
+                    $error

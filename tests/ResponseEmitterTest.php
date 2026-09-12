@@ -184,3 +184,108 @@ class ResponseEmitterTest extends TestCase
     public function testIsResponseEmptyDoesNotReadAllDataFromNonEmptySeekableResponse(): void
     {
         $body = $this->createStream('Hello');
+        $response = $this
+            ->createResponse(200)
+            ->withBody($body);
+        $responseEmitter = new ResponseEmitter();
+
+        $responseEmitter->isResponseEmpty($response);
+
+        $this->assertTrue($body->isSeekable());
+        $this->assertFalse($body->eof());
+    }
+
+    public function testIsResponseEmptyDoesNotDrainNonSeekableResponseWithContent(): void
+    {
+        $resource = popen('echo 12', 'r');
+        $body = $this->getStreamFactory()->createStreamFromResource($resource);
+        $response = $this->createResponse(200)->withBody($body);
+        $responseEmitter = new ResponseEmitter();
+
+        $responseEmitter->isResponseEmpty($response);
+
+        $this->assertFalse($body->isSeekable());
+        $this->assertSame('12', trim((string) $body));
+    }
+
+    public function testAvoidReadFromSlowStreamAccordingToStatus(): void
+    {
+        $body = new SlowPokeStream();
+        $response = $this
+            ->createResponse(204, 'No content')
+            ->withBody($body);
+
+        $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+
+        $this->assertFalse($body->eof());
+        $this->expectOutputString('');
+    }
+
+    public function testIsResponseEmptyWithEmptyBody(): void
+    {
+        $response = $this->createResponse(200);
+        $responseEmitter = new ResponseEmitter();
+
+        $this->assertTrue($responseEmitter->isResponseEmpty($response));
+    }
+
+    public function testIsResponseEmptyWithZeroAsBody(): void
+    {
+        $body = $this->createStream('0');
+        $response = $this
+            ->createResponse(200)
+            ->withBody($body);
+        $responseEmitter = new ResponseEmitter();
+
+        $this->assertFalse($responseEmitter->isResponseEmpty($response));
+    }
+
+    public function testWillHandleInvalidConnectionStatusWithADeterminateBody(): void
+    {
+        $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://temp', 'r+'));
+        $body->write('Hello!' . "\n");
+        $body->write('Hello!' . "\n");
+
+        // Tell connection_status() to fail.
+        $GLOBALS['connection_status_return'] = CONNECTION_ABORTED;
+
+        $response = $this
+            ->createResponse()
+            ->withHeader('Content-Length', $body->getSize())
+            ->withBody($body);
+
+        $responseEmitter = new ResponseEmitter();
+        $responseEmitter->emit($response);
+
+        $this->expectOutputString("Hello!\nHello!\n");
+
+        // Tell connection_status() to pass.
+        unset($GLOBALS['connection_status_return']);
+    }
+
+    public function testWillHandleInvalidConnectionStatusWithAnIndeterminateBody(): void
+    {
+        $body = $this->getStreamFactory()->createStreamFromResource(fopen('php://input', 'r+'));
+
+        // Tell connection_status() to fail.
+        $GLOBALS['connection_status_return'] = CONNECTION_TIMEOUT;
+
+        $response = $this
+            ->createResponse()
+            ->withBody($body);
+
+
+        $responseEmitter = new ResponseEmitter();
+
+        $mirror = new ReflectionClass(ResponseEmitter::class);
+        $emitBodyMethod = $mirror->getMethod('emitBody');
+        $this->setAccessible($emitBodyMethod);
+        $emitBodyMethod->invoke($responseEmitter, $response);
+
+        $this->expectOutputString("");
+
+        // Tell connection_status() to pass.
+        unset($GLOBALS['connection_status_return']);
+    }
+}

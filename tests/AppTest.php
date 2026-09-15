@@ -923,3 +923,7 @@ class AppTest extends TestCase
             $proxy->get('/bar', function (ServerRequestInterface $request, ResponseInterface $response) use (&$output) {
                 $output .= 'Center';
                 return $response;
+            });
+        })
+            ->add($middlewareProphecy->reveal())
+            ->addMiddleware($middlewareProphecy2->reveal());

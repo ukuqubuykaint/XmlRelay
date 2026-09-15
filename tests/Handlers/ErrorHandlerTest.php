@@ -424,3 +424,5 @@ class ErrorHandlerTest extends TestCase
                 self::assertStringContainsString(
                     'set "displayErrorDetails" to true in the ErrorHandler constructor',
                     $error
+                );
+            });

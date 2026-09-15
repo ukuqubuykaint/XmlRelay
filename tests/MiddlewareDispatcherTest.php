@@ -546,3 +546,4 @@ class MiddlewareDispatcherTest extends TestCase
 
                 return $response->withAddedHeader('X-TRACE', 'outer');
             });
+        $dispatcher->add($middlewareProphecy->reveal());

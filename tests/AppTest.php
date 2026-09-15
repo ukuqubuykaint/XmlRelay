@@ -927,3 +927,7 @@ class AppTest extends TestCase
         })
             ->add($middlewareProphecy->reveal())
             ->addMiddleware($middlewareProphecy2->reveal());
+
+        $uriProphecy = $this->prophesize(UriInterface::class);
+        $uriProphecy->getPath()->willReturn('/foo/bar');
+

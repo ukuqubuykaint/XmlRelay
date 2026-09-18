@@ -931,3 +931,6 @@ class AppTest extends TestCase
         $uriProphecy = $this->prophesize(UriInterface::class);
         $uriProphecy->getPath()->willReturn('/foo/bar');
 
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $requestProphecy->getMethod()->willReturn('GET');
+        $requestProphecy->getUri()->willReturn($uriProphecy->reveal());

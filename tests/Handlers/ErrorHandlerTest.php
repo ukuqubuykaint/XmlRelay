@@ -426,3 +426,7 @@ class ErrorHandlerTest extends TestCase
                     $error
                 );
             });
+
+        $exception = new HttpNotFoundException($request);
+        $handler->__invoke($request, $exception, false, true, true);
+    }

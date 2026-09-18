@@ -547,3 +547,7 @@ class MiddlewareDispatcherTest extends TestCase
                 return $response->withAddedHeader('X-TRACE', 'outer');
             });
         $dispatcher->add($middlewareProphecy->reveal());
+
+        $response = $dispatcher->handle($requestProphecy->reveal());
+
+        $this->assertSame(['nested', 'outer'], $response->getHeader('X-TRACE'));

@@ -174,3 +174,6 @@ class ErrorHandler implements ErrorHandlerInterface
         $acceptHeader = $request->getHeaderLine('Accept');
         $selectedContentTypes = array_intersect(
             explode(',', $acceptHeader),
+            array_keys($this->errorRenderers)
+        );
+        $count = count($selectedContentTypes);

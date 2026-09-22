@@ -430,3 +430,5 @@ class ErrorHandlerTest extends TestCase
         $exception = new HttpNotFoundException($request);
         $handler->__invoke($request, $exception, false, true, true);
     }
+
+    public function testWriteToErrorLogDoesNotShowTipIfErrorLogRendererIsNotPlainText()

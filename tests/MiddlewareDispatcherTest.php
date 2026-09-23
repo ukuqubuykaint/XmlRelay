@@ -554,3 +554,4 @@ class MiddlewareDispatcherTest extends TestCase
     }
 
     public function testFetchesMiddlewareFromContainer(): void
+    {

@@ -938,3 +938,7 @@ class AppTest extends TestCase
         $requestProphecy->withAttribute(Argument::type('string'), Argument::any())->will(function ($args) {
             $this->getAttribute($args[0])->willReturn($args[1]);
             return $this;
+        });
+
+        $app->handle($requestProphecy->reveal());
+

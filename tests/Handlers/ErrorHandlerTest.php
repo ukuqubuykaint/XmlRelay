@@ -432,3 +432,4 @@ class ErrorHandlerTest extends TestCase
     }
 
     public function testWriteToErrorLogDoesNotShowTipIfErrorLogRendererIsNotPlainText()
+    {

@@ -50,3 +50,4 @@ class HttpExceptionTest extends TestCase
         $this->assertSame([], $exception->getAllowedMethods());
         $this->assertSame('Method not allowed.', $exception->getMessage());
     }
+}

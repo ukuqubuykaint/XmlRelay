@@ -59,3 +59,4 @@ interface PSR7ObjectProviderInterface
      * @return StreamInterface
      */
     public function createStream(string $contents = ''): StreamInterface;
+}

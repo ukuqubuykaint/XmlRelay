@@ -555,3 +555,43 @@ class MiddlewareDispatcherTest extends TestCase
 
     public function testFetchesMiddlewareFromContainer(): void
     {
+        $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+
+        $middlewareProphecy = $this->prophesize(MiddlewareInterface::class);
+        $middlewareProphecy->process(Argument::cetera())->willReturn($responseProphecy->reveal());
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has('somemiddlewarename')->willReturn(true);
+        $containerProphecy->get('somemiddlewarename')->willReturn($middlewareProphecy->reveal());
+        /** @var ContainerInterface $container */
+        $container = $containerProphecy->reveal();
+        /** @var RequestHandlerInterface $kernel */
+        $kernel = $kernelProphecy->reveal();
+        $dispatcher = $this->createMiddlewareDispatcher($kernel, $container);
+        $dispatcher->addDeferred('somemiddlewarename');
+        $response = $dispatcher->handle($requestProphecy->reveal());
+
+        $this->assertSame($responseProphecy->reveal(), $response);
+        $kernelProphecy->handle(Argument::type(ServerRequestInterface::class))->shouldNotHaveBeenCalled();
+    }
+
+    public function testMiddlewareGetsInstantiatedWithContainer(): void
+    {
+        $kernelProphecy = $this->prophesize(RequestHandlerInterface::class);
+        $requestProphecy = $this->prophesize(ServerRequestInterface::class);
+
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $containerProphecy->has(MockMiddlewareWithConstructor::class)->willReturn(false);
+        /** @var ContainerInterface $container */
+        $container = $containerProphecy->reveal();
+        /** @var RequestHandlerInterface $kernel */
+        $kernel = $kernelProphecy->reveal();
+        $dispatcher = $this->createMiddlewareDispatcher($kernel, $container);
+        $dispatcher->addDeferred(MockMiddlewareWithConstructor::class);
+        $dispatcher->handle($requestProphecy->reveal());
+
+        $this->assertSame($containerProphecy->reveal(), MockMiddlewareWithConstructor::$container);
+    }
+}

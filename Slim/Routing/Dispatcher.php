@@ -75,3 +75,4 @@ class Dispatcher implements DispatcherInterface
         $dispatcher = $this->createDispatcher();
         return $dispatcher->getAllowedMethods($uri);
     }
+}

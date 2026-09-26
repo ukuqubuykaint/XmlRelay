@@ -97,3 +97,4 @@ class SlimHttpServerRequestCreatorTest extends TestCase
 
         $slimHttpServerRequestCreator->createServerRequestFromGlobals();
     }
+}

@@ -161,3 +161,4 @@ class DispatcherTest extends TestCase
         $this->assertSame(RoutingResults::FOUND, $results->getRouteStatus());
         $this->assertSame(['file' => '%2e%2e%2fetc%2fpasswd'], $results->getRouteArguments());
     }
+}

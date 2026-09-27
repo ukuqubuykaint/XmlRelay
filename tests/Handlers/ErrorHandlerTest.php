@@ -255,3 +255,5 @@ class ErrorHandlerTest extends TestCase
 
         $errorRenderers = [
             'text/plain' => PlainTextErrorRenderer::class,
+            'text/xml' => XmlErrorRenderer::class,
+        ];

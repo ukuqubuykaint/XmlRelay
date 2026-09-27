@@ -50,3 +50,4 @@ class RouteRunnerTest extends TestCase
         $middlewareDispatcher = new MiddlewareDispatcher($dispatcher, $callableResolver);
         $middlewareDispatcher->handle($request);
     }
+}

@@ -148,3 +148,5 @@ class RoutingMiddlewareTest extends TestCase
             $this->assertSame(Dispatcher::NOT_FOUND, $routingResults->getRouteStatus());
         }
     }
+
+    public function testPerformRoutingThrowsExceptionOnInvalidRoutingResultsRouteStatus()

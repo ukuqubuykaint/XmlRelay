@@ -177,3 +177,5 @@ class ErrorHandler implements ErrorHandlerInterface
             array_keys($this->errorRenderers)
         );
         $count = count($selectedContentTypes);
+
+        if ($count) {

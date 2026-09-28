@@ -433,3 +433,6 @@ class ErrorHandlerTest extends TestCase
 
     public function testWriteToErrorLogDoesNotShowTipIfErrorLogRendererIsNotPlainText()
     {
+        $request = $this
+            ->createServerRequest('/', 'GET')
+            ->withHeader('Accept', 'application/json');

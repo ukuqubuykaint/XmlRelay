@@ -436,3 +436,7 @@ class ErrorHandlerTest extends TestCase
         $request = $this
             ->createServerRequest('/', 'GET')
             ->withHeader('Accept', 'application/json');
+
+        $logger = $this->getMockLogger();
+
+        $handler = new ErrorHandler(

@@ -440,3 +440,5 @@ class ErrorHandlerTest extends TestCase
         $logger = $this->getMockLogger();
 
         $handler = new ErrorHandler(
+            $this->getCallableResolver(),
+            $this->getResponseFactory(),

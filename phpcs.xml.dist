@@ -14,3 +14,4 @@
     <!-- Paths to check -->
     <file>Slim</file>
     <file>tests</file>
+</ruleset>

@@ -43,3 +43,4 @@ class ServerRequestCreator implements ServerRequestCreatorInterface
         /** @var ServerRequestInterface */
         return (Closure::fromCallable($callable))();
     }
+}

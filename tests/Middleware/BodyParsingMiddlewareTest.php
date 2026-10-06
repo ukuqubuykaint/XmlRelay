@@ -156,3 +156,61 @@ class BodyParsingMiddlewareTest extends TestCase
         $middleware = new BodyParsingMiddleware();
         $requestHandler = $this->createRequestHandler();
         $middleware->process($request, $requestHandler);
+
+        $this->assertEquals($expected, $requestHandler->request->getParsedBody());
+    }
+
+    public function testParsingWithARegisteredParser()
+    {
+        $request = $this->createRequestWithBody('application/vnd.api+json', '{"foo":"bar"}');
+
+        $parsers = [
+            'application/vnd.api+json' => function ($input) {
+                return ['data' => $input];
+            },
+        ];
+        $middleware = new BodyParsingMiddleware($parsers);
+        $requestHandler = $this->createRequestHandler();
+        $middleware->process($request, $requestHandler);
+
+        $this->assertSame(['data' => '{"foo":"bar"}'], $requestHandler->request->getParsedBody());
+    }
+
+    public function testParsingFailsWhenAnInvalidTypeIsReturned()
+    {
+        $request = $this->createRequestWithBody('application/json;charset=utf8', '{"foo":"bar"}');
+
+        $parsers = [
+            'application/json' => function ($input) {
+                return 10; // invalid - should return null, array or object
+            },
+        ];
+        $middleware = new BodyParsingMiddleware($parsers);
+
+        $this->expectException(RuntimeException::class);
+        $middleware->process($request, $this->createRequestHandler());
+    }
+
+    public function testSettingAndGettingAParser()
+    {
+        $middleware = new BodyParsingMiddleware();
+        $parser = function ($input) {
+            return ['data' => $input];
+        };
+
+        $this->assertFalse($middleware->hasBodyParser('text/foo'));
+
+        $middleware->registerBodyParser('text/foo', $parser);
+        $this->assertTrue($middleware->hasBodyParser('text/foo'));
+
+        $this->assertSame($parser, $middleware->getBodyParser('text/foo'));
+    }
+
+    public function testGettingUnknownParser()
+    {
+        $middleware = new BodyParsingMiddleware();
+
+        $this->expectException(RuntimeException::class);
+        $middleware->getBodyParser('text/foo');
+    }
+}

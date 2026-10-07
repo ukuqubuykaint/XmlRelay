@@ -38,3 +38,4 @@ class Psr17FactoryProviderTest extends TestCase
 
         $this->assertSame(['Factory 2', 'Factory 1'], Psr17FactoryProvider::getFactories());
     }
+}

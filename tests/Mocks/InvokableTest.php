@@ -18,3 +18,4 @@ class InvokableTest
     {
         return static::$CalledCount++;
     }
+}

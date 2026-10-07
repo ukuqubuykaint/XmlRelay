@@ -370,3 +370,4 @@ You can also type-hint to the concrete instance of the container you are using t
 - [#2774](https://github.com/ukuqubuykaint/AJAX-XML/pull/2774) Add possibility for custom `RequestHandler` invocation strategies
 
 ### Fixed
+- [#2776](https://github.com/ukuqubuykaint/AJAX-XML/pull/2774) Fix group middleware on multiple nested groups

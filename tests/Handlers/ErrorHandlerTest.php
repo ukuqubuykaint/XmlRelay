@@ -446,3 +446,4 @@ class ErrorHandlerTest extends TestCase
         );
 
         $handler->setLogErrorRenderer(HtmlErrorRenderer::class);
+

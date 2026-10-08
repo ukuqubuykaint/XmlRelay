@@ -946,3 +946,6 @@ class AppTest extends TestCase
     }
 
     public function testAddMiddlewareOnTwoRouteGroup(): void
+    {
+        $output = '';
+

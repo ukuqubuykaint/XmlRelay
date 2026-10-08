@@ -443,3 +443,6 @@ class ErrorHandlerTest extends TestCase
             $this->getCallableResolver(),
             $this->getResponseFactory(),
             $logger
+        );
+
+        $handler->setLogErrorRenderer(HtmlErrorRenderer::class);

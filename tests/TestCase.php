@@ -133,3 +133,4 @@ abstract class TestCase extends PhpUnitTestCase
             $ref->setAccessible($accessible);
         }
     }
+}

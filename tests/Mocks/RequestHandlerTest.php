@@ -51,3 +51,4 @@ class RequestHandlerTest implements RequestHandlerInterface
 
         return $responseFactory->createResponse();
     }
+}

@@ -188,3 +188,4 @@ class RoutingMiddlewareTest extends TestCase
         /** @noinspection PhpUnhandledExceptionInspection */
         $middleware->performRouting($request);
     }
+}

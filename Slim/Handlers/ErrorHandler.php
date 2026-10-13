@@ -179,3 +179,4 @@ class ErrorHandler implements ErrorHandlerInterface
         $count = count($selectedContentTypes);
 
         if ($count) {
+            $current = current($selectedContentTypes);

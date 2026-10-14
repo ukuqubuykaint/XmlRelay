@@ -447,3 +447,70 @@ class ErrorHandlerTest extends TestCase
 
         $handler->setLogErrorRenderer(HtmlErrorRenderer::class);
 
+        $logger->expects(self::once())
+            ->method('error')
+            ->willReturnCallback(static function (string $error) {
+                self::assertStringNotContainsString(
+                    'set "displayErrorDetails" to true in the ErrorHandler constructor',
+                    $error
+                );
+            });
+
+        $exception = new HttpNotFoundException($request);
+        $handler->__invoke($request, $exception, false, true, true);
+    }
+
+    public function testDefaultErrorRenderer()
+    {
+        $request = $this
+            ->createServerRequest('/', 'GET')
+            ->withHeader('Accept', 'application/unknown');
+
+        $handler = new ErrorHandler($this->getCallableResolver(), $this->getResponseFactory());
+        $exception = new RuntimeException();
+
+        /** @var ResponseInterface $res */
+        $res = $handler->__invoke($request, $exception, true, false, true);
+
+        $this->assertTrue($res->hasHeader('Content-Type'));
+        $this->assertSame('text/html', $res->getHeaderLine('Content-Type'));
+    }
+
+    public function testLogErrorRenderer()
+    {
+        $renderer = function () {
+            return '';
+        };
+
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+        $callableResolverProphecy
+            ->resolve('logErrorRenderer')
+            ->willReturn($renderer)
+            ->shouldBeCalledOnce();
+
+        $loggerProphecy = $this->prophesize(LoggerInterface::class);
+        $loggerProphecy
+            ->error(Argument::type('string'))
+            ->shouldBeCalled();
+
+        $handler = new ErrorHandler(
+            $callableResolverProphecy->reveal(),
+            $this->getResponseFactory(),
+            $loggerProphecy->reveal()
+        );
+        $handler->setLogErrorRenderer('logErrorRenderer');
+
+        $displayErrorDetailsProperty = new ReflectionProperty($handler, 'displayErrorDetails');
+        $this->setAccessible($displayErrorDetailsProperty);
+        $displayErrorDetailsProperty->setValue($handler, true);
+
+        $exception = new RuntimeException();
+        $exceptionProperty = new ReflectionProperty($handler, 'exception');
+        $this->setAccessible($exceptionProperty);
+        $exceptionProperty->setValue($handler, $exception);
+
+        $writeToErrorLogMethod = new ReflectionMethod($handler, 'writeToErrorLog');
+        $this->setAccessible($writeToErrorLogMethod);
+        $writeToErrorLogMethod->invoke($handler);
+    }
+}

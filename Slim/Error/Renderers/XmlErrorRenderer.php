@@ -51,3 +51,4 @@ class XmlErrorRenderer extends AbstractErrorRenderer
     {
         return sprintf('<![CDATA[%s]]>', str_replace(']]>', ']]]]><![CDATA[>', $content));
     }
+}

@@ -194,3 +194,171 @@ class Route implements RouteInterface, RequestHandlerInterface
     {
         return $this->callable;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setCallable($callable): RouteInterface
+    {
+        $this->callable = $callable;
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setName(string $name): RouteInterface
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIdentifier(): string
+    {
+        return $this->identifier;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getArgument(string $name, ?string $default = null): ?string
+    {
+        if (array_key_exists($name, $this->arguments)) {
+            return $this->arguments[$name];
+        }
+        return $default;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getArguments(): array
+    {
+        return $this->arguments;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setArguments(array $arguments, bool $includeInSavedArguments = true): RouteInterface
+    {
+        if ($includeInSavedArguments) {
+            $this->savedArguments = $arguments;
+        }
+
+        $this->arguments = $arguments;
+        return $this;
+    }
+
+    /**
+     * @return RouteGroupInterface[]
+     */
+    public function getGroups(): array
+    {
+        return $this->groups;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function add($middleware): RouteInterface
+    {
+        $this->middlewareDispatcher->add($middleware);
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function addMiddleware(MiddlewareInterface $middleware): RouteInterface
+    {
+        $this->middlewareDispatcher->addMiddleware($middleware);
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function prepare(array $arguments): RouteInterface
+    {
+        $this->arguments = array_replace($this->savedArguments, $arguments);
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setArgument(string $name, string $value, bool $includeInSavedArguments = true): RouteInterface
+    {
+        if ($includeInSavedArguments) {
+            $this->savedArguments[$name] = $value;
+        }
+
+        $this->arguments[$name] = $value;
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function run(ServerRequestInterface $request): ResponseInterface
+    {
+        if (!$this->groupMiddlewareAppended) {
+            $this->appendGroupMiddlewareToRoute();
+        }
+
+        return $this->middlewareDispatcher->handle($request);
+    }
+
+    /**
+     * @return void
+     */
+    protected function appendGroupMiddlewareToRoute(): void
+    {
+        $inner = $this->middlewareDispatcher;
+        $this->middlewareDispatcher = new MiddlewareDispatcher($inner, $this->callableResolver, $this->container);
+
+        foreach (array_reverse($this->groups) as $group) {
+            $group->appendMiddlewareToDispatcher($this->middlewareDispatcher);
+        }
+
+        $this->groupMiddlewareAppended = true;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        if ($this->callableResolver instanceof AdvancedCallableResolverInterface) {
+            $callable = $this->callableResolver->resolveRoute($this->callable);
+        } else {
+            $callable = $this->callableResolver->resolve($this->callable);
+        }
+        $strategy = $this->invocationStrategy;
+
+        $strategyImplements = class_implements($strategy);
+
+        if (
+            is_array($callable)
+            && $callable[0] instanceof RequestHandlerInterface
+            && !in_array(RequestHandlerInvocationStrategyInterface::class, $strategyImplements)
+        ) {
+            $strategy = new RequestHandler();
+        }
+
+        $response = $this->responseFactory->createResponse();
+        return $strategy($callable, $request, $response, $this->arguments);
+    }
+}

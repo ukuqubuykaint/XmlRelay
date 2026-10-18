@@ -361,3 +361,4 @@ class Route implements RouteInterface, RequestHandlerInterface
         $response = $this->responseFactory->createResponse();
         return $strategy($callable, $request, $response, $this->arguments);
     }
+}

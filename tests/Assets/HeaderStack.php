@@ -90,3 +90,4 @@ class HeaderStack
         }
         return false;
     }
+}

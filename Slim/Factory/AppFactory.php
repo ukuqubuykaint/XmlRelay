@@ -214,3 +214,4 @@ class AppFactory
     {
         static::$slimHttpDecoratorsAutomaticDetectionEnabled = $enabled;
     }
+}

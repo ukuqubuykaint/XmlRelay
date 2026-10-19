@@ -181,3 +181,7 @@ class ErrorHandler implements ErrorHandlerInterface
         if ($count) {
             $current = current($selectedContentTypes);
 
+            /**
+             * Ensure other supported content types take precedence over text/plain
+             * when multiple content types are provided via Accept header.
+             */

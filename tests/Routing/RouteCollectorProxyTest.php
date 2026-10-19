@@ -280,3 +280,4 @@ class RouteCollectorProxyTest extends TestCase
         );
 
         $route = $routeCollectorProxy->delete($pattern, $callable);
+

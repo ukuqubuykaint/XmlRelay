@@ -38,3 +38,4 @@ class MiddlewareTest implements MiddlewareInterface
 
         return $response;
     }
+}

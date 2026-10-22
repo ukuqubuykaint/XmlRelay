@@ -25,3 +25,4 @@ interface DispatcherInterface
      * @return string[]
      */
     public function getAllowedMethods(string $uri): array;
+}

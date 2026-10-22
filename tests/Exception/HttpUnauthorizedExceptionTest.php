@@ -30,3 +30,4 @@ class HttpUnauthorizedExceptionTest extends TestCase
 
         $this->assertSame('Hello World', $exception->getMessage());
     }
+}

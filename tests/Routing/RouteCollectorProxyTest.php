@@ -455,3 +455,4 @@ class RouteCollectorProxyTest extends TestCase
 
         $routeCollectorProxy->group($pattern, $callable);
     }
+}

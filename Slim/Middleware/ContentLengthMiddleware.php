@@ -30,3 +30,4 @@ class ContentLengthMiddleware implements MiddlewareInterface
 
         return $response;
     }
+}

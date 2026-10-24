@@ -281,3 +281,178 @@ class RouteCollectorProxyTest extends TestCase
 
         $route = $routeCollectorProxy->delete($pattern, $callable);
 
+        $this->assertSame($pattern, $route->getPattern());
+    }
+
+    public function testOptions()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/';
+        $callable = function () {
+        };
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);
+        $routeProphecy
+            ->getPattern()
+            ->willReturn($pattern)
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->map(['OPTIONS'], $pattern, Argument::is($callable))
+            ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            $routeCollectorProphecy->reveal()
+        );
+
+        $route = $routeCollectorProxy->options($pattern, $callable);
+
+        $this->assertSame($pattern, $route->getPattern());
+    }
+
+    public function testAny()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/';
+        $callable = function () {
+        };
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);
+        $routeProphecy
+            ->getPattern()
+            ->willReturn($pattern)
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->map(['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], $pattern, Argument::is($callable))
+            ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            $routeCollectorProphecy->reveal()
+        );
+
+        $route = $routeCollectorProxy->any($pattern, $callable);
+
+        $this->assertSame($pattern, $route->getPattern());
+    }
+
+    public function testMap()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/';
+        $methods = ['GET', 'POST'];
+        $callable = function () {
+        };
+
+        $routeProphecy = $this->prophesize(RouteInterface::class);
+        $routeProphecy
+            ->getPattern()
+            ->willReturn($pattern)
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->map($methods, $pattern, Argument::is($callable))
+            ->willReturn($routeProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            $routeCollectorProphecy->reveal()
+        );
+
+        $route = $routeCollectorProxy->map($methods, $pattern, $callable);
+
+        $this->assertSame($pattern, $route->getPattern());
+    }
+
+    public function testRedirect()
+    {
+        $containerProphecy = $this->prophesize(ContainerInterface::class);
+        $callableResolver = new CallableResolver($containerProphecy->reveal());
+
+        $from = '/from';
+        $to = '/to';
+
+        $responseProphecy = $this->prophesize(ResponseInterface::class);
+        $responseProphecy
+            ->withHeader('Location', $to)
+            ->willReturn($responseProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $responseFactoryProphecy
+            ->createResponse()
+            ->will(function () use ($responseProphecy) {
+                $this
+                    ->createResponse(302)
+                    ->willReturn($responseProphecy)
+                    ->shouldBeCalledOnce();
+                return $responseProphecy->reveal();
+            })
+            ->shouldBeCalledOnce();
+
+        $routeCollector = new RouteCollector(
+            $responseFactoryProphecy->reveal(),
+            $callableResolver
+        );
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolver,
+            $containerProphecy->reveal(),
+            $routeCollector
+        );
+
+        $route = $routeCollectorProxy->redirect($from, $to);
+        $request = $this->createServerRequest('/');
+        $response = $route->run($request);
+
+        $this->assertSame($responseProphecy->reveal(), $response);
+    }
+
+    public function testGroup()
+    {
+        $responseFactoryProphecy = $this->prophesize(ResponseFactoryInterface::class);
+        $callableResolverProphecy = $this->prophesize(CallableResolverInterface::class);
+
+        $pattern = '/group';
+        $callable = function () {
+        };
+
+        $routeGroupProphecy = $this->prophesize(RouteGroupInterface::class);
+
+        $routeCollectorProphecy = $this->prophesize(RouteCollectorInterface::class);
+        $routeCollectorProphecy
+            ->group($pattern, Argument::is($callable))
+            ->willReturn($routeGroupProphecy->reveal())
+            ->shouldBeCalledOnce();
+
+        $routeCollectorProxy = new RouteCollectorProxy(
+            $responseFactoryProphecy->reveal(),
+            $callableResolverProphecy->reveal(),
+            null,
+            $routeCollectorProphecy->reveal()
+        );
+
+        $routeCollectorProxy->group($pattern, $callable);
+    }
+}

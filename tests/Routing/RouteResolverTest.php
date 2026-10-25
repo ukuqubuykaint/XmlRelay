@@ -89,3 +89,4 @@ class RouteResolverTest extends TestCase
 
         $routeResolver->resolveRoute($identifier);
     }
+}

@@ -191,3 +191,6 @@ class ErrorHandler implements ErrorHandlerInterface
                     return $next;
                 }
             }
+
+            // @phpstan-ignore-next-line
+            if (is_string($current)) {

@@ -25,3 +25,4 @@ interface AdvancedCallableResolverInterface extends CallableResolverInterface
      * @param callable|array{class-string, string}|string $toResolve
      */
     public function resolveMiddleware($toResolve): callable;
+}

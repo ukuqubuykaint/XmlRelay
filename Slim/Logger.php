@@ -29,3 +29,4 @@ class Logger extends AbstractLogger
     {
         error_log((string) $message);
     }
+}

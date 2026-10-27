@@ -314,3 +314,4 @@ class ErrorHandler implements ErrorHandlerInterface
 
         return $response;
     }
+}

@@ -193,3 +193,4 @@ class RouteCollectorProxy implements RouteCollectorProxyInterface
 
         return $this->get($from, $handler);
     }
+}

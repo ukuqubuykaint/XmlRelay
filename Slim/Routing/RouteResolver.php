@@ -53,3 +53,4 @@ class RouteResolver implements RouteResolverInterface
     {
         return $this->routeCollector->lookupRoute($identifier);
     }
+}

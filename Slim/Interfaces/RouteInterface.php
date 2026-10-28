@@ -125,3 +125,4 @@ interface RouteInterface
      * back to the Application.
      */
     public function run(ServerRequestInterface $request): ResponseInterface;
+}

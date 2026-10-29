@@ -38,3 +38,4 @@ class ContentLengthMiddlewareTest extends TestCase
 
         $this->assertSame('4', $response->getHeaderLine('Content-Length'));
     }
+}

@@ -44,3 +44,4 @@ class NyholmPsr17Factory extends Psr17Factory
             && class_exists(static::$responseFactoryClass)
         );
     }
+}

@@ -40,3 +40,4 @@ class Psr17FactoryTest extends TestCase
 
         MockPsr17Factory::getServerRequestCreator();
     }
+}
